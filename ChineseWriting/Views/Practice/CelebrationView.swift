@@ -5,6 +5,7 @@ struct CelebrationView: View {
     @Binding var isActive: Bool
 
     @State private var particles: [Particle] = []
+    @State private var viewSize: CGSize = .zero
 
     struct Particle: Identifiable {
         let id = UUID()
@@ -19,15 +20,19 @@ struct CelebrationView: View {
     private let colors: [Color] = [.red, .orange, .yellow, .green, .blue, .purple, .pink]
 
     var body: some View {
-        ZStack {
-            ForEach(particles) { particle in
-                Circle()
-                    .fill(particle.color)
-                    .frame(width: particle.size, height: particle.size)
-                    .opacity(particle.opacity)
-                    .rotationEffect(.degrees(particle.rotation))
-                    .position(x: particle.x, y: particle.y)
+        GeometryReader { geometry in
+            ZStack {
+                ForEach(particles) { particle in
+                    Circle()
+                        .fill(particle.color)
+                        .frame(width: particle.size, height: particle.size)
+                        .opacity(particle.opacity)
+                        .rotationEffect(.degrees(particle.rotation))
+                        .position(x: particle.x, y: particle.y)
+                }
             }
+            .onAppear { viewSize = geometry.size }
+            .onChange(of: geometry.size) { _, newSize in viewSize = newSize }
         }
         .allowsHitTesting(false)
         .onChange(of: isActive) { _, active in
@@ -38,10 +43,8 @@ struct CelebrationView: View {
     }
 
     private func launchConfetti() {
-        let screenWidth = UIScreen.main.bounds.width
-        let screenHeight = UIScreen.main.bounds.height
-        let centerX = screenWidth / 2
-        let startY = screenHeight / 2
+        let centerX = viewSize.width / 2
+        let startY = viewSize.height / 2
 
         var newParticles: [Particle] = []
         for _ in 0..<40 {
@@ -70,7 +73,8 @@ struct CelebrationView: View {
         }
 
         // Clean up
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+        Task { @MainActor in
+            try? await Task.sleep(for: .seconds(1.5))
             particles = []
             isActive = false
         }

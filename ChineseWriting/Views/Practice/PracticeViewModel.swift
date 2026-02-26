@@ -20,8 +20,9 @@ final class PracticeViewModel {
     var showCelebration = false
     var recognizedChar: String?
     var isRecognizing = false
+    var rewriteFeedback: String?
 
-    // Session stats
+    // Practice stats (running totals for current practice)
     var correctCount = 0
     var incorrectCount = 0
     var totalCount = 0
@@ -45,7 +46,23 @@ final class PracticeViewModel {
 
     // MARK: - Actions
 
-    func startSession() {
+    /// Auto-start practice when the view appears. Loads the first card if idle.
+    func beginIfNeeded() {
+        guard studyState == .idle else { return }
+        correctCount = 0
+        incorrectCount = 0
+        totalCount = 0
+        loadNextCard()
+    }
+
+    /// User taps "Done" to end practice early.
+    func endPractice() {
+        ttsService.stop()
+        studyState = .sessionComplete
+    }
+
+    /// Start practicing again (from the completion screen).
+    func practiceMore() {
         correctCount = 0
         incorrectCount = 0
         totalCount = 0
@@ -120,21 +137,45 @@ final class PracticeViewModel {
     func tracingComplete() {
         studyState = .rewriting
         rewriteDrawing = PKDrawing()
+        rewriteFeedback = nil
     }
 
     func submitRewrite() {
         guard studyState == .rewriting, !rewriteDrawing.strokes.isEmpty else { return }
 
-        // Always rate as Again — the miss is recorded regardless of rewrite quality
-        guard let card = currentCard else { return }
-        sessionManager.rateCard(card, rating: .again)
-        incorrectCount += 1
-        totalCount += 1
+        // Recognize the rewrite to verify the user wrote the character correctly
+        isRecognizing = true
 
-        // Brief feedback then advance
         Task {
-            try? await Task.sleep(for: .seconds(0.8))
-            loadNextCard()
+            guard let entry = currentEntry, let card = currentCard else { return }
+            let expected = useTraditional ? entry.traditional : entry.simplified
+            let result = await recognitionService.recognize(
+                drawing: rewriteDrawing,
+                expected: expected,
+                traditional: useTraditional
+            )
+
+            isRecognizing = false
+
+            if result.isCorrect {
+                // They wrote it correctly after review — rate as "again" since they
+                // needed help, but let them move on
+                rewriteFeedback = nil
+                sessionManager.rateCard(card, rating: .again)
+                incorrectCount += 1
+                totalCount += 1
+                triggerHaptic(success: true)
+
+                Task {
+                    try? await Task.sleep(for: .seconds(0.8))
+                    loadNextCard()
+                }
+            } else {
+                // Not quite right — encourage them to try again
+                rewriteFeedback = "Almost! Try again"
+                rewriteDrawing = PKDrawing()
+                triggerHaptic(success: false)
+            }
         }
     }
 
@@ -170,11 +211,11 @@ final class PracticeViewModel {
         }
 
         Task {
-            try? await Task.sleep(for: .seconds(0.8))
+            try? await Task.sleep(for: .seconds(1.2))
             if currentStrokeData != nil {
                 studyState = .showingStrokeOrder
             } else {
-                // No stroke data available — skip to tracing with just the character shown
+                // No stroke data available — skip to rewriting
                 studyState = .rewriting
                 rewriteDrawing = PKDrawing()
             }
@@ -190,6 +231,7 @@ final class PracticeViewModel {
             tracingDrawing = PKDrawing()
             rewriteDrawing = PKDrawing()
             recognizedChar = nil
+            rewriteFeedback = nil
             studyState = .presenting
             playTTS()
         } else {

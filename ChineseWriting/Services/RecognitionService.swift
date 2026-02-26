@@ -30,7 +30,12 @@ final class RecognitionService {
         guard let cgImage = image.cgImage else { return .failed }
 
         return await withCheckedContinuation { continuation in
+            var hasResumed = false
+
             let request = VNRecognizeTextRequest { request, error in
+                guard !hasResumed else { return }
+                hasResumed = true
+
                 guard let observations = request.results as? [VNRecognizedTextObservation],
                       error == nil else {
                     continuation.resume(returning: .failed)
@@ -68,6 +73,8 @@ final class RecognitionService {
             do {
                 try handler.perform([request])
             } catch {
+                guard !hasResumed else { return }
+                hasResumed = true
                 continuation.resume(returning: .failed)
             }
         }

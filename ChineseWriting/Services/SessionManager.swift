@@ -20,9 +20,6 @@ final class SessionManager {
     /// Don't introduce new cards if more than this many reviews are due.
     static let maxDueBeforeStopNew = 20
 
-    private var newCardsIntroducedToday = 0
-    private var lastNewCardDate: Date?
-
     init(characterData: CharacterDataService, modelContext: ModelContext) {
         self.characterData = characterData
         self.modelContext = modelContext
@@ -31,10 +28,8 @@ final class SessionManager {
     // MARK: - Next Card
 
     /// Returns the next card to study, along with its character data.
-    /// Returns nil if no cards are available (session complete for today).
+    /// Returns nil if no cards are available (all caught up for now).
     func nextCard() -> (ReviewCard, CharacterEntry)? {
-        resetNewCardCountIfNeeded()
-
         // 1. Relearning cards due now
         if let card = fetchDueCards(state: .relearning).first,
            let entry = characterData.character(forSimplified: card.character) {
@@ -54,9 +49,10 @@ final class SessionManager {
             return (card, entry)
         }
 
-        // 4. New cards (only if due backlog is small enough)
+        // 4. New cards (only if due backlog is small enough and daily limit not reached)
         let totalDue = dueReviews.count
-        if totalDue < Self.maxDueBeforeStopNew && newCardsIntroducedToday < Self.maxNewPerDay {
+        let newToday = countNewCardsIntroducedToday()
+        if totalDue < Self.maxDueBeforeStopNew && newToday < Self.maxNewPerDay {
             if let (card, entry) = introduceNextNewCard() {
                 return (card, entry)
             }
@@ -173,17 +169,30 @@ final class SessionManager {
         return (try? modelContext.fetch(descriptor)) ?? []
     }
 
+    /// Count new cards introduced today by checking ReviewLogs with stabilityBefore == 0
+    /// (first-ever review of a card). Persists across app restarts.
+    private func countNewCardsIntroducedToday() -> Int {
+        let calendar = Calendar.current
+        let startOfToday = calendar.startOfDay(for: Date())
+        let descriptor = FetchDescriptor<ReviewLog>(
+            predicate: #Predicate {
+                $0.reviewDate >= startOfToday && $0.stabilityBefore == 0.0
+            }
+        )
+        return (try? modelContext.fetchCount(descriptor)) ?? 0
+    }
+
     private func introduceNextNewCard() -> (ReviewCard, CharacterEntry)? {
+        // Batch-fetch all existing card characters to avoid per-character queries
+        let allCardsDescriptor = FetchDescriptor<ReviewCard>()
+        let existingCards = (try? modelContext.fetch(allCardsDescriptor)) ?? []
+        let existingCharacters = Set(existingCards.map(\.character))
+
         // Find the next character that doesn't have a ReviewCard yet
         for grade in characterData.gradeLevels {
             let gradeChars = characterData.characters(forGrade: grade)
             for entry in gradeChars {
-                let char = entry.simplified
-                let descriptor = FetchDescriptor<ReviewCard>(
-                    predicate: #Predicate { $0.character == char }
-                )
-                let existingCount = (try? modelContext.fetchCount(descriptor)) ?? 0
-                if existingCount == 0 {
+                if !existingCharacters.contains(entry.simplified) {
                     // Create a new ReviewCard
                     let card = ReviewCard(
                         character: entry.simplified,
@@ -195,22 +204,11 @@ final class SessionManager {
                     modelContext.insert(card)
                     try? modelContext.save()
 
-                    newCardsIntroducedToday += 1
-                    lastNewCardDate = Date()
                     return (card, entry)
                 }
             }
         }
         return nil
-    }
-
-    private func resetNewCardCountIfNeeded() {
-        let calendar = Calendar.current
-        let today = calendar.startOfDay(for: Date())
-        if let lastDate = lastNewCardDate,
-           !calendar.isDate(lastDate, inSameDayAs: today) {
-            newCardsIntroducedToday = 0
-        }
     }
 
     private func daysBetween(_ from: Date, and to: Date) -> Int {

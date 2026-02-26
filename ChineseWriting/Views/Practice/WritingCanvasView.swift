@@ -23,6 +23,7 @@ struct WritingCanvasView: UIViewRepresentable {
     }
 
     func updateUIView(_ canvas: PKCanvasView, context: Context) {
+        context.coordinator.parent = self
         if canvas.drawing != drawing {
             canvas.drawing = drawing
         }
@@ -33,11 +34,15 @@ struct WritingCanvasView: UIViewRepresentable {
     }
 
     class Coordinator: NSObject, PKCanvasViewDelegate {
-        let parent: WritingCanvasView
+        var parent: WritingCanvasView
         var idleTimer: Timer?
 
         init(parent: WritingCanvasView) {
             self.parent = parent
+        }
+
+        deinit {
+            idleTimer?.invalidate()
         }
 
         func canvasViewDrawingDidChange(_ canvasView: PKCanvasView) {
@@ -53,9 +58,7 @@ struct WritingCanvasView: UIViewRepresentable {
                 withTimeInterval: WritingCanvasView.idleTimeout,
                 repeats: false
             ) { [weak self] _ in
-                DispatchQueue.main.async {
-                    self?.parent.onSubmit?()
-                }
+                self?.parent.onSubmit?()
             }
         }
     }

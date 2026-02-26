@@ -12,10 +12,11 @@ struct StrokeOrderView: View {
     @State private var animating = false
 
     private var totalStrokes: Int { strokeData.strokes.count }
-    private var allPaths: [Path] { StrokeRenderer.allStrokes(from: strokeData) }
-    private let scale: CGFloat = 1.0
 
     var body: some View {
+        let paths = StrokeRenderer.allStrokes(from: strokeData)
+        let scale = size / StrokeRenderer.canvasSize
+
         VStack(spacing: 16) {
             Text("Stroke Order")
                 .font(.headline)
@@ -27,30 +28,30 @@ struct StrokeOrderView: View {
 
                 // Completed strokes (black/filled)
                 ForEach(0..<completedStrokes, id: \.self) { i in
-                    if i < allPaths.count {
-                        allPaths[i]
+                    if i < paths.count {
+                        paths[i]
                             .fill(Color.primary)
-                            .scaleEffect(displayScale, anchor: .topLeading)
+                            .scaleEffect(scale, anchor: .topLeading)
                     }
                 }
 
                 // Current stroke animating (red, filled via median reveal)
-                if completedStrokes < allPaths.count {
-                    allPaths[completedStrokes]
+                if completedStrokes < paths.count {
+                    paths[completedStrokes]
                         .fill(Color.red)
-                        .scaleEffect(displayScale, anchor: .topLeading)
+                        .scaleEffect(scale, anchor: .topLeading)
                         .mask(
                             medianPath(for: completedStrokes)
                                 .trim(from: 0, to: currentStrokeProgress)
                                 .stroke(style: StrokeStyle(lineWidth: 150, lineCap: .round, lineJoin: .round))
-                                .scaleEffect(displayScale, anchor: .topLeading)
+                                .scaleEffect(scale, anchor: .topLeading)
                         )
                 }
 
                 // Stroke number labels
                 ForEach(0..<totalStrokes, id: \.self) { i in
                     if i < completedStrokes {
-                        strokeNumberLabel(i)
+                        strokeNumberLabel(i, scale: scale)
                     }
                 }
             }
@@ -67,10 +68,6 @@ struct StrokeOrderView: View {
                 .foregroundStyle(.secondary)
         }
         .onAppear { startAnimation() }
-    }
-
-    private var displayScale: CGFloat {
-        size / StrokeRenderer.canvasSize
     }
 
     private var guideGrid: some View {
@@ -93,10 +90,10 @@ struct StrokeOrderView: View {
         }
     }
 
-    private func strokeNumberLabel(_ index: Int) -> some View {
+    private func strokeNumberLabel(_ index: Int, scale: CGFloat) -> some View {
         let medians = StrokeRenderer.medianPoints(from: strokeData, strokeIndex: index)
         let point = medians.first ?? .zero
-        let scaled = CGPoint(x: point.x * displayScale, y: point.y * displayScale)
+        let scaled = CGPoint(x: point.x * scale, y: point.y * scale)
 
         return Text("\(index + 1)")
             .font(.system(size: 10, weight: .bold))
@@ -125,7 +122,8 @@ struct StrokeOrderView: View {
     private func animateNextStroke() {
         guard completedStrokes < totalStrokes else {
             // All strokes done
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            Task { @MainActor in
+                try? await Task.sleep(for: .milliseconds(500))
                 onComplete?()
             }
             return
@@ -136,7 +134,8 @@ struct StrokeOrderView: View {
             currentStrokeProgress = 1.0
         }
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
+        Task { @MainActor in
+            try? await Task.sleep(for: .milliseconds(700))
             completedStrokes += 1
             currentStrokeProgress = 0
             animateNextStroke()
