@@ -118,6 +118,7 @@ struct WritingCanvasContainer: View {
             WritingCanvasView(drawing: $drawing, onSubmit: onSubmit)
         }
         .frame(width: size, height: size)
+        .background(Color(.systemBackground))
         .clipShape(RoundedRectangle(cornerRadius: 8))
     }
 }
