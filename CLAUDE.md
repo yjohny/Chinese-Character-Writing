@@ -41,7 +41,7 @@ Practice auto-starts on appear (idle is just a loading state). Users can tap "Do
 
 ## Important conventions
 
-- Stroke SVG data uses a 1024×1024 coordinate space with Y-axis flipped (origin top-left, y=900 is baseline). StrokeRenderer handles the transform.
+- Stroke SVG data uses a 1024×1024 coordinate space with Y-axis flipped (origin top-left, y=900 is baseline). StrokeRenderer handles the transform. The SVG parser tracks `lastCubicControl` for proper S/s smooth cubic Bezier reflection.
 - CharacterPromptView intentionally hides the Chinese example word text so users recall from audio only.
 - WritingCanvasContainer uses a solid `.systemBackground` behind the transparent PKCanvasView so strokes are visible in both light and dark mode.
 - Recognition uses a lenient confidence threshold (0.15) and checks all top-10 candidates, not just the #1 result.
@@ -50,3 +50,15 @@ Practice auto-starts on appear (idle is just a loading state). Users can tap "Do
 - New card pacing: max 10 new cards/day (`maxNewPerDay`), paused if >20 reviews due (`maxDueBeforeStopNew`). The daily count is derived from ReviewLog (stabilityBefore == 0) so it persists across app restarts.
 - iPad layout: `AdaptiveLayout` switches to side-by-side HStack on regular width class. Canvas size is 420pt on iPad, 300pt on iPhone. Views that show prompt + canvas pairs use this adaptive layout.
 - WritingCanvasView coordinator must update its `parent` reference in `updateUIView` so SwiftUI binding updates propagate correctly.
+
+## Async task management
+
+- PracticeViewModel uses a single `pendingTask: Task<Void, Never>?` to track in-flight async work (recognition, delayed transitions). The previous task is always cancelled before launching a new one. `endPractice()` and `loadNextCard()` cancel pending tasks. All Task continuations must check `Task.isCancelled` and verify the expected `studyState` after every `await` before mutating state.
+- StrokeOrderView stores its animation as a `@State` Task and cancels it in `.onDisappear`. Animation state is reset in `startAnimation()` so it works correctly for subsequent characters.
+- TTSService nils out `completion` before calling `stopSpeaking` to prevent the cancelled utterance's delegate from firing the wrong callback. Both `didFinish` and `didCancel` delegate methods are implemented.
+
+## FSRS implementation notes
+
+- `nextDifficulty` mean-reverts toward D0(3) (Good rating), not D0(4), per FSRS v5 spec.
+- `scheduleLearning` and `scheduleReview` compute `newD` first, then pass `newD` (not the old difficulty) to `stabilityAfterSuccess`/`stabilityAfterFailure`.
+- `FSRSEngine.init` requires exactly 19 weights (enforced by precondition).
