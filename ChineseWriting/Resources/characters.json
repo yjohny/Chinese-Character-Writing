@@ -1,0 +1,8400 @@
+[
+  {
+    "simplified": "一",
+    "traditional": "一",
+    "pinyin": "yī",
+    "meaning": "one",
+    "gradeLevel": 1,
+    "orderInGrade": 0,
+    "exampleWords": [
+      {
+        "word": "一个",
+        "wordTraditional": "一個",
+        "pinyin": "yī gè",
+        "meaning": "one (of)",
+        "ttsText": "一，一个的一"
+      }
+    ]
+  },
+  {
+    "simplified": "二",
+    "traditional": "二",
+    "pinyin": "èr",
+    "meaning": "two",
+    "gradeLevel": 1,
+    "orderInGrade": 1,
+    "exampleWords": [
+      {
+        "word": "第二",
+        "wordTraditional": "第二",
+        "pinyin": "dì èr",
+        "meaning": "second",
+        "ttsText": "二，第二的二"
+      }
+    ]
+  },
+  {
+    "simplified": "三",
+    "traditional": "三",
+    "pinyin": "sān",
+    "meaning": "three",
+    "gradeLevel": 1,
+    "orderInGrade": 2,
+    "exampleWords": [
+      {
+        "word": "三个",
+        "wordTraditional": "三個",
+        "pinyin": "sān gè",
+        "meaning": "three (of)",
+        "ttsText": "三，三个的三"
+      }
+    ]
+  },
+  {
+    "simplified": "上",
+    "traditional": "上",
+    "pinyin": "shàng",
+    "meaning": "up; above",
+    "gradeLevel": 1,
+    "orderInGrade": 3,
+    "exampleWords": [
+      {
+        "word": "上学",
+        "wordTraditional": "上學",
+        "pinyin": "shàng xué",
+        "meaning": "go to school",
+        "ttsText": "上，上学的上"
+      }
+    ]
+  },
+  {
+    "simplified": "口",
+    "traditional": "口",
+    "pinyin": "kǒu",
+    "meaning": "mouth",
+    "gradeLevel": 1,
+    "orderInGrade": 4,
+    "exampleWords": [
+      {
+        "word": "人口",
+        "wordTraditional": "人口",
+        "pinyin": "rén kǒu",
+        "meaning": "population",
+        "ttsText": "口，人口的口"
+      }
+    ]
+  },
+  {
+    "simplified": "目",
+    "traditional": "目",
+    "pinyin": "mù",
+    "meaning": "eye",
+    "gradeLevel": 1,
+    "orderInGrade": 5,
+    "exampleWords": [
+      {
+        "word": "目光",
+        "wordTraditional": "目光",
+        "pinyin": "mù guāng",
+        "meaning": "gaze",
+        "ttsText": "目，目光的目"
+      }
+    ]
+  },
+  {
+    "simplified": "耳",
+    "traditional": "耳",
+    "pinyin": "ěr",
+    "meaning": "ear",
+    "gradeLevel": 1,
+    "orderInGrade": 6,
+    "exampleWords": [
+      {
+        "word": "耳朵",
+        "wordTraditional": "耳朵",
+        "pinyin": "ěr duo",
+        "meaning": "ear",
+        "ttsText": "耳，耳朵的耳"
+      }
+    ]
+  },
+  {
+    "simplified": "手",
+    "traditional": "手",
+    "pinyin": "shǒu",
+    "meaning": "hand",
+    "gradeLevel": 1,
+    "orderInGrade": 7,
+    "exampleWords": [
+      {
+        "word": "手机",
+        "wordTraditional": "手機",
+        "pinyin": "shǒu jī",
+        "meaning": "phone",
+        "ttsText": "手，手机的手"
+      }
+    ]
+  },
+  {
+    "simplified": "日",
+    "traditional": "日",
+    "pinyin": "rì",
+    "meaning": "day; sun",
+    "gradeLevel": 1,
+    "orderInGrade": 8,
+    "exampleWords": [
+      {
+        "word": "日子",
+        "wordTraditional": "日子",
+        "pinyin": "rì zi",
+        "meaning": "day",
+        "ttsText": "日，日子的日"
+      }
+    ]
+  },
+  {
+    "simplified": "田",
+    "traditional": "田",
+    "pinyin": "tián",
+    "meaning": "field",
+    "gradeLevel": 1,
+    "orderInGrade": 9,
+    "exampleWords": [
+      {
+        "word": "田地",
+        "wordTraditional": "田地",
+        "pinyin": "tián dì",
+        "meaning": "farmland",
+        "ttsText": "田，田地的田"
+      }
+    ]
+  },
+  {
+    "simplified": "禾",
+    "traditional": "禾",
+    "pinyin": "hé",
+    "meaning": "grain",
+    "gradeLevel": 1,
+    "orderInGrade": 10,
+    "exampleWords": [
+      {
+        "word": "禾苗",
+        "wordTraditional": "禾苗",
+        "pinyin": "hé miáo",
+        "meaning": "seedling",
+        "ttsText": "禾，禾苗的禾"
+      }
+    ]
+  },
+  {
+    "simplified": "火",
+    "traditional": "火",
+    "pinyin": "huǒ",
+    "meaning": "fire",
+    "gradeLevel": 1,
+    "orderInGrade": 11,
+    "exampleWords": [
+      {
+        "word": "火车",
+        "wordTraditional": "火車",
+        "pinyin": "huǒ chē",
+        "meaning": "train",
+        "ttsText": "火，火车的火"
+      }
+    ]
+  },
+  {
+    "simplified": "虫",
+    "traditional": "蟲",
+    "pinyin": "chóng",
+    "meaning": "insect",
+    "gradeLevel": 1,
+    "orderInGrade": 12,
+    "exampleWords": [
+      {
+        "word": "虫子",
+        "wordTraditional": "蟲子",
+        "pinyin": "chóng zi",
+        "meaning": "bug",
+        "ttsText": "虫，虫子的虫"
+      }
+    ]
+  },
+  {
+    "simplified": "云",
+    "traditional": "雲",
+    "pinyin": "yún",
+    "meaning": "cloud",
+    "gradeLevel": 1,
+    "orderInGrade": 13,
+    "exampleWords": [
+      {
+        "word": "白云",
+        "wordTraditional": "白雲",
+        "pinyin": "bái yún",
+        "meaning": "white cloud",
+        "ttsText": "云，白云的云"
+      }
+    ]
+  },
+  {
+    "simplified": "山",
+    "traditional": "山",
+    "pinyin": "shān",
+    "meaning": "mountain",
+    "gradeLevel": 1,
+    "orderInGrade": 14,
+    "exampleWords": [
+      {
+        "word": "山上",
+        "wordTraditional": "山上",
+        "pinyin": "shān shàng",
+        "meaning": "on the mountain",
+        "ttsText": "山，山上的山"
+      }
+    ]
+  },
+  {
+    "simplified": "八",
+    "traditional": "八",
+    "pinyin": "bā",
+    "meaning": "eight",
+    "gradeLevel": 1,
+    "orderInGrade": 15,
+    "exampleWords": [
+      {
+        "word": "八个",
+        "wordTraditional": "八個",
+        "pinyin": "bā gè",
+        "meaning": "eight (of)",
+        "ttsText": "八，八个的八"
+      }
+    ]
+  },
+  {
+    "simplified": "十",
+    "traditional": "十",
+    "pinyin": "shí",
+    "meaning": "ten",
+    "gradeLevel": 1,
+    "orderInGrade": 16,
+    "exampleWords": [
+      {
+        "word": "十个",
+        "wordTraditional": "十個",
+        "pinyin": "shí gè",
+        "meaning": "ten (of)",
+        "ttsText": "十，十个的十"
+      }
+    ]
+  },
+  {
+    "simplified": "人",
+    "traditional": "人",
+    "pinyin": "rén",
+    "meaning": "person",
+    "gradeLevel": 1,
+    "orderInGrade": 17,
+    "exampleWords": [
+      {
+        "word": "大人",
+        "wordTraditional": "大人",
+        "pinyin": "dà rén",
+        "meaning": "adult",
+        "ttsText": "人，大人的人"
+      }
+    ]
+  },
+  {
+    "simplified": "大",
+    "traditional": "大",
+    "pinyin": "dà",
+    "meaning": "big",
+    "gradeLevel": 1,
+    "orderInGrade": 18,
+    "exampleWords": [
+      {
+        "word": "大家",
+        "wordTraditional": "大家",
+        "pinyin": "dà jiā",
+        "meaning": "everyone",
+        "ttsText": "大，大家的大"
+      }
+    ]
+  },
+  {
+    "simplified": "天",
+    "traditional": "天",
+    "pinyin": "tiān",
+    "meaning": "sky; day",
+    "gradeLevel": 1,
+    "orderInGrade": 19,
+    "exampleWords": [
+      {
+        "word": "天空",
+        "wordTraditional": "天空",
+        "pinyin": "tiān kōng",
+        "meaning": "sky",
+        "ttsText": "天，天空的天"
+      }
+    ]
+  },
+  {
+    "simplified": "四",
+    "traditional": "四",
+    "pinyin": "sì",
+    "meaning": "four",
+    "gradeLevel": 1,
+    "orderInGrade": 20,
+    "exampleWords": [
+      {
+        "word": "四个",
+        "wordTraditional": "四個",
+        "pinyin": "sì gè",
+        "meaning": "four (of)",
+        "ttsText": "四，四个的四"
+      }
+    ]
+  },
+  {
+    "simplified": "五",
+    "traditional": "五",
+    "pinyin": "wǔ",
+    "meaning": "five",
+    "gradeLevel": 1,
+    "orderInGrade": 21,
+    "exampleWords": [
+      {
+        "word": "五个",
+        "wordTraditional": "五個",
+        "pinyin": "wǔ gè",
+        "meaning": "five (of)",
+        "ttsText": "五，五个的五"
+      }
+    ]
+  },
+  {
+    "simplified": "六",
+    "traditional": "六",
+    "pinyin": "liù",
+    "meaning": "six",
+    "gradeLevel": 1,
+    "orderInGrade": 22,
+    "exampleWords": [
+      {
+        "word": "六个",
+        "wordTraditional": "六個",
+        "pinyin": "liù gè",
+        "meaning": "six (of)",
+        "ttsText": "六，六个的六"
+      }
+    ]
+  },
+  {
+    "simplified": "七",
+    "traditional": "七",
+    "pinyin": "qī",
+    "meaning": "seven",
+    "gradeLevel": 1,
+    "orderInGrade": 23,
+    "exampleWords": [
+      {
+        "word": "七个",
+        "wordTraditional": "七個",
+        "pinyin": "qī gè",
+        "meaning": "seven (of)",
+        "ttsText": "七，七个的七"
+      }
+    ]
+  },
+  {
+    "simplified": "九",
+    "traditional": "九",
+    "pinyin": "jiǔ",
+    "meaning": "nine",
+    "gradeLevel": 1,
+    "orderInGrade": 24,
+    "exampleWords": [
+      {
+        "word": "九个",
+        "wordTraditional": "九個",
+        "pinyin": "jiǔ gè",
+        "meaning": "nine (of)",
+        "ttsText": "九，九个的九"
+      }
+    ]
+  },
+  {
+    "simplified": "个",
+    "traditional": "個",
+    "pinyin": "gè",
+    "meaning": "measure word",
+    "gradeLevel": 1,
+    "orderInGrade": 25,
+    "exampleWords": [
+      {
+        "word": "一个",
+        "wordTraditional": "一個",
+        "pinyin": "yī gè",
+        "meaning": "one (of)",
+        "ttsText": "个，一个的个"
+      }
+    ]
+  },
+  {
+    "simplified": "月",
+    "traditional": "月",
+    "pinyin": "yuè",
+    "meaning": "moon; month",
+    "gradeLevel": 1,
+    "orderInGrade": 26,
+    "exampleWords": [
+      {
+        "word": "月亮",
+        "wordTraditional": "月亮",
+        "pinyin": "yuè liang",
+        "meaning": "moon",
+        "ttsText": "月，月亮的月"
+      }
+    ]
+  },
+  {
+    "simplified": "儿",
+    "traditional": "兒",
+    "pinyin": "ér",
+    "meaning": "child; son",
+    "gradeLevel": 1,
+    "orderInGrade": 27,
+    "exampleWords": [
+      {
+        "word": "儿子",
+        "wordTraditional": "兒子",
+        "pinyin": "ér zi",
+        "meaning": "son",
+        "ttsText": "儿，儿子的儿"
+      }
+    ]
+  },
+  {
+    "simplified": "头",
+    "traditional": "頭",
+    "pinyin": "tóu",
+    "meaning": "head",
+    "gradeLevel": 1,
+    "orderInGrade": 28,
+    "exampleWords": [
+      {
+        "word": "头发",
+        "wordTraditional": "頭髮",
+        "pinyin": "tóu fa",
+        "meaning": "hair",
+        "ttsText": "头，头发的头"
+      }
+    ]
+  },
+  {
+    "simplified": "里",
+    "traditional": "裡",
+    "pinyin": "lǐ",
+    "meaning": "inside",
+    "gradeLevel": 1,
+    "orderInGrade": 29,
+    "exampleWords": [
+      {
+        "word": "里面",
+        "wordTraditional": "裡面",
+        "pinyin": "lǐ miàn",
+        "meaning": "inside",
+        "ttsText": "里，里面的里"
+      }
+    ]
+  },
+  {
+    "simplified": "可",
+    "traditional": "可",
+    "pinyin": "kě",
+    "meaning": "may; can",
+    "gradeLevel": 1,
+    "orderInGrade": 30,
+    "exampleWords": [
+      {
+        "word": "可以",
+        "wordTraditional": "可以",
+        "pinyin": "kě yǐ",
+        "meaning": "can",
+        "ttsText": "可，可以的可"
+      }
+    ]
+  },
+  {
+    "simplified": "东",
+    "traditional": "東",
+    "pinyin": "dōng",
+    "meaning": "east",
+    "gradeLevel": 1,
+    "orderInGrade": 31,
+    "exampleWords": [
+      {
+        "word": "东方",
+        "wordTraditional": "東方",
+        "pinyin": "dōng fāng",
+        "meaning": "east",
+        "ttsText": "东，东方的东"
+      }
+    ]
+  },
+  {
+    "simplified": "西",
+    "traditional": "西",
+    "pinyin": "xī",
+    "meaning": "west",
+    "gradeLevel": 1,
+    "orderInGrade": 32,
+    "exampleWords": [
+      {
+        "word": "东西",
+        "wordTraditional": "東西",
+        "pinyin": "dōng xi",
+        "meaning": "thing",
+        "ttsText": "西，东西的西"
+      }
+    ]
+  },
+  {
+    "simplified": "是",
+    "traditional": "是",
+    "pinyin": "shì",
+    "meaning": "is; yes",
+    "gradeLevel": 1,
+    "orderInGrade": 33,
+    "exampleWords": [
+      {
+        "word": "不是",
+        "wordTraditional": "不是",
+        "pinyin": "bú shì",
+        "meaning": "is not",
+        "ttsText": "是，不是的是"
+      }
+    ]
+  },
+  {
+    "simplified": "不",
+    "traditional": "不",
+    "pinyin": "bù",
+    "meaning": "not",
+    "gradeLevel": 1,
+    "orderInGrade": 34,
+    "exampleWords": [
+      {
+        "word": "不好",
+        "wordTraditional": "不好",
+        "pinyin": "bù hǎo",
+        "meaning": "not good",
+        "ttsText": "不，不好的不"
+      }
+    ]
+  },
+  {
+    "simplified": "对",
+    "traditional": "對",
+    "pinyin": "duì",
+    "meaning": "correct",
+    "gradeLevel": 1,
+    "orderInGrade": 35,
+    "exampleWords": [
+      {
+        "word": "对不起",
+        "wordTraditional": "對不起",
+        "pinyin": "duì bu qǐ",
+        "meaning": "sorry",
+        "ttsText": "对，对不起的对"
+      }
+    ]
+  },
+  {
+    "simplified": "开",
+    "traditional": "開",
+    "pinyin": "kāi",
+    "meaning": "open",
+    "gradeLevel": 1,
+    "orderInGrade": 36,
+    "exampleWords": [
+      {
+        "word": "开心",
+        "wordTraditional": "開心",
+        "pinyin": "kāi xīn",
+        "meaning": "happy",
+        "ttsText": "开，开心的开"
+      }
+    ]
+  },
+  {
+    "simplified": "关",
+    "traditional": "關",
+    "pinyin": "guān",
+    "meaning": "close",
+    "gradeLevel": 1,
+    "orderInGrade": 37,
+    "exampleWords": [
+      {
+        "word": "关门",
+        "wordTraditional": "關門",
+        "pinyin": "guān mén",
+        "meaning": "close door",
+        "ttsText": "关，关门的关"
+      }
+    ]
+  },
+  {
+    "simplified": "正",
+    "traditional": "正",
+    "pinyin": "zhèng",
+    "meaning": "correct",
+    "gradeLevel": 1,
+    "orderInGrade": 38,
+    "exampleWords": [
+      {
+        "word": "正在",
+        "wordTraditional": "正在",
+        "pinyin": "zhèng zài",
+        "meaning": "currently",
+        "ttsText": "正，正在的正"
+      }
+    ]
+  },
+  {
+    "simplified": "反",
+    "traditional": "反",
+    "pinyin": "fǎn",
+    "meaning": "opposite",
+    "gradeLevel": 1,
+    "orderInGrade": 39,
+    "exampleWords": [
+      {
+        "word": "反面",
+        "wordTraditional": "反面",
+        "pinyin": "fǎn miàn",
+        "meaning": "reverse side",
+        "ttsText": "反，反面的反"
+      }
+    ]
+  },
+  {
+    "simplified": "王",
+    "traditional": "王",
+    "pinyin": "wáng",
+    "meaning": "king",
+    "gradeLevel": 1,
+    "orderInGrade": 40,
+    "exampleWords": [
+      {
+        "word": "国王",
+        "wordTraditional": "國王",
+        "pinyin": "guó wáng",
+        "meaning": "king",
+        "ttsText": "王，国王的王"
+      }
+    ]
+  },
+  {
+    "simplified": "石",
+    "traditional": "石",
+    "pinyin": "shí",
+    "meaning": "stone",
+    "gradeLevel": 1,
+    "orderInGrade": 41,
+    "exampleWords": [
+      {
+        "word": "石头",
+        "wordTraditional": "石頭",
+        "pinyin": "shí tou",
+        "meaning": "stone",
+        "ttsText": "石，石头的石"
+      }
+    ]
+  },
+  {
+    "simplified": "小",
+    "traditional": "小",
+    "pinyin": "xiǎo",
+    "meaning": "small",
+    "gradeLevel": 1,
+    "orderInGrade": 42,
+    "exampleWords": [
+      {
+        "word": "小心",
+        "wordTraditional": "小心",
+        "pinyin": "xiǎo xīn",
+        "meaning": "careful",
+        "ttsText": "小，小心的小"
+      }
+    ]
+  },
+  {
+    "simplified": "少",
+    "traditional": "少",
+    "pinyin": "shǎo",
+    "meaning": "few",
+    "gradeLevel": 1,
+    "orderInGrade": 43,
+    "exampleWords": [
+      {
+        "word": "多少",
+        "wordTraditional": "多少",
+        "pinyin": "duō shǎo",
+        "meaning": "how many",
+        "ttsText": "少，多少的少"
+      }
+    ]
+  },
+  {
+    "simplified": "刀",
+    "traditional": "刀",
+    "pinyin": "dāo",
+    "meaning": "knife",
+    "gradeLevel": 1,
+    "orderInGrade": 44,
+    "exampleWords": [
+      {
+        "word": "小刀",
+        "wordTraditional": "小刀",
+        "pinyin": "xiǎo dāo",
+        "meaning": "small knife",
+        "ttsText": "刀，小刀的刀"
+      }
+    ]
+  },
+  {
+    "simplified": "力",
+    "traditional": "力",
+    "pinyin": "lì",
+    "meaning": "power",
+    "gradeLevel": 1,
+    "orderInGrade": 45,
+    "exampleWords": [
+      {
+        "word": "力气",
+        "wordTraditional": "力氣",
+        "pinyin": "lì qi",
+        "meaning": "strength",
+        "ttsText": "力，力气的力"
+      }
+    ]
+  },
+  {
+    "simplified": "尺",
+    "traditional": "尺",
+    "pinyin": "chǐ",
+    "meaning": "ruler",
+    "gradeLevel": 1,
+    "orderInGrade": 46,
+    "exampleWords": [
+      {
+        "word": "尺子",
+        "wordTraditional": "尺子",
+        "pinyin": "chǐ zi",
+        "meaning": "ruler",
+        "ttsText": "尺，尺子的尺"
+      }
+    ]
+  },
+  {
+    "simplified": "本",
+    "traditional": "本",
+    "pinyin": "běn",
+    "meaning": "root; book",
+    "gradeLevel": 1,
+    "orderInGrade": 47,
+    "exampleWords": [
+      {
+        "word": "本子",
+        "wordTraditional": "本子",
+        "pinyin": "běn zi",
+        "meaning": "notebook",
+        "ttsText": "本，本子的本"
+      }
+    ]
+  },
+  {
+    "simplified": "文",
+    "traditional": "文",
+    "pinyin": "wén",
+    "meaning": "writing",
+    "gradeLevel": 1,
+    "orderInGrade": 48,
+    "exampleWords": [
+      {
+        "word": "语文",
+        "wordTraditional": "語文",
+        "pinyin": "yǔ wén",
+        "meaning": "Chinese class",
+        "ttsText": "文，语文的文"
+      }
+    ]
+  },
+  {
+    "simplified": "左",
+    "traditional": "左",
+    "pinyin": "zuǒ",
+    "meaning": "left",
+    "gradeLevel": 1,
+    "orderInGrade": 49,
+    "exampleWords": [
+      {
+        "word": "左边",
+        "wordTraditional": "左邊",
+        "pinyin": "zuǒ biān",
+        "meaning": "left side",
+        "ttsText": "左，左边的左"
+      }
+    ]
+  },
+  {
+    "simplified": "右",
+    "traditional": "右",
+    "pinyin": "yòu",
+    "meaning": "right",
+    "gradeLevel": 1,
+    "orderInGrade": 50,
+    "exampleWords": [
+      {
+        "word": "右边",
+        "wordTraditional": "右邊",
+        "pinyin": "yòu biān",
+        "meaning": "right side",
+        "ttsText": "右，右边的右"
+      }
+    ]
+  },
+  {
+    "simplified": "水",
+    "traditional": "水",
+    "pinyin": "shuǐ",
+    "meaning": "water",
+    "gradeLevel": 1,
+    "orderInGrade": 51,
+    "exampleWords": [
+      {
+        "word": "水果",
+        "wordTraditional": "水果",
+        "pinyin": "shuǐ guǒ",
+        "meaning": "fruit",
+        "ttsText": "水，水果的水"
+      }
+    ]
+  },
+  {
+    "simplified": "书",
+    "traditional": "書",
+    "pinyin": "shū",
+    "meaning": "book",
+    "gradeLevel": 1,
+    "orderInGrade": 52,
+    "exampleWords": [
+      {
+        "word": "读书",
+        "wordTraditional": "讀書",
+        "pinyin": "dú shū",
+        "meaning": "study",
+        "ttsText": "书，读书的书"
+      }
+    ]
+  },
+  {
+    "simplified": "来",
+    "traditional": "來",
+    "pinyin": "lái",
+    "meaning": "come",
+    "gradeLevel": 1,
+    "orderInGrade": 53,
+    "exampleWords": [
+      {
+        "word": "过来",
+        "wordTraditional": "過來",
+        "pinyin": "guò lái",
+        "meaning": "come over",
+        "ttsText": "来，过来的来"
+      }
+    ]
+  },
+  {
+    "simplified": "回",
+    "traditional": "回",
+    "pinyin": "huí",
+    "meaning": "return",
+    "gradeLevel": 1,
+    "orderInGrade": 54,
+    "exampleWords": [
+      {
+        "word": "回家",
+        "wordTraditional": "回家",
+        "pinyin": "huí jiā",
+        "meaning": "go home",
+        "ttsText": "回，回家的回"
+      }
+    ]
+  },
+  {
+    "simplified": "片",
+    "traditional": "片",
+    "pinyin": "piàn",
+    "meaning": "piece",
+    "gradeLevel": 1,
+    "orderInGrade": 55,
+    "exampleWords": [
+      {
+        "word": "一片",
+        "wordTraditional": "一片",
+        "pinyin": "yī piàn",
+        "meaning": "a piece",
+        "ttsText": "片，一片的片"
+      }
+    ]
+  },
+  {
+    "simplified": "皮",
+    "traditional": "皮",
+    "pinyin": "pí",
+    "meaning": "skin",
+    "gradeLevel": 1,
+    "orderInGrade": 56,
+    "exampleWords": [
+      {
+        "word": "皮球",
+        "wordTraditional": "皮球",
+        "pinyin": "pí qiú",
+        "meaning": "ball",
+        "ttsText": "皮，皮球的皮"
+      }
+    ]
+  },
+  {
+    "simplified": "生",
+    "traditional": "生",
+    "pinyin": "shēng",
+    "meaning": "life; birth",
+    "gradeLevel": 1,
+    "orderInGrade": 57,
+    "exampleWords": [
+      {
+        "word": "学生",
+        "wordTraditional": "學生",
+        "pinyin": "xué shēng",
+        "meaning": "student",
+        "ttsText": "生，学生的生"
+      }
+    ]
+  },
+  {
+    "simplified": "果",
+    "traditional": "果",
+    "pinyin": "guǒ",
+    "meaning": "fruit",
+    "gradeLevel": 1,
+    "orderInGrade": 58,
+    "exampleWords": [
+      {
+        "word": "水果",
+        "wordTraditional": "水果",
+        "pinyin": "shuǐ guǒ",
+        "meaning": "fruit",
+        "ttsText": "果，水果的果"
+      }
+    ]
+  },
+  {
+    "simplified": "几",
+    "traditional": "幾",
+    "pinyin": "jǐ",
+    "meaning": "how many",
+    "gradeLevel": 1,
+    "orderInGrade": 59,
+    "exampleWords": [
+      {
+        "word": "几个",
+        "wordTraditional": "幾個",
+        "pinyin": "jǐ gè",
+        "meaning": "how many",
+        "ttsText": "几，几个的几"
+      }
+    ]
+  },
+  {
+    "simplified": "用",
+    "traditional": "用",
+    "pinyin": "yòng",
+    "meaning": "use",
+    "gradeLevel": 1,
+    "orderInGrade": 60,
+    "exampleWords": [
+      {
+        "word": "用心",
+        "wordTraditional": "用心",
+        "pinyin": "yòng xīn",
+        "meaning": "attentive",
+        "ttsText": "用，用心的用"
+      }
+    ]
+  },
+  {
+    "simplified": "鱼",
+    "traditional": "魚",
+    "pinyin": "yú",
+    "meaning": "fish",
+    "gradeLevel": 1,
+    "orderInGrade": 61,
+    "exampleWords": [
+      {
+        "word": "小鱼",
+        "wordTraditional": "小魚",
+        "pinyin": "xiǎo yú",
+        "meaning": "small fish",
+        "ttsText": "鱼，小鱼的鱼"
+      }
+    ]
+  },
+  {
+    "simplified": "今",
+    "traditional": "今",
+    "pinyin": "jīn",
+    "meaning": "today",
+    "gradeLevel": 1,
+    "orderInGrade": 62,
+    "exampleWords": [
+      {
+        "word": "今天",
+        "wordTraditional": "今天",
+        "pinyin": "jīn tiān",
+        "meaning": "today",
+        "ttsText": "今，今天的今"
+      }
+    ]
+  },
+  {
+    "simplified": "长",
+    "traditional": "長",
+    "pinyin": "cháng",
+    "meaning": "long",
+    "gradeLevel": 1,
+    "orderInGrade": 63,
+    "exampleWords": [
+      {
+        "word": "长大",
+        "wordTraditional": "長大",
+        "pinyin": "zhǎng dà",
+        "meaning": "grow up",
+        "ttsText": "长，长大的长"
+      }
+    ]
+  },
+  {
+    "simplified": "方",
+    "traditional": "方",
+    "pinyin": "fāng",
+    "meaning": "square",
+    "gradeLevel": 1,
+    "orderInGrade": 64,
+    "exampleWords": [
+      {
+        "word": "方向",
+        "wordTraditional": "方向",
+        "pinyin": "fāng xiàng",
+        "meaning": "direction",
+        "ttsText": "方，方向的方"
+      }
+    ]
+  },
+  {
+    "simplified": "半",
+    "traditional": "半",
+    "pinyin": "bàn",
+    "meaning": "half",
+    "gradeLevel": 1,
+    "orderInGrade": 65,
+    "exampleWords": [
+      {
+        "word": "一半",
+        "wordTraditional": "一半",
+        "pinyin": "yī bàn",
+        "meaning": "half",
+        "ttsText": "半，一半的半"
+      }
+    ]
+  },
+  {
+    "simplified": "巴",
+    "traditional": "巴",
+    "pinyin": "bā",
+    "meaning": "hope",
+    "gradeLevel": 1,
+    "orderInGrade": 66,
+    "exampleWords": [
+      {
+        "word": "尾巴",
+        "wordTraditional": "尾巴",
+        "pinyin": "wěi ba",
+        "meaning": "tail",
+        "ttsText": "巴，尾巴的巴"
+      }
+    ]
+  },
+  {
+    "simplified": "把",
+    "traditional": "把",
+    "pinyin": "bǎ",
+    "meaning": "hold",
+    "gradeLevel": 1,
+    "orderInGrade": 67,
+    "exampleWords": [
+      {
+        "word": "把手",
+        "wordTraditional": "把手",
+        "pinyin": "bǎ shǒu",
+        "meaning": "handle",
+        "ttsText": "把，把手的把"
+      }
+    ]
+  },
+  {
+    "simplified": "下",
+    "traditional": "下",
+    "pinyin": "xià",
+    "meaning": "down",
+    "gradeLevel": 1,
+    "orderInGrade": 68,
+    "exampleWords": [
+      {
+        "word": "下面",
+        "wordTraditional": "下面",
+        "pinyin": "xià miàn",
+        "meaning": "below",
+        "ttsText": "下，下面的下"
+      }
+    ]
+  },
+  {
+    "simplified": "门",
+    "traditional": "門",
+    "pinyin": "mén",
+    "meaning": "door",
+    "gradeLevel": 1,
+    "orderInGrade": 69,
+    "exampleWords": [
+      {
+        "word": "开门",
+        "wordTraditional": "開門",
+        "pinyin": "kāi mén",
+        "meaning": "open door",
+        "ttsText": "门，开门的门"
+      }
+    ]
+  },
+  {
+    "simplified": "们",
+    "traditional": "們",
+    "pinyin": "men",
+    "meaning": "plural",
+    "gradeLevel": 1,
+    "orderInGrade": 70,
+    "exampleWords": [
+      {
+        "word": "我们",
+        "wordTraditional": "我們",
+        "pinyin": "wǒ men",
+        "meaning": "we",
+        "ttsText": "们，我们的们"
+      }
+    ]
+  },
+  {
+    "simplified": "你",
+    "traditional": "你",
+    "pinyin": "nǐ",
+    "meaning": "you",
+    "gradeLevel": 1,
+    "orderInGrade": 71,
+    "exampleWords": [
+      {
+        "word": "你好",
+        "wordTraditional": "你好",
+        "pinyin": "nǐ hǎo",
+        "meaning": "hello",
+        "ttsText": "你，你好的你"
+      }
+    ]
+  },
+  {
+    "simplified": "我",
+    "traditional": "我",
+    "pinyin": "wǒ",
+    "meaning": "I; me",
+    "gradeLevel": 1,
+    "orderInGrade": 72,
+    "exampleWords": [
+      {
+        "word": "我们",
+        "wordTraditional": "我們",
+        "pinyin": "wǒ men",
+        "meaning": "we",
+        "ttsText": "我，我们的我"
+      }
+    ]
+  },
+  {
+    "simplified": "他",
+    "traditional": "他",
+    "pinyin": "tā",
+    "meaning": "he",
+    "gradeLevel": 1,
+    "orderInGrade": 73,
+    "exampleWords": [
+      {
+        "word": "他们",
+        "wordTraditional": "他們",
+        "pinyin": "tā men",
+        "meaning": "they",
+        "ttsText": "他，他们的他"
+      }
+    ]
+  },
+  {
+    "simplified": "她",
+    "traditional": "她",
+    "pinyin": "tā",
+    "meaning": "she",
+    "gradeLevel": 1,
+    "orderInGrade": 74,
+    "exampleWords": [
+      {
+        "word": "她们",
+        "wordTraditional": "她們",
+        "pinyin": "tā men",
+        "meaning": "they (f)",
+        "ttsText": "她，她们的她"
+      }
+    ]
+  },
+  {
+    "simplified": "白",
+    "traditional": "白",
+    "pinyin": "bái",
+    "meaning": "white",
+    "gradeLevel": 1,
+    "orderInGrade": 75,
+    "exampleWords": [
+      {
+        "word": "白色",
+        "wordTraditional": "白色",
+        "pinyin": "bái sè",
+        "meaning": "white",
+        "ttsText": "白，白色的白"
+      }
+    ]
+  },
+  {
+    "simplified": "的",
+    "traditional": "的",
+    "pinyin": "de",
+    "meaning": "(particle)",
+    "gradeLevel": 1,
+    "orderInGrade": 76,
+    "exampleWords": [
+      {
+        "word": "我的",
+        "wordTraditional": "我的",
+        "pinyin": "wǒ de",
+        "meaning": "my",
+        "ttsText": "的，我的的的"
+      }
+    ]
+  },
+  {
+    "simplified": "了",
+    "traditional": "了",
+    "pinyin": "le",
+    "meaning": "(particle)",
+    "gradeLevel": 1,
+    "orderInGrade": 77,
+    "exampleWords": [
+      {
+        "word": "好了",
+        "wordTraditional": "好了",
+        "pinyin": "hǎo le",
+        "meaning": "done",
+        "ttsText": "了，好了的了"
+      }
+    ]
+  },
+  {
+    "simplified": "又",
+    "traditional": "又",
+    "pinyin": "yòu",
+    "meaning": "again",
+    "gradeLevel": 1,
+    "orderInGrade": 78,
+    "exampleWords": [
+      {
+        "word": "又大又圆",
+        "wordTraditional": "又大又圓",
+        "pinyin": "yòu dà yòu yuán",
+        "meaning": "big and round",
+        "ttsText": "又，又大又圆的又"
+      }
+    ]
+  },
+  {
+    "simplified": "和",
+    "traditional": "和",
+    "pinyin": "hé",
+    "meaning": "and",
+    "gradeLevel": 1,
+    "orderInGrade": 79,
+    "exampleWords": [
+      {
+        "word": "和平",
+        "wordTraditional": "和平",
+        "pinyin": "hé píng",
+        "meaning": "peace",
+        "ttsText": "和，和平的和"
+      }
+    ]
+  },
+  {
+    "simplified": "在",
+    "traditional": "在",
+    "pinyin": "zài",
+    "meaning": "at; in",
+    "gradeLevel": 1,
+    "orderInGrade": 80,
+    "exampleWords": [
+      {
+        "word": "在家",
+        "wordTraditional": "在家",
+        "pinyin": "zài jiā",
+        "meaning": "at home",
+        "ttsText": "在，在家的在"
+      }
+    ]
+  },
+  {
+    "simplified": "有",
+    "traditional": "有",
+    "pinyin": "yǒu",
+    "meaning": "have",
+    "gradeLevel": 1,
+    "orderInGrade": 81,
+    "exampleWords": [
+      {
+        "word": "没有",
+        "wordTraditional": "沒有",
+        "pinyin": "méi yǒu",
+        "meaning": "don't have",
+        "ttsText": "有，没有的有"
+      }
+    ]
+  },
+  {
+    "simplified": "子",
+    "traditional": "子",
+    "pinyin": "zǐ",
+    "meaning": "child",
+    "gradeLevel": 1,
+    "orderInGrade": 82,
+    "exampleWords": [
+      {
+        "word": "孩子",
+        "wordTraditional": "孩子",
+        "pinyin": "hái zi",
+        "meaning": "child",
+        "ttsText": "子，孩子的子"
+      }
+    ]
+  },
+  {
+    "simplified": "也",
+    "traditional": "也",
+    "pinyin": "yě",
+    "meaning": "also",
+    "gradeLevel": 1,
+    "orderInGrade": 83,
+    "exampleWords": [
+      {
+        "word": "也是",
+        "wordTraditional": "也是",
+        "pinyin": "yě shì",
+        "meaning": "also is",
+        "ttsText": "也，也是的也"
+      }
+    ]
+  },
+  {
+    "simplified": "么",
+    "traditional": "麼",
+    "pinyin": "me",
+    "meaning": "(suffix)",
+    "gradeLevel": 1,
+    "orderInGrade": 84,
+    "exampleWords": [
+      {
+        "word": "什么",
+        "wordTraditional": "什麼",
+        "pinyin": "shén me",
+        "meaning": "what",
+        "ttsText": "么，什么的么"
+      }
+    ]
+  },
+  {
+    "simplified": "多",
+    "traditional": "多",
+    "pinyin": "duō",
+    "meaning": "many",
+    "gradeLevel": 1,
+    "orderInGrade": 85,
+    "exampleWords": [
+      {
+        "word": "多少",
+        "wordTraditional": "多少",
+        "pinyin": "duō shǎo",
+        "meaning": "how many",
+        "ttsText": "多，多少的多"
+      }
+    ]
+  },
+  {
+    "simplified": "出",
+    "traditional": "出",
+    "pinyin": "chū",
+    "meaning": "go out",
+    "gradeLevel": 1,
+    "orderInGrade": 86,
+    "exampleWords": [
+      {
+        "word": "出去",
+        "wordTraditional": "出去",
+        "pinyin": "chū qù",
+        "meaning": "go out",
+        "ttsText": "出，出去的出"
+      }
+    ]
+  },
+  {
+    "simplified": "见",
+    "traditional": "見",
+    "pinyin": "jiàn",
+    "meaning": "see",
+    "gradeLevel": 1,
+    "orderInGrade": 87,
+    "exampleWords": [
+      {
+        "word": "看见",
+        "wordTraditional": "看見",
+        "pinyin": "kàn jiàn",
+        "meaning": "see",
+        "ttsText": "见，看见的见"
+      }
+    ]
+  },
+  {
+    "simplified": "两",
+    "traditional": "兩",
+    "pinyin": "liǎng",
+    "meaning": "two (of)",
+    "gradeLevel": 1,
+    "orderInGrade": 88,
+    "exampleWords": [
+      {
+        "word": "两个",
+        "wordTraditional": "兩個",
+        "pinyin": "liǎng gè",
+        "meaning": "two (of)",
+        "ttsText": "两，两个的两"
+      }
+    ]
+  },
+  {
+    "simplified": "就",
+    "traditional": "就",
+    "pinyin": "jiù",
+    "meaning": "then",
+    "gradeLevel": 1,
+    "orderInGrade": 89,
+    "exampleWords": [
+      {
+        "word": "就是",
+        "wordTraditional": "就是",
+        "pinyin": "jiù shì",
+        "meaning": "precisely",
+        "ttsText": "就，就是的就"
+      }
+    ]
+  },
+  {
+    "simplified": "竹",
+    "traditional": "竹",
+    "pinyin": "zhú",
+    "meaning": "bamboo",
+    "gradeLevel": 1,
+    "orderInGrade": 90,
+    "exampleWords": [
+      {
+        "word": "竹子",
+        "wordTraditional": "竹子",
+        "pinyin": "zhú zi",
+        "meaning": "bamboo",
+        "ttsText": "竹，竹子的竹"
+      }
+    ]
+  },
+  {
+    "simplified": "春",
+    "traditional": "春",
+    "pinyin": "chūn",
+    "meaning": "spring",
+    "gradeLevel": 2,
+    "orderInGrade": 0,
+    "exampleWords": [
+      {
+        "word": "春天",
+        "wordTraditional": "春天",
+        "pinyin": "chūn tiān",
+        "meaning": "spring",
+        "ttsText": "春，春天的春"
+      }
+    ]
+  },
+  {
+    "simplified": "冬",
+    "traditional": "冬",
+    "pinyin": "dōng",
+    "meaning": "winter",
+    "gradeLevel": 2,
+    "orderInGrade": 1,
+    "exampleWords": [
+      {
+        "word": "冬天",
+        "wordTraditional": "冬天",
+        "pinyin": "dōng tiān",
+        "meaning": "winter",
+        "ttsText": "冬，冬天的冬"
+      }
+    ]
+  },
+  {
+    "simplified": "风",
+    "traditional": "風",
+    "pinyin": "fēng",
+    "meaning": "wind",
+    "gradeLevel": 2,
+    "orderInGrade": 2,
+    "exampleWords": [
+      {
+        "word": "大风",
+        "wordTraditional": "大風",
+        "pinyin": "dà fēng",
+        "meaning": "strong wind",
+        "ttsText": "风，大风的风"
+      }
+    ]
+  },
+  {
+    "simplified": "花",
+    "traditional": "花",
+    "pinyin": "huā",
+    "meaning": "flower",
+    "gradeLevel": 2,
+    "orderInGrade": 3,
+    "exampleWords": [
+      {
+        "word": "花朵",
+        "wordTraditional": "花朵",
+        "pinyin": "huā duǒ",
+        "meaning": "flower",
+        "ttsText": "花，花朵的花"
+      }
+    ]
+  },
+  {
+    "simplified": "飞",
+    "traditional": "飛",
+    "pinyin": "fēi",
+    "meaning": "fly",
+    "gradeLevel": 2,
+    "orderInGrade": 4,
+    "exampleWords": [
+      {
+        "word": "飞机",
+        "wordTraditional": "飛機",
+        "pinyin": "fēi jī",
+        "meaning": "airplane",
+        "ttsText": "飞，飞机的飞"
+      }
+    ]
+  },
+  {
+    "simplified": "入",
+    "traditional": "入",
+    "pinyin": "rù",
+    "meaning": "enter",
+    "gradeLevel": 2,
+    "orderInGrade": 5,
+    "exampleWords": [
+      {
+        "word": "进入",
+        "wordTraditional": "進入",
+        "pinyin": "jìn rù",
+        "meaning": "enter",
+        "ttsText": "入，进入的入"
+      }
+    ]
+  },
+  {
+    "simplified": "姓",
+    "traditional": "姓",
+    "pinyin": "xìng",
+    "meaning": "surname",
+    "gradeLevel": 2,
+    "orderInGrade": 6,
+    "exampleWords": [
+      {
+        "word": "姓名",
+        "wordTraditional": "姓名",
+        "pinyin": "xìng míng",
+        "meaning": "full name",
+        "ttsText": "姓，姓名的姓"
+      }
+    ]
+  },
+  {
+    "simplified": "什",
+    "traditional": "什",
+    "pinyin": "shén",
+    "meaning": "what",
+    "gradeLevel": 2,
+    "orderInGrade": 7,
+    "exampleWords": [
+      {
+        "word": "什么",
+        "wordTraditional": "什麼",
+        "pinyin": "shén me",
+        "meaning": "what",
+        "ttsText": "什，什么的什"
+      }
+    ]
+  },
+  {
+    "simplified": "双",
+    "traditional": "雙",
+    "pinyin": "shuāng",
+    "meaning": "pair",
+    "gradeLevel": 2,
+    "orderInGrade": 8,
+    "exampleWords": [
+      {
+        "word": "一双",
+        "wordTraditional": "一雙",
+        "pinyin": "yī shuāng",
+        "meaning": "a pair",
+        "ttsText": "双，一双的双"
+      }
+    ]
+  },
+  {
+    "simplified": "国",
+    "traditional": "國",
+    "pinyin": "guó",
+    "meaning": "country",
+    "gradeLevel": 2,
+    "orderInGrade": 9,
+    "exampleWords": [
+      {
+        "word": "中国",
+        "wordTraditional": "中國",
+        "pinyin": "zhōng guó",
+        "meaning": "China",
+        "ttsText": "国，中国的国"
+      }
+    ]
+  },
+  {
+    "simplified": "青",
+    "traditional": "青",
+    "pinyin": "qīng",
+    "meaning": "green/blue",
+    "gradeLevel": 2,
+    "orderInGrade": 11,
+    "exampleWords": [
+      {
+        "word": "青草",
+        "wordTraditional": "青草",
+        "pinyin": "qīng cǎo",
+        "meaning": "green grass",
+        "ttsText": "青，青草的青"
+      }
+    ]
+  },
+  {
+    "simplified": "清",
+    "traditional": "清",
+    "pinyin": "qīng",
+    "meaning": "clear",
+    "gradeLevel": 2,
+    "orderInGrade": 12,
+    "exampleWords": [
+      {
+        "word": "清水",
+        "wordTraditional": "清水",
+        "pinyin": "qīng shuǐ",
+        "meaning": "clear water",
+        "ttsText": "清，清水的清"
+      }
+    ]
+  },
+  {
+    "simplified": "气",
+    "traditional": "氣",
+    "pinyin": "qì",
+    "meaning": "air",
+    "gradeLevel": 2,
+    "orderInGrade": 13,
+    "exampleWords": [
+      {
+        "word": "天气",
+        "wordTraditional": "天氣",
+        "pinyin": "tiān qì",
+        "meaning": "weather",
+        "ttsText": "气，天气的气"
+      }
+    ]
+  },
+  {
+    "simplified": "晴",
+    "traditional": "晴",
+    "pinyin": "qíng",
+    "meaning": "sunny",
+    "gradeLevel": 2,
+    "orderInGrade": 14,
+    "exampleWords": [
+      {
+        "word": "晴天",
+        "wordTraditional": "晴天",
+        "pinyin": "qíng tiān",
+        "meaning": "sunny day",
+        "ttsText": "晴，晴天的晴"
+      }
+    ]
+  },
+  {
+    "simplified": "情",
+    "traditional": "情",
+    "pinyin": "qíng",
+    "meaning": "feeling",
+    "gradeLevel": 2,
+    "orderInGrade": 15,
+    "exampleWords": [
+      {
+        "word": "心情",
+        "wordTraditional": "心情",
+        "pinyin": "xīn qíng",
+        "meaning": "mood",
+        "ttsText": "情，心情的情"
+      }
+    ]
+  },
+  {
+    "simplified": "请",
+    "traditional": "請",
+    "pinyin": "qǐng",
+    "meaning": "please",
+    "gradeLevel": 2,
+    "orderInGrade": 16,
+    "exampleWords": [
+      {
+        "word": "请问",
+        "wordTraditional": "請問",
+        "pinyin": "qǐng wèn",
+        "meaning": "excuse me",
+        "ttsText": "请，请问的请"
+      }
+    ]
+  },
+  {
+    "simplified": "字",
+    "traditional": "字",
+    "pinyin": "zì",
+    "meaning": "character",
+    "gradeLevel": 2,
+    "orderInGrade": 17,
+    "exampleWords": [
+      {
+        "word": "写字",
+        "wordTraditional": "寫字",
+        "pinyin": "xiě zì",
+        "meaning": "write",
+        "ttsText": "字，写字的字"
+      }
+    ]
+  },
+  {
+    "simplified": "红",
+    "traditional": "紅",
+    "pinyin": "hóng",
+    "meaning": "red",
+    "gradeLevel": 2,
+    "orderInGrade": 18,
+    "exampleWords": [
+      {
+        "word": "红色",
+        "wordTraditional": "紅色",
+        "pinyin": "hóng sè",
+        "meaning": "red",
+        "ttsText": "红，红色的红"
+      }
+    ]
+  },
+  {
+    "simplified": "时",
+    "traditional": "時",
+    "pinyin": "shí",
+    "meaning": "time",
+    "gradeLevel": 2,
+    "orderInGrade": 19,
+    "exampleWords": [
+      {
+        "word": "时间",
+        "wordTraditional": "時間",
+        "pinyin": "shí jiān",
+        "meaning": "time",
+        "ttsText": "时，时间的时"
+      }
+    ]
+  },
+  {
+    "simplified": "动",
+    "traditional": "動",
+    "pinyin": "dòng",
+    "meaning": "move",
+    "gradeLevel": 2,
+    "orderInGrade": 20,
+    "exampleWords": [
+      {
+        "word": "运动",
+        "wordTraditional": "運動",
+        "pinyin": "yùn dòng",
+        "meaning": "exercise",
+        "ttsText": "动，运动的动"
+      }
+    ]
+  },
+  {
+    "simplified": "万",
+    "traditional": "萬",
+    "pinyin": "wàn",
+    "meaning": "ten thousand",
+    "gradeLevel": 2,
+    "orderInGrade": 21,
+    "exampleWords": [
+      {
+        "word": "一万",
+        "wordTraditional": "一萬",
+        "pinyin": "yī wàn",
+        "meaning": "10,000",
+        "ttsText": "万，一万的万"
+      }
+    ]
+  },
+  {
+    "simplified": "吃",
+    "traditional": "吃",
+    "pinyin": "chī",
+    "meaning": "eat",
+    "gradeLevel": 2,
+    "orderInGrade": 22,
+    "exampleWords": [
+      {
+        "word": "吃饭",
+        "wordTraditional": "吃飯",
+        "pinyin": "chī fàn",
+        "meaning": "eat rice",
+        "ttsText": "吃，吃饭的吃"
+      }
+    ]
+  },
+  {
+    "simplified": "叫",
+    "traditional": "叫",
+    "pinyin": "jiào",
+    "meaning": "call",
+    "gradeLevel": 2,
+    "orderInGrade": 23,
+    "exampleWords": [
+      {
+        "word": "叫做",
+        "wordTraditional": "叫做",
+        "pinyin": "jiào zuò",
+        "meaning": "called",
+        "ttsText": "叫，叫做的叫"
+      }
+    ]
+  },
+  {
+    "simplified": "主",
+    "traditional": "主",
+    "pinyin": "zhǔ",
+    "meaning": "master",
+    "gradeLevel": 2,
+    "orderInGrade": 24,
+    "exampleWords": [
+      {
+        "word": "主人",
+        "wordTraditional": "主人",
+        "pinyin": "zhǔ rén",
+        "meaning": "master",
+        "ttsText": "主，主人的主"
+      }
+    ]
+  },
+  {
+    "simplified": "江",
+    "traditional": "江",
+    "pinyin": "jiāng",
+    "meaning": "river",
+    "gradeLevel": 2,
+    "orderInGrade": 25,
+    "exampleWords": [
+      {
+        "word": "长江",
+        "wordTraditional": "長江",
+        "pinyin": "cháng jiāng",
+        "meaning": "Yangtze",
+        "ttsText": "江，长江的江"
+      }
+    ]
+  },
+  {
+    "simplified": "住",
+    "traditional": "住",
+    "pinyin": "zhù",
+    "meaning": "live",
+    "gradeLevel": 2,
+    "orderInGrade": 26,
+    "exampleWords": [
+      {
+        "word": "住在",
+        "wordTraditional": "住在",
+        "pinyin": "zhù zài",
+        "meaning": "live at",
+        "ttsText": "住，住在的住"
+      }
+    ]
+  },
+  {
+    "simplified": "没",
+    "traditional": "沒",
+    "pinyin": "méi",
+    "meaning": "not have",
+    "gradeLevel": 2,
+    "orderInGrade": 27,
+    "exampleWords": [
+      {
+        "word": "没有",
+        "wordTraditional": "沒有",
+        "pinyin": "méi yǒu",
+        "meaning": "don't have",
+        "ttsText": "没，没有的没"
+      }
+    ]
+  },
+  {
+    "simplified": "以",
+    "traditional": "以",
+    "pinyin": "yǐ",
+    "meaning": "with; by",
+    "gradeLevel": 2,
+    "orderInGrade": 28,
+    "exampleWords": [
+      {
+        "word": "可以",
+        "wordTraditional": "可以",
+        "pinyin": "kě yǐ",
+        "meaning": "can",
+        "ttsText": "以，可以的以"
+      }
+    ]
+  },
+  {
+    "simplified": "会",
+    "traditional": "會",
+    "pinyin": "huì",
+    "meaning": "can; meet",
+    "gradeLevel": 2,
+    "orderInGrade": 29,
+    "exampleWords": [
+      {
+        "word": "学会",
+        "wordTraditional": "學會",
+        "pinyin": "xué huì",
+        "meaning": "learn",
+        "ttsText": "会，学会的会"
+      }
+    ]
+  },
+  {
+    "simplified": "走",
+    "traditional": "走",
+    "pinyin": "zǒu",
+    "meaning": "walk",
+    "gradeLevel": 2,
+    "orderInGrade": 30,
+    "exampleWords": [
+      {
+        "word": "走路",
+        "wordTraditional": "走路",
+        "pinyin": "zǒu lù",
+        "meaning": "walk",
+        "ttsText": "走，走路的走"
+      }
+    ]
+  },
+  {
+    "simplified": "北",
+    "traditional": "北",
+    "pinyin": "běi",
+    "meaning": "north",
+    "gradeLevel": 2,
+    "orderInGrade": 31,
+    "exampleWords": [
+      {
+        "word": "北方",
+        "wordTraditional": "北方",
+        "pinyin": "běi fāng",
+        "meaning": "north",
+        "ttsText": "北，北方的北"
+      }
+    ]
+  },
+  {
+    "simplified": "京",
+    "traditional": "京",
+    "pinyin": "jīng",
+    "meaning": "capital",
+    "gradeLevel": 2,
+    "orderInGrade": 32,
+    "exampleWords": [
+      {
+        "word": "北京",
+        "wordTraditional": "北京",
+        "pinyin": "běi jīng",
+        "meaning": "Beijing",
+        "ttsText": "京，北京的京"
+      }
+    ]
+  },
+  {
+    "simplified": "广",
+    "traditional": "廣",
+    "pinyin": "guǎng",
+    "meaning": "wide",
+    "gradeLevel": 2,
+    "orderInGrade": 33,
+    "exampleWords": [
+      {
+        "word": "广大",
+        "wordTraditional": "廣大",
+        "pinyin": "guǎng dà",
+        "meaning": "vast",
+        "ttsText": "广，广大的广"
+      }
+    ]
+  },
+  {
+    "simplified": "过",
+    "traditional": "過",
+    "pinyin": "guò",
+    "meaning": "pass",
+    "gradeLevel": 2,
+    "orderInGrade": 34,
+    "exampleWords": [
+      {
+        "word": "过去",
+        "wordTraditional": "過去",
+        "pinyin": "guò qù",
+        "meaning": "past",
+        "ttsText": "过，过去的过"
+      }
+    ]
+  },
+  {
+    "simplified": "各",
+    "traditional": "各",
+    "pinyin": "gè",
+    "meaning": "each",
+    "gradeLevel": 2,
+    "orderInGrade": 35,
+    "exampleWords": [
+      {
+        "word": "各种",
+        "wordTraditional": "各種",
+        "pinyin": "gè zhǒng",
+        "meaning": "various",
+        "ttsText": "各，各种的各"
+      }
+    ]
+  },
+  {
+    "simplified": "种",
+    "traditional": "種",
+    "pinyin": "zhǒng",
+    "meaning": "kind",
+    "gradeLevel": 2,
+    "orderInGrade": 36,
+    "exampleWords": [
+      {
+        "word": "种子",
+        "wordTraditional": "種子",
+        "pinyin": "zhǒng zi",
+        "meaning": "seed",
+        "ttsText": "种，种子的种"
+      }
+    ]
+  },
+  {
+    "simplified": "样",
+    "traditional": "樣",
+    "pinyin": "yàng",
+    "meaning": "manner",
+    "gradeLevel": 2,
+    "orderInGrade": 37,
+    "exampleWords": [
+      {
+        "word": "一样",
+        "wordTraditional": "一樣",
+        "pinyin": "yī yàng",
+        "meaning": "same",
+        "ttsText": "样，一样的样"
+      }
+    ]
+  },
+  {
+    "simplified": "伙",
+    "traditional": "夥",
+    "pinyin": "huǒ",
+    "meaning": "partner",
+    "gradeLevel": 2,
+    "orderInGrade": 38,
+    "exampleWords": [
+      {
+        "word": "伙伴",
+        "wordTraditional": "夥伴",
+        "pinyin": "huǒ bàn",
+        "meaning": "partner",
+        "ttsText": "伙，伙伴的伙"
+      }
+    ]
+  },
+  {
+    "simplified": "伴",
+    "traditional": "伴",
+    "pinyin": "bàn",
+    "meaning": "companion",
+    "gradeLevel": 2,
+    "orderInGrade": 39,
+    "exampleWords": [
+      {
+        "word": "伙伴",
+        "wordTraditional": "夥伴",
+        "pinyin": "huǒ bàn",
+        "meaning": "partner",
+        "ttsText": "伴，伙伴的伴"
+      }
+    ]
+  },
+  {
+    "simplified": "这",
+    "traditional": "這",
+    "pinyin": "zhè",
+    "meaning": "this",
+    "gradeLevel": 2,
+    "orderInGrade": 40,
+    "exampleWords": [
+      {
+        "word": "这个",
+        "wordTraditional": "這個",
+        "pinyin": "zhè gè",
+        "meaning": "this one",
+        "ttsText": "这，这个的这"
+      }
+    ]
+  },
+  {
+    "simplified": "太",
+    "traditional": "太",
+    "pinyin": "tài",
+    "meaning": "too",
+    "gradeLevel": 2,
+    "orderInGrade": 41,
+    "exampleWords": [
+      {
+        "word": "太阳",
+        "wordTraditional": "太陽",
+        "pinyin": "tài yáng",
+        "meaning": "sun",
+        "ttsText": "太，太阳的太"
+      }
+    ]
+  },
+  {
+    "simplified": "阳",
+    "traditional": "陽",
+    "pinyin": "yáng",
+    "meaning": "sun",
+    "gradeLevel": 2,
+    "orderInGrade": 42,
+    "exampleWords": [
+      {
+        "word": "太阳",
+        "wordTraditional": "太陽",
+        "pinyin": "tài yáng",
+        "meaning": "sun",
+        "ttsText": "阳，太阳的阳"
+      }
+    ]
+  },
+  {
+    "simplified": "校",
+    "traditional": "校",
+    "pinyin": "xiào",
+    "meaning": "school",
+    "gradeLevel": 2,
+    "orderInGrade": 43,
+    "exampleWords": [
+      {
+        "word": "学校",
+        "wordTraditional": "學校",
+        "pinyin": "xué xiào",
+        "meaning": "school",
+        "ttsText": "校，学校的校"
+      }
+    ]
+  },
+  {
+    "simplified": "金",
+    "traditional": "金",
+    "pinyin": "jīn",
+    "meaning": "gold",
+    "gradeLevel": 2,
+    "orderInGrade": 44,
+    "exampleWords": [
+      {
+        "word": "金色",
+        "wordTraditional": "金色",
+        "pinyin": "jīn sè",
+        "meaning": "golden",
+        "ttsText": "金，金色的金"
+      }
+    ]
+  },
+  {
+    "simplified": "秋",
+    "traditional": "秋",
+    "pinyin": "qiū",
+    "meaning": "autumn",
+    "gradeLevel": 2,
+    "orderInGrade": 45,
+    "exampleWords": [
+      {
+        "word": "秋天",
+        "wordTraditional": "秋天",
+        "pinyin": "qiū tiān",
+        "meaning": "autumn",
+        "ttsText": "秋，秋天的秋"
+      }
+    ]
+  },
+  {
+    "simplified": "因",
+    "traditional": "因",
+    "pinyin": "yīn",
+    "meaning": "because",
+    "gradeLevel": 2,
+    "orderInGrade": 46,
+    "exampleWords": [
+      {
+        "word": "因为",
+        "wordTraditional": "因為",
+        "pinyin": "yīn wèi",
+        "meaning": "because",
+        "ttsText": "因，因为的因"
+      }
+    ]
+  },
+  {
+    "simplified": "为",
+    "traditional": "為",
+    "pinyin": "wèi",
+    "meaning": "for",
+    "gradeLevel": 2,
+    "orderInGrade": 47,
+    "exampleWords": [
+      {
+        "word": "因为",
+        "wordTraditional": "因為",
+        "pinyin": "yīn wèi",
+        "meaning": "because",
+        "ttsText": "为，因为的为"
+      }
+    ]
+  },
+  {
+    "simplified": "它",
+    "traditional": "它",
+    "pinyin": "tā",
+    "meaning": "it",
+    "gradeLevel": 2,
+    "orderInGrade": 48,
+    "exampleWords": [
+      {
+        "word": "它们",
+        "wordTraditional": "它們",
+        "pinyin": "tā men",
+        "meaning": "they (things)",
+        "ttsText": "它，它们的它"
+      }
+    ]
+  },
+  {
+    "simplified": "安",
+    "traditional": "安",
+    "pinyin": "ān",
+    "meaning": "safe",
+    "gradeLevel": 2,
+    "orderInGrade": 49,
+    "exampleWords": [
+      {
+        "word": "安全",
+        "wordTraditional": "安全",
+        "pinyin": "ān quán",
+        "meaning": "safe",
+        "ttsText": "安，安全的安"
+      }
+    ]
+  },
+  {
+    "simplified": "块",
+    "traditional": "塊",
+    "pinyin": "kuài",
+    "meaning": "piece",
+    "gradeLevel": 2,
+    "orderInGrade": 50,
+    "exampleWords": [
+      {
+        "word": "一块",
+        "wordTraditional": "一塊",
+        "pinyin": "yī kuài",
+        "meaning": "one piece",
+        "ttsText": "块，一块的块"
+      }
+    ]
+  },
+  {
+    "simplified": "空",
+    "traditional": "空",
+    "pinyin": "kōng",
+    "meaning": "empty; sky",
+    "gradeLevel": 2,
+    "orderInGrade": 51,
+    "exampleWords": [
+      {
+        "word": "天空",
+        "wordTraditional": "天空",
+        "pinyin": "tiān kōng",
+        "meaning": "sky",
+        "ttsText": "空，天空的空"
+      }
+    ]
+  },
+  {
+    "simplified": "海",
+    "traditional": "海",
+    "pinyin": "hǎi",
+    "meaning": "sea",
+    "gradeLevel": 2,
+    "orderInGrade": 52,
+    "exampleWords": [
+      {
+        "word": "大海",
+        "wordTraditional": "大海",
+        "pinyin": "dà hǎi",
+        "meaning": "ocean",
+        "ttsText": "海，大海的海"
+      }
+    ]
+  },
+  {
+    "simplified": "连",
+    "traditional": "連",
+    "pinyin": "lián",
+    "meaning": "connect",
+    "gradeLevel": 2,
+    "orderInGrade": 53,
+    "exampleWords": [
+      {
+        "word": "连忙",
+        "wordTraditional": "連忙",
+        "pinyin": "lián máng",
+        "meaning": "hurriedly",
+        "ttsText": "连，连忙的连"
+      }
+    ]
+  },
+  {
+    "simplified": "军",
+    "traditional": "軍",
+    "pinyin": "jūn",
+    "meaning": "army",
+    "gradeLevel": 2,
+    "orderInGrade": 54,
+    "exampleWords": [
+      {
+        "word": "军人",
+        "wordTraditional": "軍人",
+        "pinyin": "jūn rén",
+        "meaning": "soldier",
+        "ttsText": "军，军人的军"
+      }
+    ]
+  },
+  {
+    "simplified": "音",
+    "traditional": "音",
+    "pinyin": "yīn",
+    "meaning": "sound",
+    "gradeLevel": 2,
+    "orderInGrade": 55,
+    "exampleWords": [
+      {
+        "word": "声音",
+        "wordTraditional": "聲音",
+        "pinyin": "shēng yīn",
+        "meaning": "sound",
+        "ttsText": "音，声音的音"
+      }
+    ]
+  },
+  {
+    "simplified": "远",
+    "traditional": "遠",
+    "pinyin": "yuǎn",
+    "meaning": "far",
+    "gradeLevel": 2,
+    "orderInGrade": 56,
+    "exampleWords": [
+      {
+        "word": "远方",
+        "wordTraditional": "遠方",
+        "pinyin": "yuǎn fāng",
+        "meaning": "far away",
+        "ttsText": "远，远方的远"
+      }
+    ]
+  },
+  {
+    "simplified": "近",
+    "traditional": "近",
+    "pinyin": "jìn",
+    "meaning": "near",
+    "gradeLevel": 2,
+    "orderInGrade": 57,
+    "exampleWords": [
+      {
+        "word": "附近",
+        "wordTraditional": "附近",
+        "pinyin": "fù jìn",
+        "meaning": "nearby",
+        "ttsText": "近，附近的近"
+      }
+    ]
+  },
+  {
+    "simplified": "还",
+    "traditional": "還",
+    "pinyin": "hái",
+    "meaning": "still",
+    "gradeLevel": 2,
+    "orderInGrade": 58,
+    "exampleWords": [
+      {
+        "word": "还是",
+        "wordTraditional": "還是",
+        "pinyin": "hái shì",
+        "meaning": "still is",
+        "ttsText": "还，还是的还"
+      }
+    ]
+  },
+  {
+    "simplified": "进",
+    "traditional": "進",
+    "pinyin": "jìn",
+    "meaning": "enter",
+    "gradeLevel": 2,
+    "orderInGrade": 59,
+    "exampleWords": [
+      {
+        "word": "进去",
+        "wordTraditional": "進去",
+        "pinyin": "jìn qù",
+        "meaning": "go in",
+        "ttsText": "进，进去的进"
+      }
+    ]
+  },
+  {
+    "simplified": "运",
+    "traditional": "運",
+    "pinyin": "yùn",
+    "meaning": "transport",
+    "gradeLevel": 2,
+    "orderInGrade": 60,
+    "exampleWords": [
+      {
+        "word": "运动",
+        "wordTraditional": "運動",
+        "pinyin": "yùn dòng",
+        "meaning": "exercise",
+        "ttsText": "运，运动的运"
+      }
+    ]
+  },
+  {
+    "simplified": "池",
+    "traditional": "池",
+    "pinyin": "chí",
+    "meaning": "pond",
+    "gradeLevel": 2,
+    "orderInGrade": 61,
+    "exampleWords": [
+      {
+        "word": "水池",
+        "wordTraditional": "水池",
+        "pinyin": "shuǐ chí",
+        "meaning": "pool",
+        "ttsText": "池，水池的池"
+      }
+    ]
+  },
+  {
+    "simplified": "欢",
+    "traditional": "歡",
+    "pinyin": "huān",
+    "meaning": "happy",
+    "gradeLevel": 2,
+    "orderInGrade": 62,
+    "exampleWords": [
+      {
+        "word": "欢乐",
+        "wordTraditional": "歡樂",
+        "pinyin": "huān lè",
+        "meaning": "joy",
+        "ttsText": "欢，欢乐的欢"
+      }
+    ]
+  },
+  {
+    "simplified": "古",
+    "traditional": "古",
+    "pinyin": "gǔ",
+    "meaning": "ancient",
+    "gradeLevel": 2,
+    "orderInGrade": 63,
+    "exampleWords": [
+      {
+        "word": "古老",
+        "wordTraditional": "古老",
+        "pinyin": "gǔ lǎo",
+        "meaning": "ancient",
+        "ttsText": "古，古老的古"
+      }
+    ]
+  },
+  {
+    "simplified": "凉",
+    "traditional": "涼",
+    "pinyin": "liáng",
+    "meaning": "cool",
+    "gradeLevel": 2,
+    "orderInGrade": 64,
+    "exampleWords": [
+      {
+        "word": "凉快",
+        "wordTraditional": "涼快",
+        "pinyin": "liáng kuai",
+        "meaning": "cool",
+        "ttsText": "凉，凉快的凉"
+      }
+    ]
+  },
+  {
+    "simplified": "细",
+    "traditional": "細",
+    "pinyin": "xì",
+    "meaning": "fine; thin",
+    "gradeLevel": 2,
+    "orderInGrade": 65,
+    "exampleWords": [
+      {
+        "word": "仔细",
+        "wordTraditional": "仔細",
+        "pinyin": "zǐ xì",
+        "meaning": "careful",
+        "ttsText": "细，仔细的细"
+      }
+    ]
+  },
+  {
+    "simplified": "夕",
+    "traditional": "夕",
+    "pinyin": "xī",
+    "meaning": "evening",
+    "gradeLevel": 2,
+    "orderInGrade": 66,
+    "exampleWords": [
+      {
+        "word": "除夕",
+        "wordTraditional": "除夕",
+        "pinyin": "chú xī",
+        "meaning": "New Year's Eve",
+        "ttsText": "夕，除夕的夕"
+      }
+    ]
+  },
+  {
+    "simplified": "外",
+    "traditional": "外",
+    "pinyin": "wài",
+    "meaning": "outside",
+    "gradeLevel": 2,
+    "orderInGrade": 67,
+    "exampleWords": [
+      {
+        "word": "外面",
+        "wordTraditional": "外面",
+        "pinyin": "wài miàn",
+        "meaning": "outside",
+        "ttsText": "外，外面的外"
+      }
+    ]
+  },
+  {
+    "simplified": "计",
+    "traditional": "計",
+    "pinyin": "jì",
+    "meaning": "plan",
+    "gradeLevel": 2,
+    "orderInGrade": 68,
+    "exampleWords": [
+      {
+        "word": "计划",
+        "wordTraditional": "計劃",
+        "pinyin": "jì huà",
+        "meaning": "plan",
+        "ttsText": "计，计划的计"
+      }
+    ]
+  },
+  {
+    "simplified": "记",
+    "traditional": "記",
+    "pinyin": "jì",
+    "meaning": "remember",
+    "gradeLevel": 2,
+    "orderInGrade": 69,
+    "exampleWords": [
+      {
+        "word": "记住",
+        "wordTraditional": "記住",
+        "pinyin": "jì zhù",
+        "meaning": "remember",
+        "ttsText": "记，记住的记"
+      }
+    ]
+  },
+  {
+    "simplified": "加",
+    "traditional": "加",
+    "pinyin": "jiā",
+    "meaning": "add",
+    "gradeLevel": 2,
+    "orderInGrade": 70,
+    "exampleWords": [
+      {
+        "word": "加上",
+        "wordTraditional": "加上",
+        "pinyin": "jiā shàng",
+        "meaning": "add",
+        "ttsText": "加，加上的加"
+      }
+    ]
+  },
+  {
+    "simplified": "星",
+    "traditional": "星",
+    "pinyin": "xīng",
+    "meaning": "star",
+    "gradeLevel": 2,
+    "orderInGrade": 71,
+    "exampleWords": [
+      {
+        "word": "星星",
+        "wordTraditional": "星星",
+        "pinyin": "xīng xing",
+        "meaning": "star",
+        "ttsText": "星，星星的星"
+      }
+    ]
+  },
+  {
+    "simplified": "行",
+    "traditional": "行",
+    "pinyin": "xíng",
+    "meaning": "go; ok",
+    "gradeLevel": 2,
+    "orderInGrade": 72,
+    "exampleWords": [
+      {
+        "word": "行走",
+        "wordTraditional": "行走",
+        "pinyin": "xíng zǒu",
+        "meaning": "walk",
+        "ttsText": "行，行走的行"
+      }
+    ]
+  },
+  {
+    "simplified": "名",
+    "traditional": "名",
+    "pinyin": "míng",
+    "meaning": "name",
+    "gradeLevel": 2,
+    "orderInGrade": 73,
+    "exampleWords": [
+      {
+        "word": "名字",
+        "wordTraditional": "名字",
+        "pinyin": "míng zi",
+        "meaning": "name",
+        "ttsText": "名，名字的名"
+      }
+    ]
+  },
+  {
+    "simplified": "洗",
+    "traditional": "洗",
+    "pinyin": "xǐ",
+    "meaning": "wash",
+    "gradeLevel": 2,
+    "orderInGrade": 74,
+    "exampleWords": [
+      {
+        "word": "洗手",
+        "wordTraditional": "洗手",
+        "pinyin": "xǐ shǒu",
+        "meaning": "wash hands",
+        "ttsText": "洗，洗手的洗"
+      }
+    ]
+  },
+  {
+    "simplified": "扫",
+    "traditional": "掃",
+    "pinyin": "sǎo",
+    "meaning": "sweep",
+    "gradeLevel": 2,
+    "orderInGrade": 75,
+    "exampleWords": [
+      {
+        "word": "打扫",
+        "wordTraditional": "打掃",
+        "pinyin": "dǎ sǎo",
+        "meaning": "clean up",
+        "ttsText": "扫，打扫的扫"
+      }
+    ]
+  },
+  {
+    "simplified": "真",
+    "traditional": "真",
+    "pinyin": "zhēn",
+    "meaning": "true",
+    "gradeLevel": 2,
+    "orderInGrade": 76,
+    "exampleWords": [
+      {
+        "word": "真的",
+        "wordTraditional": "真的",
+        "pinyin": "zhēn de",
+        "meaning": "really",
+        "ttsText": "真，真的的真"
+      }
+    ]
+  },
+  {
+    "simplified": "认",
+    "traditional": "認",
+    "pinyin": "rèn",
+    "meaning": "recognize",
+    "gradeLevel": 2,
+    "orderInGrade": 77,
+    "exampleWords": [
+      {
+        "word": "认识",
+        "wordTraditional": "認識",
+        "pinyin": "rèn shi",
+        "meaning": "know",
+        "ttsText": "认，认识的认"
+      }
+    ]
+  },
+  {
+    "simplified": "父",
+    "traditional": "父",
+    "pinyin": "fù",
+    "meaning": "father",
+    "gradeLevel": 2,
+    "orderInGrade": 78,
+    "exampleWords": [
+      {
+        "word": "父亲",
+        "wordTraditional": "父親",
+        "pinyin": "fù qīn",
+        "meaning": "father",
+        "ttsText": "父，父亲的父"
+      }
+    ]
+  },
+  {
+    "simplified": "母",
+    "traditional": "母",
+    "pinyin": "mǔ",
+    "meaning": "mother",
+    "gradeLevel": 2,
+    "orderInGrade": 79,
+    "exampleWords": [
+      {
+        "word": "母亲",
+        "wordTraditional": "母親",
+        "pinyin": "mǔ qīn",
+        "meaning": "mother",
+        "ttsText": "母，母亲的母"
+      }
+    ]
+  },
+  {
+    "simplified": "教",
+    "traditional": "教",
+    "pinyin": "jiāo",
+    "meaning": "teach",
+    "gradeLevel": 2,
+    "orderInGrade": 80,
+    "exampleWords": [
+      {
+        "word": "教室",
+        "wordTraditional": "教室",
+        "pinyin": "jiào shì",
+        "meaning": "classroom",
+        "ttsText": "教，教室的教"
+      }
+    ]
+  },
+  {
+    "simplified": "收",
+    "traditional": "收",
+    "pinyin": "shōu",
+    "meaning": "receive",
+    "gradeLevel": 2,
+    "orderInGrade": 81,
+    "exampleWords": [
+      {
+        "word": "收到",
+        "wordTraditional": "收到",
+        "pinyin": "shōu dào",
+        "meaning": "receive",
+        "ttsText": "收，收到的收"
+      }
+    ]
+  },
+  {
+    "simplified": "女",
+    "traditional": "女",
+    "pinyin": "nǚ",
+    "meaning": "female",
+    "gradeLevel": 2,
+    "orderInGrade": 82,
+    "exampleWords": [
+      {
+        "word": "女人",
+        "wordTraditional": "女人",
+        "pinyin": "nǚ rén",
+        "meaning": "woman",
+        "ttsText": "女，女人的女"
+      }
+    ]
+  },
+  {
+    "simplified": "完",
+    "traditional": "完",
+    "pinyin": "wán",
+    "meaning": "finish",
+    "gradeLevel": 2,
+    "orderInGrade": 83,
+    "exampleWords": [
+      {
+        "word": "完成",
+        "wordTraditional": "完成",
+        "pinyin": "wán chéng",
+        "meaning": "complete",
+        "ttsText": "完，完成的完"
+      }
+    ]
+  },
+  {
+    "simplified": "家",
+    "traditional": "家",
+    "pinyin": "jiā",
+    "meaning": "home",
+    "gradeLevel": 2,
+    "orderInGrade": 84,
+    "exampleWords": [
+      {
+        "word": "大家",
+        "wordTraditional": "大家",
+        "pinyin": "dà jiā",
+        "meaning": "everyone",
+        "ttsText": "家，大家的家"
+      }
+    ]
+  },
+  {
+    "simplified": "写",
+    "traditional": "寫",
+    "pinyin": "xiě",
+    "meaning": "write",
+    "gradeLevel": 2,
+    "orderInGrade": 85,
+    "exampleWords": [
+      {
+        "word": "写字",
+        "wordTraditional": "寫字",
+        "pinyin": "xiě zì",
+        "meaning": "write",
+        "ttsText": "写，写字的写"
+      }
+    ]
+  },
+  {
+    "simplified": "看",
+    "traditional": "看",
+    "pinyin": "kàn",
+    "meaning": "look",
+    "gradeLevel": 2,
+    "orderInGrade": 86,
+    "exampleWords": [
+      {
+        "word": "看见",
+        "wordTraditional": "看見",
+        "pinyin": "kàn jiàn",
+        "meaning": "see",
+        "ttsText": "看，看见的看"
+      }
+    ]
+  },
+  {
+    "simplified": "着",
+    "traditional": "著",
+    "pinyin": "zhe",
+    "meaning": "(particle)",
+    "gradeLevel": 2,
+    "orderInGrade": 87,
+    "exampleWords": [
+      {
+        "word": "看着",
+        "wordTraditional": "看著",
+        "pinyin": "kàn zhe",
+        "meaning": "looking at",
+        "ttsText": "着，看着的着"
+      }
+    ]
+  },
+  {
+    "simplified": "笑",
+    "traditional": "笑",
+    "pinyin": "xiào",
+    "meaning": "laugh",
+    "gradeLevel": 2,
+    "orderInGrade": 88,
+    "exampleWords": [
+      {
+        "word": "微笑",
+        "wordTraditional": "微笑",
+        "pinyin": "wēi xiào",
+        "meaning": "smile",
+        "ttsText": "笑，微笑的笑"
+      }
+    ]
+  },
+  {
+    "simplified": "兴",
+    "traditional": "興",
+    "pinyin": "xīng",
+    "meaning": "excitement",
+    "gradeLevel": 2,
+    "orderInGrade": 89,
+    "exampleWords": [
+      {
+        "word": "高兴",
+        "wordTraditional": "高興",
+        "pinyin": "gāo xìng",
+        "meaning": "happy",
+        "ttsText": "兴，高兴的兴"
+      }
+    ]
+  },
+  {
+    "simplified": "快",
+    "traditional": "快",
+    "pinyin": "kuài",
+    "meaning": "fast",
+    "gradeLevel": 2,
+    "orderInGrade": 90,
+    "exampleWords": [
+      {
+        "word": "快乐",
+        "wordTraditional": "快樂",
+        "pinyin": "kuài lè",
+        "meaning": "happy",
+        "ttsText": "快，快乐的快"
+      }
+    ]
+  },
+  {
+    "simplified": "乐",
+    "traditional": "樂",
+    "pinyin": "lè",
+    "meaning": "happy",
+    "gradeLevel": 2,
+    "orderInGrade": 91,
+    "exampleWords": [
+      {
+        "word": "快乐",
+        "wordTraditional": "快樂",
+        "pinyin": "kuài lè",
+        "meaning": "happy",
+        "ttsText": "乐，快乐的乐"
+      }
+    ]
+  },
+  {
+    "simplified": "玩",
+    "traditional": "玩",
+    "pinyin": "wán",
+    "meaning": "play",
+    "gradeLevel": 2,
+    "orderInGrade": 92,
+    "exampleWords": [
+      {
+        "word": "好玩",
+        "wordTraditional": "好玩",
+        "pinyin": "hǎo wán",
+        "meaning": "fun",
+        "ttsText": "玩，好玩的玩"
+      }
+    ]
+  },
+  {
+    "simplified": "往",
+    "traditional": "往",
+    "pinyin": "wǎng",
+    "meaning": "toward",
+    "gradeLevel": 2,
+    "orderInGrade": 93,
+    "exampleWords": [
+      {
+        "word": "往前",
+        "wordTraditional": "往前",
+        "pinyin": "wǎng qián",
+        "meaning": "forward",
+        "ttsText": "往，往前的往"
+      }
+    ]
+  },
+  {
+    "simplified": "觉",
+    "traditional": "覺",
+    "pinyin": "jué",
+    "meaning": "feel",
+    "gradeLevel": 2,
+    "orderInGrade": 94,
+    "exampleWords": [
+      {
+        "word": "感觉",
+        "wordTraditional": "感覺",
+        "pinyin": "gǎn jué",
+        "meaning": "feel",
+        "ttsText": "觉，感觉的觉"
+      }
+    ]
+  },
+  {
+    "simplified": "烧",
+    "traditional": "燒",
+    "pinyin": "shāo",
+    "meaning": "burn",
+    "gradeLevel": 2,
+    "orderInGrade": 95,
+    "exampleWords": [
+      {
+        "word": "发烧",
+        "wordTraditional": "發燒",
+        "pinyin": "fā shāo",
+        "meaning": "fever",
+        "ttsText": "烧，发烧的烧"
+      }
+    ]
+  },
+  {
+    "simplified": "知",
+    "traditional": "知",
+    "pinyin": "zhī",
+    "meaning": "know",
+    "gradeLevel": 2,
+    "orderInGrade": 96,
+    "exampleWords": [
+      {
+        "word": "知道",
+        "wordTraditional": "知道",
+        "pinyin": "zhī dào",
+        "meaning": "know",
+        "ttsText": "知，知道的知"
+      }
+    ]
+  },
+  {
+    "simplified": "识",
+    "traditional": "識",
+    "pinyin": "shí",
+    "meaning": "know",
+    "gradeLevel": 2,
+    "orderInGrade": 97,
+    "exampleWords": [
+      {
+        "word": "认识",
+        "wordTraditional": "認識",
+        "pinyin": "rèn shi",
+        "meaning": "know",
+        "ttsText": "识，认识的识"
+      }
+    ]
+  },
+  {
+    "simplified": "放",
+    "traditional": "放",
+    "pinyin": "fàng",
+    "meaning": "put; release",
+    "gradeLevel": 2,
+    "orderInGrade": 98,
+    "exampleWords": [
+      {
+        "word": "放学",
+        "wordTraditional": "放學",
+        "pinyin": "fàng xué",
+        "meaning": "after school",
+        "ttsText": "放，放学的放"
+      }
+    ]
+  },
+  {
+    "simplified": "那",
+    "traditional": "那",
+    "pinyin": "nà",
+    "meaning": "that",
+    "gradeLevel": 2,
+    "orderInGrade": 99,
+    "exampleWords": [
+      {
+        "word": "那个",
+        "wordTraditional": "那個",
+        "pinyin": "nà gè",
+        "meaning": "that one",
+        "ttsText": "那，那个的那"
+      }
+    ]
+  },
+  {
+    "simplified": "都",
+    "traditional": "都",
+    "pinyin": "dōu",
+    "meaning": "all",
+    "gradeLevel": 2,
+    "orderInGrade": 100,
+    "exampleWords": [
+      {
+        "word": "都是",
+        "wordTraditional": "都是",
+        "pinyin": "dōu shì",
+        "meaning": "all are",
+        "ttsText": "都，都是的都"
+      }
+    ]
+  },
+  {
+    "simplified": "到",
+    "traditional": "到",
+    "pinyin": "dào",
+    "meaning": "arrive",
+    "gradeLevel": 2,
+    "orderInGrade": 101,
+    "exampleWords": [
+      {
+        "word": "到达",
+        "wordTraditional": "到達",
+        "pinyin": "dào dá",
+        "meaning": "arrive",
+        "ttsText": "到，到达的到"
+      }
+    ]
+  },
+  {
+    "simplified": "高",
+    "traditional": "高",
+    "pinyin": "gāo",
+    "meaning": "tall",
+    "gradeLevel": 2,
+    "orderInGrade": 102,
+    "exampleWords": [
+      {
+        "word": "高兴",
+        "wordTraditional": "高興",
+        "pinyin": "gāo xìng",
+        "meaning": "happy",
+        "ttsText": "高，高兴的高"
+      }
+    ]
+  },
+  {
+    "simplified": "当",
+    "traditional": "當",
+    "pinyin": "dāng",
+    "meaning": "when",
+    "gradeLevel": 2,
+    "orderInGrade": 103,
+    "exampleWords": [
+      {
+        "word": "当时",
+        "wordTraditional": "當時",
+        "pinyin": "dāng shí",
+        "meaning": "at that time",
+        "ttsText": "当，当时的当"
+      }
+    ]
+  },
+  {
+    "simplified": "要",
+    "traditional": "要",
+    "pinyin": "yào",
+    "meaning": "want",
+    "gradeLevel": 2,
+    "orderInGrade": 104,
+    "exampleWords": [
+      {
+        "word": "需要",
+        "wordTraditional": "需要",
+        "pinyin": "xū yào",
+        "meaning": "need",
+        "ttsText": "要，需要的要"
+      }
+    ]
+  },
+  {
+    "simplified": "成",
+    "traditional": "成",
+    "pinyin": "chéng",
+    "meaning": "become",
+    "gradeLevel": 2,
+    "orderInGrade": 105,
+    "exampleWords": [
+      {
+        "word": "成功",
+        "wordTraditional": "成功",
+        "pinyin": "chéng gōng",
+        "meaning": "succeed",
+        "ttsText": "成，成功的成"
+      }
+    ]
+  },
+  {
+    "simplified": "间",
+    "traditional": "間",
+    "pinyin": "jiān",
+    "meaning": "between",
+    "gradeLevel": 2,
+    "orderInGrade": 106,
+    "exampleWords": [
+      {
+        "word": "时间",
+        "wordTraditional": "時間",
+        "pinyin": "shí jiān",
+        "meaning": "time",
+        "ttsText": "间，时间的间"
+      }
+    ]
+  },
+  {
+    "simplified": "已",
+    "traditional": "已",
+    "pinyin": "yǐ",
+    "meaning": "already",
+    "gradeLevel": 2,
+    "orderInGrade": 107,
+    "exampleWords": [
+      {
+        "word": "已经",
+        "wordTraditional": "已經",
+        "pinyin": "yǐ jīng",
+        "meaning": "already",
+        "ttsText": "已，已经的已"
+      }
+    ]
+  },
+  {
+    "simplified": "豆",
+    "traditional": "豆",
+    "pinyin": "dòu",
+    "meaning": "bean",
+    "gradeLevel": 2,
+    "orderInGrade": 108,
+    "exampleWords": [
+      {
+        "word": "豆子",
+        "wordTraditional": "豆子",
+        "pinyin": "dòu zi",
+        "meaning": "bean",
+        "ttsText": "豆，豆子的豆"
+      }
+    ]
+  },
+  {
+    "simplified": "句",
+    "traditional": "句",
+    "pinyin": "jù",
+    "meaning": "sentence",
+    "gradeLevel": 2,
+    "orderInGrade": 109,
+    "exampleWords": [
+      {
+        "word": "一句",
+        "wordTraditional": "一句",
+        "pinyin": "yī jù",
+        "meaning": "a sentence",
+        "ttsText": "句，一句的句"
+      }
+    ]
+  },
+  {
+    "simplified": "直",
+    "traditional": "直",
+    "pinyin": "zhí",
+    "meaning": "straight",
+    "gradeLevel": 2,
+    "orderInGrade": 110,
+    "exampleWords": [
+      {
+        "word": "一直",
+        "wordTraditional": "一直",
+        "pinyin": "yī zhí",
+        "meaning": "always",
+        "ttsText": "直，一直的直"
+      }
+    ]
+  },
+  {
+    "simplified": "呢",
+    "traditional": "呢",
+    "pinyin": "ne",
+    "meaning": "(particle)",
+    "gradeLevel": 2,
+    "orderInGrade": 111,
+    "exampleWords": [
+      {
+        "word": "你呢",
+        "wordTraditional": "你呢",
+        "pinyin": "nǐ ne",
+        "meaning": "and you?",
+        "ttsText": "呢，你呢的呢"
+      }
+    ]
+  },
+  {
+    "simplified": "吗",
+    "traditional": "嗎",
+    "pinyin": "ma",
+    "meaning": "(question)",
+    "gradeLevel": 2,
+    "orderInGrade": 112,
+    "exampleWords": [
+      {
+        "word": "好吗",
+        "wordTraditional": "好嗎",
+        "pinyin": "hǎo ma",
+        "meaning": "ok?",
+        "ttsText": "吗，好吗的吗"
+      }
+    ]
+  },
+  {
+    "simplified": "吧",
+    "traditional": "吧",
+    "pinyin": "ba",
+    "meaning": "(suggestion)",
+    "gradeLevel": 2,
+    "orderInGrade": 113,
+    "exampleWords": [
+      {
+        "word": "走吧",
+        "wordTraditional": "走吧",
+        "pinyin": "zǒu ba",
+        "meaning": "let's go",
+        "ttsText": "吧，走吧的吧"
+      }
+    ]
+  },
+  {
+    "simplified": "足",
+    "traditional": "足",
+    "pinyin": "zú",
+    "meaning": "foot",
+    "gradeLevel": 2,
+    "orderInGrade": 114,
+    "exampleWords": [
+      {
+        "word": "足球",
+        "wordTraditional": "足球",
+        "pinyin": "zú qiú",
+        "meaning": "soccer",
+        "ttsText": "足，足球的足"
+      }
+    ]
+  },
+  {
+    "simplified": "声",
+    "traditional": "聲",
+    "pinyin": "shēng",
+    "meaning": "sound",
+    "gradeLevel": 2,
+    "orderInGrade": 115,
+    "exampleWords": [
+      {
+        "word": "声音",
+        "wordTraditional": "聲音",
+        "pinyin": "shēng yīn",
+        "meaning": "sound",
+        "ttsText": "声，声音的声"
+      }
+    ]
+  },
+  {
+    "simplified": "身",
+    "traditional": "身",
+    "pinyin": "shēn",
+    "meaning": "body",
+    "gradeLevel": 2,
+    "orderInGrade": 116,
+    "exampleWords": [
+      {
+        "word": "身体",
+        "wordTraditional": "身體",
+        "pinyin": "shēn tǐ",
+        "meaning": "body",
+        "ttsText": "身，身体的身"
+      }
+    ]
+  },
+  {
+    "simplified": "体",
+    "traditional": "體",
+    "pinyin": "tǐ",
+    "meaning": "body",
+    "gradeLevel": 2,
+    "orderInGrade": 117,
+    "exampleWords": [
+      {
+        "word": "身体",
+        "wordTraditional": "身體",
+        "pinyin": "shēn tǐ",
+        "meaning": "body",
+        "ttsText": "体，身体的体"
+      }
+    ]
+  },
+  {
+    "simplified": "之",
+    "traditional": "之",
+    "pinyin": "zhī",
+    "meaning": "of",
+    "gradeLevel": 2,
+    "orderInGrade": 118,
+    "exampleWords": [
+      {
+        "word": "之后",
+        "wordTraditional": "之後",
+        "pinyin": "zhī hòu",
+        "meaning": "after",
+        "ttsText": "之，之后的之"
+      }
+    ]
+  },
+  {
+    "simplified": "相",
+    "traditional": "相",
+    "pinyin": "xiāng",
+    "meaning": "mutual",
+    "gradeLevel": 2,
+    "orderInGrade": 119,
+    "exampleWords": [
+      {
+        "word": "相信",
+        "wordTraditional": "相信",
+        "pinyin": "xiāng xìn",
+        "meaning": "believe",
+        "ttsText": "相，相信的相"
+      }
+    ]
+  },
+  {
+    "simplified": "习",
+    "traditional": "習",
+    "pinyin": "xí",
+    "meaning": "study",
+    "gradeLevel": 2,
+    "orderInGrade": 120,
+    "exampleWords": [
+      {
+        "word": "学习",
+        "wordTraditional": "學習",
+        "pinyin": "xué xí",
+        "meaning": "study",
+        "ttsText": "习，学习的习"
+      }
+    ]
+  },
+  {
+    "simplified": "义",
+    "traditional": "義",
+    "pinyin": "yì",
+    "meaning": "justice",
+    "gradeLevel": 2,
+    "orderInGrade": 121,
+    "exampleWords": [
+      {
+        "word": "意义",
+        "wordTraditional": "意義",
+        "pinyin": "yì yì",
+        "meaning": "meaning",
+        "ttsText": "义，意义的义"
+      }
+    ]
+  },
+  {
+    "simplified": "玉",
+    "traditional": "玉",
+    "pinyin": "yù",
+    "meaning": "jade",
+    "gradeLevel": 2,
+    "orderInGrade": 122,
+    "exampleWords": [
+      {
+        "word": "玉石",
+        "wordTraditional": "玉石",
+        "pinyin": "yù shí",
+        "meaning": "jade stone",
+        "ttsText": "玉，玉石的玉"
+      }
+    ]
+  },
+  {
+    "simplified": "鸣",
+    "traditional": "鳴",
+    "pinyin": "míng",
+    "meaning": "cry (bird)",
+    "gradeLevel": 2,
+    "orderInGrade": 123,
+    "exampleWords": [
+      {
+        "word": "鸟鸣",
+        "wordTraditional": "鳥鳴",
+        "pinyin": "niǎo míng",
+        "meaning": "birdsong",
+        "ttsText": "鸣，鸟鸣的鸣"
+      }
+    ]
+  },
+  {
+    "simplified": "朋",
+    "traditional": "朋",
+    "pinyin": "péng",
+    "meaning": "friend",
+    "gradeLevel": 2,
+    "orderInGrade": 124,
+    "exampleWords": [
+      {
+        "word": "朋友",
+        "wordTraditional": "朋友",
+        "pinyin": "péng you",
+        "meaning": "friend",
+        "ttsText": "朋，朋友的朋"
+      }
+    ]
+  },
+  {
+    "simplified": "友",
+    "traditional": "友",
+    "pinyin": "yǒu",
+    "meaning": "friend",
+    "gradeLevel": 2,
+    "orderInGrade": 125,
+    "exampleWords": [
+      {
+        "word": "朋友",
+        "wordTraditional": "朋友",
+        "pinyin": "péng you",
+        "meaning": "friend",
+        "ttsText": "友，朋友的友"
+      }
+    ]
+  },
+  {
+    "simplified": "话",
+    "traditional": "話",
+    "pinyin": "huà",
+    "meaning": "speech",
+    "gradeLevel": 2,
+    "orderInGrade": 126,
+    "exampleWords": [
+      {
+        "word": "说话",
+        "wordTraditional": "說話",
+        "pinyin": "shuō huà",
+        "meaning": "speak",
+        "ttsText": "话，说话的话"
+      }
+    ]
+  },
+  {
+    "simplified": "土",
+    "traditional": "土",
+    "pinyin": "tǔ",
+    "meaning": "earth",
+    "gradeLevel": 2,
+    "orderInGrade": 128,
+    "exampleWords": [
+      {
+        "word": "土地",
+        "wordTraditional": "土地",
+        "pinyin": "tǔ dì",
+        "meaning": "land",
+        "ttsText": "土，土地的土"
+      }
+    ]
+  },
+  {
+    "simplified": "公",
+    "traditional": "公",
+    "pinyin": "gōng",
+    "meaning": "public",
+    "gradeLevel": 2,
+    "orderInGrade": 129,
+    "exampleWords": [
+      {
+        "word": "公园",
+        "wordTraditional": "公園",
+        "pinyin": "gōng yuán",
+        "meaning": "park",
+        "ttsText": "公，公园的公"
+      }
+    ]
+  },
+  {
+    "simplified": "全",
+    "traditional": "全",
+    "pinyin": "quán",
+    "meaning": "all",
+    "gradeLevel": 2,
+    "orderInGrade": 130,
+    "exampleWords": [
+      {
+        "word": "全部",
+        "wordTraditional": "全部",
+        "pinyin": "quán bù",
+        "meaning": "all",
+        "ttsText": "全，全部的全"
+      }
+    ]
+  },
+  {
+    "simplified": "先",
+    "traditional": "先",
+    "pinyin": "xiān",
+    "meaning": "first",
+    "gradeLevel": 2,
+    "orderInGrade": 131,
+    "exampleWords": [
+      {
+        "word": "先生",
+        "wordTraditional": "先生",
+        "pinyin": "xiān shēng",
+        "meaning": "mister",
+        "ttsText": "先，先生的先"
+      }
+    ]
+  },
+  {
+    "simplified": "干",
+    "traditional": "乾",
+    "pinyin": "gān",
+    "meaning": "dry",
+    "gradeLevel": 2,
+    "orderInGrade": 132,
+    "exampleWords": [
+      {
+        "word": "干净",
+        "wordTraditional": "乾淨",
+        "pinyin": "gān jìng",
+        "meaning": "clean",
+        "ttsText": "干，干净的干"
+      }
+    ]
+  },
+  {
+    "simplified": "赶",
+    "traditional": "趕",
+    "pinyin": "gǎn",
+    "meaning": "hurry",
+    "gradeLevel": 2,
+    "orderInGrade": 133,
+    "exampleWords": [
+      {
+        "word": "赶快",
+        "wordTraditional": "趕快",
+        "pinyin": "gǎn kuài",
+        "meaning": "hurry up",
+        "ttsText": "赶，赶快的赶"
+      }
+    ]
+  },
+  {
+    "simplified": "起",
+    "traditional": "起",
+    "pinyin": "qǐ",
+    "meaning": "rise",
+    "gradeLevel": 2,
+    "orderInGrade": 134,
+    "exampleWords": [
+      {
+        "word": "起来",
+        "wordTraditional": "起來",
+        "pinyin": "qǐ lái",
+        "meaning": "get up",
+        "ttsText": "起，起来的起"
+      }
+    ]
+  },
+  {
+    "simplified": "明",
+    "traditional": "明",
+    "pinyin": "míng",
+    "meaning": "bright",
+    "gradeLevel": 2,
+    "orderInGrade": 135,
+    "exampleWords": [
+      {
+        "word": "明天",
+        "wordTraditional": "明天",
+        "pinyin": "míng tiān",
+        "meaning": "tomorrow",
+        "ttsText": "明，明天的明"
+      }
+    ]
+  },
+  {
+    "simplified": "节",
+    "traditional": "節",
+    "pinyin": "jié",
+    "meaning": "festival",
+    "gradeLevel": 2,
+    "orderInGrade": 136,
+    "exampleWords": [
+      {
+        "word": "节日",
+        "wordTraditional": "節日",
+        "pinyin": "jié rì",
+        "meaning": "holiday",
+        "ttsText": "节，节日的节"
+      }
+    ]
+  },
+  {
+    "simplified": "叶",
+    "traditional": "葉",
+    "pinyin": "yè",
+    "meaning": "leaf",
+    "gradeLevel": 2,
+    "orderInGrade": 137,
+    "exampleWords": [
+      {
+        "word": "树叶",
+        "wordTraditional": "樹葉",
+        "pinyin": "shù yè",
+        "meaning": "tree leaf",
+        "ttsText": "叶，树叶的叶"
+      }
+    ]
+  },
+  {
+    "simplified": "米",
+    "traditional": "米",
+    "pinyin": "mǐ",
+    "meaning": "rice",
+    "gradeLevel": 2,
+    "orderInGrade": 138,
+    "exampleWords": [
+      {
+        "word": "大米",
+        "wordTraditional": "大米",
+        "pinyin": "dà mǐ",
+        "meaning": "rice",
+        "ttsText": "米，大米的米"
+      }
+    ]
+  },
+  {
+    "simplified": "分",
+    "traditional": "分",
+    "pinyin": "fēn",
+    "meaning": "divide",
+    "gradeLevel": 2,
+    "orderInGrade": 139,
+    "exampleWords": [
+      {
+        "word": "分钟",
+        "wordTraditional": "分鐘",
+        "pinyin": "fēn zhōng",
+        "meaning": "minute",
+        "ttsText": "分，分钟的分"
+      }
+    ]
+  },
+  {
+    "simplified": "色",
+    "traditional": "色",
+    "pinyin": "sè",
+    "meaning": "color",
+    "gradeLevel": 2,
+    "orderInGrade": 140,
+    "exampleWords": [
+      {
+        "word": "颜色",
+        "wordTraditional": "顏色",
+        "pinyin": "yán sè",
+        "meaning": "color",
+        "ttsText": "色，颜色的色"
+      }
+    ]
+  },
+  {
+    "simplified": "听",
+    "traditional": "聽",
+    "pinyin": "tīng",
+    "meaning": "listen",
+    "gradeLevel": 2,
+    "orderInGrade": 141,
+    "exampleWords": [
+      {
+        "word": "听见",
+        "wordTraditional": "聽見",
+        "pinyin": "tīng jiàn",
+        "meaning": "hear",
+        "ttsText": "听，听见的听"
+      }
+    ]
+  },
+  {
+    "simplified": "哥",
+    "traditional": "哥",
+    "pinyin": "gē",
+    "meaning": "brother",
+    "gradeLevel": 2,
+    "orderInGrade": 142,
+    "exampleWords": [
+      {
+        "word": "哥哥",
+        "wordTraditional": "哥哥",
+        "pinyin": "gē ge",
+        "meaning": "brother",
+        "ttsText": "哥，哥哥的哥"
+      }
+    ]
+  },
+  {
+    "simplified": "单",
+    "traditional": "單",
+    "pinyin": "dān",
+    "meaning": "single",
+    "gradeLevel": 2,
+    "orderInGrade": 143,
+    "exampleWords": [
+      {
+        "word": "简单",
+        "wordTraditional": "簡單",
+        "pinyin": "jiǎn dān",
+        "meaning": "simple",
+        "ttsText": "单，简单的单"
+      }
+    ]
+  },
+  {
+    "simplified": "打",
+    "traditional": "打",
+    "pinyin": "dǎ",
+    "meaning": "hit",
+    "gradeLevel": 2,
+    "orderInGrade": 144,
+    "exampleWords": [
+      {
+        "word": "打球",
+        "wordTraditional": "打球",
+        "pinyin": "dǎ qiú",
+        "meaning": "play ball",
+        "ttsText": "打，打球的打"
+      }
+    ]
+  },
+  {
+    "simplified": "拍",
+    "traditional": "拍",
+    "pinyin": "pāi",
+    "meaning": "clap",
+    "gradeLevel": 2,
+    "orderInGrade": 145,
+    "exampleWords": [
+      {
+        "word": "拍手",
+        "wordTraditional": "拍手",
+        "pinyin": "pāi shǒu",
+        "meaning": "clap hands",
+        "ttsText": "拍，拍手的拍"
+      }
+    ]
+  },
+  {
+    "simplified": "跑",
+    "traditional": "跑",
+    "pinyin": "pǎo",
+    "meaning": "run",
+    "gradeLevel": 2,
+    "orderInGrade": 146,
+    "exampleWords": [
+      {
+        "word": "跑步",
+        "wordTraditional": "跑步",
+        "pinyin": "pǎo bù",
+        "meaning": "run",
+        "ttsText": "跑，跑步的跑"
+      }
+    ]
+  },
+  {
+    "simplified": "爸",
+    "traditional": "爸",
+    "pinyin": "bà",
+    "meaning": "dad",
+    "gradeLevel": 2,
+    "orderInGrade": 147,
+    "exampleWords": [
+      {
+        "word": "爸爸",
+        "wordTraditional": "爸爸",
+        "pinyin": "bà ba",
+        "meaning": "dad",
+        "ttsText": "爸，爸爸的爸"
+      }
+    ]
+  },
+  {
+    "simplified": "妈",
+    "traditional": "媽",
+    "pinyin": "mā",
+    "meaning": "mom",
+    "gradeLevel": 2,
+    "orderInGrade": 148,
+    "exampleWords": [
+      {
+        "word": "妈妈",
+        "wordTraditional": "媽媽",
+        "pinyin": "mā ma",
+        "meaning": "mom",
+        "ttsText": "妈，妈妈的妈"
+      }
+    ]
+  },
+  {
+    "simplified": "爷",
+    "traditional": "爺",
+    "pinyin": "yé",
+    "meaning": "grandpa",
+    "gradeLevel": 2,
+    "orderInGrade": 149,
+    "exampleWords": [
+      {
+        "word": "爷爷",
+        "wordTraditional": "爺爺",
+        "pinyin": "yé ye",
+        "meaning": "grandpa",
+        "ttsText": "爷，爷爷的爷"
+      }
+    ]
+  },
+  {
+    "simplified": "奶",
+    "traditional": "奶",
+    "pinyin": "nǎi",
+    "meaning": "grandma",
+    "gradeLevel": 2,
+    "orderInGrade": 150,
+    "exampleWords": [
+      {
+        "word": "奶奶",
+        "wordTraditional": "奶奶",
+        "pinyin": "nǎi nai",
+        "meaning": "grandma",
+        "ttsText": "奶，奶奶的奶"
+      }
+    ]
+  },
+  {
+    "simplified": "午",
+    "traditional": "午",
+    "pinyin": "wǔ",
+    "meaning": "noon",
+    "gradeLevel": 2,
+    "orderInGrade": 151,
+    "exampleWords": [
+      {
+        "word": "中午",
+        "wordTraditional": "中午",
+        "pinyin": "zhōng wǔ",
+        "meaning": "noon",
+        "ttsText": "午，中午的午"
+      }
+    ]
+  },
+  {
+    "simplified": "弟",
+    "traditional": "弟",
+    "pinyin": "dì",
+    "meaning": "younger brother",
+    "gradeLevel": 2,
+    "orderInGrade": 152,
+    "exampleWords": [
+      {
+        "word": "弟弟",
+        "wordTraditional": "弟弟",
+        "pinyin": "dì di",
+        "meaning": "brother",
+        "ttsText": "弟，弟弟的弟"
+      }
+    ]
+  },
+  {
+    "simplified": "丰",
+    "traditional": "豐",
+    "pinyin": "fēng",
+    "meaning": "abundant",
+    "gradeLevel": 2,
+    "orderInGrade": 153,
+    "exampleWords": [
+      {
+        "word": "丰富",
+        "wordTraditional": "豐富",
+        "pinyin": "fēng fù",
+        "meaning": "rich",
+        "ttsText": "丰，丰富的丰"
+      }
+    ]
+  },
+  {
+    "simplified": "群",
+    "traditional": "群",
+    "pinyin": "qún",
+    "meaning": "group",
+    "gradeLevel": 2,
+    "orderInGrade": 154,
+    "exampleWords": [
+      {
+        "word": "人群",
+        "wordTraditional": "人群",
+        "pinyin": "rén qún",
+        "meaning": "crowd",
+        "ttsText": "群，人群的群"
+      }
+    ]
+  },
+  {
+    "simplified": "旗",
+    "traditional": "旗",
+    "pinyin": "qí",
+    "meaning": "flag",
+    "gradeLevel": 2,
+    "orderInGrade": 155,
+    "exampleWords": [
+      {
+        "word": "国旗",
+        "wordTraditional": "國旗",
+        "pinyin": "guó qí",
+        "meaning": "national flag",
+        "ttsText": "旗，国旗的旗"
+      }
+    ]
+  },
+  {
+    "simplified": "号",
+    "traditional": "號",
+    "pinyin": "hào",
+    "meaning": "number",
+    "gradeLevel": 2,
+    "orderInGrade": 156,
+    "exampleWords": [
+      {
+        "word": "号码",
+        "wordTraditional": "號碼",
+        "pinyin": "hào mǎ",
+        "meaning": "number",
+        "ttsText": "号，号码的号"
+      }
+    ]
+  },
+  {
+    "simplified": "队",
+    "traditional": "隊",
+    "pinyin": "duì",
+    "meaning": "team",
+    "gradeLevel": 2,
+    "orderInGrade": 157,
+    "exampleWords": [
+      {
+        "word": "队伍",
+        "wordTraditional": "隊伍",
+        "pinyin": "duì wu",
+        "meaning": "team",
+        "ttsText": "队，队伍的队"
+      }
+    ]
+  },
+  {
+    "simplified": "许",
+    "traditional": "許",
+    "pinyin": "xǔ",
+    "meaning": "allow",
+    "gradeLevel": 2,
+    "orderInGrade": 158,
+    "exampleWords": [
+      {
+        "word": "也许",
+        "wordTraditional": "也許",
+        "pinyin": "yě xǔ",
+        "meaning": "perhaps",
+        "ttsText": "许，也许的许"
+      }
+    ]
+  },
+  {
+    "simplified": "让",
+    "traditional": "讓",
+    "pinyin": "ràng",
+    "meaning": "let",
+    "gradeLevel": 2,
+    "orderInGrade": 159,
+    "exampleWords": [
+      {
+        "word": "让开",
+        "wordTraditional": "讓開",
+        "pinyin": "ràng kāi",
+        "meaning": "step aside",
+        "ttsText": "让，让开的让"
+      }
+    ]
+  },
+  {
+    "simplified": "说",
+    "traditional": "說",
+    "pinyin": "shuō",
+    "meaning": "say",
+    "gradeLevel": 2,
+    "orderInGrade": 160,
+    "exampleWords": [
+      {
+        "word": "说话",
+        "wordTraditional": "說話",
+        "pinyin": "shuō huà",
+        "meaning": "speak",
+        "ttsText": "说，说话的说"
+      }
+    ]
+  },
+  {
+    "simplified": "地",
+    "traditional": "地",
+    "pinyin": "dì",
+    "meaning": "ground",
+    "gradeLevel": 2,
+    "orderInGrade": 161,
+    "exampleWords": [
+      {
+        "word": "地方",
+        "wordTraditional": "地方",
+        "pinyin": "dì fang",
+        "meaning": "place",
+        "ttsText": "地，地方的地"
+      }
+    ]
+  },
+  {
+    "simplified": "河",
+    "traditional": "河",
+    "pinyin": "hé",
+    "meaning": "river",
+    "gradeLevel": 2,
+    "orderInGrade": 162,
+    "exampleWords": [
+      {
+        "word": "河水",
+        "wordTraditional": "河水",
+        "pinyin": "hé shuǐ",
+        "meaning": "river water",
+        "ttsText": "河，河水的河"
+      }
+    ]
+  },
+  {
+    "simplified": "画",
+    "traditional": "畫",
+    "pinyin": "huà",
+    "meaning": "draw",
+    "gradeLevel": 2,
+    "orderInGrade": 163,
+    "exampleWords": [
+      {
+        "word": "画画",
+        "wordTraditional": "畫畫",
+        "pinyin": "huà huà",
+        "meaning": "draw",
+        "ttsText": "画，画画的画"
+      }
+    ]
+  },
+  {
+    "simplified": "拉",
+    "traditional": "拉",
+    "pinyin": "lā",
+    "meaning": "pull",
+    "gradeLevel": 2,
+    "orderInGrade": 164,
+    "exampleWords": [
+      {
+        "word": "拉手",
+        "wordTraditional": "拉手",
+        "pinyin": "lā shǒu",
+        "meaning": "hold hands",
+        "ttsText": "拉，拉手的拉"
+      }
+    ]
+  },
+  {
+    "simplified": "游",
+    "traditional": "遊",
+    "pinyin": "yóu",
+    "meaning": "swim; travel",
+    "gradeLevel": 3,
+    "orderInGrade": 0,
+    "exampleWords": [
+      {
+        "word": "旅游",
+        "wordTraditional": "旅遊",
+        "pinyin": "lǚ yóu",
+        "meaning": "travel",
+        "ttsText": "游，旅游的游"
+      }
+    ]
+  },
+  {
+    "simplified": "泳",
+    "traditional": "泳",
+    "pinyin": "yǒng",
+    "meaning": "swim",
+    "gradeLevel": 3,
+    "orderInGrade": 1,
+    "exampleWords": [
+      {
+        "word": "游泳",
+        "wordTraditional": "游泳",
+        "pinyin": "yóu yǒng",
+        "meaning": "swim",
+        "ttsText": "泳，游泳的泳"
+      }
+    ]
+  },
+  {
+    "simplified": "棋",
+    "traditional": "棋",
+    "pinyin": "qí",
+    "meaning": "chess",
+    "gradeLevel": 3,
+    "orderInGrade": 2,
+    "exampleWords": [
+      {
+        "word": "下棋",
+        "wordTraditional": "下棋",
+        "pinyin": "xià qí",
+        "meaning": "play chess",
+        "ttsText": "棋，下棋的棋"
+      }
+    ]
+  },
+  {
+    "simplified": "弹",
+    "traditional": "彈",
+    "pinyin": "tán",
+    "meaning": "play (instrument)",
+    "gradeLevel": 3,
+    "orderInGrade": 3,
+    "exampleWords": [
+      {
+        "word": "弹琴",
+        "wordTraditional": "彈琴",
+        "pinyin": "tán qín",
+        "meaning": "play piano",
+        "ttsText": "弹，弹琴的弹"
+      }
+    ]
+  },
+  {
+    "simplified": "钢",
+    "traditional": "鋼",
+    "pinyin": "gāng",
+    "meaning": "steel",
+    "gradeLevel": 3,
+    "orderInGrade": 4,
+    "exampleWords": [
+      {
+        "word": "钢琴",
+        "wordTraditional": "鋼琴",
+        "pinyin": "gāng qín",
+        "meaning": "piano",
+        "ttsText": "钢，钢琴的钢"
+      }
+    ]
+  },
+  {
+    "simplified": "琴",
+    "traditional": "琴",
+    "pinyin": "qín",
+    "meaning": "instrument",
+    "gradeLevel": 3,
+    "orderInGrade": 5,
+    "exampleWords": [
+      {
+        "word": "钢琴",
+        "wordTraditional": "鋼琴",
+        "pinyin": "gāng qín",
+        "meaning": "piano",
+        "ttsText": "琴，钢琴的琴"
+      }
+    ]
+  },
+  {
+    "simplified": "养",
+    "traditional": "養",
+    "pinyin": "yǎng",
+    "meaning": "raise",
+    "gradeLevel": 3,
+    "orderInGrade": 6,
+    "exampleWords": [
+      {
+        "word": "养育",
+        "wordTraditional": "養育",
+        "pinyin": "yǎng yù",
+        "meaning": "nurture",
+        "ttsText": "养，养育的养"
+      }
+    ]
+  },
+  {
+    "simplified": "航",
+    "traditional": "航",
+    "pinyin": "háng",
+    "meaning": "navigate",
+    "gradeLevel": 3,
+    "orderInGrade": 7,
+    "exampleWords": [
+      {
+        "word": "航空",
+        "wordTraditional": "航空",
+        "pinyin": "háng kōng",
+        "meaning": "aviation",
+        "ttsText": "航，航空的航"
+      }
+    ]
+  },
+  {
+    "simplified": "模",
+    "traditional": "模",
+    "pinyin": "mó",
+    "meaning": "model",
+    "gradeLevel": 3,
+    "orderInGrade": 8,
+    "exampleWords": [
+      {
+        "word": "模型",
+        "wordTraditional": "模型",
+        "pinyin": "mó xíng",
+        "meaning": "model",
+        "ttsText": "模，模型的模"
+      }
+    ]
+  },
+  {
+    "simplified": "建",
+    "traditional": "建",
+    "pinyin": "jiàn",
+    "meaning": "build",
+    "gradeLevel": 3,
+    "orderInGrade": 9,
+    "exampleWords": [
+      {
+        "word": "建设",
+        "wordTraditional": "建設",
+        "pinyin": "jiàn shè",
+        "meaning": "build",
+        "ttsText": "建，建设的建"
+      }
+    ]
+  },
+  {
+    "simplified": "筑",
+    "traditional": "築",
+    "pinyin": "zhù",
+    "meaning": "construct",
+    "gradeLevel": 3,
+    "orderInGrade": 10,
+    "exampleWords": [
+      {
+        "word": "建筑",
+        "wordTraditional": "建築",
+        "pinyin": "jiàn zhù",
+        "meaning": "architecture",
+        "ttsText": "筑，建筑的筑"
+      }
+    ]
+  },
+  {
+    "simplified": "特",
+    "traditional": "特",
+    "pinyin": "tè",
+    "meaning": "special",
+    "gradeLevel": 3,
+    "orderInGrade": 11,
+    "exampleWords": [
+      {
+        "word": "特别",
+        "wordTraditional": "特別",
+        "pinyin": "tè bié",
+        "meaning": "special",
+        "ttsText": "特，特别的特"
+      }
+    ]
+  },
+  {
+    "simplified": "产",
+    "traditional": "產",
+    "pinyin": "chǎn",
+    "meaning": "produce",
+    "gradeLevel": 3,
+    "orderInGrade": 12,
+    "exampleWords": [
+      {
+        "word": "产品",
+        "wordTraditional": "產品",
+        "pinyin": "chǎn pǐn",
+        "meaning": "product",
+        "ttsText": "产，产品的产"
+      }
+    ]
+  },
+  {
+    "simplified": "旅",
+    "traditional": "旅",
+    "pinyin": "lǚ",
+    "meaning": "travel",
+    "gradeLevel": 3,
+    "orderInGrade": 13,
+    "exampleWords": [
+      {
+        "word": "旅游",
+        "wordTraditional": "旅遊",
+        "pinyin": "lǚ yóu",
+        "meaning": "travel",
+        "ttsText": "旅，旅游的旅"
+      }
+    ]
+  },
+  {
+    "simplified": "社",
+    "traditional": "社",
+    "pinyin": "shè",
+    "meaning": "society",
+    "gradeLevel": 3,
+    "orderInGrade": 14,
+    "exampleWords": [
+      {
+        "word": "社会",
+        "wordTraditional": "社會",
+        "pinyin": "shè huì",
+        "meaning": "society",
+        "ttsText": "社，社会的社"
+      }
+    ]
+  },
+  {
+    "simplified": "照",
+    "traditional": "照",
+    "pinyin": "zhào",
+    "meaning": "shine; photo",
+    "gradeLevel": 3,
+    "orderInGrade": 15,
+    "exampleWords": [
+      {
+        "word": "照片",
+        "wordTraditional": "照片",
+        "pinyin": "zhào piàn",
+        "meaning": "photo",
+        "ttsText": "照，照片的照"
+      }
+    ]
+  },
+  {
+    "simplified": "商",
+    "traditional": "商",
+    "pinyin": "shāng",
+    "meaning": "commerce",
+    "gradeLevel": 3,
+    "orderInGrade": 16,
+    "exampleWords": [
+      {
+        "word": "商店",
+        "wordTraditional": "商店",
+        "pinyin": "shāng diàn",
+        "meaning": "store",
+        "ttsText": "商，商店的商"
+      }
+    ]
+  },
+  {
+    "simplified": "物",
+    "traditional": "物",
+    "pinyin": "wù",
+    "meaning": "thing",
+    "gradeLevel": 3,
+    "orderInGrade": 17,
+    "exampleWords": [
+      {
+        "word": "动物",
+        "wordTraditional": "動物",
+        "pinyin": "dòng wù",
+        "meaning": "animal",
+        "ttsText": "物，动物的物"
+      }
+    ]
+  },
+  {
+    "simplified": "根",
+    "traditional": "根",
+    "pinyin": "gēn",
+    "meaning": "root",
+    "gradeLevel": 3,
+    "orderInGrade": 18,
+    "exampleWords": [
+      {
+        "word": "根本",
+        "wordTraditional": "根本",
+        "pinyin": "gēn běn",
+        "meaning": "fundamental",
+        "ttsText": "根，根本的根"
+      }
+    ]
+  },
+  {
+    "simplified": "湖",
+    "traditional": "湖",
+    "pinyin": "hú",
+    "meaning": "lake",
+    "gradeLevel": 3,
+    "orderInGrade": 19,
+    "exampleWords": [
+      {
+        "word": "湖水",
+        "wordTraditional": "湖水",
+        "pinyin": "hú shuǐ",
+        "meaning": "lake water",
+        "ttsText": "湖，湖水的湖"
+      }
+    ]
+  },
+  {
+    "simplified": "界",
+    "traditional": "界",
+    "pinyin": "jiè",
+    "meaning": "boundary",
+    "gradeLevel": 3,
+    "orderInGrade": 20,
+    "exampleWords": [
+      {
+        "word": "世界",
+        "wordTraditional": "世界",
+        "pinyin": "shì jiè",
+        "meaning": "world",
+        "ttsText": "界，世界的界"
+      }
+    ]
+  },
+  {
+    "simplified": "醒",
+    "traditional": "醒",
+    "pinyin": "xǐng",
+    "meaning": "wake up",
+    "gradeLevel": 3,
+    "orderInGrade": 21,
+    "exampleWords": [
+      {
+        "word": "清醒",
+        "wordTraditional": "清醒",
+        "pinyin": "qīng xǐng",
+        "meaning": "sober",
+        "ttsText": "醒，清醒的醒"
+      }
+    ]
+  },
+  {
+    "simplified": "列",
+    "traditional": "列",
+    "pinyin": "liè",
+    "meaning": "row",
+    "gradeLevel": 3,
+    "orderInGrade": 22,
+    "exampleWords": [
+      {
+        "word": "排列",
+        "wordTraditional": "排列",
+        "pinyin": "pái liè",
+        "meaning": "arrange",
+        "ttsText": "列，排列的列"
+      }
+    ]
+  },
+  {
+    "simplified": "展",
+    "traditional": "展",
+    "pinyin": "zhǎn",
+    "meaning": "show",
+    "gradeLevel": 3,
+    "orderInGrade": 23,
+    "exampleWords": [
+      {
+        "word": "展览",
+        "wordTraditional": "展覽",
+        "pinyin": "zhǎn lǎn",
+        "meaning": "exhibition",
+        "ttsText": "展，展览的展"
+      }
+    ]
+  },
+  {
+    "simplified": "品",
+    "traditional": "品",
+    "pinyin": "pǐn",
+    "meaning": "goods",
+    "gradeLevel": 3,
+    "orderInGrade": 24,
+    "exampleWords": [
+      {
+        "word": "产品",
+        "wordTraditional": "產品",
+        "pinyin": "chǎn pǐn",
+        "meaning": "product",
+        "ttsText": "品，产品的品"
+      }
+    ]
+  },
+  {
+    "simplified": "圈",
+    "traditional": "圈",
+    "pinyin": "quān",
+    "meaning": "circle",
+    "gradeLevel": 3,
+    "orderInGrade": 25,
+    "exampleWords": [
+      {
+        "word": "一圈",
+        "wordTraditional": "一圈",
+        "pinyin": "yī quān",
+        "meaning": "one circle",
+        "ttsText": "圈，一圈的圈"
+      }
+    ]
+  },
+  {
+    "simplified": "彩",
+    "traditional": "彩",
+    "pinyin": "cǎi",
+    "meaning": "color",
+    "gradeLevel": 3,
+    "orderInGrade": 26,
+    "exampleWords": [
+      {
+        "word": "色彩",
+        "wordTraditional": "色彩",
+        "pinyin": "sè cǎi",
+        "meaning": "color",
+        "ttsText": "彩，色彩的彩"
+      }
+    ]
+  },
+  {
+    "simplified": "壮",
+    "traditional": "壯",
+    "pinyin": "zhuàng",
+    "meaning": "strong",
+    "gradeLevel": 3,
+    "orderInGrade": 27,
+    "exampleWords": [
+      {
+        "word": "壮大",
+        "wordTraditional": "壯大",
+        "pinyin": "zhuàng dà",
+        "meaning": "strengthen",
+        "ttsText": "壮，壮大的壮"
+      }
+    ]
+  },
+  {
+    "simplified": "章",
+    "traditional": "章",
+    "pinyin": "zhāng",
+    "meaning": "chapter",
+    "gradeLevel": 3,
+    "orderInGrade": 28,
+    "exampleWords": [
+      {
+        "word": "文章",
+        "wordTraditional": "文章",
+        "pinyin": "wén zhāng",
+        "meaning": "article",
+        "ttsText": "章，文章的章"
+      }
+    ]
+  },
+  {
+    "simplified": "表",
+    "traditional": "表",
+    "pinyin": "biǎo",
+    "meaning": "surface",
+    "gradeLevel": 3,
+    "orderInGrade": 29,
+    "exampleWords": [
+      {
+        "word": "表面",
+        "wordTraditional": "表面",
+        "pinyin": "biǎo miàn",
+        "meaning": "surface",
+        "ttsText": "表，表面的表"
+      }
+    ]
+  },
+  {
+    "simplified": "演",
+    "traditional": "演",
+    "pinyin": "yǎn",
+    "meaning": "perform",
+    "gradeLevel": 3,
+    "orderInGrade": 30,
+    "exampleWords": [
+      {
+        "word": "表演",
+        "wordTraditional": "表演",
+        "pinyin": "biǎo yǎn",
+        "meaning": "perform",
+        "ttsText": "演，表演的演"
+      }
+    ]
+  },
+  {
+    "simplified": "够",
+    "traditional": "夠",
+    "pinyin": "gòu",
+    "meaning": "enough",
+    "gradeLevel": 3,
+    "orderInGrade": 31,
+    "exampleWords": [
+      {
+        "word": "足够",
+        "wordTraditional": "足夠",
+        "pinyin": "zú gòu",
+        "meaning": "enough",
+        "ttsText": "够，足够的够"
+      }
+    ]
+  },
+  {
+    "simplified": "猜",
+    "traditional": "猜",
+    "pinyin": "cāi",
+    "meaning": "guess",
+    "gradeLevel": 3,
+    "orderInGrade": 32,
+    "exampleWords": [
+      {
+        "word": "猜想",
+        "wordTraditional": "猜想",
+        "pinyin": "cāi xiǎng",
+        "meaning": "guess",
+        "ttsText": "猜，猜想的猜"
+      }
+    ]
+  },
+  {
+    "simplified": "巨",
+    "traditional": "巨",
+    "pinyin": "jù",
+    "meaning": "huge",
+    "gradeLevel": 3,
+    "orderInGrade": 33,
+    "exampleWords": [
+      {
+        "word": "巨大",
+        "wordTraditional": "巨大",
+        "pinyin": "jù dà",
+        "meaning": "huge",
+        "ttsText": "巨，巨大的巨"
+      }
+    ]
+  },
+  {
+    "simplified": "位",
+    "traditional": "位",
+    "pinyin": "wèi",
+    "meaning": "position",
+    "gradeLevel": 3,
+    "orderInGrade": 34,
+    "exampleWords": [
+      {
+        "word": "座位",
+        "wordTraditional": "座位",
+        "pinyin": "zuò wèi",
+        "meaning": "seat",
+        "ttsText": "位，座位的位"
+      }
+    ]
+  },
+  {
+    "simplified": "布",
+    "traditional": "布",
+    "pinyin": "bù",
+    "meaning": "cloth",
+    "gradeLevel": 3,
+    "orderInGrade": 35,
+    "exampleWords": [
+      {
+        "word": "布料",
+        "wordTraditional": "布料",
+        "pinyin": "bù liào",
+        "meaning": "fabric",
+        "ttsText": "布，布料的布"
+      }
+    ]
+  },
+  {
+    "simplified": "祝",
+    "traditional": "祝",
+    "pinyin": "zhù",
+    "meaning": "wish",
+    "gradeLevel": 3,
+    "orderInGrade": 36,
+    "exampleWords": [
+      {
+        "word": "祝福",
+        "wordTraditional": "祝福",
+        "pinyin": "zhù fú",
+        "meaning": "blessing",
+        "ttsText": "祝，祝福的祝"
+      }
+    ]
+  },
+  {
+    "simplified": "贺",
+    "traditional": "賀",
+    "pinyin": "hè",
+    "meaning": "congratulate",
+    "gradeLevel": 3,
+    "orderInGrade": 37,
+    "exampleWords": [
+      {
+        "word": "祝贺",
+        "wordTraditional": "祝賀",
+        "pinyin": "zhù hè",
+        "meaning": "congratulate",
+        "ttsText": "贺，祝贺的贺"
+      }
+    ]
+  },
+  {
+    "simplified": "希",
+    "traditional": "希",
+    "pinyin": "xī",
+    "meaning": "hope",
+    "gradeLevel": 3,
+    "orderInGrade": 38,
+    "exampleWords": [
+      {
+        "word": "希望",
+        "wordTraditional": "希望",
+        "pinyin": "xī wàng",
+        "meaning": "hope",
+        "ttsText": "希，希望的希"
+      }
+    ]
+  },
+  {
+    "simplified": "精",
+    "traditional": "精",
+    "pinyin": "jīng",
+    "meaning": "essence",
+    "gradeLevel": 3,
+    "orderInGrade": 39,
+    "exampleWords": [
+      {
+        "word": "精彩",
+        "wordTraditional": "精彩",
+        "pinyin": "jīng cǎi",
+        "meaning": "wonderful",
+        "ttsText": "精，精彩的精"
+      }
+    ]
+  },
+  {
+    "simplified": "准",
+    "traditional": "準",
+    "pinyin": "zhǔn",
+    "meaning": "allow",
+    "gradeLevel": 3,
+    "orderInGrade": 40,
+    "exampleWords": [
+      {
+        "word": "准备",
+        "wordTraditional": "準備",
+        "pinyin": "zhǔn bèi",
+        "meaning": "prepare",
+        "ttsText": "准，准备的准"
+      }
+    ]
+  },
+  {
+    "simplified": "备",
+    "traditional": "備",
+    "pinyin": "bèi",
+    "meaning": "prepare",
+    "gradeLevel": 3,
+    "orderInGrade": 41,
+    "exampleWords": [
+      {
+        "word": "准备",
+        "wordTraditional": "準備",
+        "pinyin": "zhǔn bèi",
+        "meaning": "prepare",
+        "ttsText": "备，准备的备"
+      }
+    ]
+  },
+  {
+    "simplified": "提",
+    "traditional": "提",
+    "pinyin": "tí",
+    "meaning": "lift",
+    "gradeLevel": 3,
+    "orderInGrade": 42,
+    "exampleWords": [
+      {
+        "word": "提高",
+        "wordTraditional": "提高",
+        "pinyin": "tí gāo",
+        "meaning": "improve",
+        "ttsText": "提，提高的提"
+      }
+    ]
+  },
+  {
+    "simplified": "确",
+    "traditional": "確",
+    "pinyin": "què",
+    "meaning": "sure",
+    "gradeLevel": 3,
+    "orderInGrade": 43,
+    "exampleWords": [
+      {
+        "word": "确实",
+        "wordTraditional": "確實",
+        "pinyin": "què shí",
+        "meaning": "indeed",
+        "ttsText": "确，确实的确"
+      }
+    ]
+  },
+  {
+    "simplified": "信",
+    "traditional": "信",
+    "pinyin": "xìn",
+    "meaning": "believe",
+    "gradeLevel": 3,
+    "orderInGrade": 44,
+    "exampleWords": [
+      {
+        "word": "相信",
+        "wordTraditional": "相信",
+        "pinyin": "xiāng xìn",
+        "meaning": "believe",
+        "ttsText": "信，相信的信"
+      }
+    ]
+  },
+  {
+    "simplified": "赞",
+    "traditional": "讚",
+    "pinyin": "zàn",
+    "meaning": "praise",
+    "gradeLevel": 3,
+    "orderInGrade": 45,
+    "exampleWords": [
+      {
+        "word": "赞美",
+        "wordTraditional": "讚美",
+        "pinyin": "zàn měi",
+        "meaning": "praise",
+        "ttsText": "赞，赞美的赞"
+      }
+    ]
+  },
+  {
+    "simplified": "错",
+    "traditional": "錯",
+    "pinyin": "cuò",
+    "meaning": "wrong",
+    "gradeLevel": 3,
+    "orderInGrade": 46,
+    "exampleWords": [
+      {
+        "word": "错误",
+        "wordTraditional": "錯誤",
+        "pinyin": "cuò wù",
+        "meaning": "mistake",
+        "ttsText": "错，错误的错"
+      }
+    ]
+  },
+  {
+    "simplified": "断",
+    "traditional": "斷",
+    "pinyin": "duàn",
+    "meaning": "break",
+    "gradeLevel": 3,
+    "orderInGrade": 47,
+    "exampleWords": [
+      {
+        "word": "判断",
+        "wordTraditional": "判斷",
+        "pinyin": "pàn duàn",
+        "meaning": "judge",
+        "ttsText": "断，判断的断"
+      }
+    ]
+  },
+  {
+    "simplified": "续",
+    "traditional": "續",
+    "pinyin": "xù",
+    "meaning": "continue",
+    "gradeLevel": 3,
+    "orderInGrade": 48,
+    "exampleWords": [
+      {
+        "word": "继续",
+        "wordTraditional": "繼續",
+        "pinyin": "jì xù",
+        "meaning": "continue",
+        "ttsText": "续，继续的续"
+      }
+    ]
+  },
+  {
+    "simplified": "决",
+    "traditional": "決",
+    "pinyin": "jué",
+    "meaning": "decide",
+    "gradeLevel": 3,
+    "orderInGrade": 49,
+    "exampleWords": [
+      {
+        "word": "决定",
+        "wordTraditional": "決定",
+        "pinyin": "jué dìng",
+        "meaning": "decide",
+        "ttsText": "决，决定的决"
+      }
+    ]
+  },
+  {
+    "simplified": "组",
+    "traditional": "組",
+    "pinyin": "zǔ",
+    "meaning": "group",
+    "gradeLevel": 3,
+    "orderInGrade": 50,
+    "exampleWords": [
+      {
+        "word": "小组",
+        "wordTraditional": "小組",
+        "pinyin": "xiǎo zǔ",
+        "meaning": "group",
+        "ttsText": "组，小组的组"
+      }
+    ]
+  },
+  {
+    "simplified": "桥",
+    "traditional": "橋",
+    "pinyin": "qiáo",
+    "meaning": "bridge",
+    "gradeLevel": 3,
+    "orderInGrade": 51,
+    "exampleWords": [
+      {
+        "word": "大桥",
+        "wordTraditional": "大橋",
+        "pinyin": "dà qiáo",
+        "meaning": "bridge",
+        "ttsText": "桥，大桥的桥"
+      }
+    ]
+  },
+  {
+    "simplified": "险",
+    "traditional": "險",
+    "pinyin": "xiǎn",
+    "meaning": "danger",
+    "gradeLevel": 3,
+    "orderInGrade": 52,
+    "exampleWords": [
+      {
+        "word": "危险",
+        "wordTraditional": "危險",
+        "pinyin": "wēi xiǎn",
+        "meaning": "danger",
+        "ttsText": "险，危险的险"
+      }
+    ]
+  },
+  {
+    "simplified": "洪",
+    "traditional": "洪",
+    "pinyin": "hóng",
+    "meaning": "flood",
+    "gradeLevel": 3,
+    "orderInGrade": 53,
+    "exampleWords": [
+      {
+        "word": "洪水",
+        "wordTraditional": "洪水",
+        "pinyin": "hóng shuǐ",
+        "meaning": "flood",
+        "ttsText": "洪，洪水的洪"
+      }
+    ]
+  },
+  {
+    "simplified": "减",
+    "traditional": "減",
+    "pinyin": "jiǎn",
+    "meaning": "reduce",
+    "gradeLevel": 3,
+    "orderInGrade": 54,
+    "exampleWords": [
+      {
+        "word": "减少",
+        "wordTraditional": "減少",
+        "pinyin": "jiǎn shǎo",
+        "meaning": "reduce",
+        "ttsText": "减，减少的减"
+      }
+    ]
+  },
+  {
+    "simplified": "灾",
+    "traditional": "災",
+    "pinyin": "zāi",
+    "meaning": "disaster",
+    "gradeLevel": 3,
+    "orderInGrade": 55,
+    "exampleWords": [
+      {
+        "word": "灾难",
+        "wordTraditional": "災難",
+        "pinyin": "zāi nàn",
+        "meaning": "disaster",
+        "ttsText": "灾，灾难的灾"
+      }
+    ]
+  },
+  {
+    "simplified": "服",
+    "traditional": "服",
+    "pinyin": "fú",
+    "meaning": "clothes",
+    "gradeLevel": 3,
+    "orderInGrade": 56,
+    "exampleWords": [
+      {
+        "word": "衣服",
+        "wordTraditional": "衣服",
+        "pinyin": "yī fu",
+        "meaning": "clothes",
+        "ttsText": "服，衣服的服"
+      }
+    ]
+  },
+  {
+    "simplified": "街",
+    "traditional": "街",
+    "pinyin": "jiē",
+    "meaning": "street",
+    "gradeLevel": 3,
+    "orderInGrade": 57,
+    "exampleWords": [
+      {
+        "word": "街道",
+        "wordTraditional": "街道",
+        "pinyin": "jiē dào",
+        "meaning": "street",
+        "ttsText": "街，街道的街"
+      }
+    ]
+  },
+  {
+    "simplified": "管",
+    "traditional": "管",
+    "pinyin": "guǎn",
+    "meaning": "manage",
+    "gradeLevel": 3,
+    "orderInGrade": 58,
+    "exampleWords": [
+      {
+        "word": "管理",
+        "wordTraditional": "管理",
+        "pinyin": "guǎn lǐ",
+        "meaning": "manage",
+        "ttsText": "管，管理的管"
+      }
+    ]
+  },
+  {
+    "simplified": "具",
+    "traditional": "具",
+    "pinyin": "jù",
+    "meaning": "tool",
+    "gradeLevel": 3,
+    "orderInGrade": 59,
+    "exampleWords": [
+      {
+        "word": "工具",
+        "wordTraditional": "工具",
+        "pinyin": "gōng jù",
+        "meaning": "tool",
+        "ttsText": "具，工具的具"
+      }
+    ]
+  },
+  {
+    "simplified": "屋",
+    "traditional": "屋",
+    "pinyin": "wū",
+    "meaning": "house",
+    "gradeLevel": 3,
+    "orderInGrade": 60,
+    "exampleWords": [
+      {
+        "word": "房屋",
+        "wordTraditional": "房屋",
+        "pinyin": "fáng wū",
+        "meaning": "house",
+        "ttsText": "屋，房屋的屋"
+      }
+    ]
+  },
+  {
+    "simplified": "紧",
+    "traditional": "緊",
+    "pinyin": "jǐn",
+    "meaning": "tight",
+    "gradeLevel": 3,
+    "orderInGrade": 61,
+    "exampleWords": [
+      {
+        "word": "紧张",
+        "wordTraditional": "緊張",
+        "pinyin": "jǐn zhāng",
+        "meaning": "nervous",
+        "ttsText": "紧，紧张的紧"
+      }
+    ]
+  },
+  {
+    "simplified": "标",
+    "traditional": "標",
+    "pinyin": "biāo",
+    "meaning": "mark",
+    "gradeLevel": 3,
+    "orderInGrade": 62,
+    "exampleWords": [
+      {
+        "word": "标准",
+        "wordTraditional": "標準",
+        "pinyin": "biāo zhǔn",
+        "meaning": "standard",
+        "ttsText": "标，标准的标"
+      }
+    ]
+  },
+  {
+    "simplified": "宫",
+    "traditional": "宮",
+    "pinyin": "gōng",
+    "meaning": "palace",
+    "gradeLevel": 3,
+    "orderInGrade": 63,
+    "exampleWords": [
+      {
+        "word": "皇宫",
+        "wordTraditional": "皇宮",
+        "pinyin": "huáng gōng",
+        "meaning": "palace",
+        "ttsText": "宫，皇宫的宫"
+      }
+    ]
+  },
+  {
+    "simplified": "团",
+    "traditional": "團",
+    "pinyin": "tuán",
+    "meaning": "group",
+    "gradeLevel": 3,
+    "orderInGrade": 64,
+    "exampleWords": [
+      {
+        "word": "团队",
+        "wordTraditional": "團隊",
+        "pinyin": "tuán duì",
+        "meaning": "team",
+        "ttsText": "团，团队的团"
+      }
+    ]
+  },
+  {
+    "simplified": "翻",
+    "traditional": "翻",
+    "pinyin": "fān",
+    "meaning": "turn over",
+    "gradeLevel": 3,
+    "orderInGrade": 65,
+    "exampleWords": [
+      {
+        "word": "翻开",
+        "wordTraditional": "翻開",
+        "pinyin": "fān kāi",
+        "meaning": "open (book)",
+        "ttsText": "翻，翻开的翻"
+      }
+    ]
+  },
+  {
+    "simplified": "倒",
+    "traditional": "倒",
+    "pinyin": "dǎo",
+    "meaning": "fall over",
+    "gradeLevel": 3,
+    "orderInGrade": 66,
+    "exampleWords": [
+      {
+        "word": "倒下",
+        "wordTraditional": "倒下",
+        "pinyin": "dǎo xià",
+        "meaning": "fall down",
+        "ttsText": "倒，倒下的倒"
+      }
+    ]
+  },
+  {
+    "simplified": "猫",
+    "traditional": "貓",
+    "pinyin": "māo",
+    "meaning": "cat",
+    "gradeLevel": 3,
+    "orderInGrade": 67,
+    "exampleWords": [
+      {
+        "word": "小猫",
+        "wordTraditional": "小貓",
+        "pinyin": "xiǎo māo",
+        "meaning": "kitten",
+        "ttsText": "猫，小猫的猫"
+      }
+    ]
+  },
+  {
+    "simplified": "环",
+    "traditional": "環",
+    "pinyin": "huán",
+    "meaning": "ring",
+    "gradeLevel": 3,
+    "orderInGrade": 68,
+    "exampleWords": [
+      {
+        "word": "环境",
+        "wordTraditional": "環境",
+        "pinyin": "huán jìng",
+        "meaning": "environment",
+        "ttsText": "环，环境的环"
+      }
+    ]
+  },
+  {
+    "simplified": "境",
+    "traditional": "境",
+    "pinyin": "jìng",
+    "meaning": "boundary",
+    "gradeLevel": 3,
+    "orderInGrade": 69,
+    "exampleWords": [
+      {
+        "word": "环境",
+        "wordTraditional": "環境",
+        "pinyin": "huán jìng",
+        "meaning": "environment",
+        "ttsText": "境，环境的境"
+      }
+    ]
+  },
+  {
+    "simplified": "注",
+    "traditional": "注",
+    "pinyin": "zhù",
+    "meaning": "pour; note",
+    "gradeLevel": 3,
+    "orderInGrade": 70,
+    "exampleWords": [
+      {
+        "word": "注意",
+        "wordTraditional": "注意",
+        "pinyin": "zhù yì",
+        "meaning": "attention",
+        "ttsText": "注，注意的注"
+      }
+    ]
+  },
+  {
+    "simplified": "黑",
+    "traditional": "黑",
+    "pinyin": "hēi",
+    "meaning": "black",
+    "gradeLevel": 3,
+    "orderInGrade": 71,
+    "exampleWords": [
+      {
+        "word": "黑色",
+        "wordTraditional": "黑色",
+        "pinyin": "hēi sè",
+        "meaning": "black",
+        "ttsText": "黑，黑色的黑"
+      }
+    ]
+  },
+  {
+    "simplified": "潮",
+    "traditional": "潮",
+    "pinyin": "cháo",
+    "meaning": "tide",
+    "gradeLevel": 4,
+    "orderInGrade": 0,
+    "exampleWords": [
+      {
+        "word": "潮水",
+        "wordTraditional": "潮水",
+        "pinyin": "cháo shuǐ",
+        "meaning": "tide",
+        "ttsText": "潮，潮水的潮"
+      }
+    ]
+  },
+  {
+    "simplified": "称",
+    "traditional": "稱",
+    "pinyin": "chēng",
+    "meaning": "call",
+    "gradeLevel": 4,
+    "orderInGrade": 1,
+    "exampleWords": [
+      {
+        "word": "称呼",
+        "wordTraditional": "稱呼",
+        "pinyin": "chēng hu",
+        "meaning": "address",
+        "ttsText": "称，称呼的称"
+      }
+    ]
+  },
+  {
+    "simplified": "笼",
+    "traditional": "籠",
+    "pinyin": "lóng",
+    "meaning": "cage",
+    "gradeLevel": 4,
+    "orderInGrade": 2,
+    "exampleWords": [
+      {
+        "word": "鸟笼",
+        "wordTraditional": "鳥籠",
+        "pinyin": "niǎo lóng",
+        "meaning": "birdcage",
+        "ttsText": "笼，鸟笼的笼"
+      }
+    ]
+  },
+  {
+    "simplified": "雾",
+    "traditional": "霧",
+    "pinyin": "wù",
+    "meaning": "fog",
+    "gradeLevel": 4,
+    "orderInGrade": 3,
+    "exampleWords": [
+      {
+        "word": "大雾",
+        "wordTraditional": "大霧",
+        "pinyin": "dà wù",
+        "meaning": "heavy fog",
+        "ttsText": "雾，大雾的雾"
+      }
+    ]
+  },
+  {
+    "simplified": "灿",
+    "traditional": "燦",
+    "pinyin": "càn",
+    "meaning": "brilliant",
+    "gradeLevel": 4,
+    "orderInGrade": 4,
+    "exampleWords": [
+      {
+        "word": "灿烂",
+        "wordTraditional": "燦爛",
+        "pinyin": "càn làn",
+        "meaning": "brilliant",
+        "ttsText": "灿，灿烂的灿"
+      }
+    ]
+  },
+  {
+    "simplified": "烂",
+    "traditional": "爛",
+    "pinyin": "làn",
+    "meaning": "rotten",
+    "gradeLevel": 4,
+    "orderInGrade": 5,
+    "exampleWords": [
+      {
+        "word": "灿烂",
+        "wordTraditional": "燦爛",
+        "pinyin": "càn làn",
+        "meaning": "brilliant",
+        "ttsText": "烂，灿烂的烂"
+      }
+    ]
+  },
+  {
+    "simplified": "竿",
+    "traditional": "竿",
+    "pinyin": "gān",
+    "meaning": "pole",
+    "gradeLevel": 4,
+    "orderInGrade": 6,
+    "exampleWords": [
+      {
+        "word": "竹竿",
+        "wordTraditional": "竹竿",
+        "pinyin": "zhú gān",
+        "meaning": "bamboo pole",
+        "ttsText": "竿，竹竿的竿"
+      }
+    ]
+  },
+  {
+    "simplified": "茫",
+    "traditional": "茫",
+    "pinyin": "máng",
+    "meaning": "vast",
+    "gradeLevel": 4,
+    "orderInGrade": 7,
+    "exampleWords": [
+      {
+        "word": "茫茫",
+        "wordTraditional": "茫茫",
+        "pinyin": "máng máng",
+        "meaning": "vast",
+        "ttsText": "茫，茫茫的茫"
+      }
+    ]
+  },
+  {
+    "simplified": "桨",
+    "traditional": "槳",
+    "pinyin": "jiǎng",
+    "meaning": "oar",
+    "gradeLevel": 4,
+    "orderInGrade": 8,
+    "exampleWords": [
+      {
+        "word": "船桨",
+        "wordTraditional": "船槳",
+        "pinyin": "chuán jiǎng",
+        "meaning": "oar",
+        "ttsText": "桨，船桨的桨"
+      }
+    ]
+  },
+  {
+    "simplified": "规",
+    "traditional": "規",
+    "pinyin": "guī",
+    "meaning": "rule",
+    "gradeLevel": 4,
+    "orderInGrade": 9,
+    "exampleWords": [
+      {
+        "word": "规律",
+        "wordTraditional": "規律",
+        "pinyin": "guī lǜ",
+        "meaning": "rule",
+        "ttsText": "规，规律的规"
+      }
+    ]
+  },
+  {
+    "simplified": "律",
+    "traditional": "律",
+    "pinyin": "lǜ",
+    "meaning": "law",
+    "gradeLevel": 4,
+    "orderInGrade": 10,
+    "exampleWords": [
+      {
+        "word": "法律",
+        "wordTraditional": "法律",
+        "pinyin": "fǎ lǜ",
+        "meaning": "law",
+        "ttsText": "律，法律的律"
+      }
+    ]
+  },
+  {
+    "simplified": "支",
+    "traditional": "支",
+    "pinyin": "zhī",
+    "meaning": "branch",
+    "gradeLevel": 4,
+    "orderInGrade": 11,
+    "exampleWords": [
+      {
+        "word": "支持",
+        "wordTraditional": "支持",
+        "pinyin": "zhī chí",
+        "meaning": "support",
+        "ttsText": "支，支持的支"
+      }
+    ]
+  },
+  {
+    "simplified": "触",
+    "traditional": "觸",
+    "pinyin": "chù",
+    "meaning": "touch",
+    "gradeLevel": 4,
+    "orderInGrade": 12,
+    "exampleWords": [
+      {
+        "word": "接触",
+        "wordTraditional": "接觸",
+        "pinyin": "jiē chù",
+        "meaning": "contact",
+        "ttsText": "触，接触的触"
+      }
+    ]
+  },
+  {
+    "simplified": "痕",
+    "traditional": "痕",
+    "pinyin": "hén",
+    "meaning": "mark",
+    "gradeLevel": 4,
+    "orderInGrade": 13,
+    "exampleWords": [
+      {
+        "word": "痕迹",
+        "wordTraditional": "痕跡",
+        "pinyin": "hén jì",
+        "meaning": "trace",
+        "ttsText": "痕，痕迹的痕"
+      }
+    ]
+  },
+  {
+    "simplified": "迹",
+    "traditional": "跡",
+    "pinyin": "jì",
+    "meaning": "trace",
+    "gradeLevel": 4,
+    "orderInGrade": 14,
+    "exampleWords": [
+      {
+        "word": "痕迹",
+        "wordTraditional": "痕跡",
+        "pinyin": "hén jì",
+        "meaning": "trace",
+        "ttsText": "迹，痕迹的迹"
+      }
+    ]
+  },
+  {
+    "simplified": "均",
+    "traditional": "均",
+    "pinyin": "jūn",
+    "meaning": "equal",
+    "gradeLevel": 4,
+    "orderInGrade": 15,
+    "exampleWords": [
+      {
+        "word": "平均",
+        "wordTraditional": "平均",
+        "pinyin": "píng jūn",
+        "meaning": "average",
+        "ttsText": "均，平均的均"
+      }
+    ]
+  },
+  {
+    "simplified": "叠",
+    "traditional": "疊",
+    "pinyin": "dié",
+    "meaning": "fold",
+    "gradeLevel": 4,
+    "orderInGrade": 16,
+    "exampleWords": [
+      {
+        "word": "重叠",
+        "wordTraditional": "重疊",
+        "pinyin": "chóng dié",
+        "meaning": "overlap",
+        "ttsText": "叠，重叠的叠"
+      }
+    ]
+  },
+  {
+    "simplified": "茎",
+    "traditional": "莖",
+    "pinyin": "jīng",
+    "meaning": "stem",
+    "gradeLevel": 4,
+    "orderInGrade": 17,
+    "exampleWords": [
+      {
+        "word": "花茎",
+        "wordTraditional": "花莖",
+        "pinyin": "huā jīng",
+        "meaning": "flower stem",
+        "ttsText": "茎，花茎的茎"
+      }
+    ]
+  },
+  {
+    "simplified": "占",
+    "traditional": "佔",
+    "pinyin": "zhàn",
+    "meaning": "occupy",
+    "gradeLevel": 4,
+    "orderInGrade": 18,
+    "exampleWords": [
+      {
+        "word": "占领",
+        "wordTraditional": "佔領",
+        "pinyin": "zhàn lǐng",
+        "meaning": "occupy",
+        "ttsText": "占，占领的占"
+      }
+    ]
+  },
+  {
+    "simplified": "若",
+    "traditional": "若",
+    "pinyin": "ruò",
+    "meaning": "if",
+    "gradeLevel": 4,
+    "orderInGrade": 19,
+    "exampleWords": [
+      {
+        "word": "若是",
+        "wordTraditional": "若是",
+        "pinyin": "ruò shì",
+        "meaning": "if",
+        "ttsText": "若，若是的若"
+      }
+    ]
+  },
+  {
+    "simplified": "罩",
+    "traditional": "罩",
+    "pinyin": "zhào",
+    "meaning": "cover",
+    "gradeLevel": 4,
+    "orderInGrade": 20,
+    "exampleWords": [
+      {
+        "word": "笼罩",
+        "wordTraditional": "籠罩",
+        "pinyin": "lǒng zhào",
+        "meaning": "shroud",
+        "ttsText": "罩，笼罩的罩"
+      }
+    ]
+  },
+  {
+    "simplified": "屹",
+    "traditional": "屹",
+    "pinyin": "yì",
+    "meaning": "stand firm",
+    "gradeLevel": 4,
+    "orderInGrade": 21,
+    "exampleWords": [
+      {
+        "word": "屹立",
+        "wordTraditional": "屹立",
+        "pinyin": "yì lì",
+        "meaning": "stand firm",
+        "ttsText": "屹，屹立的屹"
+      }
+    ]
+  },
+  {
+    "simplified": "辉",
+    "traditional": "輝",
+    "pinyin": "huī",
+    "meaning": "splendor",
+    "gradeLevel": 4,
+    "orderInGrade": 22,
+    "exampleWords": [
+      {
+        "word": "光辉",
+        "wordTraditional": "光輝",
+        "pinyin": "guāng huī",
+        "meaning": "glory",
+        "ttsText": "辉，光辉的辉"
+      }
+    ]
+  },
+  {
+    "simplified": "庙",
+    "traditional": "廟",
+    "pinyin": "miào",
+    "meaning": "temple",
+    "gradeLevel": 4,
+    "orderInGrade": 23,
+    "exampleWords": [
+      {
+        "word": "寺庙",
+        "wordTraditional": "寺廟",
+        "pinyin": "sì miào",
+        "meaning": "temple",
+        "ttsText": "庙，寺庙的庙"
+      }
+    ]
+  },
+  {
+    "simplified": "贸",
+    "traditional": "貿",
+    "pinyin": "mào",
+    "meaning": "trade",
+    "gradeLevel": 4,
+    "orderInGrade": 24,
+    "exampleWords": [
+      {
+        "word": "贸易",
+        "wordTraditional": "貿易",
+        "pinyin": "mào yì",
+        "meaning": "trade",
+        "ttsText": "贸，贸易的贸"
+      }
+    ]
+  },
+  {
+    "simplified": "超",
+    "traditional": "超",
+    "pinyin": "chāo",
+    "meaning": "surpass",
+    "gradeLevel": 4,
+    "orderInGrade": 25,
+    "exampleWords": [
+      {
+        "word": "超过",
+        "wordTraditional": "超過",
+        "pinyin": "chāo guò",
+        "meaning": "exceed",
+        "ttsText": "超，超过的超"
+      }
+    ]
+  },
+  {
+    "simplified": "灌",
+    "traditional": "灌",
+    "pinyin": "guàn",
+    "meaning": "irrigate",
+    "gradeLevel": 4,
+    "orderInGrade": 26,
+    "exampleWords": [
+      {
+        "word": "灌溉",
+        "wordTraditional": "灌溉",
+        "pinyin": "guàn gài",
+        "meaning": "irrigate",
+        "ttsText": "灌，灌溉的灌"
+      }
+    ]
+  },
+  {
+    "simplified": "核",
+    "traditional": "核",
+    "pinyin": "hé",
+    "meaning": "core",
+    "gradeLevel": 4,
+    "orderInGrade": 27,
+    "exampleWords": [
+      {
+        "word": "核心",
+        "wordTraditional": "核心",
+        "pinyin": "hé xīn",
+        "meaning": "core",
+        "ttsText": "核，核心的核"
+      }
+    ]
+  },
+  {
+    "simplified": "荣",
+    "traditional": "榮",
+    "pinyin": "róng",
+    "meaning": "glory",
+    "gradeLevel": 4,
+    "orderInGrade": 28,
+    "exampleWords": [
+      {
+        "word": "光荣",
+        "wordTraditional": "光榮",
+        "pinyin": "guāng róng",
+        "meaning": "glorious",
+        "ttsText": "荣，光荣的荣"
+      }
+    ]
+  },
+  {
+    "simplified": "毁",
+    "traditional": "毀",
+    "pinyin": "huǐ",
+    "meaning": "destroy",
+    "gradeLevel": 4,
+    "orderInGrade": 29,
+    "exampleWords": [
+      {
+        "word": "毁坏",
+        "wordTraditional": "毀壞",
+        "pinyin": "huǐ huài",
+        "meaning": "destroy",
+        "ttsText": "毁，毁坏的毁"
+      }
+    ]
+  },
+  {
+    "simplified": "慧",
+    "traditional": "慧",
+    "pinyin": "huì",
+    "meaning": "wise",
+    "gradeLevel": 4,
+    "orderInGrade": 30,
+    "exampleWords": [
+      {
+        "word": "智慧",
+        "wordTraditional": "智慧",
+        "pinyin": "zhì huì",
+        "meaning": "wisdom",
+        "ttsText": "慧，智慧的慧"
+      }
+    ]
+  },
+  {
+    "simplified": "冻",
+    "traditional": "凍",
+    "pinyin": "dòng",
+    "meaning": "freeze",
+    "gradeLevel": 4,
+    "orderInGrade": 31,
+    "exampleWords": [
+      {
+        "word": "冰冻",
+        "wordTraditional": "冰凍",
+        "pinyin": "bīng dòng",
+        "meaning": "frozen",
+        "ttsText": "冻，冰冻的冻"
+      }
+    ]
+  },
+  {
+    "simplified": "餐",
+    "traditional": "餐",
+    "pinyin": "cān",
+    "meaning": "meal",
+    "gradeLevel": 4,
+    "orderInGrade": 32,
+    "exampleWords": [
+      {
+        "word": "早餐",
+        "wordTraditional": "早餐",
+        "pinyin": "zǎo cān",
+        "meaning": "breakfast",
+        "ttsText": "餐，早餐的餐"
+      }
+    ]
+  },
+  {
+    "simplified": "融",
+    "traditional": "融",
+    "pinyin": "róng",
+    "meaning": "melt",
+    "gradeLevel": 4,
+    "orderInGrade": 33,
+    "exampleWords": [
+      {
+        "word": "融化",
+        "wordTraditional": "融化",
+        "pinyin": "róng huà",
+        "meaning": "melt",
+        "ttsText": "融，融化的融"
+      }
+    ]
+  },
+  {
+    "simplified": "剩",
+    "traditional": "剩",
+    "pinyin": "shèng",
+    "meaning": "remain",
+    "gradeLevel": 4,
+    "orderInGrade": 34,
+    "exampleWords": [
+      {
+        "word": "剩下",
+        "wordTraditional": "剩下",
+        "pinyin": "shèng xià",
+        "meaning": "remain",
+        "ttsText": "剩，剩下的剩"
+      }
+    ]
+  },
+  {
+    "simplified": "伐",
+    "traditional": "伐",
+    "pinyin": "fá",
+    "meaning": "cut down",
+    "gradeLevel": 4,
+    "orderInGrade": 35,
+    "exampleWords": [
+      {
+        "word": "砍伐",
+        "wordTraditional": "砍伐",
+        "pinyin": "kǎn fá",
+        "meaning": "fell trees",
+        "ttsText": "伐，砍伐的伐"
+      }
+    ]
+  },
+  {
+    "simplified": "煤",
+    "traditional": "煤",
+    "pinyin": "méi",
+    "meaning": "coal",
+    "gradeLevel": 4,
+    "orderInGrade": 36,
+    "exampleWords": [
+      {
+        "word": "煤炭",
+        "wordTraditional": "煤炭",
+        "pinyin": "méi tàn",
+        "meaning": "coal",
+        "ttsText": "煤，煤炭的煤"
+      }
+    ]
+  },
+  {
+    "simplified": "虑",
+    "traditional": "慮",
+    "pinyin": "lǜ",
+    "meaning": "consider",
+    "gradeLevel": 4,
+    "orderInGrade": 37,
+    "exampleWords": [
+      {
+        "word": "考虑",
+        "wordTraditional": "考慮",
+        "pinyin": "kǎo lǜ",
+        "meaning": "consider",
+        "ttsText": "虑，考虑的虑"
+      }
+    ]
+  },
+  {
+    "simplified": "献",
+    "traditional": "獻",
+    "pinyin": "xiàn",
+    "meaning": "offer",
+    "gradeLevel": 4,
+    "orderInGrade": 38,
+    "exampleWords": [
+      {
+        "word": "贡献",
+        "wordTraditional": "貢獻",
+        "pinyin": "gòng xiàn",
+        "meaning": "contribute",
+        "ttsText": "献，贡献的献"
+      }
+    ]
+  },
+  {
+    "simplified": "慎",
+    "traditional": "慎",
+    "pinyin": "shèn",
+    "meaning": "careful",
+    "gradeLevel": 4,
+    "orderInGrade": 39,
+    "exampleWords": [
+      {
+        "word": "谨慎",
+        "wordTraditional": "謹慎",
+        "pinyin": "jǐn shèn",
+        "meaning": "cautious",
+        "ttsText": "慎，谨慎的慎"
+      }
+    ]
+  },
+  {
+    "simplified": "遗",
+    "traditional": "遺",
+    "pinyin": "yí",
+    "meaning": "leave behind",
+    "gradeLevel": 4,
+    "orderInGrade": 40,
+    "exampleWords": [
+      {
+        "word": "遗忘",
+        "wordTraditional": "遺忘",
+        "pinyin": "yí wàng",
+        "meaning": "forget",
+        "ttsText": "遗，遗忘的遗"
+      }
+    ]
+  },
+  {
+    "simplified": "盗",
+    "traditional": "盜",
+    "pinyin": "dào",
+    "meaning": "steal",
+    "gradeLevel": 4,
+    "orderInGrade": 41,
+    "exampleWords": [
+      {
+        "word": "盗窃",
+        "wordTraditional": "盜竊",
+        "pinyin": "dào qiè",
+        "meaning": "steal",
+        "ttsText": "盗，盗窃的盗"
+      }
+    ]
+  },
+  {
+    "simplified": "驾",
+    "traditional": "駕",
+    "pinyin": "jià",
+    "meaning": "drive",
+    "gradeLevel": 4,
+    "orderInGrade": 42,
+    "exampleWords": [
+      {
+        "word": "驾驶",
+        "wordTraditional": "駕駛",
+        "pinyin": "jià shǐ",
+        "meaning": "drive",
+        "ttsText": "驾，驾驶的驾"
+      }
+    ]
+  },
+  {
+    "simplified": "质",
+    "traditional": "質",
+    "pinyin": "zhì",
+    "meaning": "quality",
+    "gradeLevel": 4,
+    "orderInGrade": 43,
+    "exampleWords": [
+      {
+        "word": "质量",
+        "wordTraditional": "質量",
+        "pinyin": "zhì liàng",
+        "meaning": "quality",
+        "ttsText": "质，质量的质"
+      }
+    ]
+  },
+  {
+    "simplified": "议",
+    "traditional": "議",
+    "pinyin": "yì",
+    "meaning": "discuss",
+    "gradeLevel": 4,
+    "orderInGrade": 44,
+    "exampleWords": [
+      {
+        "word": "会议",
+        "wordTraditional": "會議",
+        "pinyin": "huì yì",
+        "meaning": "meeting",
+        "ttsText": "议，会议的议"
+      }
+    ]
+  },
+  {
+    "simplified": "源",
+    "traditional": "源",
+    "pinyin": "yuán",
+    "meaning": "source",
+    "gradeLevel": 4,
+    "orderInGrade": 45,
+    "exampleWords": [
+      {
+        "word": "水源",
+        "wordTraditional": "水源",
+        "pinyin": "shuǐ yuán",
+        "meaning": "water source",
+        "ttsText": "源，水源的源"
+      }
+    ]
+  },
+  {
+    "simplified": "享",
+    "traditional": "享",
+    "pinyin": "xiǎng",
+    "meaning": "enjoy",
+    "gradeLevel": 4,
+    "orderInGrade": 46,
+    "exampleWords": [
+      {
+        "word": "享受",
+        "wordTraditional": "享受",
+        "pinyin": "xiǎng shòu",
+        "meaning": "enjoy",
+        "ttsText": "享，享受的享"
+      }
+    ]
+  },
+  {
+    "simplified": "叙",
+    "traditional": "敘",
+    "pinyin": "xù",
+    "meaning": "narrate",
+    "gradeLevel": 4,
+    "orderInGrade": 47,
+    "exampleWords": [
+      {
+        "word": "叙述",
+        "wordTraditional": "敘述",
+        "pinyin": "xù shù",
+        "meaning": "narrate",
+        "ttsText": "叙，叙述的叙"
+      }
+    ]
+  },
+  {
+    "simplified": "辽",
+    "traditional": "遼",
+    "pinyin": "liáo",
+    "meaning": "distant",
+    "gradeLevel": 4,
+    "orderInGrade": 48,
+    "exampleWords": [
+      {
+        "word": "辽阔",
+        "wordTraditional": "遼闊",
+        "pinyin": "liáo kuò",
+        "meaning": "vast",
+        "ttsText": "辽，辽阔的辽"
+      }
+    ]
+  },
+  {
+    "simplified": "阔",
+    "traditional": "闊",
+    "pinyin": "kuò",
+    "meaning": "wide",
+    "gradeLevel": 4,
+    "orderInGrade": 49,
+    "exampleWords": [
+      {
+        "word": "辽阔",
+        "wordTraditional": "遼闊",
+        "pinyin": "liáo kuò",
+        "meaning": "vast",
+        "ttsText": "阔，辽阔的阔"
+      }
+    ]
+  },
+  {
+    "simplified": "忧",
+    "traditional": "憂",
+    "pinyin": "yōu",
+    "meaning": "worry",
+    "gradeLevel": 4,
+    "orderInGrade": 50,
+    "exampleWords": [
+      {
+        "word": "忧愁",
+        "wordTraditional": "憂愁",
+        "pinyin": "yōu chóu",
+        "meaning": "worry",
+        "ttsText": "忧，忧愁的忧"
+      }
+    ]
+  },
+  {
+    "simplified": "患",
+    "traditional": "患",
+    "pinyin": "huàn",
+    "meaning": "trouble",
+    "gradeLevel": 4,
+    "orderInGrade": 51,
+    "exampleWords": [
+      {
+        "word": "患者",
+        "wordTraditional": "患者",
+        "pinyin": "huàn zhě",
+        "meaning": "patient",
+        "ttsText": "患，患者的患"
+      }
+    ]
+  },
+  {
+    "simplified": "搬",
+    "traditional": "搬",
+    "pinyin": "bān",
+    "meaning": "move",
+    "gradeLevel": 4,
+    "orderInGrade": 52,
+    "exampleWords": [
+      {
+        "word": "搬家",
+        "wordTraditional": "搬家",
+        "pinyin": "bān jiā",
+        "meaning": "move house",
+        "ttsText": "搬，搬家的搬"
+      }
+    ]
+  },
+  {
+    "simplified": "剧",
+    "traditional": "劇",
+    "pinyin": "jù",
+    "meaning": "drama",
+    "gradeLevel": 4,
+    "orderInGrade": 53,
+    "exampleWords": [
+      {
+        "word": "电视剧",
+        "wordTraditional": "電視劇",
+        "pinyin": "diàn shì jù",
+        "meaning": "TV drama",
+        "ttsText": "剧，电视剧的剧"
+      }
+    ]
+  },
+  {
+    "simplified": "振",
+    "traditional": "振",
+    "pinyin": "zhèn",
+    "meaning": "shake",
+    "gradeLevel": 4,
+    "orderInGrade": 54,
+    "exampleWords": [
+      {
+        "word": "振动",
+        "wordTraditional": "振動",
+        "pinyin": "zhèn dòng",
+        "meaning": "vibrate",
+        "ttsText": "振，振动的振"
+      }
+    ]
+  },
+  {
+    "simplified": "育",
+    "traditional": "育",
+    "pinyin": "yù",
+    "meaning": "educate",
+    "gradeLevel": 4,
+    "orderInGrade": 55,
+    "exampleWords": [
+      {
+        "word": "教育",
+        "wordTraditional": "教育",
+        "pinyin": "jiào yù",
+        "meaning": "education",
+        "ttsText": "育，教育的育"
+      }
+    ]
+  },
+  {
+    "simplified": "良",
+    "traditional": "良",
+    "pinyin": "liáng",
+    "meaning": "good",
+    "gradeLevel": 4,
+    "orderInGrade": 56,
+    "exampleWords": [
+      {
+        "word": "良好",
+        "wordTraditional": "良好",
+        "pinyin": "liáng hǎo",
+        "meaning": "good",
+        "ttsText": "良，良好的良"
+      }
+    ]
+  },
+  {
+    "simplified": "训",
+    "traditional": "訓",
+    "pinyin": "xùn",
+    "meaning": "train",
+    "gradeLevel": 4,
+    "orderInGrade": 57,
+    "exampleWords": [
+      {
+        "word": "训练",
+        "wordTraditional": "訓練",
+        "pinyin": "xùn liàn",
+        "meaning": "train",
+        "ttsText": "训，训练的训"
+      }
+    ]
+  },
+  {
+    "simplified": "善",
+    "traditional": "善",
+    "pinyin": "shàn",
+    "meaning": "good",
+    "gradeLevel": 4,
+    "orderInGrade": 58,
+    "exampleWords": [
+      {
+        "word": "善良",
+        "wordTraditional": "善良",
+        "pinyin": "shàn liáng",
+        "meaning": "kind",
+        "ttsText": "善，善良的善"
+      }
+    ]
+  },
+  {
+    "simplified": "谦",
+    "traditional": "謙",
+    "pinyin": "qiān",
+    "meaning": "modest",
+    "gradeLevel": 4,
+    "orderInGrade": 59,
+    "exampleWords": [
+      {
+        "word": "谦虚",
+        "wordTraditional": "謙虛",
+        "pinyin": "qiān xū",
+        "meaning": "modest",
+        "ttsText": "谦，谦虚的谦"
+      }
+    ]
+  },
+  {
+    "simplified": "虚",
+    "traditional": "虛",
+    "pinyin": "xū",
+    "meaning": "empty",
+    "gradeLevel": 4,
+    "orderInGrade": 60,
+    "exampleWords": [
+      {
+        "word": "虚心",
+        "wordTraditional": "虛心",
+        "pinyin": "xū xīn",
+        "meaning": "humble",
+        "ttsText": "虚，虚心的虚"
+      }
+    ]
+  },
+  {
+    "simplified": "窃",
+    "traditional": "竊",
+    "pinyin": "qiè",
+    "meaning": "steal",
+    "gradeLevel": 5,
+    "orderInGrade": 0,
+    "exampleWords": [
+      {
+        "word": "偷窃",
+        "wordTraditional": "偷竊",
+        "pinyin": "tōu qiè",
+        "meaning": "steal",
+        "ttsText": "窃，偷窃的窃"
+      }
+    ]
+  },
+  {
+    "simplified": "锅",
+    "traditional": "鍋",
+    "pinyin": "guō",
+    "meaning": "pot",
+    "gradeLevel": 5,
+    "orderInGrade": 1,
+    "exampleWords": [
+      {
+        "word": "火锅",
+        "wordTraditional": "火鍋",
+        "pinyin": "huǒ guō",
+        "meaning": "hot pot",
+        "ttsText": "锅，火锅的锅"
+      }
+    ]
+  },
+  {
+    "simplified": "饿",
+    "traditional": "餓",
+    "pinyin": "è",
+    "meaning": "hungry",
+    "gradeLevel": 5,
+    "orderInGrade": 2,
+    "exampleWords": [
+      {
+        "word": "饥饿",
+        "wordTraditional": "飢餓",
+        "pinyin": "jī è",
+        "meaning": "hungry",
+        "ttsText": "饿，饥饿的饿"
+      }
+    ]
+  },
+  {
+    "simplified": "惧",
+    "traditional": "懼",
+    "pinyin": "jù",
+    "meaning": "fear",
+    "gradeLevel": 5,
+    "orderInGrade": 3,
+    "exampleWords": [
+      {
+        "word": "恐惧",
+        "wordTraditional": "恐懼",
+        "pinyin": "kǒng jù",
+        "meaning": "fear",
+        "ttsText": "惧，恐惧的惧"
+      }
+    ]
+  },
+  {
+    "simplified": "充",
+    "traditional": "充",
+    "pinyin": "chōng",
+    "meaning": "fill",
+    "gradeLevel": 5,
+    "orderInGrade": 4,
+    "exampleWords": [
+      {
+        "word": "充满",
+        "wordTraditional": "充滿",
+        "pinyin": "chōng mǎn",
+        "meaning": "full of",
+        "ttsText": "充，充满的充"
+      }
+    ]
+  },
+  {
+    "simplified": "酸",
+    "traditional": "酸",
+    "pinyin": "suān",
+    "meaning": "sour",
+    "gradeLevel": 5,
+    "orderInGrade": 5,
+    "exampleWords": [
+      {
+        "word": "酸甜",
+        "wordTraditional": "酸甜",
+        "pinyin": "suān tián",
+        "meaning": "sweet and sour",
+        "ttsText": "酸，酸甜的酸"
+      }
+    ]
+  },
+  {
+    "simplified": "甜",
+    "traditional": "甜",
+    "pinyin": "tián",
+    "meaning": "sweet",
+    "gradeLevel": 5,
+    "orderInGrade": 6,
+    "exampleWords": [
+      {
+        "word": "甜蜜",
+        "wordTraditional": "甜蜜",
+        "pinyin": "tián mì",
+        "meaning": "sweet",
+        "ttsText": "甜，甜蜜的甜"
+      }
+    ]
+  },
+  {
+    "simplified": "吵",
+    "traditional": "吵",
+    "pinyin": "chǎo",
+    "meaning": "noisy",
+    "gradeLevel": 5,
+    "orderInGrade": 7,
+    "exampleWords": [
+      {
+        "word": "吵闹",
+        "wordTraditional": "吵鬧",
+        "pinyin": "chǎo nào",
+        "meaning": "noisy",
+        "ttsText": "吵，吵闹的吵"
+      }
+    ]
+  },
+  {
+    "simplified": "仁",
+    "traditional": "仁",
+    "pinyin": "rén",
+    "meaning": "kind",
+    "gradeLevel": 5,
+    "orderInGrade": 8,
+    "exampleWords": [
+      {
+        "word": "仁慈",
+        "wordTraditional": "仁慈",
+        "pinyin": "rén cí",
+        "meaning": "benevolent",
+        "ttsText": "仁，仁慈的仁"
+      }
+    ]
+  },
+  {
+    "simplified": "贪",
+    "traditional": "貪",
+    "pinyin": "tān",
+    "meaning": "greedy",
+    "gradeLevel": 5,
+    "orderInGrade": 9,
+    "exampleWords": [
+      {
+        "word": "贪心",
+        "wordTraditional": "貪心",
+        "pinyin": "tān xīn",
+        "meaning": "greedy",
+        "ttsText": "贪，贪心的贪"
+      }
+    ]
+  },
+  {
+    "simplified": "津",
+    "traditional": "津",
+    "pinyin": "jīn",
+    "meaning": "ferry",
+    "gradeLevel": 5,
+    "orderInGrade": 10,
+    "exampleWords": [
+      {
+        "word": "天津",
+        "wordTraditional": "天津",
+        "pinyin": "tiān jīn",
+        "meaning": "Tianjin",
+        "ttsText": "津，天津的津"
+      }
+    ]
+  },
+  {
+    "simplified": "偷",
+    "traditional": "偷",
+    "pinyin": "tōu",
+    "meaning": "steal",
+    "gradeLevel": 5,
+    "orderInGrade": 11,
+    "exampleWords": [
+      {
+        "word": "小偷",
+        "wordTraditional": "小偷",
+        "pinyin": "xiǎo tōu",
+        "meaning": "thief",
+        "ttsText": "偷，小偷的偷"
+      }
+    ]
+  },
+  {
+    "simplified": "扑",
+    "traditional": "撲",
+    "pinyin": "pū",
+    "meaning": "pounce",
+    "gradeLevel": 5,
+    "orderInGrade": 12,
+    "exampleWords": [
+      {
+        "word": "扑倒",
+        "wordTraditional": "撲倒",
+        "pinyin": "pū dǎo",
+        "meaning": "fall forward",
+        "ttsText": "扑，扑倒的扑"
+      }
+    ]
+  },
+  {
+    "simplified": "莲",
+    "traditional": "蓮",
+    "pinyin": "lián",
+    "meaning": "lotus",
+    "gradeLevel": 5,
+    "orderInGrade": 13,
+    "exampleWords": [
+      {
+        "word": "莲花",
+        "wordTraditional": "蓮花",
+        "pinyin": "lián huā",
+        "meaning": "lotus flower",
+        "ttsText": "莲，莲花的莲"
+      }
+    ]
+  },
+  {
+    "simplified": "赋",
+    "traditional": "賦",
+    "pinyin": "fù",
+    "meaning": "bestow",
+    "gradeLevel": 5,
+    "orderInGrade": 14,
+    "exampleWords": [
+      {
+        "word": "天赋",
+        "wordTraditional": "天賦",
+        "pinyin": "tiān fù",
+        "meaning": "talent",
+        "ttsText": "赋，天赋的赋"
+      }
+    ]
+  },
+  {
+    "simplified": "淘",
+    "traditional": "淘",
+    "pinyin": "táo",
+    "meaning": "wash",
+    "gradeLevel": 5,
+    "orderInGrade": 15,
+    "exampleWords": [
+      {
+        "word": "淘气",
+        "wordTraditional": "淘氣",
+        "pinyin": "táo qì",
+        "meaning": "naughty",
+        "ttsText": "淘，淘气的淘"
+      }
+    ]
+  },
+  {
+    "simplified": "岂",
+    "traditional": "豈",
+    "pinyin": "qǐ",
+    "meaning": "how can",
+    "gradeLevel": 5,
+    "orderInGrade": 16,
+    "exampleWords": [
+      {
+        "word": "岂不",
+        "wordTraditional": "豈不",
+        "pinyin": "qǐ bù",
+        "meaning": "wouldn't it",
+        "ttsText": "岂，岂不的岂"
+      }
+    ]
+  },
+  {
+    "simplified": "豪",
+    "traditional": "豪",
+    "pinyin": "háo",
+    "meaning": "heroic",
+    "gradeLevel": 5,
+    "orderInGrade": 17,
+    "exampleWords": [
+      {
+        "word": "豪华",
+        "wordTraditional": "豪華",
+        "pinyin": "háo huá",
+        "meaning": "luxurious",
+        "ttsText": "豪，豪华的豪"
+      }
+    ]
+  },
+  {
+    "simplified": "誉",
+    "traditional": "譽",
+    "pinyin": "yù",
+    "meaning": "fame",
+    "gradeLevel": 5,
+    "orderInGrade": 18,
+    "exampleWords": [
+      {
+        "word": "荣誉",
+        "wordTraditional": "榮譽",
+        "pinyin": "róng yù",
+        "meaning": "honor",
+        "ttsText": "誉，荣誉的誉"
+      }
+    ]
+  },
+  {
+    "simplified": "杆",
+    "traditional": "桿",
+    "pinyin": "gǎn",
+    "meaning": "pole",
+    "gradeLevel": 5,
+    "orderInGrade": 19,
+    "exampleWords": [
+      {
+        "word": "旗杆",
+        "wordTraditional": "旗桿",
+        "pinyin": "qí gǎn",
+        "meaning": "flagpole",
+        "ttsText": "杆，旗杆的杆"
+      }
+    ]
+  },
+  {
+    "simplified": "腿",
+    "traditional": "腿",
+    "pinyin": "tuǐ",
+    "meaning": "leg",
+    "gradeLevel": 5,
+    "orderInGrade": 20,
+    "exampleWords": [
+      {
+        "word": "大腿",
+        "wordTraditional": "大腿",
+        "pinyin": "dà tuǐ",
+        "meaning": "thigh",
+        "ttsText": "腿，大腿的腿"
+      }
+    ]
+  },
+  {
+    "simplified": "陷",
+    "traditional": "陷",
+    "pinyin": "xiàn",
+    "meaning": "trap",
+    "gradeLevel": 5,
+    "orderInGrade": 21,
+    "exampleWords": [
+      {
+        "word": "陷阱",
+        "wordTraditional": "陷阱",
+        "pinyin": "xiàn jǐng",
+        "meaning": "trap",
+        "ttsText": "陷，陷阱的陷"
+      }
+    ]
+  },
+  {
+    "simplified": "膝",
+    "traditional": "膝",
+    "pinyin": "xī",
+    "meaning": "knee",
+    "gradeLevel": 5,
+    "orderInGrade": 22,
+    "exampleWords": [
+      {
+        "word": "膝盖",
+        "wordTraditional": "膝蓋",
+        "pinyin": "xī gài",
+        "meaning": "knee",
+        "ttsText": "膝，膝盖的膝"
+      }
+    ]
+  },
+  {
+    "simplified": "镇",
+    "traditional": "鎮",
+    "pinyin": "zhèn",
+    "meaning": "town",
+    "gradeLevel": 5,
+    "orderInGrade": 23,
+    "exampleWords": [
+      {
+        "word": "城镇",
+        "wordTraditional": "城鎮",
+        "pinyin": "chéng zhèn",
+        "meaning": "town",
+        "ttsText": "镇，城镇的镇"
+      }
+    ]
+  },
+  {
+    "simplified": "宾",
+    "traditional": "賓",
+    "pinyin": "bīn",
+    "meaning": "guest",
+    "gradeLevel": 5,
+    "orderInGrade": 24,
+    "exampleWords": [
+      {
+        "word": "宾客",
+        "wordTraditional": "賓客",
+        "pinyin": "bīn kè",
+        "meaning": "guest",
+        "ttsText": "宾，宾客的宾"
+      }
+    ]
+  },
+  {
+    "simplified": "朴",
+    "traditional": "樸",
+    "pinyin": "pǔ",
+    "meaning": "simple",
+    "gradeLevel": 5,
+    "orderInGrade": 25,
+    "exampleWords": [
+      {
+        "word": "朴素",
+        "wordTraditional": "樸素",
+        "pinyin": "pǔ sù",
+        "meaning": "simple",
+        "ttsText": "朴，朴素的朴"
+      }
+    ]
+  },
+  {
+    "simplified": "敏",
+    "traditional": "敏",
+    "pinyin": "mǐn",
+    "meaning": "quick",
+    "gradeLevel": 5,
+    "orderInGrade": 26,
+    "exampleWords": [
+      {
+        "word": "敏感",
+        "wordTraditional": "敏感",
+        "pinyin": "mǐn gǎn",
+        "meaning": "sensitive",
+        "ttsText": "敏，敏感的敏"
+      }
+    ]
+  },
+  {
+    "simplified": "悟",
+    "traditional": "悟",
+    "pinyin": "wù",
+    "meaning": "realize",
+    "gradeLevel": 5,
+    "orderInGrade": 27,
+    "exampleWords": [
+      {
+        "word": "领悟",
+        "wordTraditional": "領悟",
+        "pinyin": "lǐng wù",
+        "meaning": "realize",
+        "ttsText": "悟，领悟的悟"
+      }
+    ]
+  },
+  {
+    "simplified": "犬",
+    "traditional": "犬",
+    "pinyin": "quǎn",
+    "meaning": "dog",
+    "gradeLevel": 5,
+    "orderInGrade": 28,
+    "exampleWords": [
+      {
+        "word": "警犬",
+        "wordTraditional": "警犬",
+        "pinyin": "jǐng quǎn",
+        "meaning": "police dog",
+        "ttsText": "犬，警犬的犬"
+      }
+    ]
+  },
+  {
+    "simplified": "阶",
+    "traditional": "階",
+    "pinyin": "jiē",
+    "meaning": "step",
+    "gradeLevel": 5,
+    "orderInGrade": 29,
+    "exampleWords": [
+      {
+        "word": "阶段",
+        "wordTraditional": "階段",
+        "pinyin": "jiē duàn",
+        "meaning": "stage",
+        "ttsText": "阶，阶段的阶"
+      }
+    ]
+  },
+  {
+    "simplified": "纠",
+    "traditional": "糾",
+    "pinyin": "jiū",
+    "meaning": "correct",
+    "gradeLevel": 5,
+    "orderInGrade": 30,
+    "exampleWords": [
+      {
+        "word": "纠正",
+        "wordTraditional": "糾正",
+        "pinyin": "jiū zhèng",
+        "meaning": "correct",
+        "ttsText": "纠，纠正的纠"
+      }
+    ]
+  },
+  {
+    "simplified": "衰",
+    "traditional": "衰",
+    "pinyin": "shuāi",
+    "meaning": "decline",
+    "gradeLevel": 5,
+    "orderInGrade": 31,
+    "exampleWords": [
+      {
+        "word": "衰老",
+        "wordTraditional": "衰老",
+        "pinyin": "shuāi lǎo",
+        "meaning": "aging",
+        "ttsText": "衰，衰老的衰"
+      }
+    ]
+  },
+  {
+    "simplified": "彻",
+    "traditional": "徹",
+    "pinyin": "chè",
+    "meaning": "thorough",
+    "gradeLevel": 5,
+    "orderInGrade": 32,
+    "exampleWords": [
+      {
+        "word": "彻底",
+        "wordTraditional": "徹底",
+        "pinyin": "chè dǐ",
+        "meaning": "thorough",
+        "ttsText": "彻，彻底的彻"
+      }
+    ]
+  },
+  {
+    "simplified": "鉴",
+    "traditional": "鑒",
+    "pinyin": "jiàn",
+    "meaning": "mirror",
+    "gradeLevel": 5,
+    "orderInGrade": 33,
+    "exampleWords": [
+      {
+        "word": "鉴赏",
+        "wordTraditional": "鑒賞",
+        "pinyin": "jiàn shǎng",
+        "meaning": "appreciate",
+        "ttsText": "鉴，鉴赏的鉴"
+      }
+    ]
+  },
+  {
+    "simplified": "脊",
+    "traditional": "脊",
+    "pinyin": "jǐ",
+    "meaning": "spine",
+    "gradeLevel": 5,
+    "orderInGrade": 34,
+    "exampleWords": [
+      {
+        "word": "脊背",
+        "wordTraditional": "脊背",
+        "pinyin": "jǐ bèi",
+        "meaning": "back",
+        "ttsText": "脊，脊背的脊"
+      }
+    ]
+  },
+  {
+    "simplified": "链",
+    "traditional": "鏈",
+    "pinyin": "liàn",
+    "meaning": "chain",
+    "gradeLevel": 5,
+    "orderInGrade": 35,
+    "exampleWords": [
+      {
+        "word": "项链",
+        "wordTraditional": "項鏈",
+        "pinyin": "xiàng liàn",
+        "meaning": "necklace",
+        "ttsText": "链，项链的链"
+      }
+    ]
+  },
+  {
+    "simplified": "蹲",
+    "traditional": "蹲",
+    "pinyin": "dūn",
+    "meaning": "squat",
+    "gradeLevel": 5,
+    "orderInGrade": 36,
+    "exampleWords": [
+      {
+        "word": "蹲下",
+        "wordTraditional": "蹲下",
+        "pinyin": "dūn xià",
+        "meaning": "squat down",
+        "ttsText": "蹲，蹲下的蹲"
+      }
+    ]
+  },
+  {
+    "simplified": "脉",
+    "traditional": "脈",
+    "pinyin": "mài",
+    "meaning": "pulse",
+    "gradeLevel": 5,
+    "orderInGrade": 37,
+    "exampleWords": [
+      {
+        "word": "山脉",
+        "wordTraditional": "山脈",
+        "pinyin": "shān mài",
+        "meaning": "mountain range",
+        "ttsText": "脉，山脉的脉"
+      }
+    ]
+  },
+  {
+    "simplified": "旷",
+    "traditional": "曠",
+    "pinyin": "kuàng",
+    "meaning": "vast",
+    "gradeLevel": 5,
+    "orderInGrade": 38,
+    "exampleWords": [
+      {
+        "word": "旷野",
+        "wordTraditional": "曠野",
+        "pinyin": "kuàng yě",
+        "meaning": "wilderness",
+        "ttsText": "旷，旷野的旷"
+      }
+    ]
+  },
+  {
+    "simplified": "踢",
+    "traditional": "踢",
+    "pinyin": "tī",
+    "meaning": "kick",
+    "gradeLevel": 5,
+    "orderInGrade": 39,
+    "exampleWords": [
+      {
+        "word": "踢球",
+        "wordTraditional": "踢球",
+        "pinyin": "tī qiú",
+        "meaning": "kick ball",
+        "ttsText": "踢，踢球的踢"
+      }
+    ]
+  },
+  {
+    "simplified": "魂",
+    "traditional": "魂",
+    "pinyin": "hún",
+    "meaning": "soul",
+    "gradeLevel": 5,
+    "orderInGrade": 40,
+    "exampleWords": [
+      {
+        "word": "灵魂",
+        "wordTraditional": "靈魂",
+        "pinyin": "líng hún",
+        "meaning": "soul",
+        "ttsText": "魂，灵魂的魂"
+      }
+    ]
+  },
+  {
+    "simplified": "浓",
+    "traditional": "濃",
+    "pinyin": "nóng",
+    "meaning": "thick",
+    "gradeLevel": 5,
+    "orderInGrade": 41,
+    "exampleWords": [
+      {
+        "word": "浓密",
+        "wordTraditional": "濃密",
+        "pinyin": "nóng mì",
+        "meaning": "dense",
+        "ttsText": "浓，浓密的浓"
+      }
+    ]
+  },
+  {
+    "simplified": "燥",
+    "traditional": "燥",
+    "pinyin": "zào",
+    "meaning": "dry",
+    "gradeLevel": 5,
+    "orderInGrade": 42,
+    "exampleWords": [
+      {
+        "word": "干燥",
+        "wordTraditional": "乾燥",
+        "pinyin": "gān zào",
+        "meaning": "dry",
+        "ttsText": "燥，干燥的燥"
+      }
+    ]
+  },
+  {
+    "simplified": "峻",
+    "traditional": "峻",
+    "pinyin": "jùn",
+    "meaning": "steep",
+    "gradeLevel": 5,
+    "orderInGrade": 43,
+    "exampleWords": [
+      {
+        "word": "严峻",
+        "wordTraditional": "嚴峻",
+        "pinyin": "yán jùn",
+        "meaning": "severe",
+        "ttsText": "峻，严峻的峻"
+      }
+    ]
+  },
+  {
+    "simplified": "崖",
+    "traditional": "崖",
+    "pinyin": "yá",
+    "meaning": "cliff",
+    "gradeLevel": 5,
+    "orderInGrade": 44,
+    "exampleWords": [
+      {
+        "word": "悬崖",
+        "wordTraditional": "懸崖",
+        "pinyin": "xuán yá",
+        "meaning": "cliff",
+        "ttsText": "崖，悬崖的崖"
+      }
+    ]
+  },
+  {
+    "simplified": "弥",
+    "traditional": "彌",
+    "pinyin": "mí",
+    "meaning": "fill",
+    "gradeLevel": 5,
+    "orderInGrade": 45,
+    "exampleWords": [
+      {
+        "word": "弥漫",
+        "wordTraditional": "彌漫",
+        "pinyin": "mí màn",
+        "meaning": "pervade",
+        "ttsText": "弥，弥漫的弥"
+      }
+    ]
+  },
+  {
+    "simplified": "频",
+    "traditional": "頻",
+    "pinyin": "pín",
+    "meaning": "frequent",
+    "gradeLevel": 5,
+    "orderInGrade": 46,
+    "exampleWords": [
+      {
+        "word": "频繁",
+        "wordTraditional": "頻繁",
+        "pinyin": "pín fán",
+        "meaning": "frequent",
+        "ttsText": "频，频繁的频"
+      }
+    ]
+  },
+  {
+    "simplified": "疾",
+    "traditional": "疾",
+    "pinyin": "jí",
+    "meaning": "disease",
+    "gradeLevel": 5,
+    "orderInGrade": 47,
+    "exampleWords": [
+      {
+        "word": "疾病",
+        "wordTraditional": "疾病",
+        "pinyin": "jí bìng",
+        "meaning": "disease",
+        "ttsText": "疾，疾病的疾"
+      }
+    ]
+  },
+  {
+    "simplified": "浆",
+    "traditional": "漿",
+    "pinyin": "jiāng",
+    "meaning": "pulp",
+    "gradeLevel": 5,
+    "orderInGrade": 48,
+    "exampleWords": [
+      {
+        "word": "豆浆",
+        "wordTraditional": "豆漿",
+        "pinyin": "dòu jiāng",
+        "meaning": "soy milk",
+        "ttsText": "浆，豆浆的浆"
+      }
+    ]
+  },
+  {
+    "simplified": "勉",
+    "traditional": "勉",
+    "pinyin": "miǎn",
+    "meaning": "encourage",
+    "gradeLevel": 5,
+    "orderInGrade": 49,
+    "exampleWords": [
+      {
+        "word": "勉强",
+        "wordTraditional": "勉強",
+        "pinyin": "miǎn qiǎng",
+        "meaning": "reluctant",
+        "ttsText": "勉，勉强的勉"
+      }
+    ]
+  },
+  {
+    "simplified": "挪",
+    "traditional": "挪",
+    "pinyin": "nuó",
+    "meaning": "move",
+    "gradeLevel": 6,
+    "orderInGrade": 0,
+    "exampleWords": [
+      {
+        "word": "挪动",
+        "wordTraditional": "挪動",
+        "pinyin": "nuó dòng",
+        "meaning": "move",
+        "ttsText": "挪，挪动的挪"
+      }
+    ]
+  },
+  {
+    "simplified": "蒸",
+    "traditional": "蒸",
+    "pinyin": "zhēng",
+    "meaning": "steam",
+    "gradeLevel": 6,
+    "orderInGrade": 1,
+    "exampleWords": [
+      {
+        "word": "蒸汽",
+        "wordTraditional": "蒸汽",
+        "pinyin": "zhēng qì",
+        "meaning": "steam",
+        "ttsText": "蒸，蒸汽的蒸"
+      }
+    ]
+  },
+  {
+    "simplified": "秧",
+    "traditional": "秧",
+    "pinyin": "yāng",
+    "meaning": "seedling",
+    "gradeLevel": 6,
+    "orderInGrade": 2,
+    "exampleWords": [
+      {
+        "word": "秧苗",
+        "wordTraditional": "秧苗",
+        "pinyin": "yāng miáo",
+        "meaning": "seedling",
+        "ttsText": "秧，秧苗的秧"
+      }
+    ]
+  },
+  {
+    "simplified": "番",
+    "traditional": "番",
+    "pinyin": "fān",
+    "meaning": "time (MW)",
+    "gradeLevel": 6,
+    "orderInGrade": 3,
+    "exampleWords": [
+      {
+        "word": "番茄",
+        "wordTraditional": "番茄",
+        "pinyin": "fān qié",
+        "meaning": "tomato",
+        "ttsText": "番，番茄的番"
+      }
+    ]
+  },
+  {
+    "simplified": "锻",
+    "traditional": "鍛",
+    "pinyin": "duàn",
+    "meaning": "forge",
+    "gradeLevel": 6,
+    "orderInGrade": 4,
+    "exampleWords": [
+      {
+        "word": "锻炼",
+        "wordTraditional": "鍛煉",
+        "pinyin": "duàn liàn",
+        "meaning": "exercise",
+        "ttsText": "锻，锻炼的锻"
+      }
+    ]
+  },
+  {
+    "simplified": "雅",
+    "traditional": "雅",
+    "pinyin": "yǎ",
+    "meaning": "elegant",
+    "gradeLevel": 6,
+    "orderInGrade": 5,
+    "exampleWords": [
+      {
+        "word": "优雅",
+        "wordTraditional": "優雅",
+        "pinyin": "yōu yǎ",
+        "meaning": "elegant",
+        "ttsText": "雅，优雅的雅"
+      }
+    ]
+  },
+  {
+    "simplified": "勃",
+    "traditional": "勃",
+    "pinyin": "bó",
+    "meaning": "vigorous",
+    "gradeLevel": 6,
+    "orderInGrade": 6,
+    "exampleWords": [
+      {
+        "word": "蓬勃",
+        "wordTraditional": "蓬勃",
+        "pinyin": "péng bó",
+        "meaning": "vigorous",
+        "ttsText": "勃，蓬勃的勃"
+      }
+    ]
+  },
+  {
+    "simplified": "施",
+    "traditional": "施",
+    "pinyin": "shī",
+    "meaning": "implement",
+    "gradeLevel": 6,
+    "orderInGrade": 7,
+    "exampleWords": [
+      {
+        "word": "实施",
+        "wordTraditional": "實施",
+        "pinyin": "shí shī",
+        "meaning": "implement",
+        "ttsText": "施，实施的施"
+      }
+    ]
+  },
+  {
+    "simplified": "拔",
+    "traditional": "拔",
+    "pinyin": "bá",
+    "meaning": "pull out",
+    "gradeLevel": 6,
+    "orderInGrade": 8,
+    "exampleWords": [
+      {
+        "word": "拔河",
+        "wordTraditional": "拔河",
+        "pinyin": "bá hé",
+        "meaning": "tug of war",
+        "ttsText": "拔，拔河的拔"
+      }
+    ]
+  },
+  {
+    "simplified": "瘦",
+    "traditional": "瘦",
+    "pinyin": "shòu",
+    "meaning": "thin",
+    "gradeLevel": 6,
+    "orderInGrade": 9,
+    "exampleWords": [
+      {
+        "word": "瘦弱",
+        "wordTraditional": "瘦弱",
+        "pinyin": "shòu ruò",
+        "meaning": "thin and weak",
+        "ttsText": "瘦，瘦弱的瘦"
+      }
+    ]
+  },
+  {
+    "simplified": "饥",
+    "traditional": "飢",
+    "pinyin": "jī",
+    "meaning": "hungry",
+    "gradeLevel": 6,
+    "orderInGrade": 10,
+    "exampleWords": [
+      {
+        "word": "饥饿",
+        "wordTraditional": "飢餓",
+        "pinyin": "jī è",
+        "meaning": "hungry",
+        "ttsText": "饥，饥饿的饥"
+      }
+    ]
+  },
+  {
+    "simplified": "蕴",
+    "traditional": "蘊",
+    "pinyin": "yùn",
+    "meaning": "contain",
+    "gradeLevel": 6,
+    "orderInGrade": 11,
+    "exampleWords": [
+      {
+        "word": "蕴含",
+        "wordTraditional": "蘊含",
+        "pinyin": "yùn hán",
+        "meaning": "contain",
+        "ttsText": "蕴，蕴含的蕴"
+      }
+    ]
+  },
+  {
+    "simplified": "蜡",
+    "traditional": "蠟",
+    "pinyin": "là",
+    "meaning": "wax",
+    "gradeLevel": 6,
+    "orderInGrade": 12,
+    "exampleWords": [
+      {
+        "word": "蜡烛",
+        "wordTraditional": "蠟燭",
+        "pinyin": "là zhú",
+        "meaning": "candle",
+        "ttsText": "蜡，蜡烛的蜡"
+      }
+    ]
+  },
+  {
+    "simplified": "烛",
+    "traditional": "燭",
+    "pinyin": "zhú",
+    "meaning": "candle",
+    "gradeLevel": 6,
+    "orderInGrade": 13,
+    "exampleWords": [
+      {
+        "word": "蜡烛",
+        "wordTraditional": "蠟燭",
+        "pinyin": "là zhú",
+        "meaning": "candle",
+        "ttsText": "烛，蜡烛的烛"
+      }
+    ]
+  },
+  {
+    "simplified": "幽",
+    "traditional": "幽",
+    "pinyin": "yōu",
+    "meaning": "secluded",
+    "gradeLevel": 6,
+    "orderInGrade": 14,
+    "exampleWords": [
+      {
+        "word": "幽默",
+        "wordTraditional": "幽默",
+        "pinyin": "yōu mò",
+        "meaning": "humor",
+        "ttsText": "幽，幽默的幽"
+      }
+    ]
+  },
+  {
+    "simplified": "愁",
+    "traditional": "愁",
+    "pinyin": "chóu",
+    "meaning": "worry",
+    "gradeLevel": 6,
+    "orderInGrade": 15,
+    "exampleWords": [
+      {
+        "word": "忧愁",
+        "wordTraditional": "憂愁",
+        "pinyin": "yōu chóu",
+        "meaning": "worry",
+        "ttsText": "愁，忧愁的愁"
+      }
+    ]
+  },
+  {
+    "simplified": "窜",
+    "traditional": "竄",
+    "pinyin": "cuàn",
+    "meaning": "flee",
+    "gradeLevel": 6,
+    "orderInGrade": 16,
+    "exampleWords": [
+      {
+        "word": "逃窜",
+        "wordTraditional": "逃竄",
+        "pinyin": "táo cuàn",
+        "meaning": "flee",
+        "ttsText": "窜，逃窜的窜"
+      }
+    ]
+  },
+  {
+    "simplified": "祭",
+    "traditional": "祭",
+    "pinyin": "jì",
+    "meaning": "sacrifice",
+    "gradeLevel": 6,
+    "orderInGrade": 17,
+    "exampleWords": [
+      {
+        "word": "祭祀",
+        "wordTraditional": "祭祀",
+        "pinyin": "jì sì",
+        "meaning": "sacrifice",
+        "ttsText": "祭，祭祀的祭"
+      }
+    ]
+  },
+  {
+    "simplified": "效",
+    "traditional": "效",
+    "pinyin": "xiào",
+    "meaning": "effect",
+    "gradeLevel": 6,
+    "orderInGrade": 18,
+    "exampleWords": [
+      {
+        "word": "效果",
+        "wordTraditional": "效果",
+        "pinyin": "xiào guǒ",
+        "meaning": "effect",
+        "ttsText": "效，效果的效"
+      }
+    ]
+  },
+  {
+    "simplified": "憾",
+    "traditional": "憾",
+    "pinyin": "hàn",
+    "meaning": "regret",
+    "gradeLevel": 6,
+    "orderInGrade": 19,
+    "exampleWords": [
+      {
+        "word": "遗憾",
+        "wordTraditional": "遺憾",
+        "pinyin": "yí hàn",
+        "meaning": "regret",
+        "ttsText": "憾，遗憾的憾"
+      }
+    ]
+  },
+  {
+    "simplified": "潜",
+    "traditional": "潛",
+    "pinyin": "qián",
+    "meaning": "dive",
+    "gradeLevel": 6,
+    "orderInGrade": 20,
+    "exampleWords": [
+      {
+        "word": "潜水",
+        "wordTraditional": "潛水",
+        "pinyin": "qián shuǐ",
+        "meaning": "dive",
+        "ttsText": "潜，潜水的潜"
+      }
+    ]
+  },
+  {
+    "simplified": "控",
+    "traditional": "控",
+    "pinyin": "kòng",
+    "meaning": "control",
+    "gradeLevel": 6,
+    "orderInGrade": 21,
+    "exampleWords": [
+      {
+        "word": "控制",
+        "wordTraditional": "控制",
+        "pinyin": "kòng zhì",
+        "meaning": "control",
+        "ttsText": "控，控制的控"
+      }
+    ]
+  },
+  {
+    "simplified": "盲",
+    "traditional": "盲",
+    "pinyin": "máng",
+    "meaning": "blind",
+    "gradeLevel": 6,
+    "orderInGrade": 22,
+    "exampleWords": [
+      {
+        "word": "盲目",
+        "wordTraditional": "盲目",
+        "pinyin": "máng mù",
+        "meaning": "blind",
+        "ttsText": "盲，盲目的盲"
+      }
+    ]
+  },
+  {
+    "simplified": "哲",
+    "traditional": "哲",
+    "pinyin": "zhé",
+    "meaning": "wise",
+    "gradeLevel": 6,
+    "orderInGrade": 23,
+    "exampleWords": [
+      {
+        "word": "哲学",
+        "wordTraditional": "哲學",
+        "pinyin": "zhé xué",
+        "meaning": "philosophy",
+        "ttsText": "哲，哲学的哲"
+      }
+    ]
+  },
+  {
+    "simplified": "泣",
+    "traditional": "泣",
+    "pinyin": "qì",
+    "meaning": "weep",
+    "gradeLevel": 6,
+    "orderInGrade": 24,
+    "exampleWords": [
+      {
+        "word": "哭泣",
+        "wordTraditional": "哭泣",
+        "pinyin": "kū qì",
+        "meaning": "weep",
+        "ttsText": "泣，哭泣的泣"
+      }
+    ]
+  },
+  {
+    "simplified": "锈",
+    "traditional": "銹",
+    "pinyin": "xiù",
+    "meaning": "rust",
+    "gradeLevel": 6,
+    "orderInGrade": 25,
+    "exampleWords": [
+      {
+        "word": "生锈",
+        "wordTraditional": "生銹",
+        "pinyin": "shēng xiù",
+        "meaning": "rust",
+        "ttsText": "锈，生锈的锈"
+      }
+    ]
+  },
+  {
+    "simplified": "填",
+    "traditional": "填",
+    "pinyin": "tián",
+    "meaning": "fill in",
+    "gradeLevel": 6,
+    "orderInGrade": 26,
+    "exampleWords": [
+      {
+        "word": "填写",
+        "wordTraditional": "填寫",
+        "pinyin": "tián xiě",
+        "meaning": "fill in",
+        "ttsText": "填，填写的填"
+      }
+    ]
+  },
+  {
+    "simplified": "怨",
+    "traditional": "怨",
+    "pinyin": "yuàn",
+    "meaning": "resent",
+    "gradeLevel": 6,
+    "orderInGrade": 27,
+    "exampleWords": [
+      {
+        "word": "抱怨",
+        "wordTraditional": "抱怨",
+        "pinyin": "bào yuàn",
+        "meaning": "complain",
+        "ttsText": "怨，抱怨的怨"
+      }
+    ]
+  },
+  {
+    "simplified": "掀",
+    "traditional": "掀",
+    "pinyin": "xiān",
+    "meaning": "lift",
+    "gradeLevel": 6,
+    "orderInGrade": 28,
+    "exampleWords": [
+      {
+        "word": "掀开",
+        "wordTraditional": "掀開",
+        "pinyin": "xiān kāi",
+        "meaning": "lift open",
+        "ttsText": "掀，掀开的掀"
+      }
+    ]
+  },
+  {
+    "simplified": "裹",
+    "traditional": "裹",
+    "pinyin": "guǒ",
+    "meaning": "wrap",
+    "gradeLevel": 6,
+    "orderInGrade": 29,
+    "exampleWords": [
+      {
+        "word": "包裹",
+        "wordTraditional": "包裹",
+        "pinyin": "bāo guǒ",
+        "meaning": "package",
+        "ttsText": "裹，包裹的裹"
+      }
+    ]
+  },
+  {
+    "simplified": "魁",
+    "traditional": "魁",
+    "pinyin": "kuí",
+    "meaning": "chief",
+    "gradeLevel": 6,
+    "orderInGrade": 30,
+    "exampleWords": [
+      {
+        "word": "魁梧",
+        "wordTraditional": "魁梧",
+        "pinyin": "kuí wú",
+        "meaning": "stalwart",
+        "ttsText": "魁，魁梧的魁"
+      }
+    ]
+  },
+  {
+    "simplified": "淋",
+    "traditional": "淋",
+    "pinyin": "lín",
+    "meaning": "drench",
+    "gradeLevel": 6,
+    "orderInGrade": 31,
+    "exampleWords": [
+      {
+        "word": "淋雨",
+        "wordTraditional": "淋雨",
+        "pinyin": "lín yǔ",
+        "meaning": "get rained on",
+        "ttsText": "淋，淋雨的淋"
+      }
+    ]
+  },
+  {
+    "simplified": "撑",
+    "traditional": "撐",
+    "pinyin": "chēng",
+    "meaning": "prop up",
+    "gradeLevel": 6,
+    "orderInGrade": 32,
+    "exampleWords": [
+      {
+        "word": "支撑",
+        "wordTraditional": "支撐",
+        "pinyin": "zhī chēng",
+        "meaning": "support",
+        "ttsText": "撑，支撑的撑"
+      }
+    ]
+  },
+  {
+    "simplified": "霉",
+    "traditional": "霉",
+    "pinyin": "méi",
+    "meaning": "mold",
+    "gradeLevel": 6,
+    "orderInGrade": 33,
+    "exampleWords": [
+      {
+        "word": "倒霉",
+        "wordTraditional": "倒霉",
+        "pinyin": "dǎo méi",
+        "meaning": "unlucky",
+        "ttsText": "霉，倒霉的霉"
+      }
+    ]
+  },
+  {
+    "simplified": "删",
+    "traditional": "刪",
+    "pinyin": "shān",
+    "meaning": "delete",
+    "gradeLevel": 6,
+    "orderInGrade": 34,
+    "exampleWords": [
+      {
+        "word": "删除",
+        "wordTraditional": "刪除",
+        "pinyin": "shān chú",
+        "meaning": "delete",
+        "ttsText": "删，删除的删"
+      }
+    ]
+  },
+  {
+    "simplified": "预",
+    "traditional": "預",
+    "pinyin": "yù",
+    "meaning": "advance",
+    "gradeLevel": 6,
+    "orderInGrade": 35,
+    "exampleWords": [
+      {
+        "word": "预习",
+        "wordTraditional": "預習",
+        "pinyin": "yù xí",
+        "meaning": "preview",
+        "ttsText": "预，预习的预"
+      }
+    ]
+  },
+  {
+    "simplified": "耕",
+    "traditional": "耕",
+    "pinyin": "gēng",
+    "meaning": "plow",
+    "gradeLevel": 6,
+    "orderInGrade": 36,
+    "exampleWords": [
+      {
+        "word": "耕田",
+        "wordTraditional": "耕田",
+        "pinyin": "gēng tián",
+        "meaning": "plow field",
+        "ttsText": "耕，耕田的耕"
+      }
+    ]
+  },
+  {
+    "simplified": "辈",
+    "traditional": "輩",
+    "pinyin": "bèi",
+    "meaning": "generation",
+    "gradeLevel": 6,
+    "orderInGrade": 37,
+    "exampleWords": [
+      {
+        "word": "前辈",
+        "wordTraditional": "前輩",
+        "pinyin": "qián bèi",
+        "meaning": "elder",
+        "ttsText": "辈，前辈的辈"
+      }
+    ]
+  },
+  {
+    "simplified": "饶",
+    "traditional": "饒",
+    "pinyin": "ráo",
+    "meaning": "forgive",
+    "gradeLevel": 6,
+    "orderInGrade": 38,
+    "exampleWords": [
+      {
+        "word": "饶恕",
+        "wordTraditional": "饒恕",
+        "pinyin": "ráo shù",
+        "meaning": "forgive",
+        "ttsText": "饶，饶恕的饶"
+      }
+    ]
+  },
+  {
+    "simplified": "恢",
+    "traditional": "恢",
+    "pinyin": "huī",
+    "meaning": "restore",
+    "gradeLevel": 6,
+    "orderInGrade": 39,
+    "exampleWords": [
+      {
+        "word": "恢复",
+        "wordTraditional": "恢復",
+        "pinyin": "huī fù",
+        "meaning": "restore",
+        "ttsText": "恢，恢复的恢"
+      }
+    ]
+  },
+  {
+    "simplified": "屈",
+    "traditional": "屈",
+    "pinyin": "qū",
+    "meaning": "bend",
+    "gradeLevel": 6,
+    "orderInGrade": 40,
+    "exampleWords": [
+      {
+        "word": "委屈",
+        "wordTraditional": "委屈",
+        "pinyin": "wěi qū",
+        "meaning": "wronged",
+        "ttsText": "屈，委屈的屈"
+      }
+    ]
+  },
+  {
+    "simplified": "障",
+    "traditional": "障",
+    "pinyin": "zhàng",
+    "meaning": "barrier",
+    "gradeLevel": 6,
+    "orderInGrade": 41,
+    "exampleWords": [
+      {
+        "word": "障碍",
+        "wordTraditional": "障礙",
+        "pinyin": "zhàng ài",
+        "meaning": "obstacle",
+        "ttsText": "障，障碍的障"
+      }
+    ]
+  },
+  {
+    "simplified": "覆",
+    "traditional": "覆",
+    "pinyin": "fù",
+    "meaning": "cover",
+    "gradeLevel": 6,
+    "orderInGrade": 42,
+    "exampleWords": [
+      {
+        "word": "覆盖",
+        "wordTraditional": "覆蓋",
+        "pinyin": "fù gài",
+        "meaning": "cover",
+        "ttsText": "覆，覆盖的覆"
+      }
+    ]
+  },
+  {
+    "simplified": "壤",
+    "traditional": "壤",
+    "pinyin": "rǎng",
+    "meaning": "soil",
+    "gradeLevel": 6,
+    "orderInGrade": 43,
+    "exampleWords": [
+      {
+        "word": "土壤",
+        "wordTraditional": "土壤",
+        "pinyin": "tǔ rǎng",
+        "meaning": "soil",
+        "ttsText": "壤，土壤的壤"
+      }
+    ]
+  },
+  {
+    "simplified": "延",
+    "traditional": "延",
+    "pinyin": "yán",
+    "meaning": "extend",
+    "gradeLevel": 6,
+    "orderInGrade": 44,
+    "exampleWords": [
+      {
+        "word": "延长",
+        "wordTraditional": "延長",
+        "pinyin": "yán cháng",
+        "meaning": "extend",
+        "ttsText": "延，延长的延"
+      }
+    ]
+  },
+  {
+    "simplified": "昔",
+    "traditional": "昔",
+    "pinyin": "xī",
+    "meaning": "past",
+    "gradeLevel": 6,
+    "orderInGrade": 45,
+    "exampleWords": [
+      {
+        "word": "昔日",
+        "wordTraditional": "昔日",
+        "pinyin": "xī rì",
+        "meaning": "in the past",
+        "ttsText": "昔，昔日的昔"
+      }
+    ]
+  },
+  {
+    "simplified": "莫",
+    "traditional": "莫",
+    "pinyin": "mò",
+    "meaning": "do not",
+    "gradeLevel": 6,
+    "orderInGrade": 46,
+    "exampleWords": [
+      {
+        "word": "莫名",
+        "wordTraditional": "莫名",
+        "pinyin": "mò míng",
+        "meaning": "unexplained",
+        "ttsText": "莫，莫名的莫"
+      }
+    ]
+  },
+  {
+    "simplified": "矛",
+    "traditional": "矛",
+    "pinyin": "máo",
+    "meaning": "spear",
+    "gradeLevel": 6,
+    "orderInGrade": 47,
+    "exampleWords": [
+      {
+        "word": "矛盾",
+        "wordTraditional": "矛盾",
+        "pinyin": "máo dùn",
+        "meaning": "contradiction",
+        "ttsText": "矛，矛盾的矛"
+      }
+    ]
+  },
+  {
+    "simplified": "削",
+    "traditional": "削",
+    "pinyin": "xuē",
+    "meaning": "cut",
+    "gradeLevel": 6,
+    "orderInGrade": 48,
+    "exampleWords": [
+      {
+        "word": "削减",
+        "wordTraditional": "削減",
+        "pinyin": "xuē jiǎn",
+        "meaning": "reduce",
+        "ttsText": "削，削减的削"
+      }
+    ]
+  },
+  {
+    "simplified": "贯",
+    "traditional": "貫",
+    "pinyin": "guàn",
+    "meaning": "pierce",
+    "gradeLevel": 6,
+    "orderInGrade": 49,
+    "exampleWords": [
+      {
+        "word": "贯穿",
+        "wordTraditional": "貫穿",
+        "pinyin": "guàn chuān",
+        "meaning": "run through",
+        "ttsText": "贯，贯穿的贯"
+      }
+    ]
+  },
+  {
+    "simplified": "媒",
+    "traditional": "媒",
+    "pinyin": "méi",
+    "meaning": "media",
+    "gradeLevel": 6,
+    "orderInGrade": 50,
+    "exampleWords": [
+      {
+        "word": "媒体",
+        "wordTraditional": "媒體",
+        "pinyin": "méi tǐ",
+        "meaning": "media",
+        "ttsText": "媒，媒体的媒"
+      }
+    ]
+  },
+  {
+    "simplified": "抑",
+    "traditional": "抑",
+    "pinyin": "yì",
+    "meaning": "suppress",
+    "gradeLevel": 6,
+    "orderInGrade": 51,
+    "exampleWords": [
+      {
+        "word": "抑制",
+        "wordTraditional": "抑制",
+        "pinyin": "yì zhì",
+        "meaning": "suppress",
+        "ttsText": "抑，抑制的抑"
+      }
+    ]
+  },
+  {
+    "simplified": "挫",
+    "traditional": "挫",
+    "pinyin": "cuò",
+    "meaning": "setback",
+    "gradeLevel": 6,
+    "orderInGrade": 52,
+    "exampleWords": [
+      {
+        "word": "挫折",
+        "wordTraditional": "挫折",
+        "pinyin": "cuò zhé",
+        "meaning": "setback",
+        "ttsText": "挫，挫折的挫"
+      }
+    ]
+  },
+  {
+    "simplified": "卓",
+    "traditional": "卓",
+    "pinyin": "zhuó",
+    "meaning": "outstanding",
+    "gradeLevel": 6,
+    "orderInGrade": 53,
+    "exampleWords": [
+      {
+        "word": "卓越",
+        "wordTraditional": "卓越",
+        "pinyin": "zhuó yuè",
+        "meaning": "outstanding",
+        "ttsText": "卓，卓越的卓"
+      }
+    ]
+  },
+  {
+    "simplified": "兼",
+    "traditional": "兼",
+    "pinyin": "jiān",
+    "meaning": "together",
+    "gradeLevel": 6,
+    "orderInGrade": 54,
+    "exampleWords": [
+      {
+        "word": "兼职",
+        "wordTraditional": "兼職",
+        "pinyin": "jiān zhí",
+        "meaning": "part-time",
+        "ttsText": "兼，兼职的兼"
+      }
+    ]
+  },
+  {
+    "simplified": "慕",
+    "traditional": "慕",
+    "pinyin": "mù",
+    "meaning": "admire",
+    "gradeLevel": 6,
+    "orderInGrade": 55,
+    "exampleWords": [
+      {
+        "word": "羡慕",
+        "wordTraditional": "羨慕",
+        "pinyin": "xiàn mù",
+        "meaning": "admire",
+        "ttsText": "慕，羡慕的慕"
+      }
+    ]
+  },
+  {
+    "simplified": "吟",
+    "traditional": "吟",
+    "pinyin": "yín",
+    "meaning": "chant",
+    "gradeLevel": 6,
+    "orderInGrade": 56,
+    "exampleWords": [
+      {
+        "word": "吟诵",
+        "wordTraditional": "吟誦",
+        "pinyin": "yín sòng",
+        "meaning": "chant",
+        "ttsText": "吟，吟诵的吟"
+      }
+    ]
+  }
+]
