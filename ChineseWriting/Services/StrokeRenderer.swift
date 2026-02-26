@@ -46,6 +46,9 @@ struct StrokeRenderer {
         let path = CGMutablePath()
         var currentPoint = CGPoint.zero
         var startPoint = CGPoint.zero
+        // Tracks the second control point of the previous C/c/S/s command
+        // for computing the reflected first control point in S/s commands.
+        var lastCubicControl: CGPoint?
 
         let tokens = tokenize(d)
         var i = 0
@@ -71,6 +74,7 @@ struct StrokeRenderer {
                 path.move(to: p)
                 currentPoint = p
                 startPoint = p
+                lastCubicControl = nil
                 // Subsequent coordinates are implicit lineTo
                 while i < tokens.count, Double(tokens[i]) != nil {
                     let p = nextPoint()
@@ -84,6 +88,7 @@ struct StrokeRenderer {
                 path.move(to: p)
                 currentPoint = p
                 startPoint = p
+                lastCubicControl = nil
                 while i < tokens.count, Double(tokens[i]) != nil {
                     let dp = nextPoint()
                     let p = CGPoint(x: currentPoint.x + dp.x, y: currentPoint.y + dp.y)
@@ -92,6 +97,7 @@ struct StrokeRenderer {
                 }
 
             case "L":
+                lastCubicControl = nil
                 while i < tokens.count, Double(tokens[i]) != nil {
                     let p = nextPoint()
                     path.addLine(to: p)
@@ -99,6 +105,7 @@ struct StrokeRenderer {
                 }
 
             case "l":
+                lastCubicControl = nil
                 while i < tokens.count, Double(tokens[i]) != nil {
                     let dp = nextPoint()
                     let p = CGPoint(x: currentPoint.x + dp.x, y: currentPoint.y + dp.y)
@@ -107,6 +114,7 @@ struct StrokeRenderer {
                 }
 
             case "H":
+                lastCubicControl = nil
                 while i < tokens.count, Double(tokens[i]) != nil {
                     let x = nextNumber()
                     let p = CGPoint(x: x, y: currentPoint.y)
@@ -115,6 +123,7 @@ struct StrokeRenderer {
                 }
 
             case "h":
+                lastCubicControl = nil
                 while i < tokens.count, Double(tokens[i]) != nil {
                     let dx = nextNumber()
                     let p = CGPoint(x: currentPoint.x + dx, y: currentPoint.y)
@@ -123,6 +132,7 @@ struct StrokeRenderer {
                 }
 
             case "V":
+                lastCubicControl = nil
                 while i < tokens.count, Double(tokens[i]) != nil {
                     let y = nextNumber()
                     let p = CGPoint(x: currentPoint.x, y: y)
@@ -131,6 +141,7 @@ struct StrokeRenderer {
                 }
 
             case "v":
+                lastCubicControl = nil
                 while i < tokens.count, Double(tokens[i]) != nil {
                     let dy = nextNumber()
                     let p = CGPoint(x: currentPoint.x, y: currentPoint.y + dy)
@@ -139,6 +150,7 @@ struct StrokeRenderer {
                 }
 
             case "Q":
+                lastCubicControl = nil
                 while i < tokens.count, Double(tokens[i]) != nil {
                     let control = nextPoint()
                     let end = nextPoint()
@@ -147,6 +159,7 @@ struct StrokeRenderer {
                 }
 
             case "q":
+                lastCubicControl = nil
                 while i < tokens.count, Double(tokens[i]) != nil {
                     let dc = nextPoint()
                     let de = nextPoint()
@@ -162,6 +175,7 @@ struct StrokeRenderer {
                     let c2 = nextPoint()
                     let end = nextPoint()
                     path.addCurve(to: end, control1: c1, control2: c2)
+                    lastCubicControl = c2
                     currentPoint = end
                 }
 
@@ -174,6 +188,7 @@ struct StrokeRenderer {
                     let c2 = CGPoint(x: currentPoint.x + dc2.x, y: currentPoint.y + dc2.y)
                     let end = CGPoint(x: currentPoint.x + de.x, y: currentPoint.y + de.y)
                     path.addCurve(to: end, control1: c1, control2: c2)
+                    lastCubicControl = c2
                     currentPoint = end
                 }
 
@@ -181,8 +196,12 @@ struct StrokeRenderer {
                 while i < tokens.count, Double(tokens[i]) != nil {
                     let c2 = nextPoint()
                     let end = nextPoint()
-                    // Smooth cubic: c1 is reflection of previous c2
-                    path.addCurve(to: end, control1: currentPoint, control2: c2)
+                    // Smooth cubic: c1 is reflection of previous c2 about current point
+                    let prev = lastCubicControl ?? currentPoint
+                    let c1 = CGPoint(x: 2 * currentPoint.x - prev.x,
+                                     y: 2 * currentPoint.y - prev.y)
+                    path.addCurve(to: end, control1: c1, control2: c2)
+                    lastCubicControl = c2
                     currentPoint = end
                 }
 
@@ -192,13 +211,19 @@ struct StrokeRenderer {
                     let de = nextPoint()
                     let c2 = CGPoint(x: currentPoint.x + dc2.x, y: currentPoint.y + dc2.y)
                     let end = CGPoint(x: currentPoint.x + de.x, y: currentPoint.y + de.y)
-                    path.addCurve(to: end, control1: currentPoint, control2: c2)
+                    // Smooth cubic: c1 is reflection of previous c2 about current point
+                    let prev = lastCubicControl ?? currentPoint
+                    let c1 = CGPoint(x: 2 * currentPoint.x - prev.x,
+                                     y: 2 * currentPoint.y - prev.y)
+                    path.addCurve(to: end, control1: c1, control2: c2)
+                    lastCubicControl = c2
                     currentPoint = end
                 }
 
             case "Z", "z":
                 path.closeSubpath()
                 currentPoint = startPoint
+                lastCubicControl = nil
 
             default:
                 break

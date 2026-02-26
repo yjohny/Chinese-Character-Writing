@@ -29,16 +29,16 @@ final class RecognitionService {
         let image = renderDrawing(drawing)
         guard let cgImage = image.cgImage else { return .failed }
 
+        // VNImageRequestHandler.perform() is synchronous — the completion handler
+        // runs inline during perform(), so there is no threading concern between
+        // the handler and the catch block. We capture the result and resume once.
         return await withCheckedContinuation { continuation in
-            var hasResumed = false
+            var result: RecognitionResult?
 
             let request = VNRecognizeTextRequest { request, error in
-                guard !hasResumed else { return }
-                hasResumed = true
-
                 guard let observations = request.results as? [VNRecognizedTextObservation],
                       error == nil else {
-                    continuation.resume(returning: .failed)
+                    result = .failed
                     return
                 }
 
@@ -56,12 +56,12 @@ final class RecognitionService {
                 let matchFound = allCandidates.contains { $0.0 == expected && $0.1 >= Self.confidenceThreshold }
                 let topCandidate = allCandidates.first
 
-                continuation.resume(returning: RecognitionResult(
+                result = RecognitionResult(
                     recognizedCharacter: topCandidate?.0,
                     confidence: topCandidate?.1 ?? 0,
                     allCandidates: allCandidates,
                     isCorrect: matchFound
-                ))
+                )
             }
 
             let langCode = traditional ? "zh-Hant" : "zh-Hans"
@@ -73,10 +73,10 @@ final class RecognitionService {
             do {
                 try handler.perform([request])
             } catch {
-                guard !hasResumed else { return }
-                hasResumed = true
-                continuation.resume(returning: .failed)
+                // perform() failed before calling the completion handler
             }
+
+            continuation.resume(returning: result ?? .failed)
         }
     }
 

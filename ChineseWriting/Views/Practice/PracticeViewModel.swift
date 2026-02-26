@@ -34,6 +34,10 @@ final class PracticeViewModel {
     let characterData: CharacterDataService
     private let recognitionService = RecognitionService()
 
+    /// Tracks in-flight async work (recognition, delayed transitions) so it can be
+    /// cancelled when the user ends the session or moves to the next card.
+    private var pendingTask: Task<Void, Never>?
+
     var useTraditional: Bool {
         sessionManager.fetchProfile()?.useTraditional ?? false
     }
@@ -57,12 +61,16 @@ final class PracticeViewModel {
 
     /// User taps "Done" to end practice early.
     func endPractice() {
+        pendingTask?.cancel()
+        pendingTask = nil
         ttsService.stop()
         studyState = .sessionComplete
     }
 
     /// Start practicing again (from the completion screen).
     func practiceMore() {
+        pendingTask?.cancel()
+        pendingTask = nil
         correctCount = 0
         incorrectCount = 0
         totalCount = 0
@@ -90,7 +98,8 @@ final class PracticeViewModel {
         studyState = .recognizing
         isRecognizing = true
 
-        Task {
+        pendingTask?.cancel()
+        pendingTask = Task {
             guard let entry = currentEntry else { return }
             let expected = useTraditional ? entry.traditional : entry.simplified
             let result = await recognitionService.recognize(
@@ -98,6 +107,8 @@ final class PracticeViewModel {
                 expected: expected,
                 traditional: useTraditional
             )
+
+            guard !Task.isCancelled, studyState == .recognizing else { return }
 
             isRecognizing = false
             recognizedChar = result.recognizedCharacter
@@ -112,6 +123,8 @@ final class PracticeViewModel {
 
     func overrideCorrect() {
         guard studyState == .writing || studyState == .recognizing else { return }
+        pendingTask?.cancel()
+        pendingTask = nil
         isRecognizing = false
         handleCorrect(wasOverride: true, visionConfidence: 0)
     }
@@ -146,7 +159,8 @@ final class PracticeViewModel {
         // Recognize the rewrite to verify the user wrote the character correctly
         isRecognizing = true
 
-        Task {
+        pendingTask?.cancel()
+        pendingTask = Task {
             guard let entry = currentEntry, let card = currentCard else { return }
             let expected = useTraditional ? entry.traditional : entry.simplified
             let result = await recognitionService.recognize(
@@ -154,6 +168,8 @@ final class PracticeViewModel {
                 expected: expected,
                 traditional: useTraditional
             )
+
+            guard !Task.isCancelled, studyState == .rewriting else { return }
 
             isRecognizing = false
 
@@ -166,8 +182,9 @@ final class PracticeViewModel {
                 totalCount += 1
                 triggerHaptic(success: true)
 
-                Task {
+                pendingTask = Task {
                     try? await Task.sleep(for: .seconds(0.8))
+                    guard !Task.isCancelled else { return }
                     loadNextCard()
                 }
             } else {
@@ -195,8 +212,9 @@ final class PracticeViewModel {
         correctCount += 1
         totalCount += 1
 
-        Task {
+        pendingTask = Task {
             try? await Task.sleep(for: .seconds(1.5))
+            guard !Task.isCancelled else { return }
             loadNextCard()
         }
     }
@@ -210,8 +228,9 @@ final class PracticeViewModel {
             currentStrokeData = characterData.strokeData(for: entry.simplified)
         }
 
-        Task {
+        pendingTask = Task {
             try? await Task.sleep(for: .seconds(1.2))
+            guard !Task.isCancelled else { return }
             if currentStrokeData != nil {
                 studyState = .showingStrokeOrder
             } else {
@@ -223,6 +242,9 @@ final class PracticeViewModel {
     }
 
     private func loadNextCard() {
+        pendingTask?.cancel()
+        pendingTask = nil
+
         if let (card, entry) = sessionManager.nextCard() {
             currentCard = card
             currentEntry = entry
