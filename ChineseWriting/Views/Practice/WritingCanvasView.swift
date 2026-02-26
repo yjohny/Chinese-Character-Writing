@@ -14,7 +14,7 @@ struct WritingCanvasView: UIViewRepresentable {
     func makeUIView(context: Context) -> PKCanvasView {
         let canvas = PKCanvasView()
         canvas.drawingPolicy = .anyInput
-        canvas.tool = PKInkingTool(.pen, color: .black, width: 6)
+        canvas.tool = PKInkingTool(.pen, color: .black, width: 12)
         canvas.backgroundColor = .clear
         canvas.isOpaque = false
         canvas.delegate = context.coordinator
@@ -118,6 +118,7 @@ struct WritingCanvasContainer: View {
             WritingCanvasView(drawing: $drawing, onSubmit: onSubmit)
         }
         .frame(width: size, height: size)
+        .background(Color(.systemBackground))
         .clipShape(RoundedRectangle(cornerRadius: 8))
     }
 }

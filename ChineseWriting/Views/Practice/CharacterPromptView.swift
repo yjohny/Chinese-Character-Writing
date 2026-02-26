@@ -18,16 +18,12 @@ struct CharacterPromptView: View {
                 .font(.subheadline)
                 .foregroundStyle(.secondary)
 
-            // Example word
+            // Example word — show only the English meaning, not the Chinese,
+            // so the user must recall the character from audio alone.
             if let example = entry.exampleWords.first {
-                let displayWord = useTraditional ? example.wordTraditional : example.word
-                HStack(spacing: 4) {
-                    Text(displayWord)
-                        .font(.custom("STKaiti", size: 28))
-                    Text("(\(example.meaning))")
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
-                }
+                Text("Example: \(example.meaning)")
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
             }
 
             // TTS button

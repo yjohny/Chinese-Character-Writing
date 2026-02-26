@@ -34,12 +34,17 @@ struct StrokeOrderView: View {
                     }
                 }
 
-                // Current stroke animating (red)
+                // Current stroke animating (red, filled via median reveal)
                 if completedStrokes < allPaths.count {
                     allPaths[completedStrokes]
-                        .trim(from: 0, to: currentStrokeProgress)
-                        .stroke(Color.red, lineWidth: 3)
+                        .fill(Color.red)
                         .scaleEffect(displayScale, anchor: .topLeading)
+                        .mask(
+                            medianPath(for: completedStrokes)
+                                .trim(from: 0, to: currentStrokeProgress)
+                                .stroke(style: StrokeStyle(lineWidth: 150, lineCap: .round, lineJoin: .round))
+                                .scaleEffect(displayScale, anchor: .topLeading)
+                        )
                 }
 
                 // Stroke number labels
@@ -97,6 +102,18 @@ struct StrokeOrderView: View {
             .font(.system(size: 10, weight: .bold))
             .foregroundStyle(.red.opacity(0.7))
             .position(scaled)
+    }
+
+    /// Builds a path along the median (center line) of a stroke for use as a reveal mask.
+    private func medianPath(for strokeIndex: Int) -> Path {
+        let points = StrokeRenderer.medianPoints(from: strokeData, strokeIndex: strokeIndex)
+        var path = Path()
+        guard let first = points.first else { return path }
+        path.move(to: first)
+        for point in points.dropFirst() {
+            path.addLine(to: point)
+        }
+        return path
     }
 
     private func startAnimation() {
