@@ -8,7 +8,11 @@ struct TracingCanvasView: View {
     var onComplete: (() -> Void)?
     var size: CGFloat = 300
 
+    private var displayScale: CGFloat { size / StrokeRenderer.canvasSize }
+
     var body: some View {
+        let paths = StrokeRenderer.allStrokes(from: strokeData)
+
         VStack(spacing: 16) {
             Text("Trace the character")
                 .font(.headline)
@@ -19,10 +23,10 @@ struct TracingCanvasView: View {
                 guideGrid
 
                 // Ghost character at low opacity
-                ForEach(0..<strokeData.strokes.count, id: \.self) { i in
-                    StrokeRenderer.allStrokes(from: strokeData)[i]
+                ForEach(0..<paths.count, id: \.self) { i in
+                    paths[i]
                         .fill(Color.gray.opacity(0.15))
-                        .scaleEffect(size / StrokeRenderer.canvasSize, anchor: .topLeading)
+                        .scaleEffect(displayScale, anchor: .topLeading)
                 }
 
                 // Tracing canvas

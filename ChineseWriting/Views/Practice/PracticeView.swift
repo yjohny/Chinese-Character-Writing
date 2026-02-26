@@ -1,9 +1,16 @@
 import SwiftUI
 import PencilKit
 
-/// Main study session view. Switches between sub-views based on StudyState.
+/// Main practice view. Switches between sub-views based on StudyState.
+/// Auto-starts on appear for drop-in practice. Users can stop anytime via "Done".
 struct PracticeView: View {
     @Bindable var viewModel: PracticeViewModel
+    @Environment(\.horizontalSizeClass) private var sizeClass
+
+    /// Canvas size adapts to iPad vs iPhone.
+    private var canvasSize: CGFloat {
+        sizeClass == .regular ? 420 : 300
+    }
 
     var body: some View {
         NavigationStack {
@@ -33,11 +40,33 @@ struct PracticeView: View {
             }
             .navigationTitle("Practice")
             .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                if isActivelyPracticing {
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Button("Done") {
+                            viewModel.endPractice()
+                        }
+                    }
+                }
+            }
+            .onAppear {
+                viewModel.beginIfNeeded()
+            }
         }
     }
 
     private var showOverrideButton: Bool {
         viewModel.studyState == .writing || viewModel.studyState == .recognizing
+    }
+
+    /// Whether the user is in an active practice flow (not idle or complete).
+    private var isActivelyPracticing: Bool {
+        switch viewModel.studyState {
+        case .idle, .sessionComplete:
+            return false
+        default:
+            return true
+        }
     }
 
     @ViewBuilder
@@ -73,7 +102,7 @@ struct PracticeView: View {
             rewritingView
 
         case .sessionComplete:
-            sessionCompleteView
+            practiceCompleteView
         }
     }
 
@@ -81,53 +110,49 @@ struct PracticeView: View {
 
     private var idleView: some View {
         VStack(spacing: 24) {
-            Image(systemName: "pencil.and.outline")
-                .font(.system(size: 60))
-                .foregroundStyle(.blue)
-
-            Text("Ready to Practice")
-                .font(.title2)
-
-            Button(action: { viewModel.startSession() }) {
-                Label("Start", systemImage: "play.fill")
-                    .font(.title3)
-                    .padding(.horizontal, 32)
-                    .padding(.vertical, 12)
-            }
-            .buttonStyle(.borderedProminent)
+            ProgressView()
+                .scaleEffect(1.5)
+            Text("Loading...")
+                .font(.subheadline)
+                .foregroundStyle(.secondary)
         }
     }
 
     private var writingView: some View {
-        VStack(spacing: 16) {
-            if let entry = viewModel.currentEntry {
-                CharacterPromptView(
-                    entry: entry,
-                    useTraditional: viewModel.useTraditional,
-                    onTTSTap: { viewModel.playTTS() }
-                )
+        AdaptiveLayout(sizeClass: sizeClass) {
+            VStack(spacing: 12) {
+                if let entry = viewModel.currentEntry {
+                    CharacterPromptView(
+                        entry: entry,
+                        useTraditional: viewModel.useTraditional,
+                        onTTSTap: { viewModel.playTTS() }
+                    )
+                }
+
+                Text("Write the character")
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
             }
+        } canvas: {
+            VStack(spacing: 16) {
+                WritingCanvasContainer(
+                    drawing: $viewModel.writingDrawing,
+                    onSubmit: { viewModel.submitWriting() },
+                    size: canvasSize
+                )
 
-            Text("Write the character")
-                .font(.subheadline)
-                .foregroundStyle(.secondary)
+                HStack(spacing: 16) {
+                    Button(action: { viewModel.clearCanvas() }) {
+                        Label("Clear", systemImage: "trash")
+                    }
+                    .buttonStyle(.bordered)
 
-            WritingCanvasContainer(
-                drawing: $viewModel.writingDrawing,
-                onSubmit: { viewModel.submitWriting() }
-            )
-
-            HStack(spacing: 16) {
-                Button(action: { viewModel.clearCanvas() }) {
-                    Label("Clear", systemImage: "trash")
+                    Button(action: { viewModel.submitWriting() }) {
+                        Label("Check", systemImage: "checkmark")
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .disabled(viewModel.writingDrawing.strokes.isEmpty)
                 }
-                .buttonStyle(.bordered)
-
-                Button(action: { viewModel.submitWriting() }) {
-                    Label("Check", systemImage: "checkmark")
-                }
-                .buttonStyle(.borderedProminent)
-                .disabled(viewModel.writingDrawing.strokes.isEmpty)
             }
         }
         .padding()
@@ -137,7 +162,7 @@ struct PracticeView: View {
         VStack(spacing: 16) {
             if let entry = viewModel.currentEntry {
                 Text(entry.displayCharacter(traditional: viewModel.useTraditional))
-                    .font(.custom("STKaiti", size: 120))
+                    .font(.custom("STKaiti", size: sizeClass == .regular ? 160 : 120))
 
                 Image(systemName: "checkmark.circle.fill")
                     .font(.system(size: 48))
@@ -154,19 +179,13 @@ struct PracticeView: View {
         VStack(spacing: 16) {
             if let entry = viewModel.currentEntry {
                 Text(entry.displayCharacter(traditional: viewModel.useTraditional))
-                    .font(.custom("STKaiti", size: 100))
+                    .font(.custom("STKaiti", size: sizeClass == .regular ? 140 : 100))
 
-                Image(systemName: "xmark.circle.fill")
+                Image(systemName: "arrow.triangle.2.circlepath")
                     .font(.system(size: 40))
-                    .foregroundStyle(.red)
+                    .foregroundStyle(.orange)
 
-                if let recognized = viewModel.recognizedChar {
-                    Text("Recognized: \(recognized)")
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
-                }
-
-                Text("Let's review the strokes...")
+                Text("Let's practice the strokes!")
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
             }
@@ -184,7 +203,8 @@ struct PracticeView: View {
             if let strokeData = viewModel.currentStrokeData {
                 StrokeOrderView(
                     strokeData: strokeData,
-                    onComplete: { viewModel.strokeOrderComplete() }
+                    onComplete: { viewModel.strokeOrderComplete() },
+                    size: canvasSize - 20
                 )
             }
         }
@@ -203,7 +223,8 @@ struct PracticeView: View {
                 TracingCanvasView(
                     strokeData: strokeData,
                     drawing: $viewModel.tracingDrawing,
-                    onComplete: { viewModel.tracingComplete() }
+                    onComplete: { viewModel.tracingComplete() },
+                    size: canvasSize
                 )
             }
 
@@ -223,69 +244,100 @@ struct PracticeView: View {
     }
 
     private var rewritingView: some View {
-        VStack(spacing: 16) {
-            if let entry = viewModel.currentEntry {
-                CharacterPromptView(
-                    entry: entry,
-                    useTraditional: viewModel.useTraditional,
-                    onTTSTap: { viewModel.playTTS() }
-                )
+        AdaptiveLayout(sizeClass: sizeClass) {
+            VStack(spacing: 12) {
+                if let entry = viewModel.currentEntry {
+                    CharacterPromptView(
+                        entry: entry,
+                        useTraditional: viewModel.useTraditional,
+                        onTTSTap: { viewModel.playTTS() }
+                    )
+                }
+
+                Text("Now write it from memory")
+                    .font(.subheadline)
+                    .foregroundStyle(.orange)
+
+                if let feedback = viewModel.rewriteFeedback {
+                    Text(feedback)
+                        .font(.subheadline.bold())
+                        .foregroundStyle(.orange)
+                        .transition(.scale.combined(with: .opacity))
+                }
             }
+        } canvas: {
+            VStack(spacing: 16) {
+                WritingCanvasContainer(
+                    drawing: $viewModel.rewriteDrawing,
+                    onSubmit: { viewModel.submitRewrite() },
+                    size: canvasSize
+                )
 
-            Text("Now write it from memory")
-                .font(.subheadline)
-                .foregroundStyle(.orange)
+                if viewModel.isRecognizing {
+                    ProgressView("Checking...")
+                        .font(.caption)
+                } else {
+                    HStack(spacing: 16) {
+                        Button(action: { viewModel.clearCanvas() }) {
+                            Label("Clear", systemImage: "trash")
+                        }
+                        .buttonStyle(.bordered)
 
-            WritingCanvasContainer(
-                drawing: $viewModel.rewriteDrawing,
-                onSubmit: { viewModel.submitRewrite() }
-            )
-
-            HStack(spacing: 16) {
-                Button(action: { viewModel.clearCanvas() }) {
-                    Label("Clear", systemImage: "trash")
+                        Button(action: { viewModel.submitRewrite() }) {
+                            Label("Check", systemImage: "checkmark")
+                        }
+                        .buttonStyle(.borderedProminent)
+                        .disabled(viewModel.rewriteDrawing.strokes.isEmpty)
+                    }
                 }
-                .buttonStyle(.bordered)
-
-                Button(action: { viewModel.submitRewrite() }) {
-                    Label("Done", systemImage: "checkmark")
-                }
-                .buttonStyle(.borderedProminent)
-                .disabled(viewModel.rewriteDrawing.strokes.isEmpty)
             }
         }
         .padding()
     }
 
-    private var sessionCompleteView: some View {
+    private var practiceCompleteView: some View {
         VStack(spacing: 24) {
-            Image(systemName: "star.fill")
-                .font(.system(size: 60))
-                .foregroundStyle(.yellow)
+            if viewModel.totalCount > 0 {
+                Image(systemName: "star.fill")
+                    .font(.system(size: 60))
+                    .foregroundStyle(.yellow)
 
-            Text("Session Complete!")
-                .font(.title)
+                Text("Nice work!")
+                    .font(.title)
 
-            VStack(spacing: 8) {
-                HStack {
-                    Image(systemName: "checkmark.circle.fill")
-                        .foregroundStyle(.green)
-                    Text("Correct: \(viewModel.correctCount)")
+                VStack(spacing: 8) {
+                    HStack {
+                        Image(systemName: "checkmark.circle.fill")
+                            .foregroundStyle(.green)
+                        Text("Correct: \(viewModel.correctCount)")
+                    }
+                    HStack {
+                        Image(systemName: "arrow.triangle.2.circlepath.circle.fill")
+                            .foregroundStyle(.orange)
+                        Text("Reviewed: \(viewModel.incorrectCount)")
+                    }
+                    HStack {
+                        Image(systemName: "number.circle.fill")
+                            .foregroundStyle(.blue)
+                        Text("Total: \(viewModel.totalCount)")
+                    }
                 }
-                HStack {
-                    Image(systemName: "arrow.counterclockwise.circle.fill")
-                        .foregroundStyle(.orange)
-                    Text("To Review: \(viewModel.incorrectCount)")
-                }
-                HStack {
-                    Image(systemName: "number.circle.fill")
-                        .foregroundStyle(.blue)
-                    Text("Total: \(viewModel.totalCount)")
-                }
+                .font(.title3)
+            } else {
+                Image(systemName: "checkmark.seal.fill")
+                    .font(.system(size: 60))
+                    .foregroundStyle(.green)
+
+                Text("All caught up!")
+                    .font(.title)
+
+                Text("No characters to review right now.\nNew characters will be added each day.")
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
+                    .multilineTextAlignment(.center)
             }
-            .font(.title3)
 
-            Button(action: { viewModel.startSession() }) {
+            Button(action: { viewModel.practiceMore() }) {
                 Label("Practice More", systemImage: "arrow.clockwise")
                     .font(.title3)
                     .padding(.horizontal, 24)
@@ -298,6 +350,30 @@ struct PracticeView: View {
                     .font(.body)
             }
             .buttonStyle(.bordered)
+        }
+    }
+}
+
+// MARK: - Adaptive Layout
+
+/// Switches between VStack (iPhone) and HStack (iPad) for prompt + canvas pairs.
+private struct AdaptiveLayout<Prompt: View, Canvas: View>: View {
+    let sizeClass: UserInterfaceSizeClass?
+    @ViewBuilder let prompt: () -> Prompt
+    @ViewBuilder let canvas: () -> Canvas
+
+    var body: some View {
+        if sizeClass == .regular {
+            HStack(spacing: 32) {
+                prompt()
+                    .frame(maxWidth: .infinity)
+                canvas()
+            }
+        } else {
+            VStack(spacing: 16) {
+                prompt()
+                canvas()
+            }
         }
     }
 }
