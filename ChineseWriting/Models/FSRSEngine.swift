@@ -46,6 +46,7 @@ struct FSRSEngine {
     let w: [Double]
 
     init(weights: [Double] = FSRSEngine.defaultWeights) {
+        precondition(weights.count == 19, "FSRSEngine requires exactly 19 weights, got \(weights.count)")
         self.w = weights
     }
 
@@ -73,14 +74,14 @@ struct FSRSEngine {
     }
 
     /// Update difficulty after a review.
-    /// D'(D,G) = w7 * D0(4) + (1 - w7) * (D - w6*(G-3))
-    /// Mean-reverts toward the "Easy" initial difficulty to prevent "difficulty hell".
+    /// D'(D,G) = w7 * D0(3) + (1 - w7) * (D - w6*(G-3))
+    /// Mean-reverts toward the "Good" initial difficulty per FSRS v5 spec.
     func nextDifficulty(current d: Double, rating: Rating) -> Double {
         let g = Double(rating.rawValue)
-        // D0(4) without clamping for mean reversion target
-        let d0Easy = w[4] - exp(w[5] * 3.0) + 1.0
+        // D0(3) = w4 - e^(w5*(3-1)) + 1 — mean reversion target for "Good" rating
+        let d0Good = w[4] - exp(w[5] * 2.0) + 1.0
         let delta = d - w[6] * (g - 3.0)
-        let newD = w[7] * d0Easy + (1.0 - w[7]) * delta
+        let newD = w[7] * d0Good + (1.0 - w[7]) * delta
         return clampDifficulty(newD)
     }
 
@@ -253,19 +254,19 @@ struct FSRSEngine {
 
         switch rating {
         case .again:
-            newS = stabilityAfterFailure(difficulty: difficulty, stability: stability, retrievability: r)
+            newS = stabilityAfterFailure(difficulty: newD, stability: stability, retrievability: r)
             nextState = .relearning
             nextInterval = 1
         case .hard:
-            newS = stabilityAfterSuccess(difficulty: difficulty, stability: stability, retrievability: r, rating: rating)
+            newS = stabilityAfterSuccess(difficulty: newD, stability: stability, retrievability: r, rating: rating)
             nextState = cardState
             nextInterval = 1
         case .good:
-            newS = stabilityAfterSuccess(difficulty: difficulty, stability: stability, retrievability: r, rating: rating)
+            newS = stabilityAfterSuccess(difficulty: newD, stability: stability, retrievability: r, rating: rating)
             nextState = .review
             nextInterval = interval(stability: newS)
         case .easy:
-            newS = stabilityAfterSuccess(difficulty: difficulty, stability: stability, retrievability: r, rating: rating)
+            newS = stabilityAfterSuccess(difficulty: newD, stability: stability, retrievability: r, rating: rating)
             nextState = .review
             nextInterval = interval(stability: newS)
         }
@@ -304,19 +305,19 @@ struct FSRSEngine {
 
         switch rating {
         case .again:
-            newS = stabilityAfterFailure(difficulty: difficulty, stability: stability, retrievability: r)
+            newS = stabilityAfterFailure(difficulty: newD, stability: stability, retrievability: r)
             nextState = .relearning
             nextInterval = 1
         case .hard:
-            newS = stabilityAfterSuccess(difficulty: difficulty, stability: stability, retrievability: r, rating: rating)
+            newS = stabilityAfterSuccess(difficulty: newD, stability: stability, retrievability: r, rating: rating)
             nextState = .review
             nextInterval = interval(stability: newS)
         case .good:
-            newS = stabilityAfterSuccess(difficulty: difficulty, stability: stability, retrievability: r, rating: rating)
+            newS = stabilityAfterSuccess(difficulty: newD, stability: stability, retrievability: r, rating: rating)
             nextState = .review
             nextInterval = interval(stability: newS)
         case .easy:
-            newS = stabilityAfterSuccess(difficulty: difficulty, stability: stability, retrievability: r, rating: rating)
+            newS = stabilityAfterSuccess(difficulty: newD, stability: stability, retrievability: r, rating: rating)
             nextState = .review
             nextInterval = interval(stability: newS)
         }

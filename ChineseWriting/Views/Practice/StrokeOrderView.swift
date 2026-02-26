@@ -9,7 +9,7 @@ struct StrokeOrderView: View {
 
     @State private var completedStrokes = 0
     @State private var currentStrokeProgress: CGFloat = 0
-    @State private var animating = false
+    @State private var animationTask: Task<Void, Never>?
 
     private var totalStrokes: Int { strokeData.strokes.count }
 
@@ -68,6 +68,10 @@ struct StrokeOrderView: View {
                 .foregroundStyle(.secondary)
         }
         .onAppear { startAnimation() }
+        .onDisappear {
+            animationTask?.cancel()
+            animationTask = nil
+        }
     }
 
     private var guideGrid: some View {
@@ -114,31 +118,31 @@ struct StrokeOrderView: View {
     }
 
     private func startAnimation() {
-        guard !animating else { return }
-        animating = true
-        animateNextStroke()
-    }
-
-    private func animateNextStroke() {
-        guard completedStrokes < totalStrokes else {
-            // All strokes done
-            Task { @MainActor in
-                try? await Task.sleep(for: .milliseconds(500))
-                onComplete?()
-            }
-            return
-        }
-
+        // Reset state for fresh animation
+        completedStrokes = 0
         currentStrokeProgress = 0
-        withAnimation(.easeInOut(duration: 0.6)) {
-            currentStrokeProgress = 1.0
-        }
+        animationTask?.cancel()
 
-        Task { @MainActor in
-            try? await Task.sleep(for: .milliseconds(700))
-            completedStrokes += 1
-            currentStrokeProgress = 0
-            animateNextStroke()
+        animationTask = Task { @MainActor in
+            for stroke in 0..<totalStrokes {
+                guard !Task.isCancelled else { return }
+
+                currentStrokeProgress = 0
+                withAnimation(.easeInOut(duration: 0.6)) {
+                    currentStrokeProgress = 1.0
+                }
+
+                try? await Task.sleep(for: .milliseconds(700))
+                guard !Task.isCancelled else { return }
+
+                completedStrokes = stroke + 1
+                currentStrokeProgress = 0
+            }
+
+            // All strokes done — brief pause then notify completion
+            try? await Task.sleep(for: .milliseconds(500))
+            guard !Task.isCancelled else { return }
+            onComplete?()
         }
     }
 }

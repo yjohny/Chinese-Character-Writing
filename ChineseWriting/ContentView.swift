@@ -39,6 +39,7 @@ struct ContentView: View {
     }
 
     private func setupServices() {
+        guard sessionManager == nil else { return }
         let sm = SessionManager(characterData: characterData, modelContext: modelContext)
         self.sessionManager = sm
         self.viewModel = PracticeViewModel(

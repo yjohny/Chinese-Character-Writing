@@ -345,7 +345,7 @@ struct PracticeView: View {
             }
             .buttonStyle(.borderedProminent)
 
-            Button(action: { viewModel.studyState = .idle }) {
+            Button(action: { viewModel.endPractice() }) {
                 Text("Done")
                     .font(.body)
             }

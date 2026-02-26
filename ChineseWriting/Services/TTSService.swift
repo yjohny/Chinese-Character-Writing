@@ -18,6 +18,9 @@ final class TTSService: NSObject, ObservableObject {
     ///   - traditional: If true, uses zh-TW voice; otherwise zh-CN.
     ///   - completion: Called when speech finishes.
     func speak(_ text: String, traditional: Bool = false, completion: (() -> Void)? = nil) {
+        // Drop the old completion before stopping so the cancelled utterance's
+        // delegate callback doesn't fire it or the new one prematurely.
+        self.completion = nil
         synthesizer.stopSpeaking(at: .immediate)
         self.completion = completion
 
@@ -33,8 +36,8 @@ final class TTSService: NSObject, ObservableObject {
     }
 
     func stop() {
-        synthesizer.stopSpeaking(at: .immediate)
         completion = nil
+        synthesizer.stopSpeaking(at: .immediate)
     }
 
     private func configureAudioSession() {
@@ -52,6 +55,14 @@ extension TTSService: AVSpeechSynthesizerDelegate {
         Task { @MainActor in
             self.completion?()
             self.completion = nil
+        }
+    }
+
+    nonisolated func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didCancel utterance: AVSpeechUtterance) {
+        Task { @MainActor in
+            // Completion was already nil'd before stopSpeaking was called,
+            // so nothing to do here. This handler prevents the delegate
+            // from falling through to didFinish for cancelled utterances.
         }
     }
 }
