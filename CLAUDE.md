@@ -16,7 +16,7 @@ No external package dependencies — uses only Apple frameworks.
 
 - **UI**: SwiftUI with PencilKit for handwriting input
 - **Persistence**: SwiftData (ReviewCard, UserProfile, ReviewLog)
-- **Recognition**: Vision framework OCR (`VNRecognizeTextRequest`) — supports zh-Hans and zh-Hant
+- **Recognition**: Stroke-based matching (StrokeMatcher) with Vision OCR fallback (`VNRecognizeTextRequest`)
 - **Audio**: AVFoundation text-to-speech (`AVSpeechSynthesizer`)
 - **Spaced repetition**: FSRS v5 algorithm (FSRSEngine.swift)
 
@@ -30,12 +30,12 @@ idle → presenting → writing → recognizing → correct → (next card)
                                                                                                   (if correct) → (next card)
 ```
 
-Practice auto-starts on appear (idle is just a loading state). Users can tap "Done" in the toolbar at any time to end practice. The rewrite step uses Vision recognition to verify the user wrote the character correctly before advancing — they must get it right.
+Practice auto-starts on appear (idle is just a loading state). Users can tap "Done" in the toolbar at any time to end practice. The rewrite step uses stroke matching (with Vision OCR fallback) to verify the user wrote the character correctly before advancing — they must get it right.
 
 ### Key directories
 
 - `Models/` — CharacterEntry, StrokeData, ReviewCard, FSRSEngine, StudyState
-- `Services/` — CharacterDataService, StrokeRenderer, SessionManager, RecognitionService, TTSService
+- `Services/` — CharacterDataService, StrokeRenderer, StrokeMatcher, SessionManager, RecognitionService, TTSService
 - `Views/Practice/` — PracticeView, PracticeViewModel, WritingCanvasView, StrokeOrderView, TracingCanvasView, CharacterPromptView
 - `Resources/` — characters.json (494 chars, grades 1-6), strokes.json (SVG paths + medians from Make Me a Hanzi)
 
@@ -44,8 +44,8 @@ Practice auto-starts on appear (idle is just a loading state). Users can tap "Do
 - Stroke SVG data uses a 1024×1024 coordinate space with Y-axis flipped (origin top-left, y=900 is baseline). StrokeRenderer handles the transform. The SVG parser tracks `lastCubicControl` for proper S/s smooth cubic Bezier reflection.
 - CharacterPromptView intentionally hides the Chinese example word text so users recall from audio only.
 - WritingCanvasContainer and TracingCanvasView use a solid `Color.white` background behind the transparent PKCanvasView so strokes are visible in both light and dark mode. Do not use `.systemBackground` — it turns black in dark mode, making black ink invisible.
-- Recognition uses a lenient confidence threshold (0.15) and checks all top-10 candidates, not just the #1 result. `customWords` is set to the expected character to boost Vision's detection, and `usesLanguageCorrection` is enabled.
-- RecognitionService renders the PKDrawing to an opaque sRGB 512×512 image (`format.opaque = true`, `preferredRange = .standard`, `format.scale = 1.0`) and scales the drawing up so its longest dimension fills 432pt (512 minus padding). This prevents simple characters like 一 from being tiny in the recognition image. It forces a light-mode trait collection via `performAsCurrent` so PencilKit always renders black ink as black regardless of device appearance.
+- Recognition is two-tier: **StrokeMatcher** (primary) compares the user's PKDrawing strokes against the expected character's median centerlines from strokes.json. It normalizes both coordinate systems to [0,1] (user strokes ÷ canvasSize, medians ÷ 1024), then does greedy matching by direction (≤72° angle difference) and proximity (≤18% average distance to median polyline). Accepts if ≥60% of expected strokes match. Stroke count must be within ±max(2, expected/3). PracticeView syncs `canvasSize` to PracticeViewModel so the normalization is correct for both iPhone (300pt) and iPad (420pt).
+- **Vision OCR** (fallback) runs only when stroke matching fails or stroke data is unavailable. Uses a lenient confidence threshold (0.15), checks all top-10 candidates, sets `customWords` to the expected character, and enables `usesLanguageCorrection`. RecognitionService renders the PKDrawing to an opaque sRGB 512×512 image (`format.opaque = true`, `preferredRange = .standard`, `format.scale = 1.0`) and scales the drawing up so its longest dimension fills 432pt. Forces a light-mode trait collection via `performAsCurrent` so PencilKit always renders black ink as black regardless of device appearance.
 - There is a manual "I got it right" override button for when Vision OCR misrecognizes valid handwriting.
 - The incorrect flow should be encouraging, never use failure language. Use orange (not red) icons and phrases like "Let's practice the strokes!" — the goal is to get users to write it again correctly, not to punish them.
 - New card pacing: max 10 new cards/day (`maxNewPerDay`), paused if >20 reviews due (`maxDueBeforeStopNew`). The daily count is derived from ReviewLog (stabilityBefore == 0) so it persists across app restarts.

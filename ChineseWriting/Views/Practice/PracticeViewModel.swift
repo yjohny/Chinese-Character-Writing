@@ -13,6 +13,9 @@ final class PracticeViewModel {
     var currentCard: ReviewCard?
     var currentStrokeData: StrokeData?
 
+    /// Canvas frame size — set by PracticeView, used for stroke matching normalization.
+    var canvasSize: CGFloat = 300
+
     var writingDrawing = PKDrawing()
     var tracingDrawing = PKDrawing()
     var rewriteDrawing = PKDrawing()
@@ -105,7 +108,9 @@ final class PracticeViewModel {
             let result = await recognitionService.recognize(
                 drawing: writingDrawing,
                 expected: expected,
-                traditional: useTraditional
+                traditional: useTraditional,
+                strokeData: currentStrokeData,
+                canvasSize: canvasSize
             )
 
             guard !Task.isCancelled, studyState == .recognizing else { return }
@@ -166,7 +171,9 @@ final class PracticeViewModel {
             let result = await recognitionService.recognize(
                 drawing: rewriteDrawing,
                 expected: expected,
-                traditional: useTraditional
+                traditional: useTraditional,
+                strokeData: currentStrokeData,
+                canvasSize: canvasSize
             )
 
             guard !Task.isCancelled, studyState == .rewriting else { return }

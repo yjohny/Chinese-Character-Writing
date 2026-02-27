@@ -50,7 +50,11 @@ struct PracticeView: View {
                 }
             }
             .onAppear {
+                viewModel.canvasSize = canvasSize
                 viewModel.beginIfNeeded()
+            }
+            .onChange(of: sizeClass) { _, _ in
+                viewModel.canvasSize = canvasSize
             }
         }
     }
