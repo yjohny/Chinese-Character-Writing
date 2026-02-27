@@ -104,8 +104,14 @@ final class RecognitionService {
 
             context.cgContext.translateBy(x: offsetX, y: offsetY)
 
-            let drawingImage = drawing.image(from: bounds, scale: 2.0)
-            drawingImage.draw(in: bounds)
+            // Force light-mode trait collection so PencilKit renders "black"
+            // ink as actual black. Without this, dark mode causes adaptive ink
+            // colours to flip, producing invisible white-on-white strokes.
+            let lightTraits = UITraitCollection(userInterfaceStyle: .light)
+            lightTraits.performAsCurrent {
+                let drawingImage = drawing.image(from: bounds, scale: 2.0)
+                drawingImage.draw(in: bounds)
+            }
         }
     }
 }
