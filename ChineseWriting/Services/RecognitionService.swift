@@ -67,13 +67,14 @@ final class RecognitionService {
             let langCode = traditional ? "zh-Hant" : "zh-Hans"
             request.recognitionLanguages = [langCode]
             request.recognitionLevel = .accurate
-            request.usesLanguageCorrection = false
+            request.usesLanguageCorrection = true
+            request.customWords = [expected]
 
             let handler = VNImageRequestHandler(cgImage: cgImage, options: [:])
             do {
                 try handler.perform([request])
             } catch {
-                // perform() failed before calling the completion handler
+                print("⚠️ Vision perform() failed: \(error)")
             }
 
             continuation.resume(returning: result ?? .failed)
@@ -92,7 +93,10 @@ final class RecognitionService {
         let contentSize = max(bounds.width, bounds.height) + padding * 2
         let size = max(contentSize, 512)
 
-        let renderer = UIGraphicsImageRenderer(size: CGSize(width: size, height: size))
+        let format = UIGraphicsImageRendererFormat()
+        format.opaque = true
+        format.preferredRange = .standard
+        let renderer = UIGraphicsImageRenderer(size: CGSize(width: size, height: size), format: format)
         return renderer.image { context in
             // White background
             UIColor.white.setFill()
@@ -104,8 +108,14 @@ final class RecognitionService {
 
             context.cgContext.translateBy(x: offsetX, y: offsetY)
 
-            let drawingImage = drawing.image(from: bounds, scale: 2.0)
-            drawingImage.draw(in: bounds)
+            // Force light-mode trait collection so PencilKit renders "black"
+            // ink as actual black. Without this, dark mode causes adaptive ink
+            // colours to flip, producing invisible white-on-white strokes.
+            let lightTraits = UITraitCollection(userInterfaceStyle: .light)
+            lightTraits.performAsCurrent {
+                let drawingImage = drawing.image(from: bounds, scale: 2.0)
+                drawingImage.draw(in: bounds)
+            }
         }
     }
 }

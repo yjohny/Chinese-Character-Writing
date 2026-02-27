@@ -44,7 +44,8 @@ Practice auto-starts on appear (idle is just a loading state). Users can tap "Do
 - Stroke SVG data uses a 1024×1024 coordinate space with Y-axis flipped (origin top-left, y=900 is baseline). StrokeRenderer handles the transform. The SVG parser tracks `lastCubicControl` for proper S/s smooth cubic Bezier reflection.
 - CharacterPromptView intentionally hides the Chinese example word text so users recall from audio only.
 - WritingCanvasContainer uses a solid `.systemBackground` behind the transparent PKCanvasView so strokes are visible in both light and dark mode.
-- Recognition uses a lenient confidence threshold (0.15) and checks all top-10 candidates, not just the #1 result.
+- Recognition uses a lenient confidence threshold (0.15) and checks all top-10 candidates, not just the #1 result. `customWords` is set to the expected character to boost Vision's detection, and `usesLanguageCorrection` is enabled.
+- RecognitionService renders the PKDrawing to an opaque sRGB image (`format.opaque = true`, `preferredRange = .standard`) and forces a light-mode trait collection via `performAsCurrent` so PencilKit always renders black ink as black regardless of device appearance.
 - There is a manual "I got it right" override button for when Vision OCR misrecognizes valid handwriting.
 - The incorrect flow should be encouraging, never use failure language. Use orange (not red) icons and phrases like "Let's practice the strokes!" — the goal is to get users to write it again correctly, not to punish them.
 - New card pacing: max 10 new cards/day (`maxNewPerDay`), paused if >20 reviews due (`maxDueBeforeStopNew`). The daily count is derived from ReviewLog (stabilityBefore == 0) so it persists across app restarts.
