@@ -33,6 +33,7 @@ struct TracingCanvasView: View {
                 WritingCanvasView(drawing: $drawing, onSubmit: onComplete)
             }
             .frame(width: size, height: size)
+            .background(Color.white)
             .clipShape(RoundedRectangle(cornerRadius: 8))
             .overlay(
                 RoundedRectangle(cornerRadius: 8)

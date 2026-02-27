@@ -82,31 +82,42 @@ final class RecognitionService {
     }
 
     /// Render PKDrawing to a UIImage suitable for Vision recognition.
-    /// White background, black strokes, square, centered, minimum 512x512.
+    /// White background, black strokes, square 512×512, scaled to fill.
     private func renderDrawing(_ drawing: PKDrawing) -> UIImage {
         let bounds = drawing.bounds
         guard bounds.width > 0, bounds.height > 0 else {
             return UIImage()
         }
 
+        let imageSize: CGFloat = 512
         let padding: CGFloat = 40
-        let contentSize = max(bounds.width, bounds.height) + padding * 2
-        let size = max(contentSize, 512)
+        let available = imageSize - padding * 2 // 432
+
+        // Scale drawing up so the longest dimension fills the available space.
+        // This prevents thin strokes (e.g. 一) from being tiny in the image.
+        // Cap at 6× to avoid over-scaling very small marks.
+        let scaleFactor = min(available / max(bounds.width, bounds.height), 6.0)
 
         let format = UIGraphicsImageRendererFormat()
         format.opaque = true
         format.preferredRange = .standard
-        let renderer = UIGraphicsImageRenderer(size: CGSize(width: size, height: size), format: format)
+        format.scale = 1.0 // Consistent pixel dimensions across devices
+        let renderer = UIGraphicsImageRenderer(
+            size: CGSize(width: imageSize, height: imageSize), format: format
+        )
         return renderer.image { context in
             // White background
             UIColor.white.setFill()
-            context.fill(CGRect(origin: .zero, size: CGSize(width: size, height: size)))
+            context.fill(CGRect(origin: .zero, size: CGSize(width: imageSize, height: imageSize)))
 
-            // Center the drawing
-            let offsetX = (size - bounds.width) / 2 - bounds.origin.x
-            let offsetY = (size - bounds.height) / 2 - bounds.origin.y
-
-            context.cgContext.translateBy(x: offsetX, y: offsetY)
+            let scaledWidth = bounds.width * scaleFactor
+            let scaledHeight = bounds.height * scaleFactor
+            let destRect = CGRect(
+                x: (imageSize - scaledWidth) / 2,
+                y: (imageSize - scaledHeight) / 2,
+                width: scaledWidth,
+                height: scaledHeight
+            )
 
             // Force light-mode trait collection so PencilKit renders "black"
             // ink as actual black. Without this, dark mode causes adaptive ink
@@ -114,7 +125,7 @@ final class RecognitionService {
             let lightTraits = UITraitCollection(userInterfaceStyle: .light)
             lightTraits.performAsCurrent {
                 let drawingImage = drawing.image(from: bounds, scale: 2.0)
-                drawingImage.draw(in: bounds)
+                drawingImage.draw(in: destRect)
             }
         }
     }
