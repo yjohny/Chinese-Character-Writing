@@ -22,11 +22,30 @@ struct StrokeMatcher {
     /// ~72° allows for natural variation while filtering clearly wrong directions.
     private static let angleThreshold: Double = .pi / 2.5
 
+    /// Max distance (normalized) between user stroke start point and expected start point.
+    /// 0.25 ≈ 25% of canvas — catches reversed strokes while allowing natural imprecision.
+    private static let startPointThreshold: Double = 0.25
+
+    /// DTW distance threshold (normalized). Strokes with DTW cost above this are rejected
+    /// even if their average polyline distance is acceptable.
+    private static let dtwThreshold: Double = 0.20
+
     /// Points sampled per stroke for comparison.
     private static let sampleCount = 20
 
     /// Median data coordinate space.
     private static let referenceSize: CGFloat = 1024
+
+    /// Match ratio thresholds by grade level.
+    /// Lower grades are more lenient; higher grades require more strokes to match.
+    private static let matchThresholds: [ClosedRange<Int>: Double] = [
+        1...2: 0.70,   // Grades 1–2: simpler characters, younger learners
+        3...4: 0.75,   // Grades 3–4: moderate
+        5...6: 0.80,   // Grades 5–6: complex characters, expect more accuracy
+    ]
+
+    /// Default match threshold when grade is unknown.
+    private static let defaultMatchThreshold: Double = 0.75
 
     // MARK: - Public API
 
@@ -36,16 +55,17 @@ struct StrokeMatcher {
     ///   - drawing: The user's PencilKit drawing.
     ///   - strokeData: Expected character's stroke/median data from strokes.json.
     ///   - canvasSize: The frame size of the writing canvas (300 on iPhone, 420 on iPad).
+    ///   - gradeLevel: The character's school grade (1–6), used to adjust strictness.
     static func matches(
         drawing: PKDrawing,
         strokeData: StrokeData,
-        canvasSize: CGFloat
+        canvasSize: CGFloat,
+        gradeLevel: Int? = nil
     ) -> Bool {
         let expectedCount = strokeData.medians.count
         guard expectedCount > 0, !drawing.strokes.isEmpty else { return false }
 
         // Stroke count: allow ±max(2, expectedCount/3).
-        // Very lenient — users sometimes lift mid-stroke or draw extras.
         let countDiff = abs(drawing.strokes.count - expectedCount)
         if countDiff > max(2, expectedCount / 3) { return false }
 
@@ -64,7 +84,7 @@ struct StrokeMatcher {
         }
 
         // Greedy matching: for each expected stroke, find the best unmatched user stroke
-        // by direction + proximity.
+        // by direction, start-point proximity, shape (DTW), and polyline distance.
         var matched = 0
         var used = Set<Int>()
 
@@ -73,30 +93,56 @@ struct StrokeMatcher {
             let expAngle = primaryAngle(expected)
 
             var bestIdx = -1
-            var bestDist = Double.infinity
+            var bestScore = Double.infinity
 
             for (j, user) in userStrokes.enumerated() where !used.contains(j) {
                 guard user.count >= 2 else { continue }
 
-                // Direction gate — skip clearly wrong orientations
+                // Gate 1: Direction — skip clearly wrong orientations
                 if angleDifference(primaryAngle(user), expAngle) > angleThreshold { continue }
 
+                // Gate 2: Start point — the stroke must begin in roughly the right place.
+                // Catches reversed strokes (e.g. 一 drawn right-to-left) that pass
+                // the direction check when the angle is close to 180°.
+                let startDist = hypot(user[0].x - expected[0].x, user[0].y - expected[0].y)
+                if startDist > startPointThreshold { continue }
+
                 // Proximity: average distance from user points to expected polyline
-                let dist = averageDistanceToPolyline(from: user, to: expected)
-                if dist < bestDist {
-                    bestDist = dist
+                let avgDist = averageDistanceToPolyline(from: user, to: expected)
+                if avgDist >= distanceThreshold { continue }
+
+                // Shape: DTW catches strokes that are near the polyline on average
+                // but have a wrong shape (e.g. a curve where a line should be).
+                let resampledExpected = resamplePolyline(expected, count: sampleCount)
+                let dtwDist = dtwDistance(user, resampledExpected)
+                if dtwDist >= dtwThreshold { continue }
+
+                // Combined score: weight both metrics for best-match selection
+                let score = avgDist * 0.5 + dtwDist * 0.5
+                if score < bestScore {
+                    bestScore = score
                     bestIdx = j
                 }
             }
 
-            if bestIdx >= 0 && bestDist < distanceThreshold {
+            if bestIdx >= 0 {
                 matched += 1
                 used.insert(bestIdx)
             }
         }
 
-        // Accept if ≥60% of expected strokes were matched.
-        return Double(matched) / Double(expectedCount) >= 0.6
+        let threshold = matchThreshold(for: gradeLevel)
+        return Double(matched) / Double(expectedCount) >= threshold
+    }
+
+    // MARK: - Grade-based leniency
+
+    private static func matchThreshold(for gradeLevel: Int?) -> Double {
+        guard let grade = gradeLevel else { return defaultMatchThreshold }
+        for (range, threshold) in matchThresholds {
+            if range.contains(grade) { return threshold }
+        }
+        return defaultMatchThreshold
     }
 
     // MARK: - Point sampling
@@ -112,6 +158,37 @@ struct StrokeMatcher {
             let t = CGFloat(i) / CGFloat(sampleCount - 1) * maxParam
             return path.interpolatedPoint(at: t).location
         }
+    }
+
+    /// Resample a polyline to exactly `count` evenly-spaced points along its arc length.
+    private static func resamplePolyline(_ points: [CGPoint], count: Int) -> [CGPoint] {
+        guard points.count >= 2, count >= 2 else { return points }
+
+        // Compute cumulative arc lengths
+        var cumLengths = [0.0]
+        for i in 1..<points.count {
+            let d = hypot(points[i].x - points[i - 1].x, points[i].y - points[i - 1].y)
+            cumLengths.append(cumLengths.last! + d)
+        }
+        let totalLength = cumLengths.last!
+        guard totalLength > 0 else { return points }
+
+        var result = [CGPoint]()
+        var segIdx = 0
+        for i in 0..<count {
+            let target = totalLength * Double(i) / Double(count - 1)
+            while segIdx < cumLengths.count - 2 && cumLengths[segIdx + 1] < target {
+                segIdx += 1
+            }
+            let segLen = cumLengths[segIdx + 1] - cumLengths[segIdx]
+            let t = segLen > 0 ? (target - cumLengths[segIdx]) / segLen : 0
+            let p = CGPoint(
+                x: points[segIdx].x + t * (points[segIdx + 1].x - points[segIdx].x),
+                y: points[segIdx].y + t * (points[segIdx + 1].y - points[segIdx].y)
+            )
+            result.append(p)
+        }
+        return result
     }
 
     // MARK: - Direction helpers
@@ -154,5 +231,34 @@ struct StrokeMatcher {
         guard lenSq > 0 else { return hypot(p.x - a.x, p.y - a.y) }
         let t = max(0, min(1, ((p.x - a.x) * dx + (p.y - a.y) * dy) / lenSq))
         return hypot(p.x - (a.x + t * dx), p.y - (a.y + t * dy))
+    }
+
+    // MARK: - DTW (Dynamic Time Warping)
+
+    /// Normalized DTW distance between two point sequences of equal length.
+    /// Returns the average per-point cost of the optimal warping path.
+    private static func dtwDistance(_ a: [CGPoint], _ b: [CGPoint]) -> Double {
+        let n = a.count
+        let m = b.count
+        guard n > 0, m > 0 else { return .infinity }
+
+        // Cost matrix. Use 1-D array for performance.
+        var dtw = [Double](repeating: .infinity, count: (n + 1) * (m + 1))
+        let w = m + 1 // row width
+        dtw[0] = 0
+
+        for i in 1...n {
+            for j in 1...m {
+                let cost = hypot(a[i - 1].x - b[j - 1].x, a[i - 1].y - b[j - 1].y)
+                dtw[i * w + j] = cost + min(
+                    dtw[(i - 1) * w + j],       // insertion
+                    dtw[i * w + (j - 1)],        // deletion
+                    dtw[(i - 1) * w + (j - 1)]   // match
+                )
+            }
+        }
+
+        // Normalize by path length (n + m is upper bound; use max for simplicity)
+        return dtw[n * w + m] / Double(max(n, m))
     }
 }

@@ -31,12 +31,13 @@ final class RecognitionService {
         expected: String,
         traditional: Bool,
         strokeData: StrokeData? = nil,
-        canvasSize: CGFloat = 300
+        canvasSize: CGFloat = 300,
+        gradeLevel: Int? = nil
     ) async -> RecognitionResult {
         // Try stroke-based matching first — faster and more reliable for handwriting,
         // especially simple characters (e.g. 一) where Vision OCR consistently fails.
         if let strokeData,
-           StrokeMatcher.matches(drawing: drawing, strokeData: strokeData, canvasSize: canvasSize) {
+           StrokeMatcher.matches(drawing: drawing, strokeData: strokeData, canvasSize: canvasSize, gradeLevel: gradeLevel) {
             return RecognitionResult(
                 recognizedCharacter: expected,
                 confidence: 1.0,
