@@ -21,11 +21,31 @@ final class RecognitionService {
     static let maxCandidates: Int = 10
 
     /// Recognize a handwritten character from a PencilKit drawing.
+    ///
+    /// Uses stroke-based matching (comparing against median data) as the primary method,
+    /// falling back to Vision OCR for characters without stroke data or when stroke
+    /// matching is inconclusive. Stroke matching is far more reliable for handwritten
+    /// input than Vision OCR, which is designed for printed text in photos.
     func recognize(
         drawing: PKDrawing,
         expected: String,
-        traditional: Bool
+        traditional: Bool,
+        strokeData: StrokeData? = nil,
+        canvasSize: CGFloat = 300
     ) async -> RecognitionResult {
+        // Try stroke-based matching first — faster and more reliable for handwriting,
+        // especially simple characters (e.g. 一) where Vision OCR consistently fails.
+        if let strokeData,
+           StrokeMatcher.matches(drawing: drawing, strokeData: strokeData, canvasSize: canvasSize) {
+            return RecognitionResult(
+                recognizedCharacter: expected,
+                confidence: 1.0,
+                allCandidates: [(expected, 1.0)],
+                isCorrect: true
+            )
+        }
+
+        // Fall back to Vision OCR
         let image = renderDrawing(drawing)
         guard let cgImage = image.cgImage else { return .failed }
 
