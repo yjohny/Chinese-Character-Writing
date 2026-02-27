@@ -110,7 +110,8 @@ final class PracticeViewModel {
                 expected: expected,
                 traditional: useTraditional,
                 strokeData: currentStrokeData,
-                canvasSize: canvasSize
+                canvasSize: canvasSize,
+                gradeLevel: entry.gradeLevel
             )
 
             guard !Task.isCancelled, studyState == .recognizing else { return }
@@ -173,7 +174,8 @@ final class PracticeViewModel {
                 expected: expected,
                 traditional: useTraditional,
                 strokeData: currentStrokeData,
-                canvasSize: canvasSize
+                canvasSize: canvasSize,
+                gradeLevel: entry.gradeLevel
             )
 
             guard !Task.isCancelled, studyState == .rewriting else { return }
