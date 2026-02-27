@@ -7,15 +7,15 @@ import PencilKit
 /// and directions. This is more reliable than Vision OCR for handwriting recognition,
 /// especially for simple characters like 一 where OCR often fails.
 ///
-/// Both coordinate systems are normalized to [0, 1] for comparison:
-/// - User strokes: divided by canvas frame size (e.g. 300pt or 420pt)
-/// - Expected medians: divided by 1024 (the Make Me a Hanzi coordinate space)
+/// Both coordinate systems are normalized via bounding-box normalization:
+/// each set of strokes is centered at (0.5, 0.5) and scaled by max(width, height),
+/// making matching invariant to position and scale within the writing area.
 struct StrokeMatcher {
 
-    // MARK: - Thresholds
+    // MARK: - Strict thresholds
 
     /// Max average distance (normalized) from user stroke to expected median polyline.
-    /// 0.18 ≈ 18% of canvas — generous enough for sloppy handwriting.
+    /// 0.18 ≈ 18% of normalized extent — generous enough for sloppy handwriting.
     private static let distanceThreshold: Double = 0.18
 
     /// Max angle difference (radians) between start→end direction of user vs expected.
@@ -23,20 +23,38 @@ struct StrokeMatcher {
     private static let angleThreshold: Double = .pi / 2.5
 
     /// Max distance (normalized) between user stroke start point and expected start point.
-    /// 0.25 ≈ 25% of canvas — catches reversed strokes while allowing natural imprecision.
+    /// 0.25 ≈ 25% of normalized extent — catches reversed strokes while allowing imprecision.
     private static let startPointThreshold: Double = 0.25
 
     /// DTW distance threshold (normalized). Strokes with DTW cost above this are rejected
     /// even if their average polyline distance is acceptable.
     private static let dtwThreshold: Double = 0.20
 
+    // MARK: - Relaxed thresholds (≈1.4× strict)
+
+    private static let relaxedDistanceThreshold: Double = 0.25
+    private static let relaxedAngleThreshold: Double = .pi / 2.0  // 90°
+    private static let relaxedStartPointThreshold: Double = 0.35
+    private static let relaxedDtwThreshold: Double = 0.28
+
+    // MARK: - Scoring
+
+    /// Reject any stroke where a single metric exceeds this multiple of the
+    /// pass's threshold, even if the composite score is below 1.0.
+    private static let ceilingMultiplier: Double = 2.0
+
+    /// Soft scoring weights — shape (distance + DTW) weighted more than direction/position.
+    private static let angleWeight: Double = 0.20
+    private static let startWeight: Double = 0.20
+    private static let distWeight: Double = 0.30
+    private static let dtwWeight: Double = 0.30
+
+    // MARK: - Match ratios
+
     /// Points sampled per stroke for comparison.
     private static let sampleCount = 20
 
-    /// Median data coordinate space.
-    private static let referenceSize: CGFloat = 1024
-
-    /// Match ratio thresholds by grade level.
+    /// Match ratio thresholds by grade level (strict pass).
     /// Lower grades are more lenient; higher grades require more strokes to match.
     private static let matchThresholds: [ClosedRange<Int>: Double] = [
         1...2: 0.70,   // Grades 1–2: simpler characters, younger learners
@@ -47,9 +65,18 @@ struct StrokeMatcher {
     /// Default match threshold when grade is unknown.
     private static let defaultMatchThreshold: Double = 0.75
 
+    /// Relaxed pass requires a higher fraction of strokes to match.
+    private static let relaxedMatchThreshold: Double = 0.90
+
     // MARK: - Public API
 
     /// Returns `true` if the drawing is a reasonable match for the expected character.
+    ///
+    /// Uses a two-pass strategy:
+    /// 1. Strict pass with grade-based match ratio.
+    /// 2. Relaxed pass with loosened thresholds but 90% match requirement.
+    ///
+    /// Both passes use bounding-box normalization and soft composite scoring.
     ///
     /// - Parameters:
     ///   - drawing: The user's PencilKit drawing.
@@ -69,22 +96,54 @@ struct StrokeMatcher {
         let countDiff = abs(drawing.strokes.count - expectedCount)
         if countDiff > max(2, expectedCount / 3) { return false }
 
-        // Normalize user strokes to [0, 1]
-        let userStrokes = drawing.strokes.map { stroke in
-            samplePoints(from: stroke).map { p in
-                CGPoint(x: p.x / canvasSize, y: p.y / canvasSize)
-            }
+        // Sample raw points (canvas coordinates for user, Make Me a Hanzi for expected)
+        let rawUserStrokes = drawing.strokes.map { samplePoints(from: $0) }
+        let rawExpectedStrokes = (0..<expectedCount).map { i in
+            StrokeRenderer.medianPoints(from: strokeData, strokeIndex: i)
         }
 
-        // Normalize expected medians to [0, 1]
-        let expectedStrokes = (0..<expectedCount).map { i in
-            StrokeRenderer.medianPoints(from: strokeData, strokeIndex: i).map { p in
-                CGPoint(x: p.x / referenceSize, y: p.y / referenceSize)
-            }
+        // Bounding-box normalize: center at (0.5, 0.5), scale by max(width, height).
+        // This makes matching invariant to position and scale within the writing area.
+        let userStrokes = boundingBoxNormalize(rawUserStrokes)
+        let expectedStrokes = boundingBoxNormalize(rawExpectedStrokes)
+
+        // Strict pass — grade-based match ratio
+        let strictRatio = matchRatio(
+            userStrokes: userStrokes, expectedStrokes: expectedStrokes,
+            angleTh: angleThreshold, startTh: startPointThreshold,
+            distTh: distanceThreshold, dtwTh: dtwThreshold
+        )
+        if strictRatio >= matchThreshold(for: gradeLevel) {
+            return true
         }
 
-        // Greedy matching: for each expected stroke, find the best unmatched user stroke
-        // by direction, start-point proximity, shape (DTW), and polyline distance.
+        // Relaxed pass — loosened per-stroke thresholds, higher overall match requirement
+        let relaxedRatio = matchRatio(
+            userStrokes: userStrokes, expectedStrokes: expectedStrokes,
+            angleTh: relaxedAngleThreshold, startTh: relaxedStartPointThreshold,
+            distTh: relaxedDistanceThreshold, dtwTh: relaxedDtwThreshold
+        )
+        return relaxedRatio >= relaxedMatchThreshold
+    }
+
+    // MARK: - Matching
+
+    /// Fraction of expected strokes that match a user stroke, using soft composite scoring.
+    ///
+    /// For each expected stroke, greedily finds the best unmatched user stroke whose
+    /// composite score (weighted blend of angle, start-point, distance, DTW) is below 1.0.
+    /// A hard ceiling rejects any stroke where a single metric exceeds 2× the threshold.
+    private static func matchRatio(
+        userStrokes: [[CGPoint]],
+        expectedStrokes: [[CGPoint]],
+        angleTh: Double,
+        startTh: Double,
+        distTh: Double,
+        dtwTh: Double
+    ) -> Double {
+        let expectedCount = expectedStrokes.count
+        guard expectedCount > 0 else { return 0 }
+
         var matched = 0
         var used = Set<Int>()
 
@@ -98,28 +157,26 @@ struct StrokeMatcher {
             for (j, user) in userStrokes.enumerated() where !used.contains(j) {
                 guard user.count >= 2 else { continue }
 
-                // Gate 1: Direction — skip clearly wrong orientations
-                if angleDifference(primaryAngle(user), expAngle) > angleThreshold { continue }
-
-                // Gate 2: Start point — the stroke must begin in roughly the right place.
-                // Catches reversed strokes (e.g. 一 drawn right-to-left) that pass
-                // the direction check when the angle is close to 180°.
+                // Compute raw metrics
+                let angleDiff = angleDifference(primaryAngle(user), expAngle)
                 let startDist = hypot(user[0].x - expected[0].x, user[0].y - expected[0].y)
-                if startDist > startPointThreshold { continue }
-
-                // Proximity: average distance from user points to expected polyline
                 let avgDist = averageDistanceToPolyline(from: user, to: expected)
-                if avgDist >= distanceThreshold { continue }
-
-                // Shape: DTW catches strokes that are near the polyline on average
-                // but have a wrong shape (e.g. a curve where a line should be).
                 let resampledExpected = resamplePolyline(expected, count: sampleCount)
                 let dtwDist = dtwDistance(user, resampledExpected)
-                if dtwDist >= dtwThreshold { continue }
 
-                // Combined score: weight both metrics for best-match selection
-                let score = avgDist * 0.5 + dtwDist * 0.5
-                if score < bestScore {
+                // Hard ceiling: reject if any single metric exceeds 2× threshold
+                if angleDiff > angleTh * ceilingMultiplier { continue }
+                if startDist > startTh * ceilingMultiplier { continue }
+                if avgDist > distTh * ceilingMultiplier { continue }
+                if dtwDist > dtwTh * ceilingMultiplier { continue }
+
+                // Soft composite score: 0 = perfect, 1.0 = at threshold boundary
+                let score = angleWeight * (angleDiff / angleTh)
+                    + startWeight * (startDist / startTh)
+                    + distWeight * (avgDist / distTh)
+                    + dtwWeight * (dtwDist / dtwTh)
+
+                if score < 1.0 && score < bestScore {
                     bestScore = score
                     bestIdx = j
                 }
@@ -131,8 +188,40 @@ struct StrokeMatcher {
             }
         }
 
-        let threshold = matchThreshold(for: gradeLevel)
-        return Double(matched) / Double(expectedCount) >= threshold
+        return Double(matched) / Double(expectedCount)
+    }
+
+    // MARK: - Bounding-box normalization
+
+    /// Normalize stroke polylines by centering at (0.5, 0.5) and scaling by
+    /// max(width, height). Preserves aspect ratio so strokes like 一 stay flat.
+    private static func boundingBoxNormalize(_ strokes: [[CGPoint]]) -> [[CGPoint]] {
+        var minX = Double.infinity, minY = Double.infinity
+        var maxX = -Double.infinity, maxY = -Double.infinity
+        for stroke in strokes {
+            for p in stroke {
+                minX = min(minX, p.x)
+                minY = min(minY, p.y)
+                maxX = max(maxX, p.x)
+                maxY = max(maxY, p.y)
+            }
+        }
+        guard minX.isFinite, minY.isFinite else { return strokes }
+
+        let extent = max(maxX - minX, maxY - minY)
+        guard extent > 0 else { return strokes }
+
+        let centerX = (minX + maxX) / 2.0
+        let centerY = (minY + maxY) / 2.0
+
+        return strokes.map { stroke in
+            stroke.map { p in
+                CGPoint(
+                    x: (p.x - centerX) / extent + 0.5,
+                    y: (p.y - centerY) / extent + 0.5
+                )
+            }
+        }
     }
 
     // MARK: - Grade-based leniency
