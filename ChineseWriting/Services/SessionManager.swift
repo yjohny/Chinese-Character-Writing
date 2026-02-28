@@ -15,10 +15,10 @@ final class SessionManager {
     let modelContext: ModelContext
     let fsrs = FSRSEngine()
 
-    /// Maximum new cards to introduce per day.
-    static let maxNewPerDay = 10
-    /// Don't introduce new cards if more than this many reviews are due.
-    static let maxDueBeforeStopNew = 20
+    /// Don't introduce new cards if this many or more cards are in relearning (recently missed).
+    static let maxRelearningBeforeStopNew = 5
+    /// Don't introduce new cards if more than this many reviews are due (catch-up backstop).
+    static let maxDueBeforeStopNew = 50
 
     init(characterData: CharacterDataService, modelContext: ModelContext) {
         self.characterData = characterData
@@ -31,7 +31,8 @@ final class SessionManager {
     /// Returns nil if no cards are available (all caught up for now).
     func nextCard() -> (ReviewCard, CharacterEntry)? {
         // 1. Relearning cards due now
-        if let card = fetchDueCards(state: .relearning).first,
+        let dueRelearning = fetchDueCards(state: .relearning)
+        if let card = dueRelearning.first,
            let entry = characterData.character(forSimplified: card.character) {
             return (card, entry)
         }
@@ -49,10 +50,10 @@ final class SessionManager {
             return (card, entry)
         }
 
-        // 4. New cards (only if due backlog is small enough and daily limit not reached)
+        // 4. New cards (only if few relearning cards and due backlog is manageable)
+        let relearningCount = dueRelearning.count
         let totalDue = dueReviews.count
-        let newToday = countNewCardsIntroducedToday()
-        if totalDue < Self.maxDueBeforeStopNew && newToday < Self.maxNewPerDay {
+        if relearningCount < Self.maxRelearningBeforeStopNew && totalDue < Self.maxDueBeforeStopNew {
             if let (card, entry) = introduceNextNewCard() {
                 return (card, entry)
             }
@@ -167,19 +168,6 @@ final class SessionManager {
             sortBy: [SortDescriptor(\.dueDate)]
         )
         return (try? modelContext.fetch(descriptor)) ?? []
-    }
-
-    /// Count new cards introduced today by checking ReviewLogs with stabilityBefore == 0
-    /// (first-ever review of a card). Persists across app restarts.
-    private func countNewCardsIntroducedToday() -> Int {
-        let calendar = Calendar.current
-        let startOfToday = calendar.startOfDay(for: Date())
-        let descriptor = FetchDescriptor<ReviewLog>(
-            predicate: #Predicate {
-                $0.reviewDate >= startOfToday && $0.stabilityBefore == 0.0
-            }
-        )
-        return (try? modelContext.fetchCount(descriptor)) ?? 0
     }
 
     private func introduceNextNewCard() -> (ReviewCard, CharacterEntry)? {
