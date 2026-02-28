@@ -202,9 +202,7 @@ final class SessionManager {
     func setupAssumedKnownCards(startingGrade: Int) {
         guard startingGrade > 1 else { return }
 
-        let allCardsDescriptor = FetchDescriptor<ReviewCard>()
-        let existingCards = (try? modelContext.fetch(allCardsDescriptor)) ?? []
-        let existingCharacters = Set(existingCards.map(\.character))
+        let existingCharacters = fetchAllCardCharacters()
 
         let now = Date()
         let calendar = Calendar.current
@@ -250,6 +248,14 @@ final class SessionManager {
 
     // MARK: - Private
 
+    /// Fetches just the character strings from all ReviewCards, returning a Set for
+    /// existence checks. Avoids retaining the full card object graph in the caller's scope.
+    private func fetchAllCardCharacters() -> Set<String> {
+        let descriptor = FetchDescriptor<ReviewCard>()
+        let cards = (try? modelContext.fetch(descriptor)) ?? []
+        return Set(cards.map(\.character))
+    }
+
     private func fetchDueCards(state: CardState) -> [ReviewCard] {
         let now = Date()
         let stateRaw = state.rawValue
@@ -265,10 +271,7 @@ final class SessionManager {
     private func introduceNextNewCard() -> (ReviewCard, CharacterEntry)? {
         let startingGrade = max(1, fetchProfile()?.startingGrade ?? 1)
 
-        // Batch-fetch all existing card characters to avoid per-character queries
-        let allCardsDescriptor = FetchDescriptor<ReviewCard>()
-        let existingCards = (try? modelContext.fetch(allCardsDescriptor)) ?? []
-        let existingCharacters = Set(existingCards.map(\.character))
+        let existingCharacters = fetchAllCardCharacters()
 
         // Find the next character that doesn't have a ReviewCard yet,
         // starting from the user's chosen grade level

@@ -1,17 +1,22 @@
 import Foundation
 
 /// Loads and provides access to bundled character and stroke data.
-/// All data is loaded once at init and cached in memory.
+/// Character data is loaded at init; stroke data is lazily decoded per character
+/// to avoid holding the entire 6MB strokes.json in memory as decoded objects.
 @MainActor
 final class CharacterDataService: ObservableObject {
     private(set) var characters: [CharacterEntry] = []
-    private var strokeDataMap: StrokeDataMap = [:]
     private var characterIndex: [String: CharacterEntry] = [:]      // keyed by simplified
     private var traditionalIndex: [String: CharacterEntry] = [:]    // keyed by traditional
 
+    /// Raw JSON objects keyed by character — decoded lazily into StrokeData on demand.
+    private var rawStrokeEntries: [String: Any] = [:]
+    /// Cache of already-decoded StrokeData to avoid re-decoding.
+    private var strokeDataCache: [String: StrokeData] = [:]
+
     init() {
         loadCharacters()
-        loadStrokes()
+        loadStrokeIndex()
     }
 
     // MARK: - Queries
@@ -44,8 +49,21 @@ final class CharacterDataService: ObservableObject {
     }
 
     /// Get stroke order data for a character (by simplified form).
+    /// Lazily decodes from the raw JSON on first access, then caches.
     func strokeData(for character: String) -> StrokeData? {
-        strokeDataMap[character]
+        if let cached = strokeDataCache[character] {
+            return cached
+        }
+        guard let rawEntry = rawStrokeEntries[character] else { return nil }
+        do {
+            let entryData = try JSONSerialization.data(withJSONObject: rawEntry)
+            let strokeData = try JSONDecoder().decode(StrokeData.self, from: entryData)
+            strokeDataCache[character] = strokeData
+            return strokeData
+        } catch {
+            print("⚠️ Failed to decode stroke data for \(character): \(error)")
+            return nil
+        }
     }
 
     /// All available grade levels, sorted.
@@ -69,16 +87,22 @@ final class CharacterDataService: ObservableObject {
         }
     }
 
-    private func loadStrokes() {
+    /// Parses strokes.json into raw JSON objects keyed by character.
+    /// Individual StrokeData entries are decoded lazily in strokeData(for:).
+    private func loadStrokeIndex() {
         guard let url = Bundle.main.url(forResource: "strokes", withExtension: "json") else {
             print("⚠️ strokes.json not found in bundle")
             return
         }
         do {
             let data = try Data(contentsOf: url)
-            strokeDataMap = try JSONDecoder().decode(StrokeDataMap.self, from: data)
+            guard let dict = try JSONSerialization.jsonObject(with: data) as? [String: Any] else {
+                print("⚠️ strokes.json is not a dictionary")
+                return
+            }
+            rawStrokeEntries = dict
         } catch {
-            print("⚠️ Failed to decode strokes.json: \(error)")
+            print("⚠️ Failed to parse strokes.json: \(error)")
         }
     }
 
