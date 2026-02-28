@@ -1,0 +1,7 @@
+# Downloaded data sources — not committed to repo.
+# Run the generation script to re-download if needed.
+*.txt
+*.csv
+*.gz
+*.tgz
+package/
