@@ -52,10 +52,11 @@ final class SessionManager {
 
         // 4. Existing new cards (created but never completed — user quit mid-session)
         let newStateRaw = CardState.new.rawValue
-        let existingNewDescriptor = FetchDescriptor<ReviewCard>(
+        var existingNewDescriptor = FetchDescriptor<ReviewCard>(
             predicate: #Predicate { $0.stateRaw == newStateRaw },
             sortBy: [SortDescriptor(\.orderInGrade)]
         )
+        existingNewDescriptor.fetchLimit = 1
         if let card = (try? modelContext.fetch(existingNewDescriptor))?.first,
            let entry = characterData.character(forSimplified: card.character) {
             return (card, entry)
