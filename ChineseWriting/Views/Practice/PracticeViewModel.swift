@@ -80,6 +80,15 @@ final class PracticeViewModel {
         loadNextCard()
     }
 
+    /// Called when the app returns to the foreground. Unsticks state that
+    /// depends on callbacks that the system may have swallowed while backgrounded
+    /// (e.g. TTS completion that transitions presenting → writing).
+    func handleReturnToForeground() {
+        if studyState == .presenting {
+            studyState = .writing
+        }
+    }
+
     func playTTS() {
         guard let entry = currentEntry else { return }
         let ttsText: String
