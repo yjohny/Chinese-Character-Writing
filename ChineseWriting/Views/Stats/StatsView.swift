@@ -48,6 +48,7 @@ struct StatsView: View {
                             grade: grade,
                             total: characterData.totalCharacters(forGrade: grade),
                             introduced: sessionManager.totalIntroduced(forGrade: grade),
+                            learning: sessionManager.learningCount(forGrade: grade),
                             mastered: sessionManager.masteredCount(forGrade: grade)
                         )
                     }

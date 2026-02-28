@@ -5,6 +5,7 @@ struct GradeProgressRow: View {
     let grade: Int
     let total: Int
     let introduced: Int
+    let learning: Int
     let mastered: Int
 
     private var progress: Double {
@@ -30,6 +31,10 @@ struct GradeProgressRow: View {
                 Label("\(introduced) seen", systemImage: "eye.fill")
                     .font(.caption2)
                     .foregroundStyle(.secondary)
+                Spacer()
+                Label("\(learning) learning", systemImage: "book.fill")
+                    .font(.caption2)
+                    .foregroundStyle(.orange)
                 Spacer()
                 Label("\(mastered) mastered", systemImage: "checkmark.circle.fill")
                     .font(.caption2)

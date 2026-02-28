@@ -333,7 +333,7 @@ struct PracticeView: View {
                     HStack {
                         Image(systemName: "arrow.triangle.2.circlepath.circle.fill")
                             .foregroundStyle(.orange)
-                        Text("Reviewed: \(viewModel.incorrectCount)")
+                        Text("Needed practice: \(viewModel.incorrectCount)")
                     }
                     HStack {
                         Image(systemName: "number.circle.fill")
