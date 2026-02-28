@@ -32,7 +32,7 @@ idle → presenting → writing → recognizing → correct → (next card)
                                                                                                   (if correct) → (next card)
 ```
 
-Practice auto-starts on appear (idle is just a loading state). Users can tap "Done" in the toolbar at any time to end practice. The rewrite step uses stroke matching (with Vision OCR fallback) to verify the user wrote the character correctly before advancing — they must get it right.
+Practice auto-starts on appear (idle is just a loading state). Users can tap "Done" in the toolbar at any time to end practice. The session-complete screen shows stats and a "Practice More" button (no separate "Done" — users switch tabs to leave). On the correct screen, a "Review Strokes" button lets users optionally watch the stroke order animation before advancing; `isReviewingAfterCorrect` tracks this so `strokeOrderComplete()` skips tracing and goes straight to the next card. The rewrite step uses stroke matching (with Vision OCR fallback) to verify the user wrote the character correctly before advancing — they must get it right.
 
 ### Key directories
 
