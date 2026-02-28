@@ -11,6 +11,10 @@ final class UserProfile {
     var totalReviews: Int = 0
     var createdDate: Date = Date()
 
+    /// Grade level to start introducing new characters from (1-6).
+    /// Characters below this grade are created as assumed-known with staggered review dates.
+    var startingGrade: Int = 1
+
     init() {}
 
     /// Update streak based on practice today. Call once per session start.

@@ -71,6 +71,21 @@ final class SessionManager {
             }
         }
 
+        // 6. Pacing adjustment: when new cards are blocked due to struggling,
+        //    pull forward below-grade verification cards to mix in easier material.
+        //    This silently adjusts difficulty without telling the user.
+        let newCardsBlocked = relearningCount >= Self.maxRelearningBeforeStopNew
+            || totalDue >= Self.maxDueBeforeStopNew
+        if newCardsBlocked {
+            let startingGrade = fetchProfile()?.startingGrade ?? 1
+            if startingGrade > 1 {
+                if let card = fetchNextUnverifiedBelowGradeCard(startingGrade: startingGrade),
+                   let entry = characterData.character(forSimplified: card.character) {
+                    return (card, entry)
+                }
+            }
+        }
+
         return nil
     }
 
@@ -179,6 +194,60 @@ final class SessionManager {
         return newProfile
     }
 
+    // MARK: - Starting Grade
+
+    /// Creates assumed-known ReviewCards for all characters below the starting grade.
+    /// Cards get graduated initial stability based on grade distance and staggered due dates
+    /// so they trickle in for verification rather than flooding the queue.
+    func setupAssumedKnownCards(startingGrade: Int) {
+        guard startingGrade > 1 else { return }
+
+        let allCardsDescriptor = FetchDescriptor<ReviewCard>()
+        let existingCards = (try? modelContext.fetch(allCardsDescriptor)) ?? []
+        let existingCharacters = Set(existingCards.map(\.character))
+
+        let now = Date()
+        let calendar = Calendar.current
+        let assumedDifficulty = fsrs.initialDifficulty(rating: .good)
+
+        for grade in characterData.gradeLevels where grade < startingGrade {
+            let gradeDistance = startingGrade - grade
+            let initialStability: Double
+            switch gradeDistance {
+            case 1: initialStability = 7.0
+            case 2: initialStability = 14.0
+            default: initialStability = 21.0
+            }
+
+            let gradeChars = characterData.characters(forGrade: grade)
+            let spreadDays = max(1, Int(initialStability))
+
+            for (index, entry) in gradeChars.enumerated() {
+                guard !existingCharacters.contains(entry.simplified) else { continue }
+
+                let card = ReviewCard(
+                    character: entry.simplified,
+                    gradeLevel: entry.gradeLevel,
+                    orderInGrade: entry.orderInGrade
+                )
+                card.state = .review
+                card.stability = initialStability
+                card.difficulty = assumedDifficulty
+                // Stagger due dates evenly across the stability window
+                let dayOffset = index % spreadDays
+                let dueDate = calendar.date(byAdding: .day, value: dayOffset, to: now) ?? now
+                card.dueDate = dueDate
+                // Set lastReviewDate so elapsed days = stability when the card comes due,
+                // giving retrievability ≈ 0.9 and proper stability increase on success
+                let stabilityDays = Int(initialStability)
+                card.lastReviewDate = calendar.date(byAdding: .day, value: -stabilityDays, to: dueDate)
+                modelContext.insert(card)
+            }
+        }
+
+        try? modelContext.save()
+    }
+
     // MARK: - Private
 
     private func fetchDueCards(state: CardState) -> [ReviewCard] {
@@ -194,13 +263,16 @@ final class SessionManager {
     }
 
     private func introduceNextNewCard() -> (ReviewCard, CharacterEntry)? {
+        let startingGrade = max(1, fetchProfile()?.startingGrade ?? 1)
+
         // Batch-fetch all existing card characters to avoid per-character queries
         let allCardsDescriptor = FetchDescriptor<ReviewCard>()
         let existingCards = (try? modelContext.fetch(allCardsDescriptor)) ?? []
         let existingCharacters = Set(existingCards.map(\.character))
 
-        // Find the next character that doesn't have a ReviewCard yet
-        for grade in characterData.gradeLevels {
+        // Find the next character that doesn't have a ReviewCard yet,
+        // starting from the user's chosen grade level
+        for grade in characterData.gradeLevels where grade >= startingGrade {
             let gradeChars = characterData.characters(forGrade: grade)
             for entry in gradeChars {
                 if !existingCharacters.contains(entry.simplified) {
@@ -220,6 +292,27 @@ final class SessionManager {
             }
         }
         return nil
+    }
+
+    /// Finds the next below-grade assumed-known card that hasn't been independently reviewed yet.
+    /// Used for pacing adjustment: when the user is struggling at their starting grade,
+    /// we pull forward easier verification cards to build confidence and check foundations.
+    /// Prioritizes grades closest to the starting grade (most likely gaps).
+    private func fetchNextUnverifiedBelowGradeCard(startingGrade: Int) -> ReviewCard? {
+        let reviewStateRaw = CardState.review.rawValue
+        // Assumed-known cards: state = .review, reps == 0, lapses == 0
+        // (pre-seeded with stability but never independently reviewed)
+        var descriptor = FetchDescriptor<ReviewCard>(
+            predicate: #Predicate {
+                $0.stateRaw == reviewStateRaw && $0.reps == 0 && $0.lapses == 0
+            },
+            sortBy: [
+                SortDescriptor(\.gradeLevel, order: .reverse), // closest to starting grade first
+                SortDescriptor(\.dueDate)
+            ]
+        )
+        descriptor.fetchLimit = 1
+        return (try? modelContext.fetch(descriptor))?.first
     }
 
     private func daysBetween(_ from: Date, and to: Date) -> Int {
