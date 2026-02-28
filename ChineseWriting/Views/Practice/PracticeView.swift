@@ -17,17 +17,29 @@ struct PracticeView: View {
         NavigationStack {
             ZStack {
                 mainContent
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .animation(.easeInOut(duration: 0.3), value: viewModel.studyState)
 
                 // Celebration overlay
                 CelebrationView(isActive: $viewModel.showCelebration)
 
-                // Override button (floating, visible during writing/recognizing)
+                // Floating buttons (visible during writing/recognizing)
                 if showOverrideButton {
                     VStack {
                         Spacer()
                         HStack {
+                            if viewModel.studyState == .writing {
+                                Button(action: { viewModel.skipAsUnknown() }) {
+                                    Label("Show me", systemImage: "eye")
+                                        .font(.callout)
+                                }
+                                .buttonStyle(.bordered)
+                                .tint(.orange)
+                                .padding()
+                            }
+
                             Spacer()
+
                             Button(action: { viewModel.overrideCorrect() }) {
                                 Label("I got it right", systemImage: "checkmark.circle")
                                     .font(.callout)

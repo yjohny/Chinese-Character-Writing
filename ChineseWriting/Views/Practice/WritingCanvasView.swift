@@ -9,7 +9,7 @@ struct WritingCanvasView: UIViewRepresentable {
     var showGuideGrid: Bool = true
 
     /// Idle time (seconds) after last stroke before auto-submit.
-    static let idleTimeout: TimeInterval = 2.0
+    static let idleTimeout: TimeInterval = 3.0
 
     func makeUIView(context: Context) -> PKCanvasView {
         let canvas = PKCanvasView()

@@ -148,6 +148,16 @@ final class PracticeViewModel {
         handleCorrect(wasOverride: true, visionConfidence: 0)
     }
 
+    /// User taps "Show me" — they don't know this character.
+    /// Treats it as incorrect and enters the stroke review flow.
+    func skipAsUnknown() {
+        guard studyState == .writing else { return }
+        pendingTask?.cancel()
+        pendingTask = nil
+        isRecognizing = false
+        handleIncorrect()
+    }
+
     func clearCanvas() {
         switch studyState {
         case .writing:
