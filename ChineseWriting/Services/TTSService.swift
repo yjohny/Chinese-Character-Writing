@@ -60,9 +60,12 @@ extension TTSService: AVSpeechSynthesizerDelegate {
 
     nonisolated func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didCancel utterance: AVSpeechUtterance) {
         Task { @MainActor in
-            // Completion was already nil'd before stopSpeaking was called,
-            // so nothing to do here. This handler prevents the delegate
-            // from falling through to didFinish for cancelled utterances.
+            // When OUR code cancels (stop()/speak()), completion is nil'd first,
+            // so this is a no-op. But when the SYSTEM cancels speech (e.g. app
+            // went to background), completion is still set — fire it so callers
+            // aren't left waiting for a transition that will never come.
+            self.completion?()
+            self.completion = nil
         }
     }
 }

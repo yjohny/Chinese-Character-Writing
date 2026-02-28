@@ -6,6 +6,7 @@ import PencilKit
 struct PracticeView: View {
     @Bindable var viewModel: PracticeViewModel
     @Environment(\.horizontalSizeClass) private var sizeClass
+    @Environment(\.scenePhase) private var scenePhase
 
     /// Canvas size adapts to iPad vs iPhone.
     private var canvasSize: CGFloat {
@@ -55,6 +56,11 @@ struct PracticeView: View {
             }
             .onChange(of: sizeClass) { _, _ in
                 viewModel.canvasSize = canvasSize
+            }
+            .onChange(of: scenePhase) { _, newPhase in
+                if newPhase == .active {
+                    viewModel.handleReturnToForeground()
+                }
             }
         }
     }
