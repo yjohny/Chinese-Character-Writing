@@ -25,6 +25,10 @@ final class PracticeViewModel {
     var isRecognizing = false
     var rewriteFeedback: String?
 
+    /// When true, stroke order review was triggered from the correct screen
+    /// (optional review), so we advance to the next card instead of tracing.
+    var isReviewingAfterCorrect = false
+
     // Practice stats (running totals for current practice)
     var correctCount = 0
     var incorrectCount = 0
@@ -157,9 +161,23 @@ final class PracticeViewModel {
         }
     }
 
+    /// User taps "Review Strokes" on the correct screen to optionally review stroke order.
+    func reviewStrokeOrder() {
+        guard studyState == .correct, currentStrokeData != nil else { return }
+        pendingTask?.cancel()
+        pendingTask = nil
+        isReviewingAfterCorrect = true
+        studyState = .showingStrokeOrder
+    }
+
     func strokeOrderComplete() {
-        studyState = .tracing
-        tracingDrawing = PKDrawing()
+        if isReviewingAfterCorrect {
+            isReviewingAfterCorrect = false
+            loadNextCard()
+        } else {
+            studyState = .tracing
+            tracingDrawing = PKDrawing()
+        }
     }
 
     func tracingComplete() {
