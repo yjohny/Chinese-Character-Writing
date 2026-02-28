@@ -15,27 +15,27 @@ struct StrokeMatcher {
     // MARK: - Strict thresholds
 
     /// Max average distance (normalized) from user stroke to expected median polyline.
-    /// 0.18 ≈ 18% of normalized extent — generous enough for sloppy handwriting.
-    private static let distanceThreshold: Double = 0.18
+    /// 0.15 ≈ 15% of normalized extent.
+    private static let distanceThreshold: Double = 0.15
 
     /// Max angle difference (radians) between start→end direction of user vs expected.
-    /// ~72° allows for natural variation while filtering clearly wrong directions.
-    private static let angleThreshold: Double = .pi / 2.5
+    /// ~65° allows for natural variation while filtering clearly wrong directions.
+    private static let angleThreshold: Double = .pi / 2.77
 
     /// Max distance (normalized) between user stroke start point and expected start point.
-    /// 0.25 ≈ 25% of normalized extent — catches reversed strokes while allowing imprecision.
-    private static let startPointThreshold: Double = 0.25
+    /// 0.22 ≈ 22% of normalized extent — catches reversed strokes while allowing imprecision.
+    private static let startPointThreshold: Double = 0.22
 
     /// DTW distance threshold (normalized). Strokes with DTW cost above this are rejected
     /// even if their average polyline distance is acceptable.
-    private static let dtwThreshold: Double = 0.20
+    private static let dtwThreshold: Double = 0.18
 
     // MARK: - Relaxed thresholds (≈1.4× strict)
 
-    private static let relaxedDistanceThreshold: Double = 0.25
-    private static let relaxedAngleThreshold: Double = .pi / 2.0  // 90°
-    private static let relaxedStartPointThreshold: Double = 0.35
-    private static let relaxedDtwThreshold: Double = 0.28
+    private static let relaxedDistanceThreshold: Double = 0.21
+    private static let relaxedAngleThreshold: Double = .pi / 2.25  // ~80°
+    private static let relaxedStartPointThreshold: Double = 0.30
+    private static let relaxedDtwThreshold: Double = 0.25
 
     // MARK: - Scoring
 
@@ -57,13 +57,13 @@ struct StrokeMatcher {
     /// Match ratio thresholds by grade level (strict pass).
     /// Lower grades are more lenient; higher grades require more strokes to match.
     private static let matchThresholds: [ClosedRange<Int>: Double] = [
-        1...2: 0.70,   // Grades 1–2: simpler characters, younger learners
-        3...4: 0.75,   // Grades 3–4: moderate
-        5...6: 0.80,   // Grades 5–6: complex characters, expect more accuracy
+        1...2: 0.75,   // Grades 1–2: simpler characters, younger learners
+        3...4: 0.80,   // Grades 3–4: moderate
+        5...6: 0.85,   // Grades 5–6: complex characters, expect more accuracy
     ]
 
     /// Default match threshold when grade is unknown.
-    private static let defaultMatchThreshold: Double = 0.75
+    private static let defaultMatchThreshold: Double = 0.80
 
     /// Relaxed pass requires a higher fraction of strokes to match.
     private static let relaxedMatchThreshold: Double = 0.90

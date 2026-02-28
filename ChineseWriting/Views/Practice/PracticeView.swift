@@ -181,6 +181,15 @@ struct PracticeView: View {
                 Text("Correct!")
                     .font(.title2)
                     .foregroundStyle(.green)
+
+                if viewModel.currentStrokeData != nil {
+                    Button(action: { viewModel.reviewStrokeOrder() }) {
+                        Label("Review Strokes", systemImage: "hand.draw")
+                            .font(.subheadline)
+                    }
+                    .buttonStyle(.bordered)
+                    .tint(.secondary)
+                }
             }
         }
     }
@@ -354,12 +363,6 @@ struct PracticeView: View {
                     .padding(.vertical, 10)
             }
             .buttonStyle(.borderedProminent)
-
-            Button(action: { viewModel.endPractice() }) {
-                Text("Done")
-                    .font(.body)
-            }
-            .buttonStyle(.bordered)
         }
     }
 }
