@@ -56,7 +56,8 @@ Practice auto-starts on appear (idle is just a loading state). Users can tap "Do
 
 - PracticeViewModel uses a single `pendingTask: Task<Void, Never>?` to track in-flight async work (recognition, delayed transitions). The previous task is always cancelled before launching a new one. `endPractice()` and `loadNextCard()` cancel pending tasks. All Task continuations must check `Task.isCancelled` and verify the expected `studyState` after every `await` before mutating state.
 - StrokeOrderView stores its animation as a `@State` Task and cancels it in `.onDisappear`. Animation state is reset in `startAnimation()` so it works correctly for subsequent characters.
-- TTSService nils out `completion` before calling `stopSpeaking` to prevent the cancelled utterance's delegate from firing the wrong callback. Both `didFinish` and `didCancel` delegate methods are implemented.
+- TTSService nils out `completion` before calling `stopSpeaking` to prevent the cancelled utterance's delegate from firing the wrong callback. Both `didFinish` and `didCancel` delegate methods are implemented. `didCancel` fires the completion if it's non-nil — this only happens on system-initiated cancellations (e.g. app backgrounded); our own `stop()`/`speak()` nil it first, so their cancellations remain no-ops.
+- PracticeView observes `scenePhase` and calls `PracticeViewModel.handleReturnToForeground()` when the app becomes `.active`. This transitions `.presenting → .writing` in case the TTS completion was swallowed during backgrounding, preventing the state machine from getting stuck with unresponsive buttons.
 
 ## FSRS implementation notes
 
