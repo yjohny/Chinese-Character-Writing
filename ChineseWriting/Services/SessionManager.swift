@@ -194,6 +194,36 @@ final class SessionManager {
         return newProfile
     }
 
+    // MARK: - Reset
+
+    /// Deletes all ReviewCards, ReviewLogs, and resets the UserProfile.
+    /// Used when the user wants to start completely fresh.
+    func resetAllProgress() {
+        // Delete all review cards
+        do {
+            try modelContext.delete(model: ReviewCard.self)
+        } catch {
+            print("Failed to delete ReviewCards: \(error)")
+        }
+
+        // Delete all review logs
+        do {
+            try modelContext.delete(model: ReviewLog.self)
+        } catch {
+            print("Failed to delete ReviewLogs: \(error)")
+        }
+
+        // Reset profile (keep preferences, clear progress)
+        if let profile = fetchProfile() {
+            profile.currentStreak = 0
+            profile.longestStreak = 0
+            profile.lastPracticeDate = nil
+            profile.totalReviews = 0
+        }
+
+        try? modelContext.save()
+    }
+
     // MARK: - Starting Grade
 
     /// Creates assumed-known ReviewCards for all characters below the starting grade.

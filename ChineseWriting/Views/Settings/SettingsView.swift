@@ -6,6 +6,8 @@ struct SettingsView: View {
 
     @State private var useTraditional: Bool = false
     @State private var startingGrade: Int = 1
+    @State private var showResetConfirmation = false
+    @State private var showResetDone = false
 
     var body: some View {
         NavigationStack {
@@ -63,12 +65,44 @@ struct SettingsView: View {
                         .font(.caption)
                         .foregroundStyle(.secondary)
                 }
+
+                Section {
+                    Button(role: .destructive) {
+                        showResetConfirmation = true
+                    } label: {
+                        HStack {
+                            Image(systemName: "arrow.counterclockwise")
+                            Text("Reset All Progress")
+                        }
+                    }
+                    Text("Removes all review history and starts fresh. This cannot be undone.")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
             }
             .navigationTitle("Settings")
             .onAppear {
                 let profile = sessionManager.fetchProfile()
                 useTraditional = profile?.useTraditional ?? false
                 startingGrade = max(1, profile?.startingGrade ?? 1)
+            }
+            .alert("Reset All Progress?", isPresented: $showResetConfirmation) {
+                Button("Cancel", role: .cancel) {}
+                Button("Reset", role: .destructive) {
+                    sessionManager.resetAllProgress()
+                    // Re-setup assumed-known cards if starting grade > 1
+                    if startingGrade > 1 {
+                        sessionManager.setupAssumedKnownCards(startingGrade: startingGrade)
+                    }
+                    showResetDone = true
+                }
+            } message: {
+                Text("This will erase all your review history, streaks, and mastery progress. Your settings will be kept. This cannot be undone.")
+            }
+            .alert("Progress Reset", isPresented: $showResetDone) {
+                Button("OK") {}
+            } message: {
+                Text("All progress has been reset. Your next practice session will start fresh.")
             }
         }
     }

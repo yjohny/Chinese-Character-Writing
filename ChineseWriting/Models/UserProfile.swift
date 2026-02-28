@@ -15,6 +15,9 @@ final class UserProfile {
     /// Characters below this grade are created as assumed-known with staggered review dates.
     var startingGrade: Int = 1
 
+    /// Whether the user has completed the first-launch onboarding (grade picker).
+    var hasCompletedOnboarding: Bool = false
+
     init() {}
 
     /// Update streak based on practice today. Call once per session start.

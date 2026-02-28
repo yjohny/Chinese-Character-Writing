@@ -35,3 +35,16 @@ targets:
           SWIFT_OPTIMIZATION_LEVEL: "-Onone"
         Release:
           SWIFT_OPTIMIZATION_LEVEL: "-O"
+
+  ChineseWritingTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: ChineseWritingTests
+    dependencies:
+      - target: ChineseWriting
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        SWIFT_VERSION: "5.9"
+        PRODUCT_BUNDLE_IDENTIFIER: com.chinesewriting.app.tests
