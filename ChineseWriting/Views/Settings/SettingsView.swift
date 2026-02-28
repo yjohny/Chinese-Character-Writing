@@ -5,10 +5,31 @@ struct SettingsView: View {
     let sessionManager: SessionManager
 
     @State private var useTraditional: Bool = false
+    @State private var startingGrade: Int = 1
 
     var body: some View {
         NavigationStack {
             Form {
+                Section {
+                    Picker("Grade Level", selection: $startingGrade) {
+                        ForEach(1...6, id: \.self) { grade in
+                            Text("Grade \(grade)").tag(grade)
+                        }
+                    }
+                    .onChange(of: startingGrade) { _, newValue in
+                        if let profile = sessionManager.fetchProfile() {
+                            profile.startingGrade = newValue
+                            try? profile.modelContext?.save()
+                        }
+                        sessionManager.setupAssumedKnownCards(startingGrade: newValue)
+                    }
+                    Text("New characters start from this grade. Lower grades are verified periodically.")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                } header: {
+                    Text("Starting Grade")
+                }
+
                 Section("Character Set") {
                     Toggle(isOn: $useTraditional) {
                         VStack(alignment: .leading) {
@@ -45,7 +66,9 @@ struct SettingsView: View {
             }
             .navigationTitle("Settings")
             .onAppear {
-                useTraditional = sessionManager.fetchProfile()?.useTraditional ?? false
+                let profile = sessionManager.fetchProfile()
+                useTraditional = profile?.useTraditional ?? false
+                startingGrade = max(1, profile?.startingGrade ?? 1)
             }
         }
     }
