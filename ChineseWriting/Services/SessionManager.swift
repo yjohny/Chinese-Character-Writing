@@ -50,7 +50,19 @@ final class SessionManager {
             return (card, entry)
         }
 
-        // 4. New cards (only if few relearning cards and due backlog is manageable)
+        // 4. Existing new cards (created but never completed — user quit mid-session)
+        let newStateRaw = CardState.new.rawValue
+        var existingNewDescriptor = FetchDescriptor<ReviewCard>(
+            predicate: #Predicate { $0.stateRaw == newStateRaw },
+            sortBy: [SortDescriptor(\.orderInGrade)]
+        )
+        existingNewDescriptor.fetchLimit = 1
+        if let card = (try? modelContext.fetch(existingNewDescriptor))?.first,
+           let entry = characterData.character(forSimplified: card.character) {
+            return (card, entry)
+        }
+
+        // 5. New cards (only if few relearning cards and due backlog is manageable)
         let relearningCount = dueRelearning.count
         let totalDue = dueReviews.count
         if relearningCount < Self.maxRelearningBeforeStopNew && totalDue < Self.maxDueBeforeStopNew {
@@ -131,7 +143,18 @@ final class SessionManager {
 
     func totalIntroduced(forGrade grade: Int) -> Int {
         let descriptor = FetchDescriptor<ReviewCard>(
-            predicate: #Predicate { $0.gradeLevel == grade && $0.stateRaw != 0 }
+            predicate: #Predicate { $0.gradeLevel == grade }
+        )
+        return (try? modelContext.fetchCount(descriptor)) ?? 0
+    }
+
+    func learningCount(forGrade grade: Int) -> Int {
+        let threshold = FSRSEngine.masteryThreshold
+        let newStateRaw = CardState.new.rawValue
+        let descriptor = FetchDescriptor<ReviewCard>(
+            predicate: #Predicate {
+                $0.gradeLevel == grade && $0.stateRaw != newStateRaw && $0.stability < threshold
+            }
         )
         return (try? modelContext.fetchCount(descriptor)) ?? 0
     }
