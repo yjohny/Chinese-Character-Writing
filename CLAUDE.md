@@ -39,7 +39,7 @@ Practice auto-starts on appear (idle is just a loading state). Users can tap "Do
 - `Models/` — CharacterEntry, StrokeData, ReviewCard, FSRSEngine, StudyState
 - `Services/` — CharacterDataService, StrokeRenderer, StrokeMatcher, SessionManager, RecognitionService, TTSService
 - `Views/Practice/` — PracticeView, PracticeViewModel, WritingCanvasView, StrokeOrderView, TracingCanvasView, CharacterPromptView
-- `Resources/` — characters.json (494 chars, grades 1-6), strokes.json (SVG paths + medians from Make Me a Hanzi)
+- `Resources/` — characters.json (494 chars, grades 1-6), strokes.json (SVG paths + medians from Make Me a Hanzi). Stroke data is **lazily decoded** per character on first access (via `CharacterDataService.strokeData(for:)`) to avoid holding all 494 decoded `StrokeData` objects in memory at once. The raw JSON is parsed at init; individual entries are decoded and cached on demand.
 
 ## Important conventions
 
