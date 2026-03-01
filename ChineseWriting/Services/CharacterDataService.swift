@@ -59,6 +59,7 @@ final class CharacterDataService: ObservableObject {
             let entryData = try JSONSerialization.data(withJSONObject: rawEntry)
             let strokeData = try JSONDecoder().decode(StrokeData.self, from: entryData)
             strokeDataCache[character] = strokeData
+            rawStrokeEntries.removeValue(forKey: character) // Free raw JSON now that decoded copy is cached
             return strokeData
         } catch {
             print("⚠️ Failed to decode stroke data for \(character): \(error)")
@@ -107,7 +108,8 @@ final class CharacterDataService: ObservableObject {
     }
 
     private func buildIndices() {
-        characterIndex = Dictionary(uniqueKeysWithValues: characters.map { ($0.simplified, $0) })
+        // Use uniquingKeysWith to avoid crashing on duplicate simplified entries in data
+        characterIndex = Dictionary(characters.map { ($0.simplified, $0) }, uniquingKeysWith: { first, _ in first })
         // Traditional index: some traditional forms may collide, use first occurrence
         for entry in characters {
             if traditionalIndex[entry.traditional] == nil {

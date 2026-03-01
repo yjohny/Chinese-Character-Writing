@@ -11,7 +11,7 @@ final class UserProfile {
     var totalReviews: Int = 0
     var createdDate: Date = Date()
 
-    /// Grade level to start introducing new characters from (1-6).
+    /// Grade level to start introducing new characters from (1-7, where 7 is "Expansion").
     /// Characters below this grade are created as assumed-known with staggered review dates.
     var startingGrade: Int = 1
 

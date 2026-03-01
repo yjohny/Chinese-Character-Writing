@@ -6,6 +6,7 @@ struct CelebrationView: View {
 
     @State private var particles: [Particle] = []
     @State private var viewSize: CGSize = .zero
+    @State private var cleanupTask: Task<Void, Never>?
 
     struct Particle: Identifiable {
         let id = UUID()
@@ -72,9 +73,11 @@ struct CelebrationView: View {
             }
         }
 
-        // Clean up
-        Task { @MainActor in
+        // Clean up — cancel previous cleanup if re-triggered
+        cleanupTask?.cancel()
+        cleanupTask = Task { @MainActor in
             try? await Task.sleep(for: .seconds(1.5))
+            guard !Task.isCancelled else { return }
             particles = []
             isActive = false
         }
