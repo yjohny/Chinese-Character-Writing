@@ -23,8 +23,8 @@ struct PracticeView: View {
                 // Celebration overlay
                 CelebrationView(isActive: $viewModel.showCelebration)
 
-                // Floating buttons (visible during writing/recognizing)
-                if showOverrideButton {
+                // Floating buttons
+                if showFloatingButtons {
                     VStack {
                         Spacer()
                         HStack {
@@ -40,13 +40,15 @@ struct PracticeView: View {
 
                             Spacer()
 
-                            Button(action: { viewModel.overrideCorrect() }) {
-                                Label("I got it right", systemImage: "checkmark.circle")
-                                    .font(.callout)
+                            if showOverrideButton {
+                                Button(action: { viewModel.overrideCorrect() }) {
+                                    Label("I got it right", systemImage: "checkmark.circle")
+                                        .font(.callout)
+                                }
+                                .buttonStyle(.bordered)
+                                .tint(.green)
+                                .padding()
                             }
-                            .buttonStyle(.bordered)
-                            .tint(.green)
-                            .padding()
                         }
                     }
                 }
@@ -77,8 +79,16 @@ struct PracticeView: View {
         }
     }
 
+    /// Whether any floating button should be visible.
+    private var showFloatingButtons: Bool {
+        viewModel.studyState == .writing || showOverrideButton
+    }
+
+    /// "I got it right" only appears after the user has submitted their writing
+    /// (recognizing/incorrect) and drawn enough strokes to indicate a real attempt.
     private var showOverrideButton: Bool {
-        viewModel.studyState == .writing || viewModel.studyState == .recognizing
+        (viewModel.studyState == .recognizing || viewModel.studyState == .incorrect)
+            && viewModel.hasDrawnEnoughForOverride
     }
 
     /// Whether the user is in an active practice flow (not idle or complete).

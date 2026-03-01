@@ -32,6 +32,17 @@ final class PracticeViewModel {
     /// Tracks consecutive failed rewrite attempts so we can offer an escape hatch.
     var rewriteAttempts = 0
 
+    /// Whether the user has drawn enough strokes to qualify for the "I got it right" override.
+    /// Requires at least half the expected stroke count (minimum 2) to prevent gaming.
+    var hasDrawnEnoughForOverride: Bool {
+        let drawnCount = writingDrawing.strokes.count
+        if let strokeData = currentStrokeData {
+            let minimum = max(2, strokeData.strokes.count / 2)
+            return drawnCount >= minimum
+        }
+        return drawnCount >= 2
+    }
+
     // Practice stats (running totals for current practice)
     var correctCount = 0
     var incorrectCount = 0
@@ -162,7 +173,7 @@ final class PracticeViewModel {
     }
 
     func overrideCorrect() {
-        guard studyState == .writing || studyState == .recognizing else { return }
+        guard studyState == .recognizing || studyState == .incorrect else { return }
         pendingTask?.cancel()
         pendingTask = nil
         isRecognizing = false
@@ -309,7 +320,7 @@ final class PracticeViewModel {
         }
 
         pendingTask = Task {
-            try? await Task.sleep(for: .seconds(1.2))
+            try? await Task.sleep(for: .seconds(2.0))
             guard !Task.isCancelled else { return }
             if currentStrokeData != nil {
                 studyState = .showingStrokeOrder
