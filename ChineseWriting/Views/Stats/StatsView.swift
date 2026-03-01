@@ -6,6 +6,8 @@ struct StatsView: View {
     let characterData: CharacterDataService
 
     var body: some View {
+        // Touch statsRevision so @Observable re-renders this view after reviews.
+        let _ = sessionManager.statsRevision
         NavigationStack {
             List {
                 Section("Today") {

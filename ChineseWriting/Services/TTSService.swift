@@ -30,6 +30,7 @@ final class TTSService: NSObject, ObservableObject {
         generation &+= 1
         self.completion = nil
         synthesizer.stopSpeaking(at: .immediate)
+        activateAudioSession()
         self.completion = completion
 
         let utterance = AVSpeechUtterance(string: text)
@@ -47,15 +48,25 @@ final class TTSService: NSObject, ObservableObject {
         generation &+= 1
         completion = nil
         synthesizer.stopSpeaking(at: .immediate)
+        deactivateAudioSession()
     }
 
     private func configureAudioSession() {
         do {
             try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
-            try AVAudioSession.sharedInstance().setActive(true)
         } catch {
-            print("⚠️ Audio session setup failed: \(error)")
+            print("⚠️ Audio session category setup failed: \(error)")
         }
+    }
+
+    private func activateAudioSession() {
+        try? AVAudioSession.sharedInstance().setActive(true)
+    }
+
+    /// Deactivate audio session so other apps (music, podcasts) can resume.
+    /// Called when practice ends via stop().
+    private func deactivateAudioSession() {
+        try? AVAudioSession.sharedInstance().setActive(false, options: .notifyOthersOnDeactivation)
     }
 }
 
