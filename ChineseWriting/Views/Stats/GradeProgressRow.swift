@@ -16,7 +16,7 @@ struct GradeProgressRow: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
             HStack {
-                Text("Grade \(grade)")
+                Text(CharacterEntry.gradeName(for: grade))
                     .font(.subheadline.bold())
                 Spacer()
                 Text("\(mastered)/\(total)")

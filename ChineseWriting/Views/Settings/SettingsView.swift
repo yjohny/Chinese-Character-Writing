@@ -12,8 +12,8 @@ struct SettingsView: View {
             Form {
                 Section {
                     Picker("Grade Level", selection: $startingGrade) {
-                        ForEach(1...6, id: \.self) { grade in
-                            Text("Grade \(grade)").tag(grade)
+                        ForEach(1...7, id: \.self) { grade in
+                            Text(CharacterEntry.gradeName(for: grade)).tag(grade)
                         }
                     }
                     .onChange(of: startingGrade) { _, newValue in

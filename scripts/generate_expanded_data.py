@@ -28,6 +28,11 @@ DATA_DIR = os.path.join(SCRIPT_DIR, "data")
 RESOURCES_DIR = os.path.join(SCRIPT_DIR, "..", "ChineseWriting", "Resources")
 
 # Target character counts per grade (based on 部编版 curriculum)
+# Grades 1-6: 写字表 (writing table) characters — the core curriculum
+# Grade 7: 识字表-only (recognition table) characters — expansion tier
+#   These are characters students must recognize but aren't required to write
+#   in the school curriculum (due to motor-skill constraints for young children).
+#   They are common, high-frequency characters useful for adult learners.
 GRADE_TARGETS = {
     1: 300,
     2: 500,
@@ -35,8 +40,9 @@ GRADE_TARGETS = {
     4: 400,
     5: 400,
     6: 400,
+    7: 500,
 }
-TOTAL_TARGET = sum(GRADE_TARGETS.values())  # 2500
+TOTAL_TARGET = sum(GRADE_TARGETS.values())  # 3000
 
 
 def numbered_pinyin_to_tone_marked(pinyin_str):
@@ -442,7 +448,7 @@ def generate_characters_json(existing_chars, mmah_dict, cedict_chars, cedict_wor
     # Assign grades to new characters based on frequency
     # Fill each grade up to its target, in frequency order
     grade_slots = {}
-    for g in range(1, 7):
+    for g in range(1, 8):
         needed = GRADE_TARGETS[g] - existing_per_grade.get(g, 0)
         grade_slots[g] = max(0, needed)
 
@@ -450,9 +456,9 @@ def generate_characters_json(existing_chars, mmah_dict, cedict_chars, cedict_wor
     for g in sorted(grade_slots):
         print(f"  Grade {g}: {grade_slots[g]} new characters needed")
 
-    new_chars_by_grade = {g: [] for g in range(1, 7)}
+    new_chars_by_grade = {g: [] for g in range(1, 8)}
     candidate_idx = 0
-    for grade in range(1, 7):
+    for grade in range(1, 8):
         slots = grade_slots[grade]
         for _ in range(slots):
             if candidate_idx >= len(candidates):
@@ -461,16 +467,16 @@ def generate_characters_json(existing_chars, mmah_dict, cedict_chars, cedict_wor
             new_chars_by_grade[grade].append(ch)
             candidate_idx += 1
 
-    # Any remaining candidates go into grade 6
+    # Any remaining candidates go into grade 7 (expansion)
     while candidate_idx < len(candidates):
         ch, _ = candidates[candidate_idx]
-        new_chars_by_grade[6].append(ch)
+        new_chars_by_grade[7].append(ch)
         candidate_idx += 1
 
     # Generate entries for new characters
     all_chars = list(existing_chars)  # Preserve existing entries exactly
 
-    for grade in range(1, 7):
+    for grade in range(1, 8):
         # Find the max orderInGrade already used in this grade
         existing_orders = [c["orderInGrade"] for c in existing_chars if c["gradeLevel"] == grade]
         start_order = max(existing_orders) + 1 if existing_orders else 0
@@ -484,7 +490,7 @@ def generate_characters_json(existing_chars, mmah_dict, cedict_chars, cedict_wor
 
     # Sort by grade, then orderInGrade, then re-number to be contiguous
     all_chars.sort(key=lambda c: (c["gradeLevel"], c["orderInGrade"]))
-    for grade in range(1, 7):
+    for grade in range(1, 8):
         idx = 0
         for c in all_chars:
             if c["gradeLevel"] == grade:

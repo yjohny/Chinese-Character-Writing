@@ -42498,5 +42498,8505 @@
         "ttsText": "苹，苹果的苹"
       }
     ]
+  },
+  {
+    "simplified": "卸",
+    "traditional": "卸",
+    "pinyin": "xiè",
+    "meaning": "to unload; to lay down; to resign",
+    "gradeLevel": 7,
+    "orderInGrade": 0,
+    "exampleWords": [
+      {
+        "word": "卸下",
+        "wordTraditional": "卸下",
+        "pinyin": "xiè xià",
+        "meaning": "to unload",
+        "ttsText": "卸，卸下的卸"
+      }
+    ]
+  },
+  {
+    "simplified": "沼",
+    "traditional": "沼",
+    "pinyin": "zhǎo",
+    "meaning": "lake, pond, swamp",
+    "gradeLevel": 7,
+    "orderInGrade": 1,
+    "exampleWords": [
+      {
+        "word": "沼气",
+        "wordTraditional": "沼氣",
+        "pinyin": "zhǎo qì",
+        "meaning": "marsh gas; methane CH4",
+        "ttsText": "沼，沼气的沼"
+      }
+    ]
+  },
+  {
+    "simplified": "钥",
+    "traditional": "鑰",
+    "pinyin": "yào",
+    "meaning": "lock, key",
+    "gradeLevel": 7,
+    "orderInGrade": 2,
+    "exampleWords": [
+      {
+        "word": "公钥",
+        "wordTraditional": "公鑰",
+        "pinyin": "gōng yào",
+        "meaning": "(cryptography) public key",
+        "ttsText": "钥，公钥的钥"
+      }
+    ]
+  },
+  {
+    "simplified": "株",
+    "traditional": "株",
+    "pinyin": "zhū",
+    "meaning": "root, stump; measure word for trees",
+    "gradeLevel": 7,
+    "orderInGrade": 3,
+    "exampleWords": [
+      {
+        "word": "株治",
+        "wordTraditional": "株治",
+        "pinyin": "zhū zhì",
+        "meaning": "to involve others (in a law case)",
+        "ttsText": "株，株治的株"
+      }
+    ]
+  },
+  {
+    "simplified": "祷",
+    "traditional": "禱",
+    "pinyin": "dǎo",
+    "meaning": "to pray, to entreat, to beg; prayer",
+    "gradeLevel": 7,
+    "orderInGrade": 4,
+    "exampleWords": [
+      {
+        "word": "祷文",
+        "wordTraditional": "禱文",
+        "pinyin": "dǎo wén",
+        "meaning": "litany (text of a prayer)",
+        "ttsText": "祷，祷文的祷"
+      }
+    ]
+  },
+  {
+    "simplified": "剖",
+    "traditional": "剖",
+    "pinyin": "pōu",
+    "meaning": "to bisect, to dissect, to slice",
+    "gradeLevel": 7,
+    "orderInGrade": 5,
+    "exampleWords": [
+      {
+        "word": "剖面",
+        "wordTraditional": "剖面",
+        "pinyin": "pōu miàn",
+        "meaning": "profile; section",
+        "ttsText": "剖，剖面的剖"
+      }
+    ]
+  },
+  {
+    "simplified": "熙",
+    "traditional": "熈",
+    "pinyin": "xī",
+    "meaning": "bright, prosperous; splendid, glorious",
+    "gradeLevel": 7,
+    "orderInGrade": 6,
+    "exampleWords": [
+      {
+        "word": "熙提",
+        "wordTraditional": "熙提",
+        "pinyin": "xī tí",
+        "meaning": "stilb, unit of luminance",
+        "ttsText": "熙，熙提的熙"
+      }
+    ]
+  },
+  {
+    "simplified": "哗",
+    "traditional": "嘩",
+    "pinyin": "huā",
+    "meaning": "uproar, tumult, hubbub",
+    "gradeLevel": 7,
+    "orderInGrade": 7,
+    "exampleWords": [
+      {
+        "word": "哗然",
+        "wordTraditional": "嘩然",
+        "pinyin": "huá rán",
+        "meaning": "in uproar; commotion; causing a storm of protest; tumultuous",
+        "ttsText": "哗，哗然的哗"
+      }
+    ]
+  },
+  {
+    "simplified": "劈",
+    "traditional": "劈",
+    "pinyin": "pī",
+    "meaning": "to chop, to cut apart; to split",
+    "gradeLevel": 7,
+    "orderInGrade": 8,
+    "exampleWords": [
+      {
+        "word": "劈面",
+        "wordTraditional": "劈面",
+        "pinyin": "pī miàn",
+        "meaning": "right in the face",
+        "ttsText": "劈，劈面的劈"
+      }
+    ]
+  },
+  {
+    "simplified": "怯",
+    "traditional": "怯",
+    "pinyin": "qiè",
+    "meaning": "afraid, lacking in courage",
+    "gradeLevel": 7,
+    "orderInGrade": 9,
+    "exampleWords": [
+      {
+        "word": "怯子",
+        "wordTraditional": "怯子",
+        "pinyin": "qiè zi",
+        "meaning": "person with country accent; rustic; country bumpkin",
+        "ttsText": "怯，怯子的怯"
+      }
+    ]
+  },
+  {
+    "simplified": "棠",
+    "traditional": "棠",
+    "pinyin": "táng",
+    "meaning": "crabapple tree; wild plum",
+    "gradeLevel": 7,
+    "orderInGrade": 10,
+    "exampleWords": [
+      {
+        "word": "海棠",
+        "wordTraditional": "海棠",
+        "pinyin": "hǎi táng",
+        "meaning": "Chinese flowering crab apple (Malus spectabilis)",
+        "ttsText": "棠，海棠的棠"
+      }
+    ]
+  },
+  {
+    "simplified": "胳",
+    "traditional": "肐",
+    "pinyin": "gē",
+    "meaning": "arms; armpit",
+    "gradeLevel": 7,
+    "orderInGrade": 11,
+    "exampleWords": [
+      {
+        "word": "胳臂",
+        "wordTraditional": "胳臂",
+        "pinyin": "gē bei",
+        "meaning": "arm; also pr. [ge1 bi4]",
+        "ttsText": "胳，胳臂的胳"
+      }
+    ]
+  },
+  {
+    "simplified": "桩",
+    "traditional": "樁",
+    "pinyin": "zhuāng",
+    "meaning": "stake, post; matter, affair",
+    "gradeLevel": 7,
+    "orderInGrade": 12,
+    "exampleWords": [
+      {
+        "word": "打桩",
+        "wordTraditional": "打樁",
+        "pinyin": "dǎ zhuāng",
+        "meaning": "to drive piles into",
+        "ttsText": "桩，打桩的桩"
+      }
+    ]
+  },
+  {
+    "simplified": "瑰",
+    "traditional": "瑰",
+    "pinyin": "guī",
+    "meaning": "extraordinary, fabulous; rose; semi-precious stone",
+    "gradeLevel": 7,
+    "orderInGrade": 13,
+    "exampleWords": [
+      {
+        "word": "瑰奇",
+        "wordTraditional": "瑰奇",
+        "pinyin": "guī qí",
+        "meaning": "magnificent; precious",
+        "ttsText": "瑰，瑰奇的瑰"
+      }
+    ]
+  },
+  {
+    "simplified": "娱",
+    "traditional": "娛",
+    "pinyin": "yú",
+    "meaning": "pleasure, enjoyment, amusement",
+    "gradeLevel": 7,
+    "orderInGrade": 14,
+    "exampleWords": [
+      {
+        "word": "自娱",
+        "wordTraditional": "自娛",
+        "pinyin": "zì yú",
+        "meaning": "to amuse oneself",
+        "ttsText": "娱，自娱的娱"
+      }
+    ]
+  },
+  {
+    "simplified": "娶",
+    "traditional": "娶",
+    "pinyin": "qǔ",
+    "meaning": "to marry, to take a wife",
+    "gradeLevel": 7,
+    "orderInGrade": 15,
+    "exampleWords": [
+      {
+        "word": "娶亲",
+        "wordTraditional": "娶親",
+        "pinyin": "qǔ qīn",
+        "meaning": "to take a wife",
+        "ttsText": "娶，娶亲的娶"
+      }
+    ]
+  },
+  {
+    "simplified": "沫",
+    "traditional": "沫",
+    "pinyin": "mò",
+    "meaning": "bubbles, foam, froth, suds",
+    "gradeLevel": 7,
+    "orderInGrade": 16,
+    "exampleWords": [
+      {
+        "word": "口沫",
+        "wordTraditional": "口沫",
+        "pinyin": "kǒu mò",
+        "meaning": "spittle; saliva",
+        "ttsText": "沫，口沫的沫"
+      }
+    ]
+  },
+  {
+    "simplified": "嗓",
+    "traditional": "嗓",
+    "pinyin": "sǎng",
+    "meaning": "throat; voice",
+    "gradeLevel": 7,
+    "orderInGrade": 17,
+    "exampleWords": [
+      {
+        "word": "嗓子",
+        "wordTraditional": "嗓子",
+        "pinyin": "sǎng zi",
+        "meaning": "throat; voice",
+        "ttsText": "嗓，嗓子的嗓"
+      }
+    ]
+  },
+  {
+    "simplified": "焚",
+    "traditional": "焚",
+    "pinyin": "fén",
+    "meaning": "to burn",
+    "gradeLevel": 7,
+    "orderInGrade": 18,
+    "exampleWords": [
+      {
+        "word": "自焚",
+        "wordTraditional": "自焚",
+        "pinyin": "zì fén",
+        "meaning": "to set oneself on fire; to self-immolate",
+        "ttsText": "焚，自焚的焚"
+      }
+    ]
+  },
+  {
+    "simplified": "嫩",
+    "traditional": "嫩",
+    "pinyin": "nèn",
+    "meaning": "soft, delicate; young, tender",
+    "gradeLevel": 7,
+    "orderInGrade": 19,
+    "exampleWords": [
+      {
+        "word": "嫩主",
+        "wordTraditional": "嫩主",
+        "pinyin": "nèn zhǔ",
+        "meaning": "newbie",
+        "ttsText": "嫩，嫩主的嫩"
+      }
+    ]
+  },
+  {
+    "simplified": "韵",
+    "traditional": "韻",
+    "pinyin": "yùn",
+    "meaning": "rhyme; vowel",
+    "gradeLevel": 7,
+    "orderInGrade": 20,
+    "exampleWords": [
+      {
+        "word": "韵事",
+        "wordTraditional": "韻事",
+        "pinyin": "yùn shì",
+        "meaning": "poetic occasion",
+        "ttsText": "韵，韵事的韵"
+      }
+    ]
+  },
+  {
+    "simplified": "衬",
+    "traditional": "襯",
+    "pinyin": "chèn",
+    "meaning": "underwear, lining; in contrast",
+    "gradeLevel": 7,
+    "orderInGrade": 21,
+    "exampleWords": [
+      {
+        "word": "衬里",
+        "wordTraditional": "襯裡",
+        "pinyin": "chèn lǐ",
+        "meaning": "lining",
+        "ttsText": "衬，衬里的衬"
+      }
+    ]
+  },
+  {
+    "simplified": "匈",
+    "traditional": "匈",
+    "pinyin": "xiōng",
+    "meaning": "breast, chest, thorax; to clamor; Hungary",
+    "gradeLevel": 7,
+    "orderInGrade": 22,
+    "exampleWords": [
+      {
+        "word": "匈语",
+        "wordTraditional": "匈語",
+        "pinyin": "Xiōng yǔ",
+        "meaning": "Hungarian language",
+        "ttsText": "匈，匈语的匈"
+      }
+    ]
+  },
+  {
+    "simplified": "钧",
+    "traditional": "鈞",
+    "pinyin": "jūn",
+    "meaning": "unit of weight equal to thirty catties; your (formal)",
+    "gradeLevel": 7,
+    "orderInGrade": 23,
+    "exampleWords": [
+      {
+        "word": "钧谕",
+        "wordTraditional": "鈞諭",
+        "pinyin": "jūn yù",
+        "meaning": "(deferential) your instructions",
+        "ttsText": "钧，钧谕的钧"
+      }
+    ]
+  },
+  {
+    "simplified": "竖",
+    "traditional": "竪",
+    "pinyin": "shù",
+    "meaning": "perpendicular, vertical; to erect",
+    "gradeLevel": 7,
+    "orderInGrade": 24,
+    "exampleWords": [
+      {
+        "word": "竖提",
+        "wordTraditional": "豎提",
+        "pinyin": "shù tí",
+        "meaning": "stroke𠄌 in Chinese characters (e.g. 以[yi3])",
+        "ttsText": "竖，竖提的竖"
+      }
+    ]
+  },
+  {
+    "simplified": "豹",
+    "traditional": "豹",
+    "pinyin": "bào",
+    "meaning": "leopard, panther; surname",
+    "gradeLevel": 7,
+    "orderInGrade": 25,
+    "exampleWords": [
+      {
+        "word": "豹子",
+        "wordTraditional": "豹子",
+        "pinyin": "bào zi",
+        "meaning": "leopard",
+        "ttsText": "豹，豹子的豹"
+      }
+    ]
+  },
+  {
+    "simplified": "捞",
+    "traditional": "撈",
+    "pinyin": "lāo",
+    "meaning": "to dredge up; to fish for; to scoop out of the water",
+    "gradeLevel": 7,
+    "orderInGrade": 26,
+    "exampleWords": [
+      {
+        "word": "捞本",
+        "wordTraditional": "撈本",
+        "pinyin": "lāo běn",
+        "meaning": "to get one's money back (esp. gambling)",
+        "ttsText": "捞，捞本的捞"
+      }
+    ]
+  },
+  {
+    "simplified": "菊",
+    "traditional": "菊",
+    "pinyin": "jú",
+    "meaning": "chrysanthemum",
+    "gradeLevel": 7,
+    "orderInGrade": 27,
+    "exampleWords": [
+      {
+        "word": "菊科",
+        "wordTraditional": "菊科",
+        "pinyin": "jú kē",
+        "meaning": "Asteraceae or Compositae (composites), a large family of dicotyledonous plants producing scents, includes aster, daisy and sunflower",
+        "ttsText": "菊，菊科的菊"
+      }
+    ]
+  },
+  {
+    "simplified": "鄙",
+    "traditional": "鄙",
+    "pinyin": "bǐ",
+    "meaning": "rustic, vulgar; to despise, to scorn",
+    "gradeLevel": 7,
+    "orderInGrade": 28,
+    "exampleWords": [
+      {
+        "word": "鄙人",
+        "wordTraditional": "鄙人",
+        "pinyin": "bǐ rén",
+        "meaning": "your humble servant; I",
+        "ttsText": "鄙，鄙人的鄙"
+      }
+    ]
+  },
+  {
+    "simplified": "魄",
+    "traditional": "魄",
+    "pinyin": "pò",
+    "meaning": "vigor, soul, body; the dark side of the moon",
+    "gradeLevel": 7,
+    "orderInGrade": 29,
+    "exampleWords": [
+      {
+        "word": "魄力",
+        "wordTraditional": "魄力",
+        "pinyin": "pò lì",
+        "meaning": "courage; daring; boldness; resolution; drive",
+        "ttsText": "魄，魄力的魄"
+      }
+    ]
+  },
+  {
+    "simplified": "兜",
+    "traditional": "兜",
+    "pinyin": "dōu",
+    "meaning": "pouch",
+    "gradeLevel": 7,
+    "orderInGrade": 30,
+    "exampleWords": [
+      {
+        "word": "兜头",
+        "wordTraditional": "兜頭",
+        "pinyin": "dōu tóu",
+        "meaning": "full in the face",
+        "ttsText": "兜，兜头的兜"
+      }
+    ]
+  },
+  {
+    "simplified": "哄",
+    "traditional": "哄",
+    "pinyin": "hōng",
+    "meaning": "to coax; to beguile, to cheat, to deceive; tumult, uproar",
+    "gradeLevel": 7,
+    "orderInGrade": 31,
+    "exampleWords": [
+      {
+        "word": "哄然",
+        "wordTraditional": "哄然",
+        "pinyin": "hōng rán",
+        "meaning": "boisterous; uproarious",
+        "ttsText": "哄，哄然的哄"
+      }
+    ]
+  },
+  {
+    "simplified": "颖",
+    "traditional": "穎",
+    "pinyin": "yǐng",
+    "meaning": "rice tassel; sharp; clever",
+    "gradeLevel": 7,
+    "orderInGrade": 32,
+    "exampleWords": [
+      {
+        "word": "颖果",
+        "wordTraditional": "穎果",
+        "pinyin": "yǐng guǒ",
+        "meaning": "(botany) caryopsis",
+        "ttsText": "颖，颖果的颖"
+      }
+    ]
+  },
+  {
+    "simplified": "镑",
+    "traditional": "鎊",
+    "pinyin": "bàng",
+    "meaning": "pound sterling",
+    "gradeLevel": 7,
+    "orderInGrade": 33,
+    "exampleWords": [
+      {
+        "word": "英镑",
+        "wordTraditional": "英鎊",
+        "pinyin": "Yīng bàng",
+        "meaning": "pound sterling",
+        "ttsText": "镑，英镑的镑"
+      }
+    ]
+  },
+  {
+    "simplified": "屑",
+    "traditional": "屑",
+    "pinyin": "xiè",
+    "meaning": "bits, crumbs, scraps; fragments; not worthwhile",
+    "gradeLevel": 7,
+    "orderInGrade": 34,
+    "exampleWords": [
+      {
+        "word": "不屑",
+        "wordTraditional": "不屑",
+        "pinyin": "bù xiè",
+        "meaning": "to disdain to do sth",
+        "ttsText": "屑，不屑的屑"
+      }
+    ]
+  },
+  {
+    "simplified": "蚁",
+    "traditional": "蟻",
+    "pinyin": "yǐ",
+    "meaning": "ant",
+    "gradeLevel": 7,
+    "orderInGrade": 35,
+    "exampleWords": [
+      {
+        "word": "蚁后",
+        "wordTraditional": "蟻后",
+        "pinyin": "yǐ hòu",
+        "meaning": "queen ant",
+        "ttsText": "蚁，蚁后的蚁"
+      }
+    ]
+  },
+  {
+    "simplified": "壶",
+    "traditional": "壺",
+    "pinyin": "hú",
+    "meaning": "jar, pot, jug, vase; surname",
+    "gradeLevel": 7,
+    "orderInGrade": 36,
+    "exampleWords": [
+      {
+        "word": "开壶",
+        "wordTraditional": "開壺",
+        "pinyin": "kāi hú",
+        "meaning": "pot of boiling water",
+        "ttsText": "壶，开壶的壶"
+      }
+    ]
+  },
+  {
+    "simplified": "怡",
+    "traditional": "怡",
+    "pinyin": "yí",
+    "meaning": "gladness, joy, pleasure; harmony",
+    "gradeLevel": 7,
+    "orderInGrade": 37,
+    "exampleWords": [
+      {
+        "word": "怡人",
+        "wordTraditional": "怡人",
+        "pinyin": "yí rén",
+        "meaning": "delightful",
+        "ttsText": "怡，怡人的怡"
+      }
+    ]
+  },
+  {
+    "simplified": "渗",
+    "traditional": "滲",
+    "pinyin": "shèn",
+    "meaning": "to seep, to permeate, to infiltrate",
+    "gradeLevel": 7,
+    "orderInGrade": 38,
+    "exampleWords": [
+      {
+        "word": "渗人",
+        "wordTraditional": "滲人",
+        "pinyin": "shèn rén",
+        "meaning": "horrifying; creepy",
+        "ttsText": "渗，渗人的渗"
+      }
+    ]
+  },
+  {
+    "simplified": "秃",
+    "traditional": "禿",
+    "pinyin": "tū",
+    "meaning": "bald",
+    "gradeLevel": 7,
+    "orderInGrade": 39,
+    "exampleWords": [
+      {
+        "word": "秃子",
+        "wordTraditional": "禿子",
+        "pinyin": "tū zi",
+        "meaning": "bald-headed person; baldy",
+        "ttsText": "秃，秃子的秃"
+      }
+    ]
+  },
+  {
+    "simplified": "迦",
+    "traditional": "迦",
+    "pinyin": "jiā",
+    "meaning": "used in transliterations",
+    "gradeLevel": 7,
+    "orderInGrade": 40,
+    "exampleWords": [
+      {
+        "word": "迦持",
+        "wordTraditional": "迦持",
+        "pinyin": "jiā chí",
+        "meaning": "the laws of the Buddhism",
+        "ttsText": "迦，迦持的迦"
+      }
+    ]
+  },
+  {
+    "simplified": "旱",
+    "traditional": "旱",
+    "pinyin": "hàn",
+    "meaning": "dry; drought; desert",
+    "gradeLevel": 7,
+    "orderInGrade": 41,
+    "exampleWords": [
+      {
+        "word": "旱情",
+        "wordTraditional": "旱情",
+        "pinyin": "hàn qíng",
+        "meaning": "drought conditions",
+        "ttsText": "旱，旱情的旱"
+      }
+    ]
+  },
+  {
+    "simplified": "哟",
+    "traditional": "喲",
+    "pinyin": "yō",
+    "meaning": "ah, final particle",
+    "gradeLevel": 7,
+    "orderInGrade": 42,
+    "exampleWords": [
+      {
+        "word": "啊哟",
+        "wordTraditional": "啊喲",
+        "pinyin": "ā yo",
+        "meaning": "interjection of surprise or pain; Oh; Ow; My goodness!",
+        "ttsText": "哟，啊哟的哟"
+      }
+    ]
+  },
+  {
+    "simplified": "咸",
+    "traditional": "咸",
+    "pinyin": "xián",
+    "meaning": "all, together, united; salted",
+    "gradeLevel": 7,
+    "orderInGrade": 43,
+    "exampleWords": [
+      {
+        "word": "咸水",
+        "wordTraditional": "鹹水",
+        "pinyin": "xián shuǐ",
+        "meaning": "salt water; brine",
+        "ttsText": "咸，咸水的咸"
+      }
+    ]
+  },
+  {
+    "simplified": "焉",
+    "traditional": "焉",
+    "pinyin": "yān",
+    "meaning": "why? where? how?; strange; thereupon, then",
+    "gradeLevel": 7,
+    "orderInGrade": 44,
+    "exampleWords": [
+      {
+        "word": "异焉",
+        "wordTraditional": "異焉",
+        "pinyin": "yì yān",
+        "meaning": "feeling surprised at sth",
+        "ttsText": "焉，异焉的焉"
+      }
+    ]
+  },
+  {
+    "simplified": "谴",
+    "traditional": "譴",
+    "pinyin": "qiǎn",
+    "meaning": "to scold, to reprimand, to abuse",
+    "gradeLevel": 7,
+    "orderInGrade": 45,
+    "exampleWords": [
+      {
+        "word": "自谴",
+        "wordTraditional": "自譴",
+        "pinyin": "zì qiǎn",
+        "meaning": "to blame oneself; self-recrimination",
+        "ttsText": "谴，自谴的谴"
+      }
+    ]
+  },
+  {
+    "simplified": "宛",
+    "traditional": "宛",
+    "pinyin": "wǎn",
+    "meaning": "to seem; as if; crooked",
+    "gradeLevel": 7,
+    "orderInGrade": 46,
+    "exampleWords": [
+      {
+        "word": "宛如",
+        "wordTraditional": "宛如",
+        "pinyin": "wǎn rú",
+        "meaning": "to be just like",
+        "ttsText": "宛，宛如的宛"
+      }
+    ]
+  },
+  {
+    "simplified": "稻",
+    "traditional": "稻",
+    "pinyin": "dào",
+    "meaning": "rice plant; rice growing in the field",
+    "gradeLevel": 7,
+    "orderInGrade": 47,
+    "exampleWords": [
+      {
+        "word": "稻作",
+        "wordTraditional": "稻作",
+        "pinyin": "dào zuò",
+        "meaning": "rice cultivation",
+        "ttsText": "稻，稻作的稻"
+      }
+    ]
+  },
+  {
+    "simplified": "铸",
+    "traditional": "鑄",
+    "pinyin": "zhù",
+    "meaning": "to melt, to cast; to mint, to coin",
+    "gradeLevel": 7,
+    "orderInGrade": 48,
+    "exampleWords": [
+      {
+        "word": "铸就",
+        "wordTraditional": "鑄就",
+        "pinyin": "zhù jiù",
+        "meaning": "to cast; to forge; to form; to create",
+        "ttsText": "铸，铸就的铸"
+      }
+    ]
+  },
+  {
+    "simplified": "伽",
+    "traditional": "伽",
+    "pinyin": "jiā",
+    "meaning": "temple; used to transliterations",
+    "gradeLevel": 7,
+    "orderInGrade": 49,
+    "exampleWords": [
+      {
+        "word": "伽马",
+        "wordTraditional": "伽馬",
+        "pinyin": "gā mǎ",
+        "meaning": "(loanword) gamma (Greek letter Γ, γ)",
+        "ttsText": "伽，伽马的伽"
+      }
+    ]
+  },
+  {
+    "simplified": "詹",
+    "traditional": "詹",
+    "pinyin": "zhān",
+    "meaning": "talkative, verbose; surname",
+    "gradeLevel": 7,
+    "orderInGrade": 50,
+    "exampleWords": [
+      {
+        "word": "詹森",
+        "wordTraditional": "詹森",
+        "pinyin": "Zhān sēn",
+        "meaning": "Johnson",
+        "ttsText": "詹，詹森的詹"
+      }
+    ]
+  },
+  {
+    "simplified": "毙",
+    "traditional": "斃",
+    "pinyin": "bì",
+    "meaning": "to kill; to die a violent death",
+    "gradeLevel": 7,
+    "orderInGrade": 51,
+    "exampleWords": [
+      {
+        "word": "毙命",
+        "wordTraditional": "斃命",
+        "pinyin": "bì mìng",
+        "meaning": "to meet violent death; to get killed",
+        "ttsText": "毙，毙命的毙"
+      }
+    ]
+  },
+  {
+    "simplified": "恍",
+    "traditional": "怳",
+    "pinyin": "huǎng",
+    "meaning": "absent-minded; distracted; indistinct; seemingly",
+    "gradeLevel": 7,
+    "orderInGrade": 52,
+    "exampleWords": [
+      {
+        "word": "恍如",
+        "wordTraditional": "恍如",
+        "pinyin": "huǎng rú",
+        "meaning": "to be as if...; to be rather like...",
+        "ttsText": "恍，恍如的恍"
+      }
+    ]
+  },
+  {
+    "simplified": "贬",
+    "traditional": "貶",
+    "pinyin": "biǎn",
+    "meaning": "to devalue, to demote; to criticize, to censure",
+    "gradeLevel": 7,
+    "orderInGrade": 53,
+    "exampleWords": [
+      {
+        "word": "看贬",
+        "wordTraditional": "看貶",
+        "pinyin": "kàn biǎn",
+        "meaning": "to expect (a currency etc) to depreciate",
+        "ttsText": "贬，看贬的贬"
+      }
+    ]
+  },
+  {
+    "simplified": "骇",
+    "traditional": "駭",
+    "pinyin": "hài",
+    "meaning": "to terrify, to shock, to frighten",
+    "gradeLevel": 7,
+    "orderInGrade": 54,
+    "exampleWords": [
+      {
+        "word": "骇人",
+        "wordTraditional": "駭人",
+        "pinyin": "hài rén",
+        "meaning": "terrifying; shocking; dreadful",
+        "ttsText": "骇，骇人的骇"
+      }
+    ]
+  },
+  {
+    "simplified": "芯",
+    "traditional": "芯",
+    "pinyin": "xīn",
+    "meaning": "core, pith; the pith of a rush (Juncus effusus)",
+    "gradeLevel": 7,
+    "orderInGrade": 55,
+    "exampleWords": [
+      {
+        "word": "芯子",
+        "wordTraditional": "芯子",
+        "pinyin": "xìn zi",
+        "meaning": "fuse; wick; forked tongue (of a snake)",
+        "ttsText": "芯，芯子的芯"
+      }
+    ]
+  },
+  {
+    "simplified": "汁",
+    "traditional": "汁",
+    "pinyin": "zhī",
+    "meaning": "juice, liquor, fluid; sap; gravy, sauce",
+    "gradeLevel": 7,
+    "orderInGrade": 56,
+    "exampleWords": [
+      {
+        "word": "多汁",
+        "wordTraditional": "多汁",
+        "pinyin": "duō zhī",
+        "meaning": "succulent; juicy",
+        "ttsText": "汁，多汁的汁"
+      }
+    ]
+  },
+  {
+    "simplified": "桓",
+    "traditional": "桓",
+    "pinyin": "huán",
+    "meaning": "variety of tree; surname",
+    "gradeLevel": 7,
+    "orderInGrade": 57,
+    "exampleWords": [
+      {
+        "word": "桓台",
+        "wordTraditional": "桓台",
+        "pinyin": "Huán tái",
+        "meaning": "Huantai county in Zibo 淄博[Zi1 bo2], Shandong",
+        "ttsText": "桓，桓台的桓"
+      }
+    ]
+  },
+  {
+    "simplified": "坊",
+    "traditional": "坊",
+    "pinyin": "fāng",
+    "meaning": "neighborhood, district, community; street, lane; mill",
+    "gradeLevel": 7,
+    "orderInGrade": 58,
+    "exampleWords": [
+      {
+        "word": "作坊",
+        "wordTraditional": "作坊",
+        "pinyin": "zuō fang",
+        "meaning": "workshop (of artisan)",
+        "ttsText": "坊，作坊的坊"
+      }
+    ]
+  },
+  {
+    "simplified": "驴",
+    "traditional": "馿",
+    "pinyin": "lǘ",
+    "meaning": "donkey, ass",
+    "gradeLevel": 7,
+    "orderInGrade": 59,
+    "exampleWords": [
+      {
+        "word": "驴子",
+        "wordTraditional": "驢子",
+        "pinyin": "lú: zi",
+        "meaning": "ass; donkey",
+        "ttsText": "驴，驴子的驴"
+      }
+    ]
+  },
+  {
+    "simplified": "朽",
+    "traditional": "朽",
+    "pinyin": "xiǔ",
+    "meaning": "decayed, rotten",
+    "gradeLevel": 7,
+    "orderInGrade": 60,
+    "exampleWords": [
+      {
+        "word": "不朽",
+        "wordTraditional": "不朽",
+        "pinyin": "bù xiǔ",
+        "meaning": "to last forever; eternal; enduring",
+        "ttsText": "朽，不朽的朽"
+      }
+    ]
+  },
+  {
+    "simplified": "靖",
+    "traditional": "靖",
+    "pinyin": "jìng",
+    "meaning": "to pacify, to appease; calm, peaceful",
+    "gradeLevel": 7,
+    "orderInGrade": 61,
+    "exampleWords": [
+      {
+        "word": "靖西",
+        "wordTraditional": "靖西",
+        "pinyin": "Jìng xī",
+        "meaning": "see 靖西市[Jing4 xi1 Shi4]",
+        "ttsText": "靖，靖西的靖"
+      }
+    ]
+  },
+  {
+    "simplified": "佣",
+    "traditional": "佣",
+    "pinyin": "yōng",
+    "meaning": "to hire, to employ; commission; servant",
+    "gradeLevel": 7,
+    "orderInGrade": 62,
+    "exampleWords": [
+      {
+        "word": "佣人",
+        "wordTraditional": "傭人",
+        "pinyin": "yōng rén",
+        "meaning": "servant",
+        "ttsText": "佣，佣人的佣"
+      }
+    ]
+  },
+  {
+    "simplified": "汝",
+    "traditional": "汝",
+    "pinyin": "rǔ",
+    "meaning": "you",
+    "gradeLevel": 7,
+    "orderInGrade": 63,
+    "exampleWords": [
+      {
+        "word": "汝南",
+        "wordTraditional": "汝南",
+        "pinyin": "Rǔ nán",
+        "meaning": "see 汝南縣|汝南县[Ru3 nan2 Xian4]",
+        "ttsText": "汝，汝南的汝"
+      }
+    ]
+  },
+  {
+    "simplified": "碌",
+    "traditional": "碌",
+    "pinyin": "lù",
+    "meaning": "rocky, rough, uneven; mediocre",
+    "gradeLevel": 7,
+    "orderInGrade": 64,
+    "exampleWords": [
+      {
+        "word": "劳碌",
+        "wordTraditional": "勞碌",
+        "pinyin": "láo lù",
+        "meaning": "to work hard; to toil",
+        "ttsText": "碌，劳碌的碌"
+      }
+    ]
+  },
+  {
+    "simplified": "迄",
+    "traditional": "迄",
+    "pinyin": "qì",
+    "meaning": "to extend, to reach; till, until",
+    "gradeLevel": 7,
+    "orderInGrade": 65,
+    "exampleWords": [
+      {
+        "word": "起迄",
+        "wordTraditional": "起迄",
+        "pinyin": "qǐ qì",
+        "meaning": "start and end (dates); origin and destination",
+        "ttsText": "迄，起迄的迄"
+      }
+    ]
+  },
+  {
+    "simplified": "冀",
+    "traditional": "冀",
+    "pinyin": "jì",
+    "meaning": "to hope for; to wish; Hebei province",
+    "gradeLevel": 7,
+    "orderInGrade": 66,
+    "exampleWords": [
+      {
+        "word": "冀州",
+        "wordTraditional": "冀州",
+        "pinyin": "Jì zhōu",
+        "meaning": "see 冀州區|冀州区[Ji4 zhou1 Qu1]",
+        "ttsText": "冀，冀州的冀"
+      }
+    ]
+  },
+  {
+    "simplified": "荆",
+    "traditional": "荊",
+    "pinyin": "jīng",
+    "meaning": "thorns, brambles; surname",
+    "gradeLevel": 7,
+    "orderInGrade": 67,
+    "exampleWords": [
+      {
+        "word": "问荆",
+        "wordTraditional": "問荊",
+        "pinyin": "wèn jīng",
+        "meaning": "field horsetail (Equisetum arvense)",
+        "ttsText": "荆，问荆的荆"
+      }
+    ]
+  },
+  {
+    "simplified": "崔",
+    "traditional": "崔",
+    "pinyin": "cuī",
+    "meaning": "high, lofty, towering; surname",
+    "gradeLevel": 7,
+    "orderInGrade": 68,
+    "exampleWords": [
+      {
+        "word": "崔健",
+        "wordTraditional": "崔健",
+        "pinyin": "Cuī Jiàn",
+        "meaning": "Cui Jian (1961-), father of Chinese rock music",
+        "ttsText": "崔，崔健的崔"
+      }
+    ]
+  },
+  {
+    "simplified": "雁",
+    "traditional": "雁",
+    "pinyin": "yàn",
+    "meaning": "wild goose",
+    "gradeLevel": 7,
+    "orderInGrade": 69,
+    "exampleWords": [
+      {
+        "word": "大雁",
+        "wordTraditional": "大雁",
+        "pinyin": "dà yàn",
+        "meaning": "wild goose",
+        "ttsText": "雁，大雁的雁"
+      }
+    ]
+  },
+  {
+    "simplified": "绅",
+    "traditional": "紳",
+    "pinyin": "shēn",
+    "meaning": "girdle, tie; gentry; to bend",
+    "gradeLevel": 7,
+    "orderInGrade": 70,
+    "exampleWords": [
+      {
+        "word": "绅士",
+        "wordTraditional": "紳士",
+        "pinyin": "shēn shì",
+        "meaning": "gentleman",
+        "ttsText": "绅，绅士的绅"
+      }
+    ]
+  },
+  {
+    "simplified": "珊",
+    "traditional": "珊",
+    "pinyin": "shān",
+    "meaning": "coral",
+    "gradeLevel": 7,
+    "orderInGrade": 71,
+    "exampleWords": [
+      {
+        "word": "苏珊",
+        "wordTraditional": "蘇珊",
+        "pinyin": "Sū shān",
+        "meaning": "Susan (name)",
+        "ttsText": "珊，苏珊的珊"
+      }
+    ]
+  },
+  {
+    "simplified": "榜",
+    "traditional": "榜",
+    "pinyin": "bǎng",
+    "meaning": "placard, notice, announcement; a list of names",
+    "gradeLevel": 7,
+    "orderInGrade": 72,
+    "exampleWords": [
+      {
+        "word": "榜样",
+        "wordTraditional": "榜樣",
+        "pinyin": "bǎng yàng",
+        "meaning": "model",
+        "ttsText": "榜，榜样的榜"
+      }
+    ]
+  },
+  {
+    "simplified": "诵",
+    "traditional": "誦",
+    "pinyin": "sòng",
+    "meaning": "to chant, to recite, to repeat, to read aloud",
+    "gradeLevel": 7,
+    "orderInGrade": 73,
+    "exampleWords": [
+      {
+        "word": "诵经",
+        "wordTraditional": "誦經",
+        "pinyin": "sòng jīng",
+        "meaning": "to chant the sutras",
+        "ttsText": "诵，诵经的诵"
+      }
+    ]
+  },
+  {
+    "simplified": "傍",
+    "traditional": "傍",
+    "pinyin": "bàng",
+    "meaning": "beside, close, nearby; to depend on",
+    "gradeLevel": 7,
+    "orderInGrade": 74,
+    "exampleWords": [
+      {
+        "word": "傍边",
+        "wordTraditional": "傍邊",
+        "pinyin": "bàng biān",
+        "meaning": "near; beside",
+        "ttsText": "傍，傍边的傍"
+      }
+    ]
+  },
+  {
+    "simplified": "彦",
+    "traditional": "彥",
+    "pinyin": "yàn",
+    "meaning": "elegant",
+    "gradeLevel": 7,
+    "orderInGrade": 75,
+    "exampleWords": [
+      {
+        "word": "巴彦",
+        "wordTraditional": "巴彥",
+        "pinyin": "Bā yàn",
+        "meaning": "see 巴彥縣|巴彦县[Ba1 yan4 Xian4]",
+        "ttsText": "彦，巴彦的彦"
+      }
+    ]
+  },
+  {
+    "simplified": "醇",
+    "traditional": "醇",
+    "pinyin": "chún",
+    "meaning": "rich, pure, as good as wine",
+    "gradeLevel": 7,
+    "orderInGrade": 76,
+    "exampleWords": [
+      {
+        "word": "醇美",
+        "wordTraditional": "醇美",
+        "pinyin": "chún měi",
+        "meaning": "mellow; rich; superb",
+        "ttsText": "醇，醇美的醇"
+      }
+    ]
+  },
+  {
+    "simplified": "笛",
+    "traditional": "笛",
+    "pinyin": "dí",
+    "meaning": "bamboo flute; whistle",
+    "gradeLevel": 7,
+    "orderInGrade": 77,
+    "exampleWords": [
+      {
+        "word": "笛子",
+        "wordTraditional": "笛子",
+        "pinyin": "dí zi",
+        "meaning": "bamboo flute",
+        "ttsText": "笛，笛子的笛"
+      }
+    ]
+  },
+  {
+    "simplified": "禽",
+    "traditional": "禽",
+    "pinyin": "qín",
+    "meaning": "birds, fowl; to capture; surname",
+    "gradeLevel": 7,
+    "orderInGrade": 78,
+    "exampleWords": [
+      {
+        "word": "家禽",
+        "wordTraditional": "家禽",
+        "pinyin": "jiā qín",
+        "meaning": "poultry; domestic fowl",
+        "ttsText": "禽，家禽的禽"
+      }
+    ]
+  },
+  {
+    "simplified": "勿",
+    "traditional": "勿",
+    "pinyin": "wù",
+    "meaning": "must not, do not; without, never",
+    "gradeLevel": 7,
+    "orderInGrade": 79,
+    "exampleWords": [
+      {
+        "word": "切勿",
+        "wordTraditional": "切勿",
+        "pinyin": "qiè wù",
+        "meaning": "by no means",
+        "ttsText": "勿，切勿的勿"
+      }
+    ]
+  },
+  {
+    "simplified": "娟",
+    "traditional": "娟",
+    "pinyin": "juān",
+    "meaning": "beautiful, graceful",
+    "gradeLevel": 7,
+    "orderInGrade": 80,
+    "exampleWords": [
+      {
+        "word": "娟秀",
+        "wordTraditional": "娟秀",
+        "pinyin": "juān xiù",
+        "meaning": "beautiful; graceful",
+        "ttsText": "娟，娟秀的娟"
+      }
+    ]
+  },
+  {
+    "simplified": "瞄",
+    "traditional": "瞄",
+    "pinyin": "miáo",
+    "meaning": "to take aim at; to look at",
+    "gradeLevel": 7,
+    "orderInGrade": 81,
+    "exampleWords": [
+      {
+        "word": "瞄准",
+        "wordTraditional": "瞄準",
+        "pinyin": "miáo zhǔn",
+        "meaning": "to take aim at; to target",
+        "ttsText": "瞄，瞄准的瞄"
+      }
+    ]
+  },
+  {
+    "simplified": "幢",
+    "traditional": "幢",
+    "pinyin": "chuáng",
+    "meaning": "carriage curtain; sun screen; tent; measure word for buildings",
+    "gradeLevel": 7,
+    "orderInGrade": 82,
+    "exampleWords": [
+      {
+        "word": "经幢",
+        "wordTraditional": "經幢",
+        "pinyin": "jīng chuáng",
+        "meaning": "Buddhist stone pillar",
+        "ttsText": "幢，经幢的幢"
+      }
+    ]
+  },
+  {
+    "simplified": "寇",
+    "traditional": "㓂",
+    "pinyin": "kòu",
+    "meaning": "bandit, thief; enemy; to invade",
+    "gradeLevel": 7,
+    "orderInGrade": 83,
+    "exampleWords": [
+      {
+        "word": "司寇",
+        "wordTraditional": "司寇",
+        "pinyin": "sī kòu",
+        "meaning": "minister of criminal justice (official rank in imperial China)",
+        "ttsText": "寇，司寇的寇"
+      }
+    ]
+  },
+  {
+    "simplified": "睹",
+    "traditional": "睹",
+    "pinyin": "dǔ",
+    "meaning": "to look at, to gaze at; to observe",
+    "gradeLevel": 7,
+    "orderInGrade": 84,
+    "exampleWords": [
+      {
+        "word": "一睹",
+        "wordTraditional": "一睹",
+        "pinyin": "yī dǔ",
+        "meaning": "to look; to have a glimpse at; to observe (sth's splendor)",
+        "ttsText": "睹，一睹的睹"
+      }
+    ]
+  },
+  {
+    "simplified": "贿",
+    "traditional": "賄",
+    "pinyin": "huì",
+    "meaning": "to bribe; riches, wealth",
+    "gradeLevel": 7,
+    "orderInGrade": 85,
+    "exampleWords": [
+      {
+        "word": "行贿",
+        "wordTraditional": "行賄",
+        "pinyin": "xíng huì",
+        "meaning": "to offer a bribe",
+        "ttsText": "贿，行贿的贿"
+      }
+    ]
+  },
+  {
+    "simplified": "踩",
+    "traditional": "跴",
+    "pinyin": "cǎi",
+    "meaning": "to step on; to stamp",
+    "gradeLevel": 7,
+    "orderInGrade": 86,
+    "exampleWords": [
+      {
+        "word": "踩动",
+        "wordTraditional": "踩動",
+        "pinyin": "cǎi dòng",
+        "meaning": "to operate by means of a pedal",
+        "ttsText": "踩，踩动的踩"
+      }
+    ]
+  },
+  {
+    "simplified": "霆",
+    "traditional": "霆",
+    "pinyin": "tíng",
+    "meaning": "a sudden peal of thunder",
+    "gradeLevel": 7,
+    "orderInGrade": 87,
+    "exampleWords": [
+      {
+        "word": "雷霆",
+        "wordTraditional": "雷霆",
+        "pinyin": "léi tíng",
+        "meaning": "sound of thunder",
+        "ttsText": "霆，雷霆的霆"
+      }
+    ]
+  },
+  {
+    "simplified": "呜",
+    "traditional": "嗚",
+    "pinyin": "wū",
+    "meaning": "the sound of someone crying or sobbing",
+    "gradeLevel": 7,
+    "orderInGrade": 88,
+    "exampleWords": [
+      {
+        "word": "呜呼",
+        "wordTraditional": "嗚呼",
+        "pinyin": "wū hū",
+        "meaning": "alas; alack; welladay; wellaway; to die",
+        "ttsText": "呜，呜呼的呜"
+      }
+    ]
+  },
+  {
+    "simplified": "拱",
+    "traditional": "拱",
+    "pinyin": "gǒng",
+    "meaning": "to salute, to bow; arched; arch",
+    "gradeLevel": 7,
+    "orderInGrade": 89,
+    "exampleWords": [
+      {
+        "word": "拱道",
+        "wordTraditional": "拱道",
+        "pinyin": "gǒng dào",
+        "meaning": "archway",
+        "ttsText": "拱，拱道的拱"
+      }
+    ]
+  },
+  {
+    "simplified": "妃",
+    "traditional": "妃",
+    "pinyin": "fēi",
+    "meaning": "wife, spouse; imperial concubine",
+    "gradeLevel": 7,
+    "orderInGrade": 90,
+    "exampleWords": [
+      {
+        "word": "妃子",
+        "wordTraditional": "妃子",
+        "pinyin": "fēi zi",
+        "meaning": "imperial concubine",
+        "ttsText": "妃，妃子的妃"
+      }
+    ]
+  },
+  {
+    "simplified": "蔑",
+    "traditional": "蔑",
+    "pinyin": "miè",
+    "meaning": "to disdain, to disregard, to slight",
+    "gradeLevel": 7,
+    "orderInGrade": 91,
+    "exampleWords": [
+      {
+        "word": "蔑称",
+        "wordTraditional": "蔑稱",
+        "pinyin": "miè chēng",
+        "meaning": "contemptuous term",
+        "ttsText": "蔑，蔑称的蔑"
+      }
+    ]
+  },
+  {
+    "simplified": "谕",
+    "traditional": "諭",
+    "pinyin": "yù",
+    "meaning": "to proclaim; to instruct; edict",
+    "gradeLevel": 7,
+    "orderInGrade": 92,
+    "exampleWords": [
+      {
+        "word": "上谕",
+        "wordTraditional": "上諭",
+        "pinyin": "shàng yù",
+        "meaning": "imperial edict",
+        "ttsText": "谕，上谕的谕"
+      }
+    ]
+  },
+  {
+    "simplified": "缚",
+    "traditional": "縛",
+    "pinyin": "fù",
+    "meaning": "to tie, to bind",
+    "gradeLevel": 7,
+    "orderInGrade": 93,
+    "exampleWords": [
+      {
+        "word": "束缚",
+        "wordTraditional": "束縛",
+        "pinyin": "shù fù",
+        "meaning": "to bind; to tie up; to fetter; to shackle",
+        "ttsText": "缚，束缚的缚"
+      }
+    ]
+  },
+  {
+    "simplified": "诡",
+    "traditional": "詭",
+    "pinyin": "guǐ",
+    "meaning": "to cheat, to defraud; sly, treacherous",
+    "gradeLevel": 7,
+    "orderInGrade": 94,
+    "exampleWords": [
+      {
+        "word": "诡计",
+        "wordTraditional": "詭計",
+        "pinyin": "guǐ jì",
+        "meaning": "trick; ruse; crafty scheme",
+        "ttsText": "诡，诡计的诡"
+      }
+    ]
+  },
+  {
+    "simplified": "篷",
+    "traditional": "篷",
+    "pinyin": "péng",
+    "meaning": "awning, covering; sail, tarp; boat",
+    "gradeLevel": 7,
+    "orderInGrade": 95,
+    "exampleWords": [
+      {
+        "word": "天篷",
+        "wordTraditional": "天篷",
+        "pinyin": "tiān péng",
+        "meaning": "canopy",
+        "ttsText": "篷，天篷的篷"
+      }
+    ]
+  },
+  {
+    "simplified": "淹",
+    "traditional": "淹",
+    "pinyin": "yān",
+    "meaning": "to drown, to immerse, to steep",
+    "gradeLevel": 7,
+    "orderInGrade": 96,
+    "exampleWords": [
+      {
+        "word": "淹没",
+        "wordTraditional": "淹沒",
+        "pinyin": "yān mò",
+        "meaning": "to submerge; to drown; to flood; to drown out (also fig.)",
+        "ttsText": "淹，淹没的淹"
+      }
+    ]
+  },
+  {
+    "simplified": "腕",
+    "traditional": "腕",
+    "pinyin": "wàn",
+    "meaning": "wrist",
+    "gradeLevel": 7,
+    "orderInGrade": 97,
+    "exampleWords": [
+      {
+        "word": "腕子",
+        "wordTraditional": "腕子",
+        "pinyin": "wàn zi",
+        "meaning": "wrist",
+        "ttsText": "腕，腕子的腕"
+      }
+    ]
+  },
+  {
+    "simplified": "煮",
+    "traditional": "煑",
+    "pinyin": "zhǔ",
+    "meaning": "to boil, to cook",
+    "gradeLevel": 7,
+    "orderInGrade": 98,
+    "exampleWords": [
+      {
+        "word": "煮法",
+        "wordTraditional": "煮法",
+        "pinyin": "zhǔ fǎ",
+        "meaning": "cooking method",
+        "ttsText": "煮，煮法的煮"
+      }
+    ]
+  },
+  {
+    "simplified": "倩",
+    "traditional": "倩",
+    "pinyin": "qiàn",
+    "meaning": "beautiful, lovely; son-in-law",
+    "gradeLevel": 7,
+    "orderInGrade": 99,
+    "exampleWords": [
+      {
+        "word": "倩影",
+        "wordTraditional": "倩影",
+        "pinyin": "qiàn yǐng",
+        "meaning": "beautiful image of a woman",
+        "ttsText": "倩，倩影的倩"
+      }
+    ]
+  },
+  {
+    "simplified": "卒",
+    "traditional": "䘚",
+    "pinyin": "zú",
+    "meaning": "soldier; servant; at last, finally",
+    "gradeLevel": 7,
+    "orderInGrade": 100,
+    "exampleWords": [
+      {
+        "word": "卒中",
+        "wordTraditional": "卒中",
+        "pinyin": "cù zhòng",
+        "meaning": "stroke; cerebral hemorrhage",
+        "ttsText": "卒，卒中的卒"
+      }
+    ]
+  },
+  {
+    "simplified": "勘",
+    "traditional": "勘",
+    "pinyin": "kān",
+    "meaning": "to investigate; to survey, to explore; to compare; to collate",
+    "gradeLevel": 7,
+    "orderInGrade": 101,
+    "exampleWords": [
+      {
+        "word": "勘定",
+        "wordTraditional": "勘定",
+        "pinyin": "kān dìng",
+        "meaning": "to demarcate; to survey and determine",
+        "ttsText": "勘，勘定的勘"
+      }
+    ]
+  },
+  {
+    "simplified": "馨",
+    "traditional": "馨",
+    "pinyin": "xīn",
+    "meaning": "fragrant, aromatic",
+    "gradeLevel": 7,
+    "orderInGrade": 102,
+    "exampleWords": [
+      {
+        "word": "馨香",
+        "wordTraditional": "馨香",
+        "pinyin": "xīn xiāng",
+        "meaning": "fragrance; fragrant (of incense)",
+        "ttsText": "馨，馨香的馨"
+      }
+    ]
+  },
+  {
+    "simplified": "逗",
+    "traditional": "逗",
+    "pinyin": "dòu",
+    "meaning": "to entice, to tempt; to arouse, to stir",
+    "gradeLevel": 7,
+    "orderInGrade": 103,
+    "exampleWords": [
+      {
+        "word": "逗人",
+        "wordTraditional": "逗人",
+        "pinyin": "dòu rén",
+        "meaning": "amusing; funny; entertaining",
+        "ttsText": "逗，逗人的逗"
+      }
+    ]
+  },
+  {
+    "simplified": "甸",
+    "traditional": "甸",
+    "pinyin": "diān",
+    "meaning": "suburbs of the capital; to govern; crops",
+    "gradeLevel": 7,
+    "orderInGrade": 104,
+    "exampleWords": [
+      {
+        "word": "基甸",
+        "wordTraditional": "基甸",
+        "pinyin": "Jī diàn",
+        "meaning": "Gideon (name, from Judges 6:11 onward); also written 吉迪恩",
+        "ttsText": "甸，基甸的甸"
+      }
+    ]
+  },
+  {
+    "simplified": "贱",
+    "traditional": "賤",
+    "pinyin": "jiàn",
+    "meaning": "cheap, low, mean, worthless",
+    "gradeLevel": 7,
+    "orderInGrade": 105,
+    "exampleWords": [
+      {
+        "word": "贱人",
+        "wordTraditional": "賤人",
+        "pinyin": "jiàn rén",
+        "meaning": "slut; cheap person",
+        "ttsText": "贱，贱人的贱"
+      }
+    ]
+  },
+  {
+    "simplified": "炒",
+    "traditional": "炒",
+    "pinyin": "chǎo",
+    "meaning": "to boil, to fry, to roast, to sauté; to trade stock",
+    "gradeLevel": 7,
+    "orderInGrade": 106,
+    "exampleWords": [
+      {
+        "word": "炒作",
+        "wordTraditional": "炒作",
+        "pinyin": "chǎo zuò",
+        "meaning": "to hype; to promote (in the media)",
+        "ttsText": "炒，炒作的炒"
+      }
+    ]
+  },
+  {
+    "simplified": "敞",
+    "traditional": "敞",
+    "pinyin": "chǎng",
+    "meaning": "wide, open, spacious",
+    "gradeLevel": 7,
+    "orderInGrade": 107,
+    "exampleWords": [
+      {
+        "word": "敞开",
+        "wordTraditional": "敞開",
+        "pinyin": "chǎng kāi",
+        "meaning": "to open wide; unrestrictedly",
+        "ttsText": "敞，敞开的敞"
+      }
+    ]
+  },
+  {
+    "simplified": "囚",
+    "traditional": "囚",
+    "pinyin": "qiú",
+    "meaning": "prisoner, convict; to confine",
+    "gradeLevel": 7,
+    "orderInGrade": 108,
+    "exampleWords": [
+      {
+        "word": "系囚",
+        "wordTraditional": "繫囚",
+        "pinyin": "xì qiú",
+        "meaning": "prisoner",
+        "ttsText": "囚，系囚的囚"
+      }
+    ]
+  },
+  {
+    "simplified": "栗",
+    "traditional": "慄",
+    "pinyin": "lì",
+    "meaning": "chestnut tree; chestnuts; surname",
+    "gradeLevel": 7,
+    "orderInGrade": 109,
+    "exampleWords": [
+      {
+        "word": "栗子",
+        "wordTraditional": "栗子",
+        "pinyin": "lì zi",
+        "meaning": "chestnut",
+        "ttsText": "栗，栗子的栗"
+      }
+    ]
+  },
+  {
+    "simplified": "辜",
+    "traditional": "辜",
+    "pinyin": "gū",
+    "meaning": "crime, offense, sin",
+    "gradeLevel": 7,
+    "orderInGrade": 110,
+    "exampleWords": [
+      {
+        "word": "无辜",
+        "wordTraditional": "無辜",
+        "pinyin": "wú gū",
+        "meaning": "innocent; innocence; not guilty (law)",
+        "ttsText": "辜，无辜的辜"
+      }
+    ]
+  },
+  {
+    "simplified": "垫",
+    "traditional": "墊",
+    "pinyin": "diàn",
+    "meaning": "cushion, mat, pad; to advance money, to pay for another",
+    "gradeLevel": 7,
+    "orderInGrade": 111,
+    "exampleWords": [
+      {
+        "word": "垫上",
+        "wordTraditional": "墊上",
+        "pinyin": "diàn shàng",
+        "meaning": "to pay for sb",
+        "ttsText": "垫，垫上的垫"
+      }
+    ]
+  },
+  {
+    "simplified": "妒",
+    "traditional": "妒",
+    "pinyin": "dù",
+    "meaning": "jealous, envious",
+    "gradeLevel": 7,
+    "orderInGrade": 112,
+    "exampleWords": [
+      {
+        "word": "妒忌",
+        "wordTraditional": "妒忌",
+        "pinyin": "dù jì",
+        "meaning": "to be jealous of (sb's achievements etc)",
+        "ttsText": "妒，妒忌的妒"
+      }
+    ]
+  },
+  {
+    "simplified": "谣",
+    "traditional": "謠",
+    "pinyin": "yáo",
+    "meaning": "rumor; folksong, ballad",
+    "gradeLevel": 7,
+    "orderInGrade": 113,
+    "exampleWords": [
+      {
+        "word": "大谣",
+        "wordTraditional": "大謠",
+        "pinyin": "dà yáo",
+        "meaning": "high-profile rumormonger (esp. on a microblog)",
+        "ttsText": "谣，大谣的谣"
+      }
+    ]
+  },
+  {
+    "simplified": "寞",
+    "traditional": "寞",
+    "pinyin": "mò",
+    "meaning": "silent, still; lonely, solitary",
+    "gradeLevel": 7,
+    "orderInGrade": 114,
+    "exampleWords": [
+      {
+        "word": "落寞",
+        "wordTraditional": "落寞",
+        "pinyin": "luò mò",
+        "meaning": "lonely; desolate",
+        "ttsText": "寞，落寞的寞"
+      }
+    ]
+  },
+  {
+    "simplified": "蜀",
+    "traditional": "蜀",
+    "pinyin": "shǔ",
+    "meaning": "the name of an ancient state",
+    "gradeLevel": 7,
+    "orderInGrade": 115,
+    "exampleWords": [
+      {
+        "word": "蜀国",
+        "wordTraditional": "蜀國",
+        "pinyin": "Shǔ guó",
+        "meaning": "Sichuan",
+        "ttsText": "蜀，蜀国的蜀"
+      }
+    ]
+  },
+  {
+    "simplified": "甩",
+    "traditional": "甩",
+    "pinyin": "shuǎi",
+    "meaning": "to throw away, to fling, to discard",
+    "gradeLevel": 7,
+    "orderInGrade": 116,
+    "exampleWords": [
+      {
+        "word": "甩上",
+        "wordTraditional": "甩上",
+        "pinyin": "shuǎi shàng",
+        "meaning": "to slam (a door); to fling up; to splash up",
+        "ttsText": "甩，甩上的甩"
+      }
+    ]
+  },
+  {
+    "simplified": "涯",
+    "traditional": "涯",
+    "pinyin": "yá",
+    "meaning": "border, horizon; river bank, shore",
+    "gradeLevel": 7,
+    "orderInGrade": 117,
+    "exampleWords": [
+      {
+        "word": "生涯",
+        "wordTraditional": "生涯",
+        "pinyin": "shēng yá",
+        "meaning": "career; life (way in which sb lives); period of one's life",
+        "ttsText": "涯，生涯的涯"
+      }
+    ]
+  },
+  {
+    "simplified": "枕",
+    "traditional": "枕",
+    "pinyin": "zhěn",
+    "meaning": "pillow",
+    "gradeLevel": 7,
+    "orderInGrade": 118,
+    "exampleWords": [
+      {
+        "word": "枕心",
+        "wordTraditional": "枕心",
+        "pinyin": "zhěn xīn",
+        "meaning": "bare pillow (i.e. the pillow without pillow-case)",
+        "ttsText": "枕，枕心的枕"
+      }
+    ]
+  },
+  {
+    "simplified": "丐",
+    "traditional": "丐",
+    "pinyin": "gài",
+    "meaning": "beggar; to beg; to give",
+    "gradeLevel": 7,
+    "orderInGrade": 119,
+    "exampleWords": [
+      {
+        "word": "丐帮",
+        "wordTraditional": "丐幫",
+        "pinyin": "gài bāng",
+        "meaning": "beggars' union; a group of beggars",
+        "ttsText": "丐，丐帮的丐"
+      }
+    ]
+  },
+  {
+    "simplified": "奎",
+    "traditional": "奎",
+    "pinyin": "kuí",
+    "meaning": "a man's stride; a constellation",
+    "gradeLevel": 7,
+    "orderInGrade": 120,
+    "exampleWords": [
+      {
+        "word": "奎文",
+        "wordTraditional": "奎文",
+        "pinyin": "Kuí wén",
+        "meaning": "Kuiwen district of Weifang city 濰坊市|潍坊市[Wei2 fang1 shi4], Shandong",
+        "ttsText": "奎，奎文的奎"
+      }
+    ]
+  },
+  {
+    "simplified": "泌",
+    "traditional": "泌",
+    "pinyin": "mì",
+    "meaning": "to seep out, to secrete",
+    "gradeLevel": 7,
+    "orderInGrade": 121,
+    "exampleWords": [
+      {
+        "word": "分泌",
+        "wordTraditional": "分泌",
+        "pinyin": "fēn mì",
+        "meaning": "to secrete; secretion",
+        "ttsText": "泌，分泌的泌"
+      }
+    ]
+  },
+  {
+    "simplified": "逾",
+    "traditional": "踰",
+    "pinyin": "yú",
+    "meaning": "to jump over; to exceed, to surpass",
+    "gradeLevel": 7,
+    "orderInGrade": 122,
+    "exampleWords": [
+      {
+        "word": "年逾",
+        "wordTraditional": "年逾",
+        "pinyin": "nián yú",
+        "meaning": "over (a certain age)",
+        "ttsText": "逾，年逾的逾"
+      }
+    ]
+  },
+  {
+    "simplified": "叮",
+    "traditional": "叮",
+    "pinyin": "dīng",
+    "meaning": "to persistently exhort or urge; sting (as of an insect)",
+    "gradeLevel": 7,
+    "orderInGrade": 123,
+    "exampleWords": [
+      {
+        "word": "叮当",
+        "wordTraditional": "叮噹",
+        "pinyin": "dīng dāng",
+        "meaning": "(onom.) ding dong; jingling of bells; clanking sound",
+        "ttsText": "叮，叮当的叮"
+      }
+    ]
+  },
+  {
+    "simplified": "黛",
+    "traditional": "黛",
+    "pinyin": "dài",
+    "meaning": "to blacken one's eyebrows; black",
+    "gradeLevel": 7,
+    "orderInGrade": 124,
+    "exampleWords": [
+      {
+        "word": "青黛",
+        "wordTraditional": "青黛",
+        "pinyin": "qīng dài",
+        "meaning": "indigo (dye); Indigo naturalis extract (used in TCM)",
+        "ttsText": "黛，青黛的黛"
+      }
+    ]
+  },
+  {
+    "simplified": "掷",
+    "traditional": "擲",
+    "pinyin": "zhì",
+    "meaning": "to throw, to hurl, to fling, to cast",
+    "gradeLevel": 7,
+    "orderInGrade": 125,
+    "exampleWords": [
+      {
+        "word": "掷还",
+        "wordTraditional": "擲還",
+        "pinyin": "zhì huán",
+        "meaning": "please return (an item sent in the mail)",
+        "ttsText": "掷，掷还的掷"
+      }
+    ]
+  },
+  {
+    "simplified": "藉",
+    "traditional": "藉",
+    "pinyin": "jí",
+    "meaning": "by means of; excuse, pretext; to rely on",
+    "gradeLevel": 7,
+    "orderInGrade": 126,
+    "exampleWords": [
+      {
+        "word": "藉由",
+        "wordTraditional": "藉由",
+        "pinyin": "jiè yóu",
+        "meaning": "by means of; through; by",
+        "ttsText": "藉，藉由的藉"
+      }
+    ]
+  },
+  {
+    "simplified": "枢",
+    "traditional": "樞",
+    "pinyin": "shū",
+    "meaning": "door hinge; pivot; center of power",
+    "gradeLevel": 7,
+    "orderInGrade": 127,
+    "exampleWords": [
+      {
+        "word": "中枢",
+        "wordTraditional": "中樞",
+        "pinyin": "zhōng shū",
+        "meaning": "center; hub; the central administration",
+        "ttsText": "枢，中枢的枢"
+      }
+    ]
+  },
+  {
+    "simplified": "憎",
+    "traditional": "憎",
+    "pinyin": "zēng",
+    "meaning": "to abhor, to detest, to hate",
+    "gradeLevel": 7,
+    "orderInGrade": 128,
+    "exampleWords": [
+      {
+        "word": "可憎",
+        "wordTraditional": "可憎",
+        "pinyin": "kě zēng",
+        "meaning": "disgusting",
+        "ttsText": "憎，可憎的憎"
+      }
+    ]
+  },
+  {
+    "simplified": "鲸",
+    "traditional": "鯨",
+    "pinyin": "jīng",
+    "meaning": "whale",
+    "gradeLevel": 7,
+    "orderInGrade": 129,
+    "exampleWords": [
+      {
+        "word": "鲸目",
+        "wordTraditional": "鯨目",
+        "pinyin": "jīng mù",
+        "meaning": "Cetacea (whale family)",
+        "ttsText": "鲸，鲸目的鲸"
+      }
+    ]
+  },
+  {
+    "simplified": "弘",
+    "traditional": "弘",
+    "pinyin": "hóng",
+    "meaning": "to enlarge, to expand; liberal, great",
+    "gradeLevel": 7,
+    "orderInGrade": 130,
+    "exampleWords": [
+      {
+        "word": "弘法",
+        "wordTraditional": "弘法",
+        "pinyin": "hóng fǎ",
+        "meaning": "to propagate Buddhist teachings",
+        "ttsText": "弘，弘法的弘"
+      }
+    ]
+  },
+  {
+    "simplified": "倚",
+    "traditional": "倚",
+    "pinyin": "yǐ",
+    "meaning": "to rely on, to depend on",
+    "gradeLevel": 7,
+    "orderInGrade": 131,
+    "exampleWords": [
+      {
+        "word": "倚重",
+        "wordTraditional": "倚重",
+        "pinyin": "yǐ zhòng",
+        "meaning": "to rely heavily upon",
+        "ttsText": "倚，倚重的倚"
+      }
+    ]
+  },
+  {
+    "simplified": "侮",
+    "traditional": "侮",
+    "pinyin": "wǔ",
+    "meaning": "insult, ridicule, disgrace",
+    "gradeLevel": 7,
+    "orderInGrade": 132,
+    "exampleWords": [
+      {
+        "word": "侮慢",
+        "wordTraditional": "侮慢",
+        "pinyin": "wǔ màn",
+        "meaning": "to humiliate; to bully",
+        "ttsText": "侮，侮慢的侮"
+      }
+    ]
+  },
+  {
+    "simplified": "藩",
+    "traditional": "藩",
+    "pinyin": "fān",
+    "meaning": "boundary, fence, outlying border",
+    "gradeLevel": 7,
+    "orderInGrade": 133,
+    "exampleWords": [
+      {
+        "word": "藩国",
+        "wordTraditional": "藩國",
+        "pinyin": "fān guó",
+        "meaning": "feudatory; vassal state",
+        "ttsText": "藩，藩国的藩"
+      }
+    ]
+  },
+  {
+    "simplified": "拂",
+    "traditional": "拂",
+    "pinyin": "fú",
+    "meaning": "to shake off, to brush away; dust",
+    "gradeLevel": 7,
+    "orderInGrade": 134,
+    "exampleWords": [
+      {
+        "word": "拂动",
+        "wordTraditional": "拂動",
+        "pinyin": "fú dòng",
+        "meaning": "(of a breeze) to make (hair, leaves, clothing etc) sway gently",
+        "ttsText": "拂，拂动的拂"
+      }
+    ]
+  },
+  {
+    "simplified": "鹤",
+    "traditional": "鶴",
+    "pinyin": "hè",
+    "meaning": "crane; Grus species (various)",
+    "gradeLevel": 7,
+    "orderInGrade": 135,
+    "exampleWords": [
+      {
+        "word": "白鹤",
+        "wordTraditional": "白鶴",
+        "pinyin": "bái hè",
+        "meaning": "(bird species of China) Siberian crane (Leucogeranus leucogeranus)",
+        "ttsText": "鹤，白鹤的鹤"
+      }
+    ]
+  },
+  {
+    "simplified": "蚀",
+    "traditional": "蝕",
+    "pinyin": "shí",
+    "meaning": "to nibble at, to erode; an eclipse",
+    "gradeLevel": 7,
+    "orderInGrade": 136,
+    "exampleWords": [
+      {
+        "word": "全蚀",
+        "wordTraditional": "全蝕",
+        "pinyin": "quán shí",
+        "meaning": "total eclipse",
+        "ttsText": "蚀，全蚀的蚀"
+      }
+    ]
+  },
+  {
+    "simplified": "芙",
+    "traditional": "芙",
+    "pinyin": "fú",
+    "meaning": "lotus; hibiscus",
+    "gradeLevel": 7,
+    "orderInGrade": 137,
+    "exampleWords": [
+      {
+        "word": "伊芙",
+        "wordTraditional": "伊芙",
+        "pinyin": "Yī fú",
+        "meaning": "Eve (name)",
+        "ttsText": "芙，伊芙的芙"
+      }
+    ]
+  },
+  {
+    "simplified": "垃",
+    "traditional": "垃",
+    "pinyin": "lā",
+    "meaning": "garbage, refuse, trash, waste",
+    "gradeLevel": 7,
+    "orderInGrade": 138,
+    "exampleWords": [
+      {
+        "word": "垃圾",
+        "wordTraditional": "垃圾",
+        "pinyin": "lā jī",
+        "meaning": "trash",
+        "ttsText": "垃，垃圾的垃"
+      }
+    ]
+  },
+  {
+    "simplified": "烤",
+    "traditional": "烤",
+    "pinyin": "kǎo",
+    "meaning": "to bake, to cook, to roast, to toast",
+    "gradeLevel": 7,
+    "orderInGrade": 139,
+    "exampleWords": [
+      {
+        "word": "现烤",
+        "wordTraditional": "現烤",
+        "pinyin": "xiàn kǎo",
+        "meaning": "freshly baked; freshly roasted",
+        "ttsText": "烤，现烤的烤"
+      }
+    ]
+  },
+  {
+    "simplified": "晒",
+    "traditional": "晒",
+    "pinyin": "shài",
+    "meaning": "to dry in the sun; to expose to the sun",
+    "gradeLevel": 7,
+    "orderInGrade": 140,
+    "exampleWords": [
+      {
+        "word": "晒干",
+        "wordTraditional": "曬乾",
+        "pinyin": "shài gān",
+        "meaning": "to dry in the sun",
+        "ttsText": "晒，晒干的晒"
+      }
+    ]
+  },
+  {
+    "simplified": "霜",
+    "traditional": "霜",
+    "pinyin": "shuāng",
+    "meaning": "frost; frozen, crystallized, candied",
+    "gradeLevel": 7,
+    "orderInGrade": 141,
+    "exampleWords": [
+      {
+        "word": "霜天",
+        "wordTraditional": "霜天",
+        "pinyin": "shuāng tiān",
+        "meaning": "freezing weather; frosty sky",
+        "ttsText": "霜，霜天的霜"
+      }
+    ]
+  },
+  {
+    "simplified": "剿",
+    "traditional": "剿",
+    "pinyin": "jiǎo",
+    "meaning": "to annihilate, to destroy, to exterminate",
+    "gradeLevel": 7,
+    "orderInGrade": 142,
+    "exampleWords": [
+      {
+        "word": "剿说",
+        "wordTraditional": "剿說",
+        "pinyin": "chāo shuō",
+        "meaning": "to plagiarize",
+        "ttsText": "剿，剿说的剿"
+      }
+    ]
+  },
+  {
+    "simplified": "圾",
+    "traditional": "圾",
+    "pinyin": "jī",
+    "meaning": "garbage, rubbish; shaking; danger",
+    "gradeLevel": 7,
+    "orderInGrade": 143,
+    "exampleWords": [
+      {
+        "word": "拉圾",
+        "wordTraditional": "拉圾",
+        "pinyin": "lā jī",
+        "meaning": "erroneous variant of 垃圾[la1 ji1]",
+        "ttsText": "圾，拉圾的圾"
+      }
+    ]
+  },
+  {
+    "simplified": "绸",
+    "traditional": "綢",
+    "pinyin": "chóu",
+    "meaning": "silk cloth, satin damask",
+    "gradeLevel": 7,
+    "orderInGrade": 144,
+    "exampleWords": [
+      {
+        "word": "绸子",
+        "wordTraditional": "綢子",
+        "pinyin": "chóu zi",
+        "meaning": "silk fabric; silk",
+        "ttsText": "绸，绸子的绸"
+      }
+    ]
+  },
+  {
+    "simplified": "屿",
+    "traditional": "嶼",
+    "pinyin": "yǔ",
+    "meaning": "island",
+    "gradeLevel": 7,
+    "orderInGrade": 145,
+    "exampleWords": [
+      {
+        "word": "西屿",
+        "wordTraditional": "西嶼",
+        "pinyin": "Xī yǔ",
+        "meaning": "Xiyu or Hsiyu township in Penghu county 澎湖縣|澎湖县[Peng2 hu2 xian4] (Pescadores Islands), Taiwan",
+        "ttsText": "屿，西屿的屿"
+      }
+    ]
+  },
+  {
+    "simplified": "氢",
+    "traditional": "氫",
+    "pinyin": "qīng",
+    "meaning": "ammonia",
+    "gradeLevel": 7,
+    "orderInGrade": 146,
+    "exampleWords": [
+      {
+        "word": "氢化",
+        "wordTraditional": "氫化",
+        "pinyin": "qīng huà",
+        "meaning": "hydrogenation",
+        "ttsText": "氢，氢化的氢"
+      }
+    ]
+  },
+  {
+    "simplified": "驼",
+    "traditional": "駝",
+    "pinyin": "tuó",
+    "meaning": "camel; humpback; to carry on one's back",
+    "gradeLevel": 7,
+    "orderInGrade": 147,
+    "exampleWords": [
+      {
+        "word": "驼子",
+        "wordTraditional": "駝子",
+        "pinyin": "tuó zi",
+        "meaning": "hunchback",
+        "ttsText": "驼，驼子的驼"
+      }
+    ]
+  },
+  {
+    "simplified": "妆",
+    "traditional": "妝",
+    "pinyin": "zhuāng",
+    "meaning": "adornment, make-up; to dress up, to use make-up",
+    "gradeLevel": 7,
+    "orderInGrade": 148,
+    "exampleWords": [
+      {
+        "word": "妆点",
+        "wordTraditional": "妝點",
+        "pinyin": "zhuāng diǎn",
+        "meaning": "to decorate",
+        "ttsText": "妆，妆点的妆"
+      }
+    ]
+  },
+  {
+    "simplified": "捆",
+    "traditional": "捆",
+    "pinyin": "kǔn",
+    "meaning": "to bind, to tie, to truss up; a bundle",
+    "gradeLevel": 7,
+    "orderInGrade": 149,
+    "exampleWords": [
+      {
+        "word": "捆扎",
+        "wordTraditional": "捆紮",
+        "pinyin": "kǔn zā",
+        "meaning": "to bundle up with rope (e.g. firewood)",
+        "ttsText": "捆，捆扎的捆"
+      }
+    ]
+  },
+  {
+    "simplified": "铅",
+    "traditional": "鈆",
+    "pinyin": "qiān",
+    "meaning": "lead",
+    "gradeLevel": 7,
+    "orderInGrade": 150,
+    "exampleWords": [
+      {
+        "word": "铅条",
+        "wordTraditional": "鉛條",
+        "pinyin": "qiān tiáo",
+        "meaning": "strip of lead",
+        "ttsText": "铅，铅条的铅"
+      }
+    ]
+  },
+  {
+    "simplified": "逛",
+    "traditional": "逛",
+    "pinyin": "guàng",
+    "meaning": "to ramble, to stroll, to wander",
+    "gradeLevel": 7,
+    "orderInGrade": 151,
+    "exampleWords": [
+      {
+        "word": "游逛",
+        "wordTraditional": "遊逛",
+        "pinyin": "yóu guàng",
+        "meaning": "to go sightseeing",
+        "ttsText": "逛，游逛的逛"
+      }
+    ]
+  },
+  {
+    "simplified": "淑",
+    "traditional": "淑",
+    "pinyin": "shū",
+    "meaning": "good, pure, virtuous; charming",
+    "gradeLevel": 7,
+    "orderInGrade": 152,
+    "exampleWords": [
+      {
+        "word": "淑世",
+        "wordTraditional": "淑世",
+        "pinyin": "shū shì",
+        "meaning": "to make the world a better place",
+        "ttsText": "淑，淑世的淑"
+      }
+    ]
+  },
+  {
+    "simplified": "榴",
+    "traditional": "榴",
+    "pinyin": "liú",
+    "meaning": "pomegranate",
+    "gradeLevel": 7,
+    "orderInGrade": 153,
+    "exampleWords": [
+      {
+        "word": "海榴",
+        "wordTraditional": "海榴",
+        "pinyin": "hǎi liú",
+        "meaning": "pomegranate",
+        "ttsText": "榴，海榴的榴"
+      }
+    ]
+  },
+  {
+    "simplified": "丙",
+    "traditional": "丙",
+    "pinyin": "bǐng",
+    "meaning": "third; 3rd heavenly stem",
+    "gradeLevel": 7,
+    "orderInGrade": 154,
+    "exampleWords": [
+      {
+        "word": "丙子",
+        "wordTraditional": "丙子",
+        "pinyin": "bǐng zǐ",
+        "meaning": "thirteenth year C1 of the 60 year cycle, e.g. 1996 or 2056",
+        "ttsText": "丙，丙子的丙"
+      }
+    ]
+  },
+  {
+    "simplified": "痒",
+    "traditional": "痒",
+    "pinyin": "yǎng",
+    "meaning": "to itch; to tickle",
+    "gradeLevel": 7,
+    "orderInGrade": 155,
+    "exampleWords": [
+      {
+        "word": "发痒",
+        "wordTraditional": "發癢",
+        "pinyin": "fā yǎng",
+        "meaning": "to tickle; to itch",
+        "ttsText": "痒，发痒的痒"
+      }
+    ]
+  },
+  {
+    "simplified": "钞",
+    "traditional": "鈔",
+    "pinyin": "chāo",
+    "meaning": "bank note, paper money; to counterfeit",
+    "gradeLevel": 7,
+    "orderInGrade": 156,
+    "exampleWords": [
+      {
+        "word": "美钞",
+        "wordTraditional": "美鈔",
+        "pinyin": "Měi chāo",
+        "meaning": "US dollar bill; greenback",
+        "ttsText": "钞，美钞的钞"
+      }
+    ]
+  },
+  {
+    "simplified": "蹄",
+    "traditional": "蹄",
+    "pinyin": "tí",
+    "meaning": "hoof; pig's trotter",
+    "gradeLevel": 7,
+    "orderInGrade": 157,
+    "exampleWords": [
+      {
+        "word": "马蹄",
+        "wordTraditional": "馬蹄",
+        "pinyin": "mǎ tí",
+        "meaning": "horse's hoof",
+        "ttsText": "蹄，马蹄的蹄"
+      }
+    ]
+  },
+  {
+    "simplified": "躬",
+    "traditional": "躬",
+    "pinyin": "gōng",
+    "meaning": "to bow; personally, in person; oneself",
+    "gradeLevel": 7,
+    "orderInGrade": 158,
+    "exampleWords": [
+      {
+        "word": "躬行",
+        "wordTraditional": "躬行",
+        "pinyin": "gōng xíng",
+        "meaning": "to personally undertake or manage",
+        "ttsText": "躬，躬行的躬"
+      }
+    ]
+  },
+  {
+    "simplified": "昼",
+    "traditional": "晝",
+    "pinyin": "zhòu",
+    "meaning": "daytime, daylight",
+    "gradeLevel": 7,
+    "orderInGrade": 159,
+    "exampleWords": [
+      {
+        "word": "白昼",
+        "wordTraditional": "白晝",
+        "pinyin": "bái zhòu",
+        "meaning": "daytime",
+        "ttsText": "昼，白昼的昼"
+      }
+    ]
+  },
+  {
+    "simplified": "藻",
+    "traditional": "藻",
+    "pinyin": "zǎo",
+    "meaning": "splendid, magnificent; algae",
+    "gradeLevel": 7,
+    "orderInGrade": 160,
+    "exampleWords": [
+      {
+        "word": "海藻",
+        "wordTraditional": "海藻",
+        "pinyin": "hǎi zǎo",
+        "meaning": "seaweed; marine alga; kelp",
+        "ttsText": "藻，海藻的藻"
+      }
+    ]
+  },
+  {
+    "simplified": "蛛",
+    "traditional": "蛛",
+    "pinyin": "zhū",
+    "meaning": "spider",
+    "gradeLevel": 7,
+    "orderInGrade": 161,
+    "exampleWords": [
+      {
+        "word": "蛛网",
+        "wordTraditional": "蛛網",
+        "pinyin": "zhū wǎng",
+        "meaning": "spider web; cobweb",
+        "ttsText": "蛛，蛛网的蛛"
+      }
+    ]
+  },
+  {
+    "simplified": "褐",
+    "traditional": "褐",
+    "pinyin": "hè",
+    "meaning": "coarse wool; dull, brown",
+    "gradeLevel": 7,
+    "orderInGrade": 162,
+    "exampleWords": [
+      {
+        "word": "褐色",
+        "wordTraditional": "褐色",
+        "pinyin": "hè sè",
+        "meaning": "brown",
+        "ttsText": "褐，褐色的褐"
+      }
+    ]
+  },
+  {
+    "simplified": "颊",
+    "traditional": "頰",
+    "pinyin": "jiá",
+    "meaning": "cheeks, jaw",
+    "gradeLevel": 7,
+    "orderInGrade": 163,
+    "exampleWords": [
+      {
+        "word": "面颊",
+        "wordTraditional": "面頰",
+        "pinyin": "miàn jiá",
+        "meaning": "cheek",
+        "ttsText": "颊，面颊的颊"
+      }
+    ]
+  },
+  {
+    "simplified": "奠",
+    "traditional": "奠",
+    "pinyin": "diàn",
+    "meaning": "to found, to settle; to pay respects; a libation for the dead",
+    "gradeLevel": 7,
+    "orderInGrade": 164,
+    "exampleWords": [
+      {
+        "word": "奠都",
+        "wordTraditional": "奠都",
+        "pinyin": "diàn dū",
+        "meaning": "to determine the position of the capital; to found a capital",
+        "ttsText": "奠，奠都的奠"
+      }
+    ]
+  },
+  {
+    "simplified": "募",
+    "traditional": "募",
+    "pinyin": "mù",
+    "meaning": "to levy, to raise; to recruit; to summon",
+    "gradeLevel": 7,
+    "orderInGrade": 165,
+    "exampleWords": [
+      {
+        "word": "公募",
+        "wordTraditional": "公募",
+        "pinyin": "gōng mù",
+        "meaning": "public placement (investing)",
+        "ttsText": "募，公募的募"
+      }
+    ]
+  },
+  {
+    "simplified": "耽",
+    "traditional": "耽",
+    "pinyin": "dān",
+    "meaning": "to indulge; to delay",
+    "gradeLevel": 7,
+    "orderInGrade": 166,
+    "exampleWords": [
+      {
+        "word": "耽误",
+        "wordTraditional": "耽誤",
+        "pinyin": "dān wu",
+        "meaning": "to delay; to hold up; to waste time; to interfere with",
+        "ttsText": "耽，耽误的耽"
+      }
+    ]
+  },
+  {
+    "simplified": "蹈",
+    "traditional": "蹈",
+    "pinyin": "dǎo",
+    "meaning": "to dance, to stamp the feet",
+    "gradeLevel": 7,
+    "orderInGrade": 167,
+    "exampleWords": [
+      {
+        "word": "重蹈",
+        "wordTraditional": "重蹈",
+        "pinyin": "chóng dǎo",
+        "meaning": "(fig.) to follow (a path that has proved ill-advised)",
+        "ttsText": "蹈，重蹈的蹈"
+      }
+    ]
+  },
+  {
+    "simplified": "陋",
+    "traditional": "陋",
+    "pinyin": "lòu",
+    "meaning": "coarse, crude; narrow; ugly",
+    "gradeLevel": 7,
+    "orderInGrade": 168,
+    "exampleWords": [
+      {
+        "word": "陋规",
+        "wordTraditional": "陋規",
+        "pinyin": "lòu guī",
+        "meaning": "objectionable practices",
+        "ttsText": "陋，陋规的陋"
+      }
+    ]
+  },
+  {
+    "simplified": "侣",
+    "traditional": "侶",
+    "pinyin": "lǚ",
+    "meaning": "companion; associate with",
+    "gradeLevel": 7,
+    "orderInGrade": 169,
+    "exampleWords": [
+      {
+        "word": "情侣",
+        "wordTraditional": "情侶",
+        "pinyin": "qíng lǔ:",
+        "meaning": "sweethearts; lovers",
+        "ttsText": "侣，情侣的侣"
+      }
+    ]
+  },
+  {
+    "simplified": "魅",
+    "traditional": "魅",
+    "pinyin": "mèi",
+    "meaning": "magic, enchantment, charm; a forest demon",
+    "gradeLevel": 7,
+    "orderInGrade": 170,
+    "exampleWords": [
+      {
+        "word": "魅力",
+        "wordTraditional": "魅力",
+        "pinyin": "mèi lì",
+        "meaning": "charm; fascination; glamor; charisma",
+        "ttsText": "魅，魅力的魅"
+      }
+    ]
+  },
+  {
+    "simplified": "岚",
+    "traditional": "嵐",
+    "pinyin": "lán",
+    "meaning": "mountain mist, mountain haze",
+    "gradeLevel": 7,
+    "orderInGrade": 171,
+    "exampleWords": [
+      {
+        "word": "岚山",
+        "wordTraditional": "嵐山",
+        "pinyin": "Lán shān",
+        "meaning": "Lanshan district of Rizhao city 日照市[Ri4 zhao4 shi4], Shandong",
+        "ttsText": "岚，岚山的岚"
+      }
+    ]
+  },
+  {
+    "simplified": "侄",
+    "traditional": "侄",
+    "pinyin": "zhí",
+    "meaning": "nephew",
+    "gradeLevel": 7,
+    "orderInGrade": 172,
+    "exampleWords": [
+      {
+        "word": "侄子",
+        "wordTraditional": "姪子",
+        "pinyin": "zhí zi",
+        "meaning": "brother's son; nephew",
+        "ttsText": "侄，侄子的侄"
+      }
+    ]
+  },
+  {
+    "simplified": "虐",
+    "traditional": "虐",
+    "pinyin": "nüè",
+    "meaning": "cruel, harsh, oppressive",
+    "gradeLevel": 7,
+    "orderInGrade": 173,
+    "exampleWords": [
+      {
+        "word": "虐心",
+        "wordTraditional": "虐心",
+        "pinyin": "nu:è xīn",
+        "meaning": "heartbreaking; tear-jerking",
+        "ttsText": "虐，虐心的虐"
+      }
+    ]
+  },
+  {
+    "simplified": "堕",
+    "traditional": "墮",
+    "pinyin": "duò",
+    "meaning": "to drop, to fall, to sink; degenerate",
+    "gradeLevel": 7,
+    "orderInGrade": 174,
+    "exampleWords": [
+      {
+        "word": "堕落",
+        "wordTraditional": "墮落",
+        "pinyin": "duò luò",
+        "meaning": "to degrade",
+        "ttsText": "堕，堕落的堕"
+      }
+    ]
+  },
+  {
+    "simplified": "陛",
+    "traditional": "陛",
+    "pinyin": "bì",
+    "meaning": "throne; steps leading to the throne",
+    "gradeLevel": 7,
+    "orderInGrade": 175,
+    "exampleWords": [
+      {
+        "word": "陛下",
+        "wordTraditional": "陛下",
+        "pinyin": "bì xià",
+        "meaning": "Your Majesty; His or Her Majesty",
+        "ttsText": "陛，陛下的陛"
+      }
+    ]
+  },
+  {
+    "simplified": "莹",
+    "traditional": "瑩",
+    "pinyin": "yíng",
+    "meaning": "bright, lustrous, sparkling like a gem",
+    "gradeLevel": 7,
+    "orderInGrade": 176,
+    "exampleWords": [
+      {
+        "word": "清莹",
+        "wordTraditional": "清瑩",
+        "pinyin": "qīng yíng",
+        "meaning": "limpid; glistening",
+        "ttsText": "莹，清莹的莹"
+      }
+    ]
+  },
+  {
+    "simplified": "荫",
+    "traditional": "廕",
+    "pinyin": "yīn",
+    "meaning": "shade, shelter; to protect",
+    "gradeLevel": 7,
+    "orderInGrade": 177,
+    "exampleWords": [
+      {
+        "word": "树荫",
+        "wordTraditional": "樹蔭",
+        "pinyin": "shù yīn",
+        "meaning": "shade of a tree; Taiwan pr. [shu4yin4]",
+        "ttsText": "荫，树荫的荫"
+      }
+    ]
+  },
+  {
+    "simplified": "狡",
+    "traditional": "狡",
+    "pinyin": "jiǎo",
+    "meaning": "cunning, deceitful, treacherous",
+    "gradeLevel": 7,
+    "orderInGrade": 178,
+    "exampleWords": [
+      {
+        "word": "狡赖",
+        "wordTraditional": "狡賴",
+        "pinyin": "jiǎo lài",
+        "meaning": "to deny (through sophism)",
+        "ttsText": "狡，狡赖的狡"
+      }
+    ]
+  },
+  {
+    "simplified": "阀",
+    "traditional": "閥",
+    "pinyin": "fá",
+    "meaning": "clique, valve; a powerful and influential group",
+    "gradeLevel": 7,
+    "orderInGrade": 179,
+    "exampleWords": [
+      {
+        "word": "军阀",
+        "wordTraditional": "軍閥",
+        "pinyin": "jūn fá",
+        "meaning": "military clique; junta; warlord",
+        "ttsText": "阀，军阀的阀"
+      }
+    ]
+  },
+  {
+    "simplified": "绞",
+    "traditional": "絞",
+    "pinyin": "jiǎo",
+    "meaning": "intertwined; to twist, to wring; to hang a criminal",
+    "gradeLevel": 7,
+    "orderInGrade": 180,
+    "exampleWords": [
+      {
+        "word": "绞死",
+        "wordTraditional": "絞死",
+        "pinyin": "jiǎo sǐ",
+        "meaning": "to hang (i.e. execute by hanging); to strangle",
+        "ttsText": "绞，绞死的绞"
+      }
+    ]
+  },
+  {
+    "simplified": "膏",
+    "traditional": "膏",
+    "pinyin": "gāo",
+    "meaning": "grease, fat; ointment, paste",
+    "gradeLevel": 7,
+    "orderInGrade": 181,
+    "exampleWords": [
+      {
+        "word": "膏方",
+        "wordTraditional": "膏方",
+        "pinyin": "gāo fāng",
+        "meaning": "medicinal concoction in paste form (TCM)",
+        "ttsText": "膏，膏方的膏"
+      }
+    ]
+  },
+  {
+    "simplified": "垮",
+    "traditional": "垮",
+    "pinyin": "kuǎ",
+    "meaning": "to be defeated, to collapse, to fail",
+    "gradeLevel": 7,
+    "orderInGrade": 182,
+    "exampleWords": [
+      {
+        "word": "打垮",
+        "wordTraditional": "打垮",
+        "pinyin": "dǎ kuǎ",
+        "meaning": "to defeat; to strike down; to destroy",
+        "ttsText": "垮，打垮的垮"
+      }
+    ]
+  },
+  {
+    "simplified": "缅",
+    "traditional": "緬",
+    "pinyin": "miǎn",
+    "meaning": "distant, remote; to think of",
+    "gradeLevel": 7,
+    "orderInGrade": 183,
+    "exampleWords": [
+      {
+        "word": "缅因",
+        "wordTraditional": "緬因",
+        "pinyin": "Miǎn yīn",
+        "meaning": "Maine, US state",
+        "ttsText": "缅，缅因的缅"
+      }
+    ]
+  },
+  {
+    "simplified": "喇",
+    "traditional": "喇",
+    "pinyin": "lǎ",
+    "meaning": "horn, bugle; llama; final particle",
+    "gradeLevel": 7,
+    "orderInGrade": 184,
+    "exampleWords": [
+      {
+        "word": "喇合",
+        "wordTraditional": "喇合",
+        "pinyin": "Lǎ hé",
+        "meaning": "(Protestantism) Rahab, mother of Boaz",
+        "ttsText": "喇，喇合的喇"
+      }
+    ]
+  },
+  {
+    "simplified": "绒",
+    "traditional": "絨",
+    "pinyin": "róng",
+    "meaning": "cotton, silk, velvet, wool",
+    "gradeLevel": 7,
+    "orderInGrade": 185,
+    "exampleWords": [
+      {
+        "word": "立绒",
+        "wordTraditional": "立絨",
+        "pinyin": "lì róng",
+        "meaning": "velvet",
+        "ttsText": "绒，立绒的绒"
+      }
+    ]
+  },
+  {
+    "simplified": "搅",
+    "traditional": "攪",
+    "pinyin": "jiǎo",
+    "meaning": "to annoy, to disturb, to stir up",
+    "gradeLevel": 7,
+    "orderInGrade": 186,
+    "exampleWords": [
+      {
+        "word": "搅动",
+        "wordTraditional": "攪動",
+        "pinyin": "jiǎo dòng",
+        "meaning": "to mix; to stir",
+        "ttsText": "搅，搅动的搅"
+      }
+    ]
+  },
+  {
+    "simplified": "凳",
+    "traditional": "凳",
+    "pinyin": "dèng",
+    "meaning": "bench; stool",
+    "gradeLevel": 7,
+    "orderInGrade": 187,
+    "exampleWords": [
+      {
+        "word": "凳子",
+        "wordTraditional": "凳子",
+        "pinyin": "dèng zi",
+        "meaning": "stool; small seat",
+        "ttsText": "凳，凳子的凳"
+      }
+    ]
+  },
+  {
+    "simplified": "梭",
+    "traditional": "梭",
+    "pinyin": "suō",
+    "meaning": "a weaver's shuttle; to go back and forth",
+    "gradeLevel": 7,
+    "orderInGrade": 188,
+    "exampleWords": [
+      {
+        "word": "梭子",
+        "wordTraditional": "梭子",
+        "pinyin": "suō zi",
+        "meaning": "(textiles) shuttle",
+        "ttsText": "梭，梭子的梭"
+      }
+    ]
+  },
+  {
+    "simplified": "丫",
+    "traditional": "丫",
+    "pinyin": "yā",
+    "meaning": "forked; bifurcation",
+    "gradeLevel": 7,
+    "orderInGrade": 189,
+    "exampleWords": [
+      {
+        "word": "丫子",
+        "wordTraditional": "丫子",
+        "pinyin": "yā zi",
+        "meaning": "see 腳丫子|脚丫子[jiao3 ya1 zi5]",
+        "ttsText": "丫，丫子的丫"
+      }
+    ]
+  },
+  {
+    "simplified": "姬",
+    "traditional": "姬",
+    "pinyin": "jī",
+    "meaning": "beauty; imperial concubine",
+    "gradeLevel": 7,
+    "orderInGrade": 190,
+    "exampleWords": [
+      {
+        "word": "歌姬",
+        "wordTraditional": "歌姬",
+        "pinyin": "gē jī",
+        "meaning": "female singer",
+        "ttsText": "姬，歌姬的姬"
+      }
+    ]
+  },
+  {
+    "simplified": "诏",
+    "traditional": "詔",
+    "pinyin": "zhào",
+    "meaning": "to proclaim, to decree; imperial decree",
+    "gradeLevel": 7,
+    "orderInGrade": 191,
+    "exampleWords": [
+      {
+        "word": "下诏",
+        "wordTraditional": "下詔",
+        "pinyin": "xià zhào",
+        "meaning": "to hand down an imperial edict",
+        "ttsText": "诏，下诏的诏"
+      }
+    ]
+  },
+  {
+    "simplified": "钮",
+    "traditional": "鈕",
+    "pinyin": "niǔ",
+    "meaning": "button, knob; surname",
+    "gradeLevel": 7,
+    "orderInGrade": 192,
+    "exampleWords": [
+      {
+        "word": "电钮",
+        "wordTraditional": "電鈕",
+        "pinyin": "diàn niǔ",
+        "meaning": "push button (electric switch)",
+        "ttsText": "钮，电钮的钮"
+      }
+    ]
+  },
+  {
+    "simplified": "棺",
+    "traditional": "棺",
+    "pinyin": "guān",
+    "meaning": "coffin",
+    "gradeLevel": 7,
+    "orderInGrade": 193,
+    "exampleWords": [
+      {
+        "word": "石棺",
+        "wordTraditional": "石棺",
+        "pinyin": "shí guān",
+        "meaning": "sarcophagus",
+        "ttsText": "棺，石棺的棺"
+      }
+    ]
+  },
+  {
+    "simplified": "耿",
+    "traditional": "耿",
+    "pinyin": "gěng",
+    "meaning": "bright, shining; brave, loyal",
+    "gradeLevel": 7,
+    "orderInGrade": 194,
+    "exampleWords": [
+      {
+        "word": "耿直",
+        "wordTraditional": "耿直",
+        "pinyin": "gěng zhí",
+        "meaning": "honest; frank; candid",
+        "ttsText": "耿，耿直的耿"
+      }
+    ]
+  },
+  {
+    "simplified": "缔",
+    "traditional": "締",
+    "pinyin": "dì",
+    "meaning": "to tie, to join; knot, connection",
+    "gradeLevel": 7,
+    "orderInGrade": 195,
+    "exampleWords": [
+      {
+        "word": "缔结",
+        "wordTraditional": "締結",
+        "pinyin": "dì jié",
+        "meaning": "to conclude (an agreement)",
+        "ttsText": "缔，缔结的缔"
+      }
+    ]
+  },
+  {
+    "simplified": "懈",
+    "traditional": "懈",
+    "pinyin": "xiè",
+    "meaning": "idle, relaxed; negligent, remiss",
+    "gradeLevel": 7,
+    "orderInGrade": 196,
+    "exampleWords": [
+      {
+        "word": "不懈",
+        "wordTraditional": "不懈",
+        "pinyin": "bù xiè",
+        "meaning": "untiring; unremitting; indefatigable",
+        "ttsText": "懈，不懈的懈"
+      }
+    ]
+  },
+  {
+    "simplified": "嫉",
+    "traditional": "嫉",
+    "pinyin": "jí",
+    "meaning": "jealous, envious",
+    "gradeLevel": 7,
+    "orderInGrade": 197,
+    "exampleWords": [
+      {
+        "word": "嫉恨",
+        "wordTraditional": "嫉恨",
+        "pinyin": "jí hèn",
+        "meaning": "to hate out of jealousy; to resent",
+        "ttsText": "嫉，嫉恨的嫉"
+      }
+    ]
+  },
+  {
+    "simplified": "灶",
+    "traditional": "灶",
+    "pinyin": "zào",
+    "meaning": "kitchen, oven, stove",
+    "gradeLevel": 7,
+    "orderInGrade": 198,
+    "exampleWords": [
+      {
+        "word": "中灶",
+        "wordTraditional": "中灶",
+        "pinyin": "zhōng zào",
+        "meaning": "mess hall for mid-level cadres; cf. 大灶[da4 zao4]",
+        "ttsText": "灶，中灶的灶"
+      }
+    ]
+  },
+  {
+    "simplified": "匀",
+    "traditional": "勻",
+    "pinyin": "yún",
+    "meaning": "equal; even, uniform",
+    "gradeLevel": 7,
+    "orderInGrade": 199,
+    "exampleWords": [
+      {
+        "word": "匀实",
+        "wordTraditional": "勻實",
+        "pinyin": "yún shi",
+        "meaning": "even; uniform",
+        "ttsText": "匀，匀实的匀"
+      }
+    ]
+  },
+  {
+    "simplified": "嗣",
+    "traditional": "嗣",
+    "pinyin": "sì",
+    "meaning": "to connect; to inherit; descendants, heirs",
+    "gradeLevel": 7,
+    "orderInGrade": 200,
+    "exampleWords": [
+      {
+        "word": "嗣国",
+        "wordTraditional": "嗣國",
+        "pinyin": "sì guó",
+        "meaning": "to accede to a throne",
+        "ttsText": "嗣，嗣国的嗣"
+      }
+    ]
+  },
+  {
+    "simplified": "鸽",
+    "traditional": "鴿",
+    "pinyin": "gē",
+    "meaning": "pigeon, dove; Columba species (various)",
+    "gradeLevel": 7,
+    "orderInGrade": 201,
+    "exampleWords": [
+      {
+        "word": "鸽子",
+        "wordTraditional": "鴿子",
+        "pinyin": "gē zi",
+        "meaning": "pigeon; dove; various birds of the family Columbidae",
+        "ttsText": "鸽，鸽子的鸽"
+      }
+    ]
+  },
+  {
+    "simplified": "澡",
+    "traditional": "澡",
+    "pinyin": "zǎo",
+    "meaning": "to wash, to bathe",
+    "gradeLevel": 7,
+    "orderInGrade": 202,
+    "exampleWords": [
+      {
+        "word": "冲澡",
+        "wordTraditional": "沖澡",
+        "pinyin": "chōng zǎo",
+        "meaning": "to take a shower",
+        "ttsText": "澡，冲澡的澡"
+      }
+    ]
+  },
+  {
+    "simplified": "凿",
+    "traditional": "鑿",
+    "pinyin": "záo",
+    "meaning": "chisel; to bore, to pierce",
+    "gradeLevel": 7,
+    "orderInGrade": 203,
+    "exampleWords": [
+      {
+        "word": "凿子",
+        "wordTraditional": "鑿子",
+        "pinyin": "záo zi",
+        "meaning": "chisel",
+        "ttsText": "凿，凿子的凿"
+      }
+    ]
+  },
+  {
+    "simplified": "纬",
+    "traditional": "緯",
+    "pinyin": "wěi",
+    "meaning": "warp and woof; lines of latitude",
+    "gradeLevel": 7,
+    "orderInGrade": 204,
+    "exampleWords": [
+      {
+        "word": "经纬",
+        "wordTraditional": "經緯",
+        "pinyin": "jīng wěi",
+        "meaning": "warp and woof; longitude and latitude; main points",
+        "ttsText": "纬，经纬的纬"
+      }
+    ]
+  },
+  {
+    "simplified": "沸",
+    "traditional": "沸",
+    "pinyin": "fèi",
+    "meaning": "to boil, to bubble up, to gush",
+    "gradeLevel": 7,
+    "orderInGrade": 205,
+    "exampleWords": [
+      {
+        "word": "沸点",
+        "wordTraditional": "沸點",
+        "pinyin": "fèi diǎn",
+        "meaning": "boiling point",
+        "ttsText": "沸，沸点的沸"
+      }
+    ]
+  },
+  {
+    "simplified": "畴",
+    "traditional": "疇",
+    "pinyin": "chóu",
+    "meaning": "field, farmland; class, category",
+    "gradeLevel": 7,
+    "orderInGrade": 206,
+    "exampleWords": [
+      {
+        "word": "平畴",
+        "wordTraditional": "平疇",
+        "pinyin": "píng chóu",
+        "meaning": "level farmland; well-cultivated land",
+        "ttsText": "畴，平畴的畴"
+      }
+    ]
+  },
+  {
+    "simplified": "刃",
+    "traditional": "刃",
+    "pinyin": "rèn",
+    "meaning": "edged tool, cutlery, knife edge",
+    "gradeLevel": 7,
+    "orderInGrade": 207,
+    "exampleWords": [
+      {
+        "word": "开刃",
+        "wordTraditional": "開刃",
+        "pinyin": "kāi rèn",
+        "meaning": "to edge a knife, scissor, sword etc",
+        "ttsText": "刃，开刃的刃"
+      }
+    ]
+  },
+  {
+    "simplified": "遏",
+    "traditional": "遏",
+    "pinyin": "è",
+    "meaning": "to curb, to check, to stop, to suppress",
+    "gradeLevel": 7,
+    "orderInGrade": 208,
+    "exampleWords": [
+      {
+        "word": "遏制",
+        "wordTraditional": "遏制",
+        "pinyin": "è zhì",
+        "meaning": "to check",
+        "ttsText": "遏，遏制的遏"
+      }
+    ]
+  },
+  {
+    "simplified": "烁",
+    "traditional": "爍",
+    "pinyin": "shuò",
+    "meaning": "to sparkle, to shine, to glitter",
+    "gradeLevel": 7,
+    "orderInGrade": 209,
+    "exampleWords": [
+      {
+        "word": "闪烁",
+        "wordTraditional": "閃爍",
+        "pinyin": "shǎn shuò",
+        "meaning": "to glisten",
+        "ttsText": "烁，闪烁的烁"
+      }
+    ]
+  },
+  {
+    "simplified": "嗅",
+    "traditional": "嗅",
+    "pinyin": "xiù",
+    "meaning": "to sniff, to smell, to scent",
+    "gradeLevel": 7,
+    "orderInGrade": 210,
+    "exampleWords": [
+      {
+        "word": "嗅觉",
+        "wordTraditional": "嗅覺",
+        "pinyin": "xiù jué",
+        "meaning": "sense of smell",
+        "ttsText": "嗅，嗅觉的嗅"
+      }
+    ]
+  },
+  {
+    "simplified": "叭",
+    "traditional": "叭",
+    "pinyin": "bā",
+    "meaning": "trumpet",
+    "gradeLevel": 7,
+    "orderInGrade": 211,
+    "exampleWords": [
+      {
+        "word": "喇叭",
+        "wordTraditional": "喇叭",
+        "pinyin": "lǎ ba",
+        "meaning": "horn (automobile etc)",
+        "ttsText": "叭，喇叭的叭"
+      }
+    ]
+  },
+  {
+    "simplified": "熬",
+    "traditional": "熬",
+    "pinyin": "áo",
+    "meaning": "to boil, to simmer; to endure pain",
+    "gradeLevel": 7,
+    "orderInGrade": 212,
+    "exampleWords": [
+      {
+        "word": "难熬",
+        "wordTraditional": "難熬",
+        "pinyin": "nán áo",
+        "meaning": "(of pain or hardship) hard to bear",
+        "ttsText": "熬，难熬的熬"
+      }
+    ]
+  },
+  {
+    "simplified": "瞥",
+    "traditional": "瞥",
+    "pinyin": "piē",
+    "meaning": "to take a fleeting glance at",
+    "gradeLevel": 7,
+    "orderInGrade": 213,
+    "exampleWords": [
+      {
+        "word": "一瞥",
+        "wordTraditional": "一瞥",
+        "pinyin": "yī piē",
+        "meaning": "glance; glimpse",
+        "ttsText": "瞥，一瞥的瞥"
+      }
+    ]
+  },
+  {
+    "simplified": "骸",
+    "traditional": "骸",
+    "pinyin": "hái",
+    "meaning": "skeleton, body; leg bone",
+    "gradeLevel": 7,
+    "orderInGrade": 214,
+    "exampleWords": [
+      {
+        "word": "形骸",
+        "wordTraditional": "形骸",
+        "pinyin": "xíng hái",
+        "meaning": "the human body; skeleton",
+        "ttsText": "骸，形骸的骸"
+      }
+    ]
+  },
+  {
+    "simplified": "奢",
+    "traditional": "奢",
+    "pinyin": "shē",
+    "meaning": "exaggerated; extravagant, wasteful",
+    "gradeLevel": 7,
+    "orderInGrade": 215,
+    "exampleWords": [
+      {
+        "word": "奢求",
+        "wordTraditional": "奢求",
+        "pinyin": "shē qiú",
+        "meaning": "to make extravagant demands; an unreasonable request",
+        "ttsText": "奢，奢求的奢"
+      }
+    ]
+  },
+  {
+    "simplified": "拙",
+    "traditional": "拙",
+    "pinyin": "zhuō",
+    "meaning": "awkward, clumsy; dull, stupid",
+    "gradeLevel": 7,
+    "orderInGrade": 216,
+    "exampleWords": [
+      {
+        "word": "拙作",
+        "wordTraditional": "拙作",
+        "pinyin": "zhuō zuò",
+        "meaning": "my unworthy manuscript (humble expr.); my humble writing",
+        "ttsText": "拙，拙作的拙"
+      }
+    ]
+  },
+  {
+    "simplified": "栋",
+    "traditional": "棟",
+    "pinyin": "dòng",
+    "meaning": "ridge-beam; the main support of a house",
+    "gradeLevel": 7,
+    "orderInGrade": 217,
+    "exampleWords": [
+      {
+        "word": "独栋",
+        "wordTraditional": "獨棟",
+        "pinyin": "dú dòng",
+        "meaning": "(of a building) detached",
+        "ttsText": "栋，独栋的栋"
+      }
+    ]
+  },
+  {
+    "simplified": "毯",
+    "traditional": "毯",
+    "pinyin": "tǎn",
+    "meaning": "rug, carpet, blanket",
+    "gradeLevel": 7,
+    "orderInGrade": 218,
+    "exampleWords": [
+      {
+        "word": "毯子",
+        "wordTraditional": "毯子",
+        "pinyin": "tǎn zi",
+        "meaning": "blanket",
+        "ttsText": "毯，毯子的毯"
+      }
+    ]
+  },
+  {
+    "simplified": "桐",
+    "traditional": "桐",
+    "pinyin": "tóng",
+    "meaning": "Chinese wood-oil tree, Vernicia fordii",
+    "gradeLevel": 7,
+    "orderInGrade": 219,
+    "exampleWords": [
+      {
+        "word": "桐人",
+        "wordTraditional": "桐人",
+        "pinyin": "tóng rén",
+        "meaning": "puppet burial object",
+        "ttsText": "桐，桐人的桐"
+      }
+    ]
+  },
+  {
+    "simplified": "砂",
+    "traditional": "砂",
+    "pinyin": "shā",
+    "meaning": "sand, pebbles, gravel; gritty",
+    "gradeLevel": 7,
+    "orderInGrade": 220,
+    "exampleWords": [
+      {
+        "word": "砂子",
+        "wordTraditional": "砂子",
+        "pinyin": "shā zi",
+        "meaning": "sand",
+        "ttsText": "砂，砂子的砂"
+      }
+    ]
+  },
+  {
+    "simplified": "莽",
+    "traditional": "莽",
+    "pinyin": "mǎng",
+    "meaning": "thicket, underbrush; rude, impertinent",
+    "gradeLevel": 7,
+    "orderInGrade": 221,
+    "exampleWords": [
+      {
+        "word": "王莽",
+        "wordTraditional": "王莽",
+        "pinyin": "Wáng Mǎng",
+        "meaning": "Wang Mang (45 BC-23 AD), usurped power and reigned 9-23 between the former and later Han",
+        "ttsText": "莽，王莽的莽"
+      }
+    ]
+  },
+  {
+    "simplified": "泻",
+    "traditional": "瀉",
+    "pinyin": "xiè",
+    "meaning": "to leak; diarrhea",
+    "gradeLevel": 7,
+    "orderInGrade": 222,
+    "exampleWords": [
+      {
+        "word": "流泻",
+        "wordTraditional": "流瀉",
+        "pinyin": "liú xiè",
+        "meaning": "to flow; to flood",
+        "ttsText": "泻，流泻的泻"
+      }
+    ]
+  },
+  {
+    "simplified": "坪",
+    "traditional": "坪",
+    "pinyin": "píng",
+    "meaning": "plain; level ground",
+    "gradeLevel": 7,
+    "orderInGrade": 223,
+    "exampleWords": [
+      {
+        "word": "高坪",
+        "wordTraditional": "高坪",
+        "pinyin": "Gāo píng",
+        "meaning": "Gaoping district of Nanchong city 南充市[Nan2 chong1 shi4], Sichuan",
+        "ttsText": "坪，高坪的坪"
+      }
+    ]
+  },
+  {
+    "simplified": "梳",
+    "traditional": "梳",
+    "pinyin": "shū",
+    "meaning": "brush, comb",
+    "gradeLevel": 7,
+    "orderInGrade": 224,
+    "exampleWords": [
+      {
+        "word": "梳子",
+        "wordTraditional": "梳子",
+        "pinyin": "shū zi",
+        "meaning": "comb",
+        "ttsText": "梳，梳子的梳"
+      }
+    ]
+  },
+  {
+    "simplified": "杉",
+    "traditional": "杉",
+    "pinyin": "shān",
+    "meaning": "various species of pine and fir",
+    "gradeLevel": 7,
+    "orderInGrade": 225,
+    "exampleWords": [
+      {
+        "word": "水杉",
+        "wordTraditional": "水杉",
+        "pinyin": "shuǐ shān",
+        "meaning": "metasequoia",
+        "ttsText": "杉，水杉的杉"
+      }
+    ]
+  },
+  {
+    "simplified": "晤",
+    "traditional": "晤",
+    "pinyin": "wù",
+    "meaning": "to meet; to interview with",
+    "gradeLevel": 7,
+    "orderInGrade": 226,
+    "exampleWords": [
+      {
+        "word": "晤面",
+        "wordTraditional": "晤面",
+        "pinyin": "wù miàn",
+        "meaning": "to meet (in person); to meet with sb",
+        "ttsText": "晤，晤面的晤"
+      }
+    ]
+  },
+  {
+    "simplified": "稚",
+    "traditional": "稚",
+    "pinyin": "zhì",
+    "meaning": "young, immature; childhood",
+    "gradeLevel": 7,
+    "orderInGrade": 227,
+    "exampleWords": [
+      {
+        "word": "稚子",
+        "wordTraditional": "稚子",
+        "pinyin": "zhì zǐ",
+        "meaning": "young child",
+        "ttsText": "稚，稚子的稚"
+      }
+    ]
+  },
+  {
+    "simplified": "蔬",
+    "traditional": "蔬",
+    "pinyin": "shū",
+    "meaning": "vegetables, greens",
+    "gradeLevel": 7,
+    "orderInGrade": 228,
+    "exampleWords": [
+      {
+        "word": "时蔬",
+        "wordTraditional": "時蔬",
+        "pinyin": "shí shū",
+        "meaning": "seasonal vegetables",
+        "ttsText": "蔬，时蔬的蔬"
+      }
+    ]
+  },
+  {
+    "simplified": "蝇",
+    "traditional": "蠅",
+    "pinyin": "yíng",
+    "meaning": "fly, musca",
+    "gradeLevel": 7,
+    "orderInGrade": 229,
+    "exampleWords": [
+      {
+        "word": "蝇子",
+        "wordTraditional": "蠅子",
+        "pinyin": "yíng zi",
+        "meaning": "housefly",
+        "ttsText": "蝇，蝇子的蝇"
+      }
+    ]
+  },
+  {
+    "simplified": "捣",
+    "traditional": "搗",
+    "pinyin": "dǎo",
+    "meaning": "to thresh, to pound; to stir, to disturb; to attack",
+    "gradeLevel": 7,
+    "orderInGrade": 230,
+    "exampleWords": [
+      {
+        "word": "捣实",
+        "wordTraditional": "搗實",
+        "pinyin": "dǎo shí",
+        "meaning": "to ram (earth); to compact earth by ramming",
+        "ttsText": "捣，捣实的捣"
+      }
+    ]
+  },
+  {
+    "simplified": "顷",
+    "traditional": "頃",
+    "pinyin": "qǐng",
+    "meaning": "a moment; a unit of area equal to 100 mu",
+    "gradeLevel": 7,
+    "orderInGrade": 231,
+    "exampleWords": [
+      {
+        "word": "顷之",
+        "wordTraditional": "頃之",
+        "pinyin": "qǐng zhī",
+        "meaning": "in a moment; shortly after",
+        "ttsText": "顷，顷之的顷"
+      }
+    ]
+  },
+  {
+    "simplified": "麽",
+    "traditional": "麼",
+    "pinyin": "me",
+    "meaning": "interrogative particle",
+    "gradeLevel": 7,
+    "orderInGrade": 232,
+    "exampleWords": [
+      {
+        "word": "麽",
+        "wordTraditional": "麼",
+        "pinyin": "me",
+        "meaning": "interrogative particle",
+        "ttsText": "麽"
+      }
+    ]
+  },
+  {
+    "simplified": "尴",
+    "traditional": "尷",
+    "pinyin": "gān",
+    "meaning": "embarrassed; ill-at-ease",
+    "gradeLevel": 7,
+    "orderInGrade": 233,
+    "exampleWords": [
+      {
+        "word": "尴尬",
+        "wordTraditional": "尷尬",
+        "pinyin": "gān gà",
+        "meaning": "awkward; embarrassed",
+        "ttsText": "尴，尴尬的尴"
+      }
+    ]
+  },
+  {
+    "simplified": "镖",
+    "traditional": "鏢",
+    "pinyin": "biāo",
+    "meaning": "spear, harpoon, dart; to escort",
+    "gradeLevel": 7,
+    "orderInGrade": 234,
+    "exampleWords": [
+      {
+        "word": "保镖",
+        "wordTraditional": "保鏢",
+        "pinyin": "bǎo biāo",
+        "meaning": "bodyguard",
+        "ttsText": "镖，保镖的镖"
+      }
+    ]
+  },
+  {
+    "simplified": "诧",
+    "traditional": "詫",
+    "pinyin": "chà",
+    "meaning": "surprised, shocked",
+    "gradeLevel": 7,
+    "orderInGrade": 235,
+    "exampleWords": [
+      {
+        "word": "诧异",
+        "wordTraditional": "詫異",
+        "pinyin": "chà yì",
+        "meaning": "flabbergasted; astonished",
+        "ttsText": "诧，诧异的诧"
+      }
+    ]
+  },
+  {
+    "simplified": "尬",
+    "traditional": "尬",
+    "pinyin": "gà",
+    "meaning": "awkward, embarrassed; to limp, to stagger",
+    "gradeLevel": 7,
+    "orderInGrade": 236,
+    "exampleWords": [
+      {
+        "word": "尬意",
+        "wordTraditional": "尬意",
+        "pinyin": "gà yì",
+        "meaning": "(Tw) to like; to prefer",
+        "ttsText": "尬，尬意的尬"
+      }
+    ]
+  },
+  {
+    "simplified": "硫",
+    "traditional": "硫",
+    "pinyin": "liú",
+    "meaning": "sulfur",
+    "gradeLevel": 7,
+    "orderInGrade": 237,
+    "exampleWords": [
+      {
+        "word": "硫化",
+        "wordTraditional": "硫化",
+        "pinyin": "liú huà",
+        "meaning": "vulcanization (curing rubber using sulfur and heat)",
+        "ttsText": "硫，硫化的硫"
+      }
+    ]
+  },
+  {
+    "simplified": "嚼",
+    "traditional": "嚼",
+    "pinyin": "jué",
+    "meaning": "to prattle, to be glib",
+    "gradeLevel": 7,
+    "orderInGrade": 238,
+    "exampleWords": [
+      {
+        "word": "嚼子",
+        "wordTraditional": "嚼子",
+        "pinyin": "jiáo zi",
+        "meaning": "bit; mouthpiece",
+        "ttsText": "嚼，嚼子的嚼"
+      }
+    ]
+  },
+  {
+    "simplified": "羡",
+    "traditional": "羨",
+    "pinyin": "xiàn",
+    "meaning": "to envy, to covet; to admire, to praise",
+    "gradeLevel": 7,
+    "orderInGrade": 239,
+    "exampleWords": [
+      {
+        "word": "心羡",
+        "wordTraditional": "心羨",
+        "pinyin": "xīn xiàn",
+        "meaning": "to admire",
+        "ttsText": "羡，心羡的羡"
+      }
+    ]
+  },
+  {
+    "simplified": "沦",
+    "traditional": "淪",
+    "pinyin": "lún",
+    "meaning": "sunk, submerged; to perish, to be lost",
+    "gradeLevel": 7,
+    "orderInGrade": 240,
+    "exampleWords": [
+      {
+        "word": "沦为",
+        "wordTraditional": "淪為",
+        "pinyin": "lún wéi",
+        "meaning": "to sink down to; to be reduced to (sth inferior)",
+        "ttsText": "沦，沦为的沦"
+      }
+    ]
+  },
+  {
+    "simplified": "沪",
+    "traditional": "滬",
+    "pinyin": "hù",
+    "meaning": "Shanghai; the Shanghai river",
+    "gradeLevel": 7,
+    "orderInGrade": 241,
+    "exampleWords": [
+      {
+        "word": "沪上",
+        "wordTraditional": "滬上",
+        "pinyin": "Hù shàng",
+        "meaning": "alternative name for Shanghai 上海[Shang4 hai3]",
+        "ttsText": "沪，沪上的沪"
+      }
+    ]
+  },
+  {
+    "simplified": "彬",
+    "traditional": "彬",
+    "pinyin": "bīn",
+    "meaning": "ornamental; cultivated, refined, well-bred",
+    "gradeLevel": 7,
+    "orderInGrade": 242,
+    "exampleWords": [
+      {
+        "word": "彬彬",
+        "wordTraditional": "彬彬",
+        "pinyin": "bīn bīn",
+        "meaning": "refined, gentle, and elegant",
+        "ttsText": "彬，彬彬的彬"
+      }
+    ]
+  },
+  {
+    "simplified": "芽",
+    "traditional": "芽",
+    "pinyin": "yá",
+    "meaning": "bud, shoot, sprout",
+    "gradeLevel": 7,
+    "orderInGrade": 243,
+    "exampleWords": [
+      {
+        "word": "新芽",
+        "wordTraditional": "新芽",
+        "pinyin": "xīn yá",
+        "meaning": "new shoot; new sprout",
+        "ttsText": "芽，新芽的芽"
+      }
+    ]
+  },
+  {
+    "simplified": "狸",
+    "traditional": "狸",
+    "pinyin": "lí",
+    "meaning": "fox",
+    "gradeLevel": 7,
+    "orderInGrade": 244,
+    "exampleWords": [
+      {
+        "word": "狸子",
+        "wordTraditional": "狸子",
+        "pinyin": "lí zi",
+        "meaning": "leopard cat",
+        "ttsText": "狸，狸子的狸"
+      }
+    ]
+  },
+  {
+    "simplified": "冥",
+    "traditional": "㝠",
+    "pinyin": "míng",
+    "meaning": "dark, gloomy, night; deep",
+    "gradeLevel": 7,
+    "orderInGrade": 245,
+    "exampleWords": [
+      {
+        "word": "冥想",
+        "wordTraditional": "冥想",
+        "pinyin": "míng xiǎng",
+        "meaning": "to meditate; meditation",
+        "ttsText": "冥，冥想的冥"
+      }
+    ]
+  },
+  {
+    "simplified": "碳",
+    "traditional": "碳",
+    "pinyin": "tàn",
+    "meaning": "carbon",
+    "gradeLevel": 7,
+    "orderInGrade": 246,
+    "exampleWords": [
+      {
+        "word": "碳化",
+        "wordTraditional": "碳化",
+        "pinyin": "tàn huà",
+        "meaning": "to carbonize; dry distillation; carbonization",
+        "ttsText": "碳，碳化的碳"
+      }
+    ]
+  },
+  {
+    "simplified": "咧",
+    "traditional": "咧",
+    "pinyin": "liě",
+    "meaning": "to grimace, to grin",
+    "gradeLevel": 7,
+    "orderInGrade": 247,
+    "exampleWords": [
+      {
+        "word": "咧嘴",
+        "wordTraditional": "咧嘴",
+        "pinyin": "liě zuǐ",
+        "meaning": "to grin",
+        "ttsText": "咧，咧嘴的咧"
+      }
+    ]
+  },
+  {
+    "simplified": "惕",
+    "traditional": "惕",
+    "pinyin": "tì",
+    "meaning": "cautious, careful, alert",
+    "gradeLevel": 7,
+    "orderInGrade": 248,
+    "exampleWords": [
+      {
+        "word": "惕然",
+        "wordTraditional": "惕然",
+        "pinyin": "tì rán",
+        "meaning": "to be afraid, fearful of",
+        "ttsText": "惕，惕然的惕"
+      }
+    ]
+  },
+  {
+    "simplified": "暑",
+    "traditional": "暑",
+    "pinyin": "shǔ",
+    "meaning": "hot; heat; summer",
+    "gradeLevel": 7,
+    "orderInGrade": 249,
+    "exampleWords": [
+      {
+        "word": "中暑",
+        "wordTraditional": "中暑",
+        "pinyin": "zhòng shǔ",
+        "meaning": "to suffer heat exhaustion; sunstroke; heatstroke",
+        "ttsText": "暑，中暑的暑"
+      }
+    ]
+  },
+  {
+    "simplified": "咯",
+    "traditional": "咯",
+    "pinyin": "gē",
+    "meaning": "final particle",
+    "gradeLevel": 7,
+    "orderInGrade": 250,
+    "exampleWords": [
+      {
+        "word": "咯血",
+        "wordTraditional": "咯血",
+        "pinyin": "kǎ xiě",
+        "meaning": "to cough up blood; to have hemoptysis",
+        "ttsText": "咯，咯血的咯"
+      }
+    ]
+  },
+  {
+    "simplified": "萝",
+    "traditional": "蘿",
+    "pinyin": "luó",
+    "meaning": "carrot, radish, turnip",
+    "gradeLevel": 7,
+    "orderInGrade": 251,
+    "exampleWords": [
+      {
+        "word": "萝北",
+        "wordTraditional": "蘿北",
+        "pinyin": "Luó běi",
+        "meaning": "see 蘿北縣|萝北县[Luo2 bei3 Xian4]",
+        "ttsText": "萝，萝北的萝"
+      }
+    ]
+  },
+  {
+    "simplified": "汹",
+    "traditional": "洶",
+    "pinyin": "xiōng",
+    "meaning": "turbulent, torrential, restless",
+    "gradeLevel": 7,
+    "orderInGrade": 252,
+    "exampleWords": [
+      {
+        "word": "汹涌",
+        "wordTraditional": "洶湧",
+        "pinyin": "xiōng yǒng",
+        "meaning": "to surge up violently (of ocean, river, lake etc); turbulent",
+        "ttsText": "汹，汹涌的汹"
+      }
+    ]
+  },
+  {
+    "simplified": "腥",
+    "traditional": "腥",
+    "pinyin": "xīng",
+    "meaning": "fishy, rank; raw meat",
+    "gradeLevel": 7,
+    "orderInGrade": 253,
+    "exampleWords": [
+      {
+        "word": "土腥",
+        "wordTraditional": "土腥",
+        "pinyin": "tǔ xīng",
+        "meaning": "(of a taste or smell) earthy",
+        "ttsText": "腥，土腥的腥"
+      }
+    ]
+  },
+  {
+    "simplified": "窥",
+    "traditional": "窺",
+    "pinyin": "kuī",
+    "meaning": "to peep, to spy on, to watch",
+    "gradeLevel": 7,
+    "orderInGrade": 254,
+    "exampleWords": [
+      {
+        "word": "窥知",
+        "wordTraditional": "窺知",
+        "pinyin": "kuī zhī",
+        "meaning": "to find out about; to discover",
+        "ttsText": "窥，窥知的窥"
+      }
+    ]
+  },
+  {
+    "simplified": "俺",
+    "traditional": "俺",
+    "pinyin": "ǎn",
+    "meaning": "I, me, my (some dialects)",
+    "gradeLevel": 7,
+    "orderInGrade": 255,
+    "exampleWords": [
+      {
+        "word": "俺",
+        "wordTraditional": "俺",
+        "pinyin": "ǎn",
+        "meaning": "I, me, my (some dialects)",
+        "ttsText": "俺"
+      }
+    ]
+  },
+  {
+    "simplified": "潭",
+    "traditional": "潭",
+    "pinyin": "tán",
+    "meaning": "deep pool, lake; deep, profound",
+    "gradeLevel": 7,
+    "orderInGrade": 256,
+    "exampleWords": [
+      {
+        "word": "潭子",
+        "wordTraditional": "潭子",
+        "pinyin": "tán zi",
+        "meaning": "deep natural pond",
+        "ttsText": "潭，潭子的潭"
+      }
+    ]
+  },
+  {
+    "simplified": "崎",
+    "traditional": "崎",
+    "pinyin": "qí",
+    "meaning": "rough, uneven; jagged, rugged",
+    "gradeLevel": 7,
+    "orderInGrade": 257,
+    "exampleWords": [
+      {
+        "word": "长崎",
+        "wordTraditional": "長崎",
+        "pinyin": "Cháng qí",
+        "meaning": "Nagasaki, Japan",
+        "ttsText": "崎，长崎的崎"
+      }
+    ]
+  },
+  {
+    "simplified": "麟",
+    "traditional": "麐",
+    "pinyin": "lín",
+    "meaning": "female unicorn",
+    "gradeLevel": 7,
+    "orderInGrade": 258,
+    "exampleWords": [
+      {
+        "word": "麟经",
+        "wordTraditional": "麟經",
+        "pinyin": "Lín jīng",
+        "meaning": "another name for the Spring and Autumn Annals 春秋",
+        "ttsText": "麟，麟经的麟"
+      }
+    ]
+  },
+  {
+    "simplified": "捡",
+    "traditional": "撿",
+    "pinyin": "jiǎn",
+    "meaning": "to pick up, to gather, to collect",
+    "gradeLevel": 7,
+    "orderInGrade": 259,
+    "exampleWords": [
+      {
+        "word": "捡骨",
+        "wordTraditional": "撿骨",
+        "pinyin": "jiǎn gǔ",
+        "meaning": "bone-gathering, a custom of Fujian and Taiwan in which a son recovers the bones of his deceased father from the grave and places them in an urn for permanent storage at a different location",
+        "ttsText": "捡，捡骨的捡"
+      }
+    ]
+  },
+  {
+    "simplified": "拯",
+    "traditional": "拯",
+    "pinyin": "zhěng",
+    "meaning": "to aid, to help; to lift, to raise",
+    "gradeLevel": 7,
+    "orderInGrade": 260,
+    "exampleWords": [
+      {
+        "word": "包拯",
+        "wordTraditional": "包拯",
+        "pinyin": "Bāo Zhěng",
+        "meaning": "Bao Zheng (999-1062), Northern Song official renowned for his honesty",
+        "ttsText": "拯，包拯的拯"
+      }
+    ]
+  },
+  {
+    "simplified": "厥",
+    "traditional": "厥",
+    "pinyin": "jué",
+    "meaning": "personal pronoun; he, she, it",
+    "gradeLevel": 7,
+    "orderInGrade": 261,
+    "exampleWords": [
+      {
+        "word": "惊厥",
+        "wordTraditional": "驚厥",
+        "pinyin": "jīng jué",
+        "meaning": "to faint from fear; (medicine) convulsions",
+        "ttsText": "厥，惊厥的厥"
+      }
+    ]
+  },
+  {
+    "simplified": "澄",
+    "traditional": "澂",
+    "pinyin": "chéng",
+    "meaning": "clear, limpid, pure",
+    "gradeLevel": 7,
+    "orderInGrade": 262,
+    "exampleWords": [
+      {
+        "word": "澄面",
+        "wordTraditional": "澄麵",
+        "pinyin": "chéng miàn",
+        "meaning": "wheat starch",
+        "ttsText": "澄，澄面的澄"
+      }
+    ]
+  },
+  {
+    "simplified": "萎",
+    "traditional": "萎",
+    "pinyin": "wēi",
+    "meaning": "to wither, to wilt",
+    "gradeLevel": 7,
+    "orderInGrade": 263,
+    "exampleWords": [
+      {
+        "word": "萎叶",
+        "wordTraditional": "萎葉",
+        "pinyin": "wěi yè",
+        "meaning": "betel",
+        "ttsText": "萎，萎叶的萎"
+      }
+    ]
+  },
+  {
+    "simplified": "哉",
+    "traditional": "哉",
+    "pinyin": "zāi",
+    "meaning": "final exclamatory particle",
+    "gradeLevel": 7,
+    "orderInGrade": 264,
+    "exampleWords": [
+      {
+        "word": "善哉",
+        "wordTraditional": "善哉",
+        "pinyin": "shàn zāi",
+        "meaning": "excellent",
+        "ttsText": "哉，善哉的哉"
+      }
+    ]
+  },
+  {
+    "simplified": "涡",
+    "traditional": "渦",
+    "pinyin": "wō",
+    "meaning": "eddy, swirl, whirlpool",
+    "gradeLevel": 7,
+    "orderInGrade": 265,
+    "exampleWords": [
+      {
+        "word": "涡核",
+        "wordTraditional": "渦核",
+        "pinyin": "wō hé",
+        "meaning": "eye of a vortex",
+        "ttsText": "涡，涡核的涡"
+      }
+    ]
+  },
+  {
+    "simplified": "滔",
+    "traditional": "滔",
+    "pinyin": "tāo",
+    "meaning": "torrential, rushing, overflowing",
+    "gradeLevel": 7,
+    "orderInGrade": 266,
+    "exampleWords": [
+      {
+        "word": "滔天",
+        "wordTraditional": "滔天",
+        "pinyin": "tāo tiān",
+        "meaning": "(of waves, anger, a disaster, a crime etc) towering",
+        "ttsText": "滔，滔天的滔"
+      }
+    ]
+  },
+  {
+    "simplified": "暇",
+    "traditional": "暇",
+    "pinyin": "xiá",
+    "meaning": "leisure, relaxation, spare time",
+    "gradeLevel": 7,
+    "orderInGrade": 267,
+    "exampleWords": [
+      {
+        "word": "不暇",
+        "wordTraditional": "不暇",
+        "pinyin": "bù xiá",
+        "meaning": "to have no time (for sth); to be too busy (to do sth)",
+        "ttsText": "暇，不暇的暇"
+      }
+    ]
+  },
+  {
+    "simplified": "溯",
+    "traditional": "溯",
+    "pinyin": "sù",
+    "meaning": "to paddle upstream, to go against the current; to trace the source; formerly",
+    "gradeLevel": 7,
+    "orderInGrade": 268,
+    "exampleWords": [
+      {
+        "word": "回溯",
+        "wordTraditional": "回溯",
+        "pinyin": "huí sù",
+        "meaning": "to recall; to look back upon",
+        "ttsText": "溯，回溯的溯"
+      }
+    ]
+  },
+  {
+    "simplified": "鳞",
+    "traditional": "鱗",
+    "pinyin": "lín",
+    "meaning": "fish scales",
+    "gradeLevel": 7,
+    "orderInGrade": 269,
+    "exampleWords": [
+      {
+        "word": "鳞片",
+        "wordTraditional": "鱗片",
+        "pinyin": "lín piàn",
+        "meaning": "scale (of fish, reptiles etc)",
+        "ttsText": "鳞，鳞片的鳞"
+      }
+    ]
+  },
+  {
+    "simplified": "酿",
+    "traditional": "釀",
+    "pinyin": "niàng",
+    "meaning": "to ferment, to brew",
+    "gradeLevel": 7,
+    "orderInGrade": 270,
+    "exampleWords": [
+      {
+        "word": "酿成",
+        "wordTraditional": "釀成",
+        "pinyin": "niàng chéng",
+        "meaning": "to make (wine or spirits); (fig.) to lead to (a bad result)",
+        "ttsText": "酿，酿成的酿"
+      }
+    ]
+  },
+  {
+    "simplified": "茵",
+    "traditional": "茵",
+    "pinyin": "yīn",
+    "meaning": "mattress, cushion; wormwood, Skimmia japon",
+    "gradeLevel": 7,
+    "orderInGrade": 271,
+    "exampleWords": [
+      {
+        "word": "绿茵",
+        "wordTraditional": "綠茵",
+        "pinyin": "lù: yīn",
+        "meaning": "grassy area",
+        "ttsText": "茵，绿茵的茵"
+      }
+    ]
+  },
+  {
+    "simplified": "愕",
+    "traditional": "愕",
+    "pinyin": "è",
+    "meaning": "startled, alarmed, astonished",
+    "gradeLevel": 7,
+    "orderInGrade": 272,
+    "exampleWords": [
+      {
+        "word": "愕然",
+        "wordTraditional": "愕然",
+        "pinyin": "è rán",
+        "meaning": "stunned; amazed",
+        "ttsText": "愕，愕然的愕"
+      }
+    ]
+  },
+  {
+    "simplified": "瞅",
+    "traditional": "瞅",
+    "pinyin": "chǒu",
+    "meaning": "to see, to look at, to gaze at",
+    "gradeLevel": 7,
+    "orderInGrade": 273,
+    "exampleWords": [
+      {
+        "word": "瞅见",
+        "wordTraditional": "瞅見",
+        "pinyin": "chǒu jiàn",
+        "meaning": "to see",
+        "ttsText": "瞅，瞅见的瞅"
+      }
+    ]
+  },
+  {
+    "simplified": "暮",
+    "traditional": "暮",
+    "pinyin": "mù",
+    "meaning": "dusk, evening, sunset; ending",
+    "gradeLevel": 7,
+    "orderInGrade": 274,
+    "exampleWords": [
+      {
+        "word": "暮年",
+        "wordTraditional": "暮年",
+        "pinyin": "mù nián",
+        "meaning": "one's declining years; one's old age",
+        "ttsText": "暮，暮年的暮"
+      }
+    ]
+  },
+  {
+    "simplified": "衙",
+    "traditional": "衙",
+    "pinyin": "yá",
+    "meaning": "public office; official residence",
+    "gradeLevel": 7,
+    "orderInGrade": 275,
+    "exampleWords": [
+      {
+        "word": "衙内",
+        "wordTraditional": "衙內",
+        "pinyin": "yá nèi",
+        "meaning": "child of an official; palace bodyguard",
+        "ttsText": "衙，衙内的衙"
+      }
+    ]
+  },
+  {
+    "simplified": "诫",
+    "traditional": "誡",
+    "pinyin": "jiè",
+    "meaning": "to warn, to admonish; warning",
+    "gradeLevel": 7,
+    "orderInGrade": 276,
+    "exampleWords": [
+      {
+        "word": "十诫",
+        "wordTraditional": "十誡",
+        "pinyin": "shí jiè",
+        "meaning": "ten commandments",
+        "ttsText": "诫，十诫的诫"
+      }
+    ]
+  },
+  {
+    "simplified": "斧",
+    "traditional": "斧",
+    "pinyin": "fǔ",
+    "meaning": "axe, hatchet; to chop, to hew",
+    "gradeLevel": 7,
+    "orderInGrade": 277,
+    "exampleWords": [
+      {
+        "word": "斧子",
+        "wordTraditional": "斧子",
+        "pinyin": "fǔ zi",
+        "meaning": "axe; hatchet",
+        "ttsText": "斧，斧子的斧"
+      }
+    ]
+  },
+  {
+    "simplified": "兮",
+    "traditional": "兮",
+    "pinyin": "xī",
+    "meaning": "exclamatory particle",
+    "gradeLevel": 7,
+    "orderInGrade": 278,
+    "exampleWords": [
+      {
+        "word": "兮兮",
+        "wordTraditional": "兮兮",
+        "pinyin": "xī xī",
+        "meaning": "(particle used to exaggerate certain adjectives, in particular 神經兮兮|神经兮兮, 髒兮兮|脏兮兮, 可憐兮兮|可怜兮兮, and 慘兮兮|惨兮兮)",
+        "ttsText": "兮，兮兮的兮"
+      }
+    ]
+  },
+  {
+    "simplified": "焕",
+    "traditional": "煥",
+    "pinyin": "huàn",
+    "meaning": "shining, lustrous",
+    "gradeLevel": 7,
+    "orderInGrade": 279,
+    "exampleWords": [
+      {
+        "word": "焕发",
+        "wordTraditional": "煥發",
+        "pinyin": "huàn fā",
+        "meaning": "to shine; to glow; to irradiate; to flash",
+        "ttsText": "焕，焕发的焕"
+      }
+    ]
+  },
+  {
+    "simplified": "棕",
+    "traditional": "棕",
+    "pinyin": "zōng",
+    "meaning": "hemp palm; palm tree",
+    "gradeLevel": 7,
+    "orderInGrade": 280,
+    "exampleWords": [
+      {
+        "word": "棕色",
+        "wordTraditional": "棕色",
+        "pinyin": "zōng sè",
+        "meaning": "brown",
+        "ttsText": "棕，棕色的棕"
+      }
+    ]
+  },
+  {
+    "simplified": "佑",
+    "traditional": "佑",
+    "pinyin": "yòu",
+    "meaning": "to help; to protect; to bless",
+    "gradeLevel": 7,
+    "orderInGrade": 281,
+    "exampleWords": [
+      {
+        "word": "保佑",
+        "wordTraditional": "保佑",
+        "pinyin": "bǎo yòu",
+        "meaning": "to bless and protect; blessing",
+        "ttsText": "佑，保佑的佑"
+      }
+    ]
+  },
+  {
+    "simplified": "嘶",
+    "traditional": "嘶",
+    "pinyin": "sī",
+    "meaning": "the neighing of a hoarse, gravel-voiced, hoarse",
+    "gradeLevel": 7,
+    "orderInGrade": 282,
+    "exampleWords": [
+      {
+        "word": "嘶叫",
+        "wordTraditional": "嘶叫",
+        "pinyin": "sī jiào",
+        "meaning": "to whinny (of a horse); to neigh; to shout",
+        "ttsText": "嘶，嘶叫的嘶"
+      }
+    ]
+  },
+  {
+    "simplified": "妓",
+    "traditional": "妓",
+    "pinyin": "jì",
+    "meaning": "prostitute",
+    "gradeLevel": 7,
+    "orderInGrade": 283,
+    "exampleWords": [
+      {
+        "word": "名妓",
+        "wordTraditional": "名妓",
+        "pinyin": "míng jì",
+        "meaning": "famous courtesan",
+        "ttsText": "妓，名妓的妓"
+      }
+    ]
+  },
+  {
+    "simplified": "喧",
+    "traditional": "喧",
+    "pinyin": "xuān",
+    "meaning": "lively, noisy; to clamor, to talk loudly",
+    "gradeLevel": 7,
+    "orderInGrade": 284,
+    "exampleWords": [
+      {
+        "word": "喧呼",
+        "wordTraditional": "諠呼",
+        "pinyin": "xuān hū",
+        "meaning": "to shout loudly; to bawl; to vociferate; rumpus; uproar",
+        "ttsText": "喧，喧呼的喧"
+      }
+    ]
+  },
+  {
+    "simplified": "蓉",
+    "traditional": "蓉",
+    "pinyin": "róng",
+    "meaning": "lotus, hibiscus; Chengdu, Sichuan",
+    "gradeLevel": 7,
+    "orderInGrade": 285,
+    "exampleWords": [
+      {
+        "word": "蓉城",
+        "wordTraditional": "蓉城",
+        "pinyin": "Róng chéng",
+        "meaning": "nickname for Chengdu 成都[Cheng2 du1]",
+        "ttsText": "蓉，蓉城的蓉"
+      }
+    ]
+  },
+  {
+    "simplified": "樱",
+    "traditional": "櫻",
+    "pinyin": "yīng",
+    "meaning": "cherry, cherry blossom",
+    "gradeLevel": 7,
+    "orderInGrade": 286,
+    "exampleWords": [
+      {
+        "word": "樱花",
+        "wordTraditional": "櫻花",
+        "pinyin": "yīng huā",
+        "meaning": "oriental cherry (Prunus serrulata or Prunus yedoensis), prized for its blossom",
+        "ttsText": "樱，樱花的樱"
+      }
+    ]
+  },
+  {
+    "simplified": "伺",
+    "traditional": "伺",
+    "pinyin": "cì",
+    "meaning": "to serve, to wait upon, to attend; to examine",
+    "gradeLevel": 7,
+    "orderInGrade": 287,
+    "exampleWords": [
+      {
+        "word": "伺机",
+        "wordTraditional": "伺機",
+        "pinyin": "sì jī",
+        "meaning": "to wait for an opportunity; to watch for one's chance",
+        "ttsText": "伺，伺机的伺"
+      }
+    ]
+  },
+  {
+    "simplified": "嗡",
+    "traditional": "嗡",
+    "pinyin": "wēng",
+    "meaning": "the droning sound made by an airplane or a bee flying",
+    "gradeLevel": 7,
+    "orderInGrade": 288,
+    "exampleWords": [
+      {
+        "word": "嗡嗡",
+        "wordTraditional": "嗡嗡",
+        "pinyin": "wēng wēng",
+        "meaning": "(onom.) buzz; drone; hum",
+        "ttsText": "嗡，嗡嗡的嗡"
+      }
+    ]
+  },
+  {
+    "simplified": "娥",
+    "traditional": "娥",
+    "pinyin": "é",
+    "meaning": "beautiful, pretty; good; surname",
+    "gradeLevel": 7,
+    "orderInGrade": 289,
+    "exampleWords": [
+      {
+        "word": "娥眉",
+        "wordTraditional": "娥眉",
+        "pinyin": "é méi",
+        "meaning": "variant of 蛾眉[e2 mei2]",
+        "ttsText": "娥，娥眉的娥"
+      }
+    ]
+  },
+  {
+    "simplified": "梢",
+    "traditional": "梢",
+    "pinyin": "shāo",
+    "meaning": "the tip of a branch; rudder",
+    "gradeLevel": 7,
+    "orderInGrade": 290,
+    "exampleWords": [
+      {
+        "word": "后梢",
+        "wordTraditional": "後梢",
+        "pinyin": "hòu shāo",
+        "meaning": "stern (of a boat)",
+        "ttsText": "梢，后梢的梢"
+      }
+    ]
+  },
+  {
+    "simplified": "坝",
+    "traditional": "垻",
+    "pinyin": "bà",
+    "meaning": "embankment; dam",
+    "gradeLevel": 7,
+    "orderInGrade": 291,
+    "exampleWords": [
+      {
+        "word": "大坝",
+        "wordTraditional": "大壩",
+        "pinyin": "dà bà",
+        "meaning": "dam",
+        "ttsText": "坝，大坝的坝"
+      }
+    ]
+  },
+  {
+    "simplified": "蚕",
+    "traditional": "蠶",
+    "pinyin": "cán",
+    "meaning": "silkworm",
+    "gradeLevel": 7,
+    "orderInGrade": 292,
+    "exampleWords": [
+      {
+        "word": "蚕子",
+        "wordTraditional": "蠶子",
+        "pinyin": "cán zǐ",
+        "meaning": "silkworm eggs",
+        "ttsText": "蚕，蚕子的蚕"
+      }
+    ]
+  },
+  {
+    "simplified": "敷",
+    "traditional": "敷",
+    "pinyin": "fū",
+    "meaning": "to apply, to paint, to spread",
+    "gradeLevel": 7,
+    "orderInGrade": 293,
+    "exampleWords": [
+      {
+        "word": "外敷",
+        "wordTraditional": "外敷",
+        "pinyin": "wài fū",
+        "meaning": "to apply externally",
+        "ttsText": "敷，外敷的敷"
+      }
+    ]
+  },
+  {
+    "simplified": "澜",
+    "traditional": "瀾",
+    "pinyin": "lán",
+    "meaning": "overflowing; ripples, waves",
+    "gradeLevel": 7,
+    "orderInGrade": 294,
+    "exampleWords": [
+      {
+        "word": "波澜",
+        "wordTraditional": "波瀾",
+        "pinyin": "bō lán",
+        "meaning": "billows; great waves (fig. of a story with great momentum)",
+        "ttsText": "澜，波澜的澜"
+      }
+    ]
+  },
+  {
+    "simplified": "杏",
+    "traditional": "杏",
+    "pinyin": "xìng",
+    "meaning": "apricot; almond",
+    "gradeLevel": 7,
+    "orderInGrade": 295,
+    "exampleWords": [
+      {
+        "word": "杏子",
+        "wordTraditional": "杏子",
+        "pinyin": "xìng zi",
+        "meaning": "apricot",
+        "ttsText": "杏，杏子的杏"
+      }
+    ]
+  },
+  {
+    "simplified": "绥",
+    "traditional": "綏",
+    "pinyin": "suí",
+    "meaning": "to soothe, to pacify, to appease",
+    "gradeLevel": 7,
+    "orderInGrade": 296,
+    "exampleWords": [
+      {
+        "word": "时绥",
+        "wordTraditional": "時綏",
+        "pinyin": "shí suí",
+        "meaning": "peace all year round (old letter closing)",
+        "ttsText": "绥，时绥的绥"
+      }
+    ]
+  },
+  {
+    "simplified": "冶",
+    "traditional": "冶",
+    "pinyin": "yě",
+    "meaning": "to smelt, to fuse metals, to cast",
+    "gradeLevel": 7,
+    "orderInGrade": 297,
+    "exampleWords": [
+      {
+        "word": "冶金",
+        "wordTraditional": "冶金",
+        "pinyin": "yě jīn",
+        "meaning": "metallurgy",
+        "ttsText": "冶，冶金的冶"
+      }
+    ]
+  },
+  {
+    "simplified": "庇",
+    "traditional": "庇",
+    "pinyin": "bì",
+    "meaning": "cover, shield; to protect, to shelter; to harbor",
+    "gradeLevel": 7,
+    "orderInGrade": 298,
+    "exampleWords": [
+      {
+        "word": "包庇",
+        "wordTraditional": "包庇",
+        "pinyin": "bāo bì",
+        "meaning": "to shield; to harbor; to cover up",
+        "ttsText": "庇，包庇的庇"
+      }
+    ]
+  },
+  {
+    "simplified": "挠",
+    "traditional": "撓",
+    "pinyin": "náo",
+    "meaning": "to yield; to scratch, to disturb",
+    "gradeLevel": 7,
+    "orderInGrade": 299,
+    "exampleWords": [
+      {
+        "word": "挠头",
+        "wordTraditional": "撓頭",
+        "pinyin": "náo tóu",
+        "meaning": "tricky",
+        "ttsText": "挠，挠头的挠"
+      }
+    ]
+  },
+  {
+    "simplified": "搂",
+    "traditional": "摟",
+    "pinyin": "lǒu",
+    "meaning": "to embrace, to hug; to drag, to pull",
+    "gradeLevel": 7,
+    "orderInGrade": 300,
+    "exampleWords": [
+      {
+        "word": "搂住",
+        "wordTraditional": "摟住",
+        "pinyin": "lǒu zhù",
+        "meaning": "to hold in one's arms; to embrace",
+        "ttsText": "搂，搂住的搂"
+      }
+    ]
+  },
+  {
+    "simplified": "倏",
+    "traditional": "倏",
+    "pinyin": "shū",
+    "meaning": "hastily, suddenly, abruptly",
+    "gradeLevel": 7,
+    "orderInGrade": 301,
+    "exampleWords": [
+      {
+        "word": "倏地",
+        "wordTraditional": "倏地",
+        "pinyin": "shū de",
+        "meaning": "swiftly; suddenly",
+        "ttsText": "倏，倏地的倏"
+      }
+    ]
+  },
+  {
+    "simplified": "聂",
+    "traditional": "聶",
+    "pinyin": "niè",
+    "meaning": "to whisper; surname",
+    "gradeLevel": 7,
+    "orderInGrade": 302,
+    "exampleWords": [
+      {
+        "word": "聂耳",
+        "wordTraditional": "聶耳",
+        "pinyin": "Niè Ěr",
+        "meaning": "Nie Er (1912-1935), musician and composer of the PRC national anthem March of the Volunteer Army 義勇軍進行曲|义勇军进行曲",
+        "ttsText": "聂，聂耳的聂"
+      }
+    ]
+  },
+  {
+    "simplified": "婉",
+    "traditional": "婉",
+    "pinyin": "wǎn",
+    "meaning": "amiable, graceful, tactful; restrained",
+    "gradeLevel": 7,
+    "orderInGrade": 303,
+    "exampleWords": [
+      {
+        "word": "婉言",
+        "wordTraditional": "婉言",
+        "pinyin": "wǎn yán",
+        "meaning": "tactful; diplomatic; mild and indirect",
+        "ttsText": "婉，婉言的婉"
+      }
+    ]
+  },
+  {
+    "simplified": "噪",
+    "traditional": "噪",
+    "pinyin": "zào",
+    "meaning": "to be noisy; to chirp loudly",
+    "gradeLevel": 7,
+    "orderInGrade": 304,
+    "exampleWords": [
+      {
+        "word": "噪点",
+        "wordTraditional": "噪點",
+        "pinyin": "zào diǎn",
+        "meaning": "image noise",
+        "ttsText": "噪，噪点的噪"
+      }
+    ]
+  },
+  {
+    "simplified": "稼",
+    "traditional": "稼",
+    "pinyin": "jià",
+    "meaning": "crops; to sow grain",
+    "gradeLevel": 7,
+    "orderInGrade": 305,
+    "exampleWords": [
+      {
+        "word": "庄稼",
+        "wordTraditional": "莊稼",
+        "pinyin": "zhuāng jia",
+        "meaning": "farm crop",
+        "ttsText": "稼，庄稼的稼"
+      }
+    ]
+  },
+  {
+    "simplified": "鳍",
+    "traditional": "鰭",
+    "pinyin": "qí",
+    "meaning": "fin",
+    "gradeLevel": 7,
+    "orderInGrade": 306,
+    "exampleWords": [
+      {
+        "word": "背鳍",
+        "wordTraditional": "背鰭",
+        "pinyin": "bèi qí",
+        "meaning": "dorsal fin",
+        "ttsText": "鳍，背鳍的鳍"
+      }
+    ]
+  },
+  {
+    "simplified": "菱",
+    "traditional": "菱",
+    "pinyin": "líng",
+    "meaning": "water chestnut, water caltrop",
+    "gradeLevel": 7,
+    "orderInGrade": 307,
+    "exampleWords": [
+      {
+        "word": "菱形",
+        "wordTraditional": "菱形",
+        "pinyin": "líng xíng",
+        "meaning": "rhombus",
+        "ttsText": "菱，菱形的菱"
+      }
+    ]
+  },
+  {
+    "simplified": "盏",
+    "traditional": "盞",
+    "pinyin": "zhǎn",
+    "meaning": "small cup or container",
+    "gradeLevel": 7,
+    "orderInGrade": 308,
+    "exampleWords": [
+      {
+        "word": "灯盏",
+        "wordTraditional": "燈盞",
+        "pinyin": "dēng zhǎn",
+        "meaning": "lantern; uncovered oil lamp",
+        "ttsText": "盏，灯盏的盏"
+      }
+    ]
+  },
+  {
+    "simplified": "匿",
+    "traditional": "匿",
+    "pinyin": "nì",
+    "meaning": "to hide; to go into hiding",
+    "gradeLevel": 7,
+    "orderInGrade": 309,
+    "exampleWords": [
+      {
+        "word": "匿名",
+        "wordTraditional": "匿名",
+        "pinyin": "nì míng",
+        "meaning": "anonymous",
+        "ttsText": "匿，匿名的匿"
+      }
+    ]
+  },
+  {
+    "simplified": "吱",
+    "traditional": "吱",
+    "pinyin": "zhī",
+    "meaning": "to chirp; to hiss; to squeak",
+    "gradeLevel": 7,
+    "orderInGrade": 310,
+    "exampleWords": [
+      {
+        "word": "吱声",
+        "wordTraditional": "吱聲",
+        "pinyin": "zhī shēng",
+        "meaning": "to utter a word",
+        "ttsText": "吱，吱声的吱"
+      }
+    ]
+  },
+  {
+    "simplified": "寝",
+    "traditional": "寑",
+    "pinyin": "qǐn",
+    "meaning": "to sleep, to rest; bedroom",
+    "gradeLevel": 7,
+    "orderInGrade": 311,
+    "exampleWords": [
+      {
+        "word": "安寝",
+        "wordTraditional": "安寢",
+        "pinyin": "ān qǐn",
+        "meaning": "to sleep peacefully",
+        "ttsText": "寝，安寝的寝"
+      }
+    ]
+  },
+  {
+    "simplified": "揽",
+    "traditional": "攬",
+    "pinyin": "lǎn",
+    "meaning": "to grasp; to monopolize; to seize",
+    "gradeLevel": 7,
+    "orderInGrade": 312,
+    "exampleWords": [
+      {
+        "word": "揽权",
+        "wordTraditional": "攬權",
+        "pinyin": "lǎn quán",
+        "meaning": "to concentrate power in one's own hands",
+        "ttsText": "揽，揽权的揽"
+      }
+    ]
+  },
+  {
+    "simplified": "髓",
+    "traditional": "髓",
+    "pinyin": "suǐ",
+    "meaning": "substance, essence; bone marrow",
+    "gradeLevel": 7,
+    "orderInGrade": 313,
+    "exampleWords": [
+      {
+        "word": "髓结",
+        "wordTraditional": "髓結",
+        "pinyin": "suǐ jié",
+        "meaning": "pith knot (in timber)",
+        "ttsText": "髓，髓结的髓"
+      }
+    ]
+  },
+  {
+    "simplified": "秉",
+    "traditional": "秉",
+    "pinyin": "bǐng",
+    "meaning": "to grasp, to hold; to maintain, to preside over",
+    "gradeLevel": 7,
+    "orderInGrade": 314,
+    "exampleWords": [
+      {
+        "word": "秉公",
+        "wordTraditional": "秉公",
+        "pinyin": "bǐng gōng",
+        "meaning": "justly; impartially",
+        "ttsText": "秉，秉公的秉"
+      }
+    ]
+  },
+  {
+    "simplified": "哺",
+    "traditional": "哺",
+    "pinyin": "bǔ",
+    "meaning": "to chew; to feed",
+    "gradeLevel": 7,
+    "orderInGrade": 315,
+    "exampleWords": [
+      {
+        "word": "反哺",
+        "wordTraditional": "反哺",
+        "pinyin": "fǎn bǔ",
+        "meaning": "to support one's parents in their old age",
+        "ttsText": "哺，反哺的哺"
+      }
+    ]
+  },
+  {
+    "simplified": "矢",
+    "traditional": "矢",
+    "pinyin": "shǐ",
+    "meaning": "arrow, dart; to vow, to swear",
+    "gradeLevel": 7,
+    "orderInGrade": 316,
+    "exampleWords": [
+      {
+        "word": "矢量",
+        "wordTraditional": "矢量",
+        "pinyin": "shǐ liàng",
+        "meaning": "(math.) vector",
+        "ttsText": "矢，矢量的矢"
+      }
+    ]
+  },
+  {
+    "simplified": "啪",
+    "traditional": "啪",
+    "pinyin": "pā",
+    "meaning": "onomatopoetic, a bang sound",
+    "gradeLevel": 7,
+    "orderInGrade": 317,
+    "exampleWords": [
+      {
+        "word": "啪哒",
+        "wordTraditional": "啪噠",
+        "pinyin": "pā dā",
+        "meaning": "(onom.) sound of object falling into water; plop",
+        "ttsText": "啪，啪哒的啪"
+      }
+    ]
+  },
+  {
+    "simplified": "帜",
+    "traditional": "幟",
+    "pinyin": "zhì",
+    "meaning": "flag, pennant, sign; to fasten",
+    "gradeLevel": 7,
+    "orderInGrade": 318,
+    "exampleWords": [
+      {
+        "word": "旗帜",
+        "wordTraditional": "旗幟",
+        "pinyin": "qí zhì",
+        "meaning": "ensign; flag",
+        "ttsText": "帜，旗帜的帜"
+      }
+    ]
+  },
+  {
+    "simplified": "邵",
+    "traditional": "邵",
+    "pinyin": "shào",
+    "meaning": "various place names; surname",
+    "gradeLevel": 7,
+    "orderInGrade": 319,
+    "exampleWords": [
+      {
+        "word": "邵东",
+        "wordTraditional": "邵東",
+        "pinyin": "Shào dōng",
+        "meaning": "see 邵東市|邵东市[Shao4 dong1 Shi4]",
+        "ttsText": "邵，邵东的邵"
+      }
+    ]
+  },
+  {
+    "simplified": "嗽",
+    "traditional": "嗽",
+    "pinyin": "sòu",
+    "meaning": "to gargle; to cough; to clear the throat",
+    "gradeLevel": 7,
+    "orderInGrade": 320,
+    "exampleWords": [
+      {
+        "word": "咳嗽",
+        "wordTraditional": "咳嗽",
+        "pinyin": "ké sou",
+        "meaning": "to cough",
+        "ttsText": "嗽，咳嗽的嗽"
+      }
+    ]
+  },
+  {
+    "simplified": "挟",
+    "traditional": "挾",
+    "pinyin": "xié",
+    "meaning": "to seize; to hold to one's bosom",
+    "gradeLevel": 7,
+    "orderInGrade": 321,
+    "exampleWords": [
+      {
+        "word": "要挟",
+        "wordTraditional": "要挾",
+        "pinyin": "yāo xié",
+        "meaning": "to threaten; to blackmail",
+        "ttsText": "挟，要挟的挟"
+      }
+    ]
+  },
+  {
+    "simplified": "缸",
+    "traditional": "缸",
+    "pinyin": "gāng",
+    "meaning": "earthen jug, crock, cistern",
+    "gradeLevel": 7,
+    "orderInGrade": 322,
+    "exampleWords": [
+      {
+        "word": "气缸",
+        "wordTraditional": "氣缸",
+        "pinyin": "qì gāng",
+        "meaning": "cylinder (engine)",
+        "ttsText": "缸，气缸的缸"
+      }
+    ]
+  },
+  {
+    "simplified": "揉",
+    "traditional": "揉",
+    "pinyin": "róu",
+    "meaning": "to massage, to knead; to crush by hand",
+    "gradeLevel": 7,
+    "orderInGrade": 323,
+    "exampleWords": [
+      {
+        "word": "揉和",
+        "wordTraditional": "揉和",
+        "pinyin": "róu hé",
+        "meaning": "to knead (clay)",
+        "ttsText": "揉，揉和的揉"
+      }
+    ]
+  },
+  {
+    "simplified": "腻",
+    "traditional": "膩",
+    "pinyin": "nì",
+    "meaning": "greasy, oily, smooth; bored, tired",
+    "gradeLevel": 7,
+    "orderInGrade": 324,
+    "exampleWords": [
+      {
+        "word": "腻人",
+        "wordTraditional": "膩人",
+        "pinyin": "nì rén",
+        "meaning": "greasy; boring",
+        "ttsText": "腻，腻人的腻"
+      }
+    ]
+  },
+  {
+    "simplified": "驯",
+    "traditional": "馴",
+    "pinyin": "xún",
+    "meaning": "tame, obedient, docile",
+    "gradeLevel": 7,
+    "orderInGrade": 325,
+    "exampleWords": [
+      {
+        "word": "驯从",
+        "wordTraditional": "馴從",
+        "pinyin": "xùn cóng",
+        "meaning": "tame; obedient",
+        "ttsText": "驯，驯从的驯"
+      }
+    ]
+  },
+  {
+    "simplified": "缆",
+    "traditional": "纜",
+    "pinyin": "lǎn",
+    "meaning": "cable, hawser, heavy-duty rope",
+    "gradeLevel": 7,
+    "orderInGrade": 326,
+    "exampleWords": [
+      {
+        "word": "解缆",
+        "wordTraditional": "解纜",
+        "pinyin": "jiě lǎn",
+        "meaning": "to untie a mooring rope",
+        "ttsText": "缆，解缆的缆"
+      }
+    ]
+  },
+  {
+    "simplified": "晌",
+    "traditional": "晌",
+    "pinyin": "shǎng",
+    "meaning": "noon, midday; moment",
+    "gradeLevel": 7,
+    "orderInGrade": 327,
+    "exampleWords": [
+      {
+        "word": "半晌",
+        "wordTraditional": "半晌",
+        "pinyin": "bàn shǎng",
+        "meaning": "half of the day; a long time; quite a while",
+        "ttsText": "晌，半晌的晌"
+      }
+    ]
+  },
+  {
+    "simplified": "瘫",
+    "traditional": "癱",
+    "pinyin": "tān",
+    "meaning": "paralysis, palsy, numbness",
+    "gradeLevel": 7,
+    "orderInGrade": 328,
+    "exampleWords": [
+      {
+        "word": "瘫子",
+        "wordTraditional": "癱子",
+        "pinyin": "tān zi",
+        "meaning": "paralyzed person",
+        "ttsText": "瘫，瘫子的瘫"
+      }
+    ]
+  },
+  {
+    "simplified": "贮",
+    "traditional": "貯",
+    "pinyin": "zhù",
+    "meaning": "to store, to stockpile, to hoard",
+    "gradeLevel": 7,
+    "orderInGrade": 329,
+    "exampleWords": [
+      {
+        "word": "贮物",
+        "wordTraditional": "貯物",
+        "pinyin": "zhù wù",
+        "meaning": "storage",
+        "ttsText": "贮，贮物的贮"
+      }
+    ]
+  },
+  {
+    "simplified": "觅",
+    "traditional": "覓",
+    "pinyin": "mì",
+    "meaning": "to seek; to search",
+    "gradeLevel": 7,
+    "orderInGrade": 330,
+    "exampleWords": [
+      {
+        "word": "觅取",
+        "wordTraditional": "覓取",
+        "pinyin": "mì qǔ",
+        "meaning": "to seek; to seek out",
+        "ttsText": "觅，觅取的觅"
+      }
+    ]
+  },
+  {
+    "simplified": "朦",
+    "traditional": "朦",
+    "pinyin": "méng",
+    "meaning": "dim, obscure; the condition of the moon",
+    "gradeLevel": 7,
+    "orderInGrade": 331,
+    "exampleWords": [
+      {
+        "word": "朦骨",
+        "wordTraditional": "朦骨",
+        "pinyin": "Méng gǔ",
+        "meaning": "(archaic) Mongol",
+        "ttsText": "朦，朦骨的朦"
+      }
+    ]
+  },
+  {
+    "simplified": "僻",
+    "traditional": "僻",
+    "pinyin": "pì",
+    "meaning": "out-of-the-way, remote; unorthodox",
+    "gradeLevel": 7,
+    "orderInGrade": 332,
+    "exampleWords": [
+      {
+        "word": "僻地",
+        "wordTraditional": "僻地",
+        "pinyin": "pì dì",
+        "meaning": "the sticks; the boondocks",
+        "ttsText": "僻，僻地的僻"
+      }
+    ]
+  },
+  {
+    "simplified": "隋",
+    "traditional": "隋",
+    "pinyin": "suí",
+    "meaning": "the Sui dynasty; surname",
+    "gradeLevel": 7,
+    "orderInGrade": 333,
+    "exampleWords": [
+      {
+        "word": "隋代",
+        "wordTraditional": "隋代",
+        "pinyin": "Suí dài",
+        "meaning": "Sui dynasty (581-617)",
+        "ttsText": "隋，隋代的隋"
+      }
+    ]
+  },
+  {
+    "simplified": "蔓",
+    "traditional": "蔓",
+    "pinyin": "màn",
+    "meaning": "vine, tendril, creeper",
+    "gradeLevel": 7,
+    "orderInGrade": 334,
+    "exampleWords": [
+      {
+        "word": "蔓生",
+        "wordTraditional": "蔓生",
+        "pinyin": "màn shēng",
+        "meaning": "trailing plant; liana; creeper; overgrown",
+        "ttsText": "蔓，蔓生的蔓"
+      }
+    ]
+  },
+  {
+    "simplified": "咋",
+    "traditional": "咋",
+    "pinyin": "zǎ",
+    "meaning": "question-forming particle: why? what? how?; to bite; loud",
+    "gradeLevel": 7,
+    "orderInGrade": 335,
+    "exampleWords": [
+      {
+        "word": "咋呼",
+        "wordTraditional": "咋呼",
+        "pinyin": "zhā hu",
+        "meaning": "bluster; ruckus; to boast loudly",
+        "ttsText": "咋，咋呼的咋"
+      }
+    ]
+  },
+  {
+    "simplified": "嵌",
+    "traditional": "嵌",
+    "pinyin": "qiàn",
+    "meaning": "valley, ravine; to fall into; to inlay, to set in",
+    "gradeLevel": 7,
+    "orderInGrade": 336,
+    "exampleWords": [
+      {
+        "word": "嵌进",
+        "wordTraditional": "嵌進",
+        "pinyin": "qiàn jìn",
+        "meaning": "embedded; embedding",
+        "ttsText": "嵌，嵌进的嵌"
+      }
+    ]
+  },
+  {
+    "simplified": "虔",
+    "traditional": "虔",
+    "pinyin": "qián",
+    "meaning": "reverent, devout",
+    "gradeLevel": 7,
+    "orderInGrade": 337,
+    "exampleWords": [
+      {
+        "word": "虔信",
+        "wordTraditional": "虔信",
+        "pinyin": "qián xìn",
+        "meaning": "piety; devotion (to a religion); pious (believer); devout",
+        "ttsText": "虔，虔信的虔"
+      }
+    ]
+  },
+  {
+    "simplified": "畔",
+    "traditional": "畔",
+    "pinyin": "pàn",
+    "meaning": "river bank; a boundary path that divides fields",
+    "gradeLevel": 7,
+    "orderInGrade": 338,
+    "exampleWords": [
+      {
+        "word": "让畔",
+        "wordTraditional": "讓畔",
+        "pinyin": "ràng pàn",
+        "meaning": "to be accommodating in negotiating the boundary of one's field",
+        "ttsText": "畔，让畔的畔"
+      }
+    ]
+  },
+  {
+    "simplified": "琐",
+    "traditional": "瑣",
+    "pinyin": "suǒ",
+    "meaning": "petty; trifling; troublesome",
+    "gradeLevel": 7,
+    "orderInGrade": 339,
+    "exampleWords": [
+      {
+        "word": "琐事",
+        "wordTraditional": "瑣事",
+        "pinyin": "suǒ shì",
+        "meaning": "trifle",
+        "ttsText": "琐，琐事的琐"
+      }
+    ]
+  },
+  {
+    "simplified": "碟",
+    "traditional": "碟",
+    "pinyin": "dié",
+    "meaning": "plate, small dish",
+    "gradeLevel": 7,
+    "orderInGrade": 340,
+    "exampleWords": [
+      {
+        "word": "碟子",
+        "wordTraditional": "碟子",
+        "pinyin": "dié zi",
+        "meaning": "saucer; small dish",
+        "ttsText": "碟，碟子的碟"
+      }
+    ]
+  },
+  {
+    "simplified": "涩",
+    "traditional": "澀",
+    "pinyin": "sè",
+    "meaning": "astringent, harsh, rough, uneven",
+    "gradeLevel": 7,
+    "orderInGrade": 341,
+    "exampleWords": [
+      {
+        "word": "生涩",
+        "wordTraditional": "生澀",
+        "pinyin": "shēng sè",
+        "meaning": "unripe; tart; not fully proficient; somewhat shaky",
+        "ttsText": "涩，生涩的涩"
+      }
+    ]
+  },
+  {
+    "simplified": "胧",
+    "traditional": "朧",
+    "pinyin": "lóng",
+    "meaning": "blurry, obscured; the condition or appearance of the moon",
+    "gradeLevel": 7,
+    "orderInGrade": 342,
+    "exampleWords": [
+      {
+        "word": "朦胧",
+        "wordTraditional": "朦朧",
+        "pinyin": "méng lóng",
+        "meaning": "(literary) (of moonlight) dim; (literary) murky; indistinct",
+        "ttsText": "胧，朦胧的胧"
+      }
+    ]
+  },
+  {
+    "simplified": "嘟",
+    "traditional": "嘟",
+    "pinyin": "dū",
+    "meaning": "the sound of a horn tooting",
+    "gradeLevel": 7,
+    "orderInGrade": 343,
+    "exampleWords": [
+      {
+        "word": "嘟嘴",
+        "wordTraditional": "嘟嘴",
+        "pinyin": "dū zuǐ",
+        "meaning": "(coll.) to pout (esp. in sulky displeasure)",
+        "ttsText": "嘟，嘟嘴的嘟"
+      }
+    ]
+  },
+  {
+    "simplified": "蹦",
+    "traditional": "蹦",
+    "pinyin": "bèng",
+    "meaning": "to jump, to bounce on; bright",
+    "gradeLevel": 7,
+    "orderInGrade": 344,
+    "exampleWords": [
+      {
+        "word": "蹦高",
+        "wordTraditional": "蹦高",
+        "pinyin": "bèng gāo",
+        "meaning": "to jump",
+        "ttsText": "蹦，蹦高的蹦"
+      }
+    ]
+  },
+  {
+    "simplified": "冢",
+    "traditional": "冢",
+    "pinyin": "zhǒng",
+    "meaning": "burial mound, mausoleum; grand",
+    "gradeLevel": 7,
+    "orderInGrade": 345,
+    "exampleWords": [
+      {
+        "word": "义冢",
+        "wordTraditional": "義塚",
+        "pinyin": "yì zhǒng",
+        "meaning": "potter's field; pauper's grave",
+        "ttsText": "冢，义冢的冢"
+      }
+    ]
+  },
+  {
+    "simplified": "浏",
+    "traditional": "瀏",
+    "pinyin": "liú",
+    "meaning": "bright; clear; deep; swift",
+    "gradeLevel": 7,
+    "orderInGrade": 346,
+    "exampleWords": [
+      {
+        "word": "浏阳",
+        "wordTraditional": "瀏陽",
+        "pinyin": "Liú yáng",
+        "meaning": "see 瀏陽市|浏阳市[Liu2 yang2 Shi4]",
+        "ttsText": "浏，浏阳的浏"
+      }
+    ]
+  },
+  {
+    "simplified": "裔",
+    "traditional": "裔",
+    "pinyin": "yì",
+    "meaning": "progeny, descendants",
+    "gradeLevel": 7,
+    "orderInGrade": 347,
+    "exampleWords": [
+      {
+        "word": "后裔",
+        "wordTraditional": "後裔",
+        "pinyin": "hòu yì",
+        "meaning": "descendant",
+        "ttsText": "裔，后裔的裔"
+      }
+    ]
+  },
+  {
+    "simplified": "襟",
+    "traditional": "襟",
+    "pinyin": "jīn",
+    "meaning": "lapel, collar",
+    "gradeLevel": 7,
+    "orderInGrade": 348,
+    "exampleWords": [
+      {
+        "word": "对襟",
+        "wordTraditional": "對襟",
+        "pinyin": "duì jīn",
+        "meaning": "buttoned Chinese jacket",
+        "ttsText": "襟，对襟的襟"
+      }
+    ]
+  },
+  {
+    "simplified": "叨",
+    "traditional": "叨",
+    "pinyin": "dāo",
+    "meaning": "talkative; grumbling",
+    "gradeLevel": 7,
+    "orderInGrade": 349,
+    "exampleWords": [
+      {
+        "word": "叨念",
+        "wordTraditional": "叨念",
+        "pinyin": "dāo niàn",
+        "meaning": "see 念叨[nian4 dao5]",
+        "ttsText": "叨，叨念的叨"
+      }
+    ]
+  },
+  {
+    "simplified": "诀",
+    "traditional": "訣",
+    "pinyin": "jué",
+    "meaning": "to take leave of, to bid farewell; knack, trick",
+    "gradeLevel": 7,
+    "orderInGrade": 350,
+    "exampleWords": [
+      {
+        "word": "要诀",
+        "wordTraditional": "要訣",
+        "pinyin": "yào jué",
+        "meaning": "the key trick; the secret of success",
+        "ttsText": "诀，要诀的诀"
+      }
+    ]
+  },
+  {
+    "simplified": "旭",
+    "traditional": "旭",
+    "pinyin": "xù",
+    "meaning": "the rising sun; brilliant, radiant",
+    "gradeLevel": 7,
+    "orderInGrade": 351,
+    "exampleWords": [
+      {
+        "word": "旭日",
+        "wordTraditional": "旭日",
+        "pinyin": "xù rì",
+        "meaning": "the rising sun",
+        "ttsText": "旭，旭日的旭"
+      }
+    ]
+  },
+  {
+    "simplified": "虾",
+    "traditional": "蝦",
+    "pinyin": "xiā",
+    "meaning": "shrimp, prawn",
+    "gradeLevel": 7,
+    "orderInGrade": 352,
+    "exampleWords": [
+      {
+        "word": "虾子",
+        "wordTraditional": "蝦子",
+        "pinyin": "xiā zǐ",
+        "meaning": "shrimp roe; shrimp eggs",
+        "ttsText": "虾，虾子的虾"
+      }
+    ]
+  },
+  {
+    "simplified": "簿",
+    "traditional": "簿",
+    "pinyin": "bù",
+    "meaning": "register, notebook, account book",
+    "gradeLevel": 7,
+    "orderInGrade": 353,
+    "exampleWords": [
+      {
+        "word": "簿子",
+        "wordTraditional": "簿子",
+        "pinyin": "bù zi",
+        "meaning": "notebook; book",
+        "ttsText": "簿，簿子的簿"
+      }
+    ]
+  },
+  {
+    "simplified": "啤",
+    "traditional": "啤",
+    "pinyin": "pí",
+    "meaning": "beer",
+    "gradeLevel": 7,
+    "orderInGrade": 354,
+    "exampleWords": [
+      {
+        "word": "生啤",
+        "wordTraditional": "生啤",
+        "pinyin": "shēng pí",
+        "meaning": "draft beer; unpasteurized beer",
+        "ttsText": "啤，生啤的啤"
+      }
+    ]
+  },
+  {
+    "simplified": "擒",
+    "traditional": "擒",
+    "pinyin": "qín",
+    "meaning": "to arrest, to capture, to seize",
+    "gradeLevel": 7,
+    "orderInGrade": 355,
+    "exampleWords": [
+      {
+        "word": "就擒",
+        "wordTraditional": "就擒",
+        "pinyin": "jiù qín",
+        "meaning": "to be taken prisoner",
+        "ttsText": "擒，就擒的擒"
+      }
+    ]
+  },
+  {
+    "simplified": "枣",
+    "traditional": "棗",
+    "pinyin": "zǎo",
+    "meaning": "date tree; dates, jujubes; surname",
+    "gradeLevel": 7,
+    "orderInGrade": 356,
+    "exampleWords": [
+      {
+        "word": "枣子",
+        "wordTraditional": "棗子",
+        "pinyin": "zǎo zi",
+        "meaning": "dates; jujube",
+        "ttsText": "枣，枣子的枣"
+      }
+    ]
+  },
+  {
+    "simplified": "嘎",
+    "traditional": "嘎",
+    "pinyin": "gā",
+    "meaning": "a cackling sound; bad, malevolent",
+    "gradeLevel": 7,
+    "orderInGrade": 357,
+    "exampleWords": [
+      {
+        "word": "嘎了",
+        "wordTraditional": "嘎了",
+        "pinyin": "gǎ le",
+        "meaning": "(slang) (I'm, you're) toast",
+        "ttsText": "嘎，嘎了的嘎"
+      }
+    ]
+  },
+  {
+    "simplified": "苑",
+    "traditional": "苑",
+    "pinyin": "yuàn",
+    "meaning": "pasture, park, garden; mansion",
+    "gradeLevel": 7,
+    "orderInGrade": 358,
+    "exampleWords": [
+      {
+        "word": "文苑",
+        "wordTraditional": "文苑",
+        "pinyin": "wén yuàn",
+        "meaning": "the literary world",
+        "ttsText": "苑，文苑的苑"
+      }
+    ]
+  },
+  {
+    "simplified": "牟",
+    "traditional": "牟",
+    "pinyin": "móu",
+    "meaning": "to profit, to usurp; moo",
+    "gradeLevel": 7,
+    "orderInGrade": 359,
+    "exampleWords": [
+      {
+        "word": "牟利",
+        "wordTraditional": "牟利",
+        "pinyin": "móu lì",
+        "meaning": "to gain profit (by underhand means)",
+        "ttsText": "牟，牟利的牟"
+      }
+    ]
+  },
+  {
+    "simplified": "呕",
+    "traditional": "嘔",
+    "pinyin": "ǒu",
+    "meaning": "to vomit; to annoy, to enrage",
+    "gradeLevel": 7,
+    "orderInGrade": 360,
+    "exampleWords": [
+      {
+        "word": "作呕",
+        "wordTraditional": "作嘔",
+        "pinyin": "zuò ǒu",
+        "meaning": "to feel sick; to feel nauseous; to feel disgusted",
+        "ttsText": "呕，作呕的呕"
+      }
+    ]
+  },
+  {
+    "simplified": "骆",
+    "traditional": "駱",
+    "pinyin": "luò",
+    "meaning": "camel",
+    "gradeLevel": 7,
+    "orderInGrade": 361,
+    "exampleWords": [
+      {
+        "word": "骆马",
+        "wordTraditional": "駱馬",
+        "pinyin": "luò mǎ",
+        "meaning": "llama",
+        "ttsText": "骆，骆马的骆"
+      }
+    ]
+  },
+  {
+    "simplified": "凸",
+    "traditional": "凸",
+    "pinyin": "tū",
+    "meaning": "to protrude, to bulge out; convex",
+    "gradeLevel": 7,
+    "orderInGrade": 362,
+    "exampleWords": [
+      {
+        "word": "凸出",
+        "wordTraditional": "凸出",
+        "pinyin": "tū chū",
+        "meaning": "to protrude; to stick out",
+        "ttsText": "凸，凸出的凸"
+      }
+    ]
+  },
+  {
+    "simplified": "熄",
+    "traditional": "熄",
+    "pinyin": "xī",
+    "meaning": "to extinguish, to put out, to quench",
+    "gradeLevel": 7,
+    "orderInGrade": 363,
+    "exampleWords": [
+      {
+        "word": "熄火",
+        "wordTraditional": "熄火",
+        "pinyin": "xī huǒ",
+        "meaning": "(of fire, lamp etc) to go out",
+        "ttsText": "熄，熄火的熄"
+      }
+    ]
+  },
+  {
+    "simplified": "兀",
+    "traditional": "兀",
+    "pinyin": "wù",
+    "meaning": "weak; lame",
+    "gradeLevel": 7,
+    "orderInGrade": 364,
+    "exampleWords": [
+      {
+        "word": "兀立",
+        "wordTraditional": "兀立",
+        "pinyin": "wù lì",
+        "meaning": "to stand upright",
+        "ttsText": "兀，兀立的兀"
+      }
+    ]
+  },
+  {
+    "simplified": "喔",
+    "traditional": "喔",
+    "pinyin": "ō",
+    "meaning": "onomatopoetic, the sound of crowing or crying",
+    "gradeLevel": 7,
+    "orderInGrade": 365,
+    "exampleWords": [
+      {
+        "word": "喔",
+        "wordTraditional": "喔",
+        "pinyin": "ō",
+        "meaning": "onomatopoetic, the sound of crowing or crying",
+        "ttsText": "喔"
+      }
+    ]
+  },
+  {
+    "simplified": "裳",
+    "traditional": "裳",
+    "pinyin": "shang",
+    "meaning": "skirt, petticoat; beautiful",
+    "gradeLevel": 7,
+    "orderInGrade": 366,
+    "exampleWords": [
+      {
+        "word": "衣裳",
+        "wordTraditional": "衣裳",
+        "pinyin": "yī shang",
+        "meaning": "(coll.) clothes",
+        "ttsText": "裳，衣裳的裳"
+      }
+    ]
+  },
+  {
+    "simplified": "凹",
+    "traditional": "凹",
+    "pinyin": "āo",
+    "meaning": "concave, hollow; depressed; pass, valley",
+    "gradeLevel": 7,
+    "orderInGrade": 367,
+    "exampleWords": [
+      {
+        "word": "凹进",
+        "wordTraditional": "凹進",
+        "pinyin": "āo jìn",
+        "meaning": "concave; recessed; dented",
+        "ttsText": "凹，凹进的凹"
+      }
+    ]
+  },
+  {
+    "simplified": "赎",
+    "traditional": "贖",
+    "pinyin": "shú",
+    "meaning": "ransom; to buy; to redeem",
+    "gradeLevel": 7,
+    "orderInGrade": 368,
+    "exampleWords": [
+      {
+        "word": "赎回",
+        "wordTraditional": "贖回",
+        "pinyin": "shú huí",
+        "meaning": "to redeem",
+        "ttsText": "赎，赎回的赎"
+      }
+    ]
+  },
+  {
+    "simplified": "屯",
+    "traditional": "屯",
+    "pinyin": "tún",
+    "meaning": "village, hamlet; camp; station",
+    "gradeLevel": 7,
+    "orderInGrade": 369,
+    "exampleWords": [
+      {
+        "word": "屯子",
+        "wordTraditional": "屯子",
+        "pinyin": "tún zi",
+        "meaning": "village",
+        "ttsText": "屯，屯子的屯"
+      }
+    ]
+  },
+  {
+    "simplified": "膛",
+    "traditional": "膛",
+    "pinyin": "táng",
+    "meaning": "chest cavity; hollow space",
+    "gradeLevel": 7,
+    "orderInGrade": 370,
+    "exampleWords": [
+      {
+        "word": "上膛",
+        "wordTraditional": "上膛",
+        "pinyin": "shàng táng",
+        "meaning": "roof of the mouth; to load a gun",
+        "ttsText": "膛，上膛的膛"
+      }
+    ]
+  },
+  {
+    "simplified": "浇",
+    "traditional": "澆",
+    "pinyin": "jiāo",
+    "meaning": "to spray, to sprinkle, to water",
+    "gradeLevel": 7,
+    "orderInGrade": 371,
+    "exampleWords": [
+      {
+        "word": "浇水",
+        "wordTraditional": "澆水",
+        "pinyin": "jiāo shuǐ",
+        "meaning": "to water (plants etc)",
+        "ttsText": "浇，浇水的浇"
+      }
+    ]
+  },
+  {
+    "simplified": "灼",
+    "traditional": "灼",
+    "pinyin": "zhuó",
+    "meaning": "to burn, to cauterize; bright",
+    "gradeLevel": 7,
+    "orderInGrade": 372,
+    "exampleWords": [
+      {
+        "word": "灼见",
+        "wordTraditional": "灼見",
+        "pinyin": "zhuó jiàn",
+        "meaning": "to see clearly; deep insight; profound view",
+        "ttsText": "灼，灼见的灼"
+      }
+    ]
+  },
+  {
+    "simplified": "裘",
+    "traditional": "裘",
+    "pinyin": "qiú",
+    "meaning": "fur coat; surname",
+    "gradeLevel": 7,
+    "orderInGrade": 373,
+    "exampleWords": [
+      {
+        "word": "裘",
+        "wordTraditional": "裘",
+        "pinyin": "qiú",
+        "meaning": "fur coat",
+        "ttsText": "裘"
+      }
+    ]
+  },
+  {
+    "simplified": "砰",
+    "traditional": "砰",
+    "pinyin": "pēng",
+    "meaning": "bang! the sound of crashing rock",
+    "gradeLevel": 7,
+    "orderInGrade": 374,
+    "exampleWords": [
+      {
+        "word": "砰砰",
+        "wordTraditional": "砰砰",
+        "pinyin": "pēng pēng",
+        "meaning": "(onom.) slam",
+        "ttsText": "砰，砰砰的砰"
+      }
+    ]
+  },
+  {
+    "simplified": "棘",
+    "traditional": "棘",
+    "pinyin": "jí",
+    "meaning": "jujube tree; thorns, brambles",
+    "gradeLevel": 7,
+    "orderInGrade": 375,
+    "exampleWords": [
+      {
+        "word": "棘手",
+        "wordTraditional": "棘手",
+        "pinyin": "jí shǒu",
+        "meaning": "thorny (problem); intractable",
+        "ttsText": "棘，棘手的棘"
+      }
+    ]
+  },
+  {
+    "simplified": "橡",
+    "traditional": "橡",
+    "pinyin": "xiàng",
+    "meaning": "chestnut oak; rubber tree; rubber",
+    "gradeLevel": 7,
+    "orderInGrade": 376,
+    "exampleWords": [
+      {
+        "word": "橡子",
+        "wordTraditional": "橡子",
+        "pinyin": "xiàng zǐ",
+        "meaning": "acorn",
+        "ttsText": "橡，橡子的橡"
+      }
+    ]
+  },
+  {
+    "simplified": "碱",
+    "traditional": "鹻",
+    "pinyin": "jiǎn",
+    "meaning": "alkaline, alkali, lye, salt",
+    "gradeLevel": 7,
+    "orderInGrade": 377,
+    "exampleWords": [
+      {
+        "word": "碱性",
+        "wordTraditional": "鹼性",
+        "pinyin": "jiǎn xìng",
+        "meaning": "(chemistry) alkaline",
+        "ttsText": "碱，碱性的碱"
+      }
+    ]
+  },
+  {
+    "simplified": "聋",
+    "traditional": "聾",
+    "pinyin": "lóng",
+    "meaning": "deaf",
+    "gradeLevel": 7,
+    "orderInGrade": 378,
+    "exampleWords": [
+      {
+        "word": "聋人",
+        "wordTraditional": "聾人",
+        "pinyin": "lóng rén",
+        "meaning": "deaf person; hearing-impaired person",
+        "ttsText": "聋，聋人的聋"
+      }
+    ]
+  },
+  {
+    "simplified": "姥",
+    "traditional": "姥",
+    "pinyin": "lǎo",
+    "meaning": "maternal grandmother; midwife",
+    "gradeLevel": 7,
+    "orderInGrade": 379,
+    "exampleWords": [
+      {
+        "word": "老姥",
+        "wordTraditional": "老姥",
+        "pinyin": "lǎo mǔ",
+        "meaning": "old lady; (old woman's self-reference) I, me",
+        "ttsText": "姥，老姥的姥"
+      }
+    ]
+  },
+  {
+    "simplified": "瑜",
+    "traditional": "瑜",
+    "pinyin": "yú",
+    "meaning": "flawless gem or jewel",
+    "gradeLevel": 7,
+    "orderInGrade": 380,
+    "exampleWords": [
+      {
+        "word": "周瑜",
+        "wordTraditional": "周瑜",
+        "pinyin": "Zhōu Yú",
+        "meaning": "Zhou Yu (175-210), famous general of the southern Wu kingdom and victor of the battle of Redcliff",
+        "ttsText": "瑜，周瑜的瑜"
+      }
+    ]
+  },
+  {
+    "simplified": "毋",
+    "traditional": "毋",
+    "pinyin": "wú",
+    "meaning": "not; do not; surname",
+    "gradeLevel": 7,
+    "orderInGrade": 381,
+    "exampleWords": [
+      {
+        "word": "毋宁",
+        "wordTraditional": "毋寧",
+        "pinyin": "wú nìng",
+        "meaning": "not as good as; would rather",
+        "ttsText": "毋，毋宁的毋"
+      }
+    ]
+  },
+  {
+    "simplified": "娅",
+    "traditional": "婭",
+    "pinyin": "yà",
+    "meaning": "a mutual term of address for sons-in-law or brothers-in-law",
+    "gradeLevel": 7,
+    "orderInGrade": 382,
+    "exampleWords": [
+      {
+        "word": "娅",
+        "wordTraditional": "婭",
+        "pinyin": "yà",
+        "meaning": "a mutual term of address for sons-in-law or brothers-in-law",
+        "ttsText": "娅"
+      }
+    ]
+  },
+  {
+    "simplified": "沮",
+    "traditional": "沮",
+    "pinyin": "jǔ",
+    "meaning": "to stop, to prevent; dejected, defeated",
+    "gradeLevel": 7,
+    "orderInGrade": 383,
+    "exampleWords": [
+      {
+        "word": "沮丧",
+        "wordTraditional": "沮喪",
+        "pinyin": "jǔ sàng",
+        "meaning": "dispirited; dejected; dismayed",
+        "ttsText": "沮，沮丧的沮"
+      }
+    ]
+  },
+  {
+    "simplified": "萌",
+    "traditional": "萌",
+    "pinyin": "méng",
+    "meaning": "bud, germ, sprout; to bud",
+    "gradeLevel": 7,
+    "orderInGrade": 384,
+    "exampleWords": [
+      {
+        "word": "萌生",
+        "wordTraditional": "萌生",
+        "pinyin": "méng shēng",
+        "meaning": "to burgeon",
+        "ttsText": "萌，萌生的萌"
+      }
+    ]
+  },
+  {
+    "simplified": "俏",
+    "traditional": "俏",
+    "pinyin": "qiào",
+    "meaning": "to resemble; similar, alike; pretty",
+    "gradeLevel": 7,
+    "orderInGrade": 385,
+    "exampleWords": [
+      {
+        "word": "俏美",
+        "wordTraditional": "俏美",
+        "pinyin": "qiào měi",
+        "meaning": "charming; pretty",
+        "ttsText": "俏，俏美的俏"
+      }
+    ]
+  },
+  {
+    "simplified": "黯",
+    "traditional": "黯",
+    "pinyin": "àn",
+    "meaning": " black; dark; sullen, dreary",
+    "gradeLevel": 7,
+    "orderInGrade": 386,
+    "exampleWords": [
+      {
+        "word": "黯然",
+        "wordTraditional": "黯然",
+        "pinyin": "àn rán",
+        "meaning": "dim; sad",
+        "ttsText": "黯，黯然的黯"
+      }
+    ]
+  },
+  {
+    "simplified": "撇",
+    "traditional": "撇",
+    "pinyin": "piē",
+    "meaning": "to abandon, to discard",
+    "gradeLevel": 7,
+    "orderInGrade": 387,
+    "exampleWords": [
+      {
+        "word": "撇下",
+        "wordTraditional": "撇下",
+        "pinyin": "piē xia",
+        "meaning": "to cast away",
+        "ttsText": "撇，撇下的撇"
+      }
+    ]
+  },
+  {
+    "simplified": "粟",
+    "traditional": "粟",
+    "pinyin": "sù",
+    "meaning": "oats, millet, barley",
+    "gradeLevel": 7,
+    "orderInGrade": 388,
+    "exampleWords": [
+      {
+        "word": "起粟",
+        "wordTraditional": "起粟",
+        "pinyin": "qǐ sù",
+        "meaning": "to get goose bumps",
+        "ttsText": "粟，起粟的粟"
+      }
+    ]
+  },
+  {
+    "simplified": "粪",
+    "traditional": "糞",
+    "pinyin": "fèn",
+    "meaning": "manure, dung; shit, excrement",
+    "gradeLevel": 7,
+    "orderInGrade": 389,
+    "exampleWords": [
+      {
+        "word": "粪道",
+        "wordTraditional": "糞道",
+        "pinyin": "fèn dào",
+        "meaning": "coprodeum (in birds)",
+        "ttsText": "粪，粪道的粪"
+      }
+    ]
+  },
+  {
+    "simplified": "尹",
+    "traditional": "尹",
+    "pinyin": "yǐn",
+    "meaning": "to govern, to oversee; director",
+    "gradeLevel": 7,
+    "orderInGrade": 390,
+    "exampleWords": [
+      {
+        "word": "府尹",
+        "wordTraditional": "府尹",
+        "pinyin": "fǔ yǐn",
+        "meaning": "magistrate; prefect",
+        "ttsText": "尹，府尹的尹"
+      }
+    ]
+  },
+  {
+    "simplified": "苟",
+    "traditional": "苟",
+    "pinyin": "gǒu",
+    "meaning": "careless, frivolous, illicit; but, if only",
+    "gradeLevel": 7,
+    "orderInGrade": 391,
+    "exampleWords": [
+      {
+        "word": "苟同",
+        "wordTraditional": "苟同",
+        "pinyin": "gǒu tóng",
+        "meaning": "to agree blindly",
+        "ttsText": "苟，苟同的苟"
+      }
+    ]
+  },
+  {
+    "simplified": "癫",
+    "traditional": "癲",
+    "pinyin": "diān",
+    "meaning": "crazy, insane; madness, mania",
+    "gradeLevel": 7,
+    "orderInGrade": 392,
+    "exampleWords": [
+      {
+        "word": "发癫",
+        "wordTraditional": "發癲",
+        "pinyin": "fā diān",
+        "meaning": "to go crazy; to lose one's mind",
+        "ttsText": "癫，发癫的癫"
+      }
+    ]
+  },
+  {
+    "simplified": "蚂",
+    "traditional": "螞",
+    "pinyin": "mǎ",
+    "meaning": "ant; leech",
+    "gradeLevel": 7,
+    "orderInGrade": 393,
+    "exampleWords": [
+      {
+        "word": "蚂螂",
+        "wordTraditional": "螞螂",
+        "pinyin": "mā láng",
+        "meaning": "dragonfly",
+        "ttsText": "蚂，蚂螂的蚂"
+      }
+    ]
+  },
+  {
+    "simplified": "禹",
+    "traditional": "禹",
+    "pinyin": "yǔ",
+    "meaning": "legendary Hsia dynasty founder",
+    "gradeLevel": 7,
+    "orderInGrade": 394,
+    "exampleWords": [
+      {
+        "word": "禹会",
+        "wordTraditional": "禹會",
+        "pinyin": "Yǔ huì",
+        "meaning": "see 禹會區|禹会区[Yu3 hui4 Qu1]",
+        "ttsText": "禹，禹会的禹"
+      }
+    ]
+  },
+  {
+    "simplified": "廖",
+    "traditional": "廖",
+    "pinyin": "liào",
+    "meaning": "deserted, empty, few; surname",
+    "gradeLevel": 7,
+    "orderInGrade": 395,
+    "exampleWords": [
+      {
+        "word": "廖",
+        "wordTraditional": "廖",
+        "pinyin": "liào",
+        "meaning": "deserted, empty, few",
+        "ttsText": "廖"
+      }
+    ]
+  },
+  {
+    "simplified": "俭",
+    "traditional": "儉",
+    "pinyin": "jiǎn",
+    "meaning": "temperate, frugal, economical",
+    "gradeLevel": 7,
+    "orderInGrade": 396,
+    "exampleWords": [
+      {
+        "word": "俭学",
+        "wordTraditional": "儉學",
+        "pinyin": "jiǎn xué",
+        "meaning": "to be frugal so that one can pay for one's education",
+        "ttsText": "俭，俭学的俭"
+      }
+    ]
+  },
+  {
+    "simplified": "帖",
+    "traditional": "帖",
+    "pinyin": "tiē",
+    "meaning": "card, invite, notice; to fit snugly",
+    "gradeLevel": 7,
+    "orderInGrade": 397,
+    "exampleWords": [
+      {
+        "word": "帖子",
+        "wordTraditional": "帖子",
+        "pinyin": "tiě zi",
+        "meaning": "card; invitation; message; (forum) post",
+        "ttsText": "帖，帖子的帖"
+      }
+    ]
+  },
+  {
+    "simplified": "煎",
+    "traditional": "煎",
+    "pinyin": "jiān",
+    "meaning": "to fry in fat or oil; to boil in water",
+    "gradeLevel": 7,
+    "orderInGrade": 398,
+    "exampleWords": [
+      {
+        "word": "生煎",
+        "wordTraditional": "生煎",
+        "pinyin": "shēng jiān",
+        "meaning": "shengjian, a pan-fried bun filled with meat and juices, a Shanghai specialty",
+        "ttsText": "煎，生煎的煎"
+      }
+    ]
+  },
+  {
+    "simplified": "缕",
+    "traditional": "縷",
+    "pinyin": "lǚ",
+    "meaning": "strand, thread; detailed, precise",
+    "gradeLevel": 7,
+    "orderInGrade": 399,
+    "exampleWords": [
+      {
+        "word": "缕述",
+        "wordTraditional": "縷述",
+        "pinyin": "lǔ: shù",
+        "meaning": "to relate in detail",
+        "ttsText": "缕，缕述的缕"
+      }
+    ]
+  },
+  {
+    "simplified": "窦",
+    "traditional": "竇",
+    "pinyin": "dòu",
+    "meaning": "sinuses; corrupt; surname",
+    "gradeLevel": 7,
+    "orderInGrade": 400,
+    "exampleWords": [
+      {
+        "word": "窦道",
+        "wordTraditional": "竇道",
+        "pinyin": "dòu dào",
+        "meaning": "sinus (anatomy); subterranean passage",
+        "ttsText": "窦，窦道的窦"
+      }
+    ]
+  },
+  {
+    "simplified": "簇",
+    "traditional": "簇",
+    "pinyin": "cù",
+    "meaning": "bunch, cluster; crowd, swarm",
+    "gradeLevel": 7,
+    "orderInGrade": 401,
+    "exampleWords": [
+      {
+        "word": "簇新",
+        "wordTraditional": "簇新",
+        "pinyin": "cù xīn",
+        "meaning": "brand-new; spanking new",
+        "ttsText": "簇，簇新的簇"
+      }
+    ]
+  },
+  {
+    "simplified": "棱",
+    "traditional": "棱",
+    "pinyin": "léng",
+    "meaning": "squared timber; angle, corner, edge",
+    "gradeLevel": 7,
+    "orderInGrade": 402,
+    "exampleWords": [
+      {
+        "word": "棱台",
+        "wordTraditional": "稜臺",
+        "pinyin": "léng tái",
+        "meaning": "prism",
+        "ttsText": "棱，棱台的棱"
+      }
+    ]
+  },
+  {
+    "simplified": "叩",
+    "traditional": "叩",
+    "pinyin": "kòu",
+    "meaning": "to ask; to bow, to kowtow; to knock",
+    "gradeLevel": 7,
+    "orderInGrade": 403,
+    "exampleWords": [
+      {
+        "word": "叩应",
+        "wordTraditional": "叩應",
+        "pinyin": "kòu yìng",
+        "meaning": "call-in (loanword)",
+        "ttsText": "叩，叩应的叩"
+      }
+    ]
+  },
+  {
+    "simplified": "呐",
+    "traditional": "吶",
+    "pinyin": "nà",
+    "meaning": "to raise one's voice; to yell, to shout; to stammer",
+    "gradeLevel": 7,
+    "orderInGrade": 404,
+    "exampleWords": [
+      {
+        "word": "声呐",
+        "wordTraditional": "聲吶",
+        "pinyin": "shēng nà",
+        "meaning": "sonar (loanword)",
+        "ttsText": "呐，声呐的呐"
+      }
+    ]
+  },
+  {
+    "simplified": "瑶",
+    "traditional": "瑤",
+    "pinyin": "yáo",
+    "meaning": "precious jade",
+    "gradeLevel": 7,
+    "orderInGrade": 405,
+    "exampleWords": [
+      {
+        "word": "瑶海",
+        "wordTraditional": "瑤海",
+        "pinyin": "Yáo hǎi",
+        "meaning": "see 瑤海區|瑶海区[Yao2 hai3 Qu1]",
+        "ttsText": "瑶，瑶海的瑶"
+      }
+    ]
+  },
+  {
+    "simplified": "墅",
+    "traditional": "墅",
+    "pinyin": "shù",
+    "meaning": "villa, country house",
+    "gradeLevel": 7,
+    "orderInGrade": 406,
+    "exampleWords": [
+      {
+        "word": "别墅",
+        "wordTraditional": "別墅",
+        "pinyin": "bié shù",
+        "meaning": "villa",
+        "ttsText": "墅，别墅的墅"
+      }
+    ]
+  },
+  {
+    "simplified": "莺",
+    "traditional": "鶯",
+    "pinyin": "yīng",
+    "meaning": "oriole, green finch; Sylvia species (various)",
+    "gradeLevel": 7,
+    "orderInGrade": 407,
+    "exampleWords": [
+      {
+        "word": "黄莺",
+        "wordTraditional": "黃鶯",
+        "pinyin": "huáng yīng",
+        "meaning": "black-naped oriole (Oriolus chinensis)",
+        "ttsText": "莺，黄莺的莺"
+      }
+    ]
+  },
+  {
+    "simplified": "烫",
+    "traditional": "燙",
+    "pinyin": "tàng",
+    "meaning": "to scald; to iron clothes or hair",
+    "gradeLevel": 7,
+    "orderInGrade": 408,
+    "exampleWords": [
+      {
+        "word": "烫发",
+        "wordTraditional": "燙髮",
+        "pinyin": "tàng fà",
+        "meaning": "perm (hairstyle)",
+        "ttsText": "烫，烫发的烫"
+      }
+    ]
+  },
+  {
+    "simplified": "蛙",
+    "traditional": "蛙",
+    "pinyin": "wā",
+    "meaning": "frog",
+    "gradeLevel": 7,
+    "orderInGrade": 409,
+    "exampleWords": [
+      {
+        "word": "蛙人",
+        "wordTraditional": "蛙人",
+        "pinyin": "wā rén",
+        "meaning": "frogman",
+        "ttsText": "蛙，蛙人的蛙"
+      }
+    ]
+  },
+  {
+    "simplified": "歹",
+    "traditional": "歹",
+    "pinyin": "dǎi",
+    "meaning": "corpse; death; evil, depraved, wicked",
+    "gradeLevel": 7,
+    "orderInGrade": 410,
+    "exampleWords": [
+      {
+        "word": "歹人",
+        "wordTraditional": "歹人",
+        "pinyin": "dǎi rén",
+        "meaning": "bad person; evildoer; robber",
+        "ttsText": "歹，歹人的歹"
+      }
+    ]
+  },
+  {
+    "simplified": "伶",
+    "traditional": "伶",
+    "pinyin": "líng",
+    "meaning": "clever; lonely, solitary",
+    "gradeLevel": 7,
+    "orderInGrade": 411,
+    "exampleWords": [
+      {
+        "word": "名伶",
+        "wordTraditional": "名伶",
+        "pinyin": "míng líng",
+        "meaning": "famous actor or actress (Chinese opera)",
+        "ttsText": "伶，名伶的伶"
+      }
+    ]
+  },
+  {
+    "simplified": "葱",
+    "traditional": "蔥",
+    "pinyin": "cōng",
+    "meaning": "scallions, leeks, green onions",
+    "gradeLevel": 7,
+    "orderInGrade": 412,
+    "exampleWords": [
+      {
+        "word": "大葱",
+        "wordTraditional": "大蔥",
+        "pinyin": "dà cōng",
+        "meaning": "leek; Chinese onion",
+        "ttsText": "葱，大葱的葱"
+      }
+    ]
+  },
+  {
+    "simplified": "哮",
+    "traditional": "哮",
+    "pinyin": "xiāo",
+    "meaning": "to cough; to pant; to roar",
+    "gradeLevel": 7,
+    "orderInGrade": 413,
+    "exampleWords": [
+      {
+        "word": "哮鸣",
+        "wordTraditional": "哮鳴",
+        "pinyin": "xiào míng",
+        "meaning": "wheezing",
+        "ttsText": "哮，哮鸣的哮"
+      }
+    ]
+  },
+  {
+    "simplified": "眩",
+    "traditional": "眩",
+    "pinyin": "xuàn",
+    "meaning": "to confuse; dazed, disoriented",
+    "gradeLevel": 7,
+    "orderInGrade": 414,
+    "exampleWords": [
+      {
+        "word": "眩人",
+        "wordTraditional": "眩人",
+        "pinyin": "xuàn rén",
+        "meaning": "wizard; magician",
+        "ttsText": "眩，眩人的眩"
+      }
+    ]
+  },
+  {
+    "simplified": "坤",
+    "traditional": "坤",
+    "pinyin": "kūn",
+    "meaning": "earth; feminine",
+    "gradeLevel": 7,
+    "orderInGrade": 415,
+    "exampleWords": [
+      {
+        "word": "坤包",
+        "wordTraditional": "坤包",
+        "pinyin": "kūn bāo",
+        "meaning": "woman's handbag or shoulder bag",
+        "ttsText": "坤，坤包的坤"
+      }
+    ]
+  },
+  {
+    "simplified": "廓",
+    "traditional": "廓",
+    "pinyin": "kuò",
+    "meaning": "broad, wide; open; empty; outline",
+    "gradeLevel": 7,
+    "orderInGrade": 416,
+    "exampleWords": [
+      {
+        "word": "廓清",
+        "wordTraditional": "廓清",
+        "pinyin": "kuò qīng",
+        "meaning": "to clear up; to wipe out; to eradicate",
+        "ttsText": "廓，廓清的廓"
+      }
+    ]
+  },
+  {
+    "simplified": "讳",
+    "traditional": "諱",
+    "pinyin": "huì",
+    "meaning": "taboo; to shun, to conceal, to avoid mentioning",
+    "gradeLevel": 7,
+    "orderInGrade": 417,
+    "exampleWords": [
+      {
+        "word": "不讳",
+        "wordTraditional": "不諱",
+        "pinyin": "bù huì",
+        "meaning": "without concealing anything; to pass away; to die",
+        "ttsText": "讳，不讳的讳"
+      }
+    ]
+  },
+  {
+    "simplified": "啼",
+    "traditional": "啼",
+    "pinyin": "tí",
+    "meaning": "to weep, to whimper; to howl; to crow",
+    "gradeLevel": 7,
+    "orderInGrade": 418,
+    "exampleWords": [
+      {
+        "word": "啼声",
+        "wordTraditional": "啼聲",
+        "pinyin": "tí shēng",
+        "meaning": "ululation; to howl",
+        "ttsText": "啼，啼声的啼"
+      }
+    ]
+  },
+  {
+    "simplified": "乍",
+    "traditional": "乍",
+    "pinyin": "zhà",
+    "meaning": "first time, for the first time, suddenly",
+    "gradeLevel": 7,
+    "orderInGrade": 419,
+    "exampleWords": [
+      {
+        "word": "乍现",
+        "wordTraditional": "乍現",
+        "pinyin": "zhà xiàn",
+        "meaning": "to appear suddenly",
+        "ttsText": "乍，乍现的乍"
+      }
+    ]
+  },
+  {
+    "simplified": "瓣",
+    "traditional": "瓣",
+    "pinyin": "bàn",
+    "meaning": "petal; segment; valve",
+    "gradeLevel": 7,
+    "orderInGrade": 420,
+    "exampleWords": [
+      {
+        "word": "心瓣",
+        "wordTraditional": "心瓣",
+        "pinyin": "xīn bàn",
+        "meaning": "heart valve",
+        "ttsText": "瓣，心瓣的瓣"
+      }
+    ]
+  },
+  {
+    "simplified": "矫",
+    "traditional": "矯",
+    "pinyin": "jiǎo",
+    "meaning": "to correct, to rectify, to straighten out",
+    "gradeLevel": 7,
+    "orderInGrade": 421,
+    "exampleWords": [
+      {
+        "word": "矫情",
+        "wordTraditional": "矯情",
+        "pinyin": "jiáo qing",
+        "meaning": "(Beijing dialect) argumentative; unreasonable",
+        "ttsText": "矫，矫情的矫"
+      }
+    ]
+  },
+  {
+    "simplified": "跋",
+    "traditional": "跋",
+    "pinyin": "bá",
+    "meaning": "to walk, to travel; epilogue, colophon",
+    "gradeLevel": 7,
+    "orderInGrade": 422,
+    "exampleWords": [
+      {
+        "word": "题跋",
+        "wordTraditional": "題跋",
+        "pinyin": "tí bá",
+        "meaning": "short comments; preface and postscript",
+        "ttsText": "跋，题跋的跋"
+      }
+    ]
+  },
+  {
+    "simplified": "枉",
+    "traditional": "枉",
+    "pinyin": "wǎng",
+    "meaning": "useless, in vain; crooked, bent",
+    "gradeLevel": 7,
+    "orderInGrade": 423,
+    "exampleWords": [
+      {
+        "word": "枉法",
+        "wordTraditional": "枉法",
+        "pinyin": "wǎng fǎ",
+        "meaning": "to circumvent the law",
+        "ttsText": "枉，枉法的枉"
+      }
+    ]
+  },
+  {
+    "simplified": "梗",
+    "traditional": "梗",
+    "pinyin": "gěng",
+    "meaning": "stem, branch; to hinder, to block",
+    "gradeLevel": 7,
+    "orderInGrade": 424,
+    "exampleWords": [
+      {
+        "word": "作梗",
+        "wordTraditional": "作梗",
+        "pinyin": "zuò gěng",
+        "meaning": "to hinder; to obstruct; to create difficulties",
+        "ttsText": "梗，作梗的梗"
+      }
+    ]
+  },
+  {
+    "simplified": "厕",
+    "traditional": "厠",
+    "pinyin": "cè",
+    "meaning": "toilet, washroom; to mingle",
+    "gradeLevel": 7,
+    "orderInGrade": 425,
+    "exampleWords": [
+      {
+        "word": "厕所",
+        "wordTraditional": "廁所",
+        "pinyin": "cè suǒ",
+        "meaning": "toilet; lavatory",
+        "ttsText": "厕，厕所的厕"
+      }
+    ]
+  },
+  {
+    "simplified": "琢",
+    "traditional": "琢",
+    "pinyin": "zuó",
+    "meaning": "to polish jade; to cut jade",
+    "gradeLevel": 7,
+    "orderInGrade": 426,
+    "exampleWords": [
+      {
+        "word": "琢磨",
+        "wordTraditional": "琢磨",
+        "pinyin": "zhuó mó",
+        "meaning": "to carve and polish (jade)",
+        "ttsText": "琢，琢磨的琢"
+      }
+    ]
+  },
+  {
+    "simplified": "讥",
+    "traditional": "譏",
+    "pinyin": "jī",
+    "meaning": "to ridicule, to mock, to jeer",
+    "gradeLevel": 7,
+    "orderInGrade": 427,
+    "exampleWords": [
+      {
+        "word": "讥笑",
+        "wordTraditional": "譏笑",
+        "pinyin": "jī xiào",
+        "meaning": "to sneer",
+        "ttsText": "讥，讥笑的讥"
+      }
+    ]
+  },
+  {
+    "simplified": "釉",
+    "traditional": "釉",
+    "pinyin": "yòu",
+    "meaning": "enamel, glaze",
+    "gradeLevel": 7,
+    "orderInGrade": 428,
+    "exampleWords": [
+      {
+        "word": "青釉",
+        "wordTraditional": "青釉",
+        "pinyin": "qīng yòu",
+        "meaning": "celadon, classic Chinese style of ceramic glaze",
+        "ttsText": "釉，青釉的釉"
+      }
+    ]
+  },
+  {
+    "simplified": "窟",
+    "traditional": "窟",
+    "pinyin": "kū",
+    "meaning": "hole, cave; cellar; underground",
+    "gradeLevel": 7,
+    "orderInGrade": 429,
+    "exampleWords": [
+      {
+        "word": "石窟",
+        "wordTraditional": "石窟",
+        "pinyin": "shí kū",
+        "meaning": "rock cave; grotto; cliff caves (often with Buddhist statues)",
+        "ttsText": "窟，石窟的窟"
+      }
+    ]
+  },
+  {
+    "simplified": "敛",
+    "traditional": "斂",
+    "pinyin": "liǎn",
+    "meaning": "to collect, to extort",
+    "gradeLevel": 7,
+    "orderInGrade": 430,
+    "exampleWords": [
+      {
+        "word": "内敛",
+        "wordTraditional": "內斂",
+        "pinyin": "nèi liǎn",
+        "meaning": "introverted; reserved; (artistic style) understated",
+        "ttsText": "敛，内敛的敛"
+      }
+    ]
+  },
+  {
+    "simplified": "轼",
+    "traditional": "軾",
+    "pinyin": "shì",
+    "meaning": "carriage crossbar",
+    "gradeLevel": 7,
+    "orderInGrade": 431,
+    "exampleWords": [
+      {
+        "word": "苏轼",
+        "wordTraditional": "蘇軾",
+        "pinyin": "Sū Shì",
+        "meaning": "Su Shi (1037-1101), aka Su Dongpo 蘇東坡|苏东坡[Su1 Dong1 po1], Song dynasty writer, calligrapher and public official, one of the Three Su's 三蘇|三苏[San1 Su1] and one of the Eight Giants of Tang and Song Prose 唐宋八大家[Tang2 Song4 Ba1 Da4 jia1]",
+        "ttsText": "轼，苏轼的轼"
+      }
+    ]
+  },
+  {
+    "simplified": "庐",
+    "traditional": "廬",
+    "pinyin": "lú",
+    "meaning": "hut, cottage; the name of a mountain",
+    "gradeLevel": 7,
+    "orderInGrade": 432,
+    "exampleWords": [
+      {
+        "word": "结庐",
+        "wordTraditional": "結廬",
+        "pinyin": "jié lú",
+        "meaning": "to build one's house",
+        "ttsText": "庐，结庐的庐"
+      }
+    ]
+  },
+  {
+    "simplified": "胚",
+    "traditional": "肧",
+    "pinyin": "pēi",
+    "meaning": "embryo; an unfinished thing",
+    "gradeLevel": 7,
+    "orderInGrade": 433,
+    "exampleWords": [
+      {
+        "word": "色胚",
+        "wordTraditional": "色胚",
+        "pinyin": "sè pēi",
+        "meaning": "lecher",
+        "ttsText": "胚，色胚的胚"
+      }
+    ]
+  },
+  {
+    "simplified": "呻",
+    "traditional": "呻",
+    "pinyin": "shēn",
+    "meaning": "to moan, to groan; to chant",
+    "gradeLevel": 7,
+    "orderInGrade": 434,
+    "exampleWords": [
+      {
+        "word": "呻吟",
+        "wordTraditional": "呻吟",
+        "pinyin": "shēn yín",
+        "meaning": "to moan; to groan",
+        "ttsText": "呻，呻吟的呻"
+      }
+    ]
+  },
+  {
+    "simplified": "绰",
+    "traditional": "綽",
+    "pinyin": "chuò",
+    "meaning": "graceful, delicate; spacious",
+    "gradeLevel": 7,
+    "orderInGrade": 435,
+    "exampleWords": [
+      {
+        "word": "绰名",
+        "wordTraditional": "綽名",
+        "pinyin": "chuò míng",
+        "meaning": "nickname",
+        "ttsText": "绰，绰名的绰"
+      }
+    ]
+  },
+  {
+    "simplified": "扼",
+    "traditional": "扼",
+    "pinyin": "è",
+    "meaning": "to clutch, to grasp; to choke, to strangle",
+    "gradeLevel": 7,
+    "orderInGrade": 436,
+    "exampleWords": [
+      {
+        "word": "扼要",
+        "wordTraditional": "扼要",
+        "pinyin": "è yào",
+        "meaning": "to the point; concise",
+        "ttsText": "扼，扼要的扼"
+      }
+    ]
+  },
+  {
+    "simplified": "懿",
+    "traditional": "懿",
+    "pinyin": "yì",
+    "meaning": "admirable, esteemed, virtuous",
+    "gradeLevel": 7,
+    "orderInGrade": 437,
+    "exampleWords": [
+      {
+        "word": "懿亲",
+        "wordTraditional": "懿親",
+        "pinyin": "yì qīn",
+        "meaning": "(formal) close kin; closest relative",
+        "ttsText": "懿，懿亲的懿"
+      }
+    ]
+  },
+  {
+    "simplified": "炯",
+    "traditional": "炯",
+    "pinyin": "jiǒng",
+    "meaning": "bright, brilliant; clear; hot",
+    "gradeLevel": 7,
+    "orderInGrade": 438,
+    "exampleWords": [
+      {
+        "word": "杨炯",
+        "wordTraditional": "楊炯",
+        "pinyin": "Yáng Jiǒng",
+        "meaning": "Yang Jiong (650-693?), one of the Four Great Poets of the Early Tang 初唐四傑|初唐四杰[Chu1 Tang2 Si4 jie2]",
+        "ttsText": "炯，杨炯的炯"
+      }
+    ]
+  },
+  {
+    "simplified": "慷",
+    "traditional": "慷",
+    "pinyin": "kāng",
+    "meaning": "ardent, fervent; generous, magnanimous",
+    "gradeLevel": 7,
+    "orderInGrade": 439,
+    "exampleWords": [
+      {
+        "word": "慷慨",
+        "wordTraditional": "慷慨",
+        "pinyin": "kāng kǎi",
+        "meaning": "vehement; fervent; generous; magnanimous",
+        "ttsText": "慷，慷慨的慷"
+      }
+    ]
+  },
+  {
+    "simplified": "虞",
+    "traditional": "虞",
+    "pinyin": "yú",
+    "meaning": "anxious, concerned, worried",
+    "gradeLevel": 7,
+    "orderInGrade": 440,
+    "exampleWords": [
+      {
+        "word": "不虞",
+        "wordTraditional": "不虞",
+        "pinyin": "bù yú",
+        "meaning": "unexpected; eventuality; contingency; not worry about",
+        "ttsText": "虞，不虞的虞"
+      }
+    ]
+  },
+  {
+    "simplified": "锤",
+    "traditional": "錘",
+    "pinyin": "chuí",
+    "meaning": "hammer",
+    "gradeLevel": 7,
+    "orderInGrade": 441,
+    "exampleWords": [
+      {
+        "word": "锤子",
+        "wordTraditional": "錘子",
+        "pinyin": "chuí zi",
+        "meaning": "hammer",
+        "ttsText": "锤，锤子的锤"
+      }
+    ]
+  },
+  {
+    "simplified": "栓",
+    "traditional": "栓",
+    "pinyin": "shuān",
+    "meaning": "cork, peg, stopper",
+    "gradeLevel": 7,
+    "orderInGrade": 442,
+    "exampleWords": [
+      {
+        "word": "栓子",
+        "wordTraditional": "栓子",
+        "pinyin": "shuān zi",
+        "meaning": "(medicine) embolus",
+        "ttsText": "栓，栓子的栓"
+      }
+    ]
+  },
+  {
+    "simplified": "蚊",
+    "traditional": "蚊",
+    "pinyin": "wén",
+    "meaning": "mosquito, gnat",
+    "gradeLevel": 7,
+    "orderInGrade": 443,
+    "exampleWords": [
+      {
+        "word": "蚊子",
+        "wordTraditional": "蚊子",
+        "pinyin": "wén zi",
+        "meaning": "mosquito",
+        "ttsText": "蚊，蚊子的蚊"
+      }
+    ]
+  },
+  {
+    "simplified": "磅",
+    "traditional": "磅",
+    "pinyin": "bàng",
+    "meaning": "pound; to weigh",
+    "gradeLevel": 7,
+    "orderInGrade": 444,
+    "exampleWords": [
+      {
+        "word": "过磅",
+        "wordTraditional": "過磅",
+        "pinyin": "guò bàng",
+        "meaning": "to weigh (on a scale)",
+        "ttsText": "磅，过磅的磅"
+      }
+    ]
+  },
+  {
+    "simplified": "孽",
+    "traditional": "孼",
+    "pinyin": "niè",
+    "meaning": "bastard child; the consequence of a sin; evil",
+    "gradeLevel": 7,
+    "orderInGrade": 445,
+    "exampleWords": [
+      {
+        "word": "孽子",
+        "wordTraditional": "孽子",
+        "pinyin": "niè zǐ",
+        "meaning": "unfilial son",
+        "ttsText": "孽，孽子的孽"
+      }
+    ]
+  },
+  {
+    "simplified": "惭",
+    "traditional": "慙",
+    "pinyin": "cán",
+    "meaning": "ashamed, humiliated; shameful",
+    "gradeLevel": 7,
+    "orderInGrade": 446,
+    "exampleWords": [
+      {
+        "word": "羞惭",
+        "wordTraditional": "羞慚",
+        "pinyin": "xiū cán",
+        "meaning": "a disgrace; ashamed",
+        "ttsText": "惭，羞惭的惭"
+      }
+    ]
+  },
+  {
+    "simplified": "戳",
+    "traditional": "戳",
+    "pinyin": "chuō",
+    "meaning": "to pierce, to prick, to stab; stamp, seal",
+    "gradeLevel": 7,
+    "orderInGrade": 447,
+    "exampleWords": [
+      {
+        "word": "戳子",
+        "wordTraditional": "戳子",
+        "pinyin": "chuō zi",
+        "meaning": "stamp; seal",
+        "ttsText": "戳，戳子的戳"
+      }
+    ]
+  },
+  {
+    "simplified": "禀",
+    "traditional": "稟",
+    "pinyin": "bǐng",
+    "meaning": "to report to, to petition",
+    "gradeLevel": 7,
+    "orderInGrade": 448,
+    "exampleWords": [
+      {
+        "word": "禀性",
+        "wordTraditional": "稟性",
+        "pinyin": "bǐng xìng",
+        "meaning": "natural disposition",
+        "ttsText": "禀，禀性的禀"
+      }
+    ]
+  },
+  {
+    "simplified": "鄂",
+    "traditional": "鄂",
+    "pinyin": "è",
+    "meaning": "Hubei province; startled",
+    "gradeLevel": 7,
+    "orderInGrade": 449,
+    "exampleWords": [
+      {
+        "word": "鄂城",
+        "wordTraditional": "鄂城",
+        "pinyin": "È chéng",
+        "meaning": "see 鄂城區|鄂城区[E4 cheng2 Qu1]",
+        "ttsText": "鄂，鄂城的鄂"
+      }
+    ]
+  },
+  {
+    "simplified": "馈",
+    "traditional": "餽",
+    "pinyin": "kuì",
+    "meaning": "gift, present",
+    "gradeLevel": 7,
+    "orderInGrade": 450,
+    "exampleWords": [
+      {
+        "word": "回馈",
+        "wordTraditional": "回饋",
+        "pinyin": "huí kuì",
+        "meaning": "to repay a favor; to give back; feedback",
+        "ttsText": "馈，回馈的馈"
+      }
+    ]
+  },
+  {
+    "simplified": "垣",
+    "traditional": "垣",
+    "pinyin": "yuán",
+    "meaning": "low wall",
+    "gradeLevel": 7,
+    "orderInGrade": 451,
+    "exampleWords": [
+      {
+        "word": "长垣",
+        "wordTraditional": "長垣",
+        "pinyin": "Cháng yuán",
+        "meaning": "see 長垣市|长垣市[Chang2 yuan2 Shi4]",
+        "ttsText": "垣，长垣的垣"
+      }
+    ]
+  },
+  {
+    "simplified": "溅",
+    "traditional": "濺",
+    "pinyin": "jiàn",
+    "meaning": "to sprinkle, to spray, to splash, to spill",
+    "gradeLevel": 7,
+    "orderInGrade": 452,
+    "exampleWords": [
+      {
+        "word": "溅开",
+        "wordTraditional": "濺開",
+        "pinyin": "jiàn kāi",
+        "meaning": "splash",
+        "ttsText": "溅，溅开的溅"
+      }
+    ]
+  },
+  {
+    "simplified": "咚",
+    "traditional": "咚",
+    "pinyin": "dōng",
+    "meaning": "onomatopoetic, a thumping sound",
+    "gradeLevel": 7,
+    "orderInGrade": 453,
+    "exampleWords": [
+      {
+        "word": "壁咚",
+        "wordTraditional": "壁咚",
+        "pinyin": "bì dōng",
+        "meaning": "(slang) to kabedon",
+        "ttsText": "咚，壁咚的咚"
+      }
+    ]
+  },
+  {
+    "simplified": "钙",
+    "traditional": "鈣",
+    "pinyin": "gài",
+    "meaning": "calcium",
+    "gradeLevel": 7,
+    "orderInGrade": 454,
+    "exampleWords": [
+      {
+        "word": "钙化",
+        "wordTraditional": "鈣化",
+        "pinyin": "gài huà",
+        "meaning": "to calcify; calcification",
+        "ttsText": "钙，钙化的钙"
+      }
+    ]
+  },
+  {
+    "simplified": "礁",
+    "traditional": "礁",
+    "pinyin": "jiāo",
+    "meaning": "jetty, reef",
+    "gradeLevel": 7,
+    "orderInGrade": 455,
+    "exampleWords": [
+      {
+        "word": "礁石",
+        "wordTraditional": "礁石",
+        "pinyin": "jiāo shí",
+        "meaning": "reef",
+        "ttsText": "礁，礁石的礁"
+      }
+    ]
+  },
+  {
+    "simplified": "彰",
+    "traditional": "彰",
+    "pinyin": "zhāng",
+    "meaning": "clear, manifest, obvious",
+    "gradeLevel": 7,
+    "orderInGrade": 456,
+    "exampleWords": [
+      {
+        "word": "彰明",
+        "wordTraditional": "彰明",
+        "pinyin": "zhāng míng",
+        "meaning": "to show clearly; to make public; obvious",
+        "ttsText": "彰，彰明的彰"
+      }
+    ]
+  },
+  {
+    "simplified": "豁",
+    "traditional": "豁",
+    "pinyin": "huō",
+    "meaning": "clear, open; exempt",
+    "gradeLevel": 7,
+    "orderInGrade": 457,
+    "exampleWords": [
+      {
+        "word": "豁然",
+        "wordTraditional": "豁然",
+        "pinyin": "huò rán",
+        "meaning": "wide and open; a flash of understanding",
+        "ttsText": "豁，豁然的豁"
+      }
+    ]
+  },
+  {
+    "simplified": "眯",
+    "traditional": "眯",
+    "pinyin": "mī",
+    "meaning": "to squint, to narrow the eyes; blindness",
+    "gradeLevel": 7,
+    "orderInGrade": 458,
+    "exampleWords": [
+      {
+        "word": "眯眼",
+        "wordTraditional": "瞇眼",
+        "pinyin": "mī yǎn",
+        "meaning": "to narrow one's eyes (as when smiling or squinting)",
+        "ttsText": "眯，眯眼的眯"
+      }
+    ]
+  },
+  {
+    "simplified": "磷",
+    "traditional": "燐",
+    "pinyin": "lín",
+    "meaning": "phosphorus",
+    "gradeLevel": 7,
+    "orderInGrade": 459,
+    "exampleWords": [
+      {
+        "word": "磷光",
+        "wordTraditional": "磷光",
+        "pinyin": "lín guāng",
+        "meaning": "phosphorescence",
+        "ttsText": "磷，磷光的磷"
+      }
+    ]
+  },
+  {
+    "simplified": "雯",
+    "traditional": "雯",
+    "pinyin": "wén",
+    "meaning": "cloud patterns; storm clouds",
+    "gradeLevel": 7,
+    "orderInGrade": 460,
+    "exampleWords": [
+      {
+        "word": "雯",
+        "wordTraditional": "雯",
+        "pinyin": "wén",
+        "meaning": "cloud patterns",
+        "ttsText": "雯"
+      }
+    ]
+  },
+  {
+    "simplified": "墟",
+    "traditional": "墟",
+    "pinyin": "xū",
+    "meaning": "high mound; hilly countryside; wasteland",
+    "gradeLevel": 7,
+    "orderInGrade": 461,
+    "exampleWords": [
+      {
+        "word": "墟里",
+        "wordTraditional": "墟里",
+        "pinyin": "xū lǐ",
+        "meaning": "village",
+        "ttsText": "墟，墟里的墟"
+      }
+    ]
+  },
+  {
+    "simplified": "迂",
+    "traditional": "迂",
+    "pinyin": "yū",
+    "meaning": "abstruse, pedantic, unrealistic",
+    "gradeLevel": 7,
+    "orderInGrade": 462,
+    "exampleWords": [
+      {
+        "word": "迂见",
+        "wordTraditional": "迂見",
+        "pinyin": "yū jiàn",
+        "meaning": "absurd opinion; pedantic and unrealistic view",
+        "ttsText": "迂，迂见的迂"
+      }
+    ]
+  },
+  {
+    "simplified": "瞻",
+    "traditional": "瞻",
+    "pinyin": "zhān",
+    "meaning": "to look; to look out for; to respect",
+    "gradeLevel": 7,
+    "orderInGrade": 463,
+    "exampleWords": [
+      {
+        "word": "前瞻",
+        "wordTraditional": "前瞻",
+        "pinyin": "qián zhān",
+        "meaning": "forward-looking; prescient; foresight; forethought; outlook",
+        "ttsText": "瞻，前瞻的瞻"
+      }
+    ]
+  },
+  {
+    "simplified": "颅",
+    "traditional": "顱",
+    "pinyin": "lú",
+    "meaning": "skull",
+    "gradeLevel": 7,
+    "orderInGrade": 464,
+    "exampleWords": [
+      {
+        "word": "头颅",
+        "wordTraditional": "頭顱",
+        "pinyin": "tóu lú",
+        "meaning": "head; skull",
+        "ttsText": "颅，头颅的颅"
+      }
+    ]
+  },
+  {
+    "simplified": "琉",
+    "traditional": "琉",
+    "pinyin": "liú",
+    "meaning": "sparkling stone; opaque, glazed",
+    "gradeLevel": 7,
+    "orderInGrade": 465,
+    "exampleWords": [
+      {
+        "word": "琉球",
+        "wordTraditional": "琉球",
+        "pinyin": "Liú qiú",
+        "meaning": "Ryūkyū",
+        "ttsText": "琉，琉球的琉"
+      }
+    ]
+  },
+  {
+    "simplified": "悼",
+    "traditional": "悼",
+    "pinyin": "dào",
+    "meaning": "to grieve, to lament, to mourn",
+    "gradeLevel": 7,
+    "orderInGrade": 466,
+    "exampleWords": [
+      {
+        "word": "悼念",
+        "wordTraditional": "悼念",
+        "pinyin": "dào niàn",
+        "meaning": "to grieve",
+        "ttsText": "悼，悼念的悼"
+      }
+    ]
+  },
+  {
+    "simplified": "蝴",
+    "traditional": "蝴",
+    "pinyin": "hú",
+    "meaning": "butterfly",
+    "gradeLevel": 7,
+    "orderInGrade": 467,
+    "exampleWords": [
+      {
+        "word": "蝴蝶",
+        "wordTraditional": "蝴蝶",
+        "pinyin": "hú dié",
+        "meaning": "butterfly",
+        "ttsText": "蝴，蝴蝶的蝴"
+      }
+    ]
+  },
+  {
+    "simplified": "拣",
+    "traditional": "揀",
+    "pinyin": "jiǎn",
+    "meaning": "to choose, to select; to gather, to pick up",
+    "gradeLevel": 7,
+    "orderInGrade": 468,
+    "exampleWords": [
+      {
+        "word": "拣起",
+        "wordTraditional": "揀起",
+        "pinyin": "jiǎn qǐ",
+        "meaning": "to pick up",
+        "ttsText": "拣，拣起的拣"
+      }
+    ]
+  },
+  {
+    "simplified": "渺",
+    "traditional": "渺",
+    "pinyin": "miǎo",
+    "meaning": "vast, boundless",
+    "gradeLevel": 7,
+    "orderInGrade": 469,
+    "exampleWords": [
+      {
+        "word": "渺子",
+        "wordTraditional": "渺子",
+        "pinyin": "miǎo zǐ",
+        "meaning": "muon (particle physics)",
+        "ttsText": "渺，渺子的渺"
+      }
+    ]
+  },
+  {
+    "simplified": "眷",
+    "traditional": "眷",
+    "pinyin": "juàn",
+    "meaning": "to take an interest in; to care for",
+    "gradeLevel": 7,
+    "orderInGrade": 470,
+    "exampleWords": [
+      {
+        "word": "家眷",
+        "wordTraditional": "家眷",
+        "pinyin": "jiā juàn",
+        "meaning": "one's wife and children",
+        "ttsText": "眷，家眷的眷"
+      }
+    ]
+  },
+  {
+    "simplified": "悯",
+    "traditional": "憫",
+    "pinyin": "mǐn",
+    "meaning": "to pity, to sympathize with; to grieve for",
+    "gradeLevel": 7,
+    "orderInGrade": 471,
+    "exampleWords": [
+      {
+        "word": "悲悯",
+        "wordTraditional": "悲憫",
+        "pinyin": "bēi mǐn",
+        "meaning": "to take pity on sb; compassionate",
+        "ttsText": "悯，悲悯的悯"
+      }
+    ]
+  },
+  {
+    "simplified": "汰",
+    "traditional": "汰",
+    "pinyin": "tài",
+    "meaning": "to eliminate, to scour, to wash out; excessive",
+    "gradeLevel": 7,
+    "orderInGrade": 472,
+    "exampleWords": [
+      {
+        "word": "裁汰",
+        "wordTraditional": "裁汰",
+        "pinyin": "cái tài",
+        "meaning": "to cut back",
+        "ttsText": "汰，裁汰的汰"
+      }
+    ]
+  },
+  {
+    "simplified": "慑",
+    "traditional": "慴",
+    "pinyin": "shè",
+    "meaning": "afraid, scared; to frighten, to intimidate",
+    "gradeLevel": 7,
+    "orderInGrade": 473,
+    "exampleWords": [
+      {
+        "word": "慑人",
+        "wordTraditional": "懾人",
+        "pinyin": "shè rén",
+        "meaning": "intimidating",
+        "ttsText": "慑，慑人的慑"
+      }
+    ]
+  },
+  {
+    "simplified": "婶",
+    "traditional": "嬸",
+    "pinyin": "shěn",
+    "meaning": "father's younger brother's wife",
+    "gradeLevel": 7,
+    "orderInGrade": 474,
+    "exampleWords": [
+      {
+        "word": "婶子",
+        "wordTraditional": "嬸子",
+        "pinyin": "shěn zi",
+        "meaning": "(coll.) father's younger brother's wife; aunt",
+        "ttsText": "婶，婶子的婶"
+      }
+    ]
+  },
+  {
+    "simplified": "斐",
+    "traditional": "斐",
+    "pinyin": "fěi",
+    "meaning": "graceful, elegant, beautiful",
+    "gradeLevel": 7,
+    "orderInGrade": 475,
+    "exampleWords": [
+      {
+        "word": "布斐",
+        "wordTraditional": "布斐",
+        "pinyin": "bù fěi",
+        "meaning": "(loanword) buffet",
+        "ttsText": "斐，布斐的斐"
+      }
+    ]
+  },
+  {
+    "simplified": "嘘",
+    "traditional": "噓",
+    "pinyin": "xū",
+    "meaning": "to blow, to exhale, to hiss, to sigh; to praise",
+    "gradeLevel": 7,
+    "orderInGrade": 476,
+    "exampleWords": [
+      {
+        "word": "嘘声",
+        "wordTraditional": "噓聲",
+        "pinyin": "xū shēng",
+        "meaning": "hissing sound; to hiss (as a sign of displeasure)",
+        "ttsText": "嘘，嘘声的嘘"
+      }
+    ]
+  },
+  {
+    "simplified": "镶",
+    "traditional": "鑲",
+    "pinyin": "xiāng",
+    "meaning": "inset, inlay; to set, to mount; to fill",
+    "gradeLevel": 7,
+    "orderInGrade": 477,
+    "exampleWords": [
+      {
+        "word": "镶金",
+        "wordTraditional": "鑲金",
+        "pinyin": "xiāng jīn",
+        "meaning": "gilded; inlaid with gold",
+        "ttsText": "镶，镶金的镶"
+      }
+    ]
+  },
+  {
+    "simplified": "炕",
+    "traditional": "匟",
+    "pinyin": "kàng",
+    "meaning": "the brick-bed in northern China",
+    "gradeLevel": 7,
+    "orderInGrade": 478,
+    "exampleWords": [
+      {
+        "word": "落炕",
+        "wordTraditional": "落炕",
+        "pinyin": "lào kàng",
+        "meaning": "to be laid up in bed with illness",
+        "ttsText": "炕，落炕的炕"
+      }
+    ]
+  },
+  {
+    "simplified": "宦",
+    "traditional": "宦",
+    "pinyin": "huàn",
+    "meaning": "government official",
+    "gradeLevel": 7,
+    "orderInGrade": 479,
+    "exampleWords": [
+      {
+        "word": "宦海",
+        "wordTraditional": "宦海",
+        "pinyin": "huàn hǎi",
+        "meaning": "officialdom; bureaucracy",
+        "ttsText": "宦，宦海的宦"
+      }
+    ]
+  },
+  {
+    "simplified": "趴",
+    "traditional": "趴",
+    "pinyin": "pā",
+    "meaning": "prone, lying down, leaning over",
+    "gradeLevel": 7,
+    "orderInGrade": 480,
+    "exampleWords": [
+      {
+        "word": "趴体",
+        "wordTraditional": "趴體",
+        "pinyin": "pā tǐ",
+        "meaning": "(loanword) party",
+        "ttsText": "趴，趴体的趴"
+      }
+    ]
+  },
+  {
+    "simplified": "绷",
+    "traditional": "綳",
+    "pinyin": "běng",
+    "meaning": "to bind, to strap, to draw firm",
+    "gradeLevel": 7,
+    "orderInGrade": 481,
+    "exampleWords": [
+      {
+        "word": "绷子",
+        "wordTraditional": "繃子",
+        "pinyin": "bēng zi",
+        "meaning": "embroidery frame; hoop; tambour",
+        "ttsText": "绷，绷子的绷"
+      }
+    ]
+  },
+  {
+    "simplified": "窘",
+    "traditional": "窘",
+    "pinyin": "jiǒng",
+    "meaning": "distressed; embarrassed; hard-pressed",
+    "gradeLevel": 7,
+    "orderInGrade": 482,
+    "exampleWords": [
+      {
+        "word": "发窘",
+        "wordTraditional": "發窘",
+        "pinyin": "fā jiǒng",
+        "meaning": "to feel embarrassment; disconcerted; embarrassed",
+        "ttsText": "窘，发窘的窘"
+      }
+    ]
+  },
+  {
+    "simplified": "襄",
+    "traditional": "襄",
+    "pinyin": "xiāng",
+    "meaning": "to aid, to help, to assist; to undress",
+    "gradeLevel": 7,
+    "orderInGrade": 483,
+    "exampleWords": [
+      {
+        "word": "襄都",
+        "wordTraditional": "襄都",
+        "pinyin": "Xiāng dū",
+        "meaning": "see 襄都區|襄都区[Xiang1 du1 Qu1]",
+        "ttsText": "襄，襄都的襄"
+      }
+    ]
+  },
+  {
+    "simplified": "珀",
+    "traditional": "珀",
+    "pinyin": "pò",
+    "meaning": "amber",
+    "gradeLevel": 7,
+    "orderInGrade": 484,
+    "exampleWords": [
+      {
+        "word": "珀斯",
+        "wordTraditional": "珀斯",
+        "pinyin": "Pò sī",
+        "meaning": "Perth, capital of Western Australia; also written 帕斯",
+        "ttsText": "珀，珀斯的珀"
+      }
+    ]
+  },
+  {
+    "simplified": "嚣",
+    "traditional": "囂",
+    "pinyin": "xiāo",
+    "meaning": "to make noise; to treat with contempt",
+    "gradeLevel": 7,
+    "orderInGrade": 485,
+    "exampleWords": [
+      {
+        "word": "嚣张",
+        "wordTraditional": "囂張",
+        "pinyin": "xiāo zhāng",
+        "meaning": "rampant; unbridled; arrogant; aggressive",
+        "ttsText": "嚣，嚣张的嚣"
+      }
+    ]
+  },
+  {
+    "simplified": "拚",
+    "traditional": "拚",
+    "pinyin": "pàn",
+    "meaning": "to reject, to disregard, to go all out",
+    "gradeLevel": 7,
+    "orderInGrade": 486,
+    "exampleWords": [
+      {
+        "word": "拚去",
+        "wordTraditional": "拚去",
+        "pinyin": "pàn qù",
+        "meaning": "to reject; to abandon",
+        "ttsText": "拚，拚去的拚"
+      }
+    ]
+  },
+  {
+    "simplified": "酌",
+    "traditional": "酌",
+    "pinyin": "zhuó",
+    "meaning": "to pour wine, to drink wine; to deliberate, to consider",
+    "gradeLevel": 7,
+    "orderInGrade": 487,
+    "exampleWords": [
+      {
+        "word": "酌定",
+        "wordTraditional": "酌定",
+        "pinyin": "zhuó dìng",
+        "meaning": "to decide after intense deliberation",
+        "ttsText": "酌，酌定的酌"
+      }
+    ]
+  },
+  {
+    "simplified": "浊",
+    "traditional": "濁",
+    "pinyin": "zhuó",
+    "meaning": "dirty, filthy, muddy, turbid",
+    "gradeLevel": 7,
+    "orderInGrade": 488,
+    "exampleWords": [
+      {
+        "word": "浊世",
+        "wordTraditional": "濁世",
+        "pinyin": "zhuó shì",
+        "meaning": "the world in chaos",
+        "ttsText": "浊，浊世的浊"
+      }
+    ]
+  },
+  {
+    "simplified": "毓",
+    "traditional": "毓",
+    "pinyin": "yù",
+    "meaning": "to give birth to; to raise; to educate",
+    "gradeLevel": 7,
+    "orderInGrade": 489,
+    "exampleWords": [
+      {
+        "word": "毓婷",
+        "wordTraditional": "毓婷",
+        "pinyin": "Yù tíng",
+        "meaning": "Yuting, trade name of an emergency birth control tablet containing the hormonal medication levonorgestrel",
+        "ttsText": "毓，毓婷的毓"
+      }
+    ]
+  },
+  {
+    "simplified": "撼",
+    "traditional": "撼",
+    "pinyin": "hàn",
+    "meaning": "to incite, to move, to shake",
+    "gradeLevel": 7,
+    "orderInGrade": 490,
+    "exampleWords": [
+      {
+        "word": "撼动",
+        "wordTraditional": "撼動",
+        "pinyin": "hàn dòng",
+        "meaning": "to shake up; to deal a shock; (fig.) to stir (sb's heart)",
+        "ttsText": "撼，撼动的撼"
+      }
+    ]
+  },
+  {
+    "simplified": "嗜",
+    "traditional": "嗜",
+    "pinyin": "shì",
+    "meaning": "addicted to, fond of, with a weakness for",
+    "gradeLevel": 7,
+    "orderInGrade": 491,
+    "exampleWords": [
+      {
+        "word": "嗜好",
+        "wordTraditional": "嗜好",
+        "pinyin": "shì hào",
+        "meaning": "hobby; indulgence; habit; addiction",
+        "ttsText": "嗜，嗜好的嗜"
+      }
+    ]
+  },
+  {
+    "simplified": "扛",
+    "traditional": "扛",
+    "pinyin": "káng",
+    "meaning": "to lift; to carry on one's shoulders",
+    "gradeLevel": 7,
+    "orderInGrade": 492,
+    "exampleWords": [
+      {
+        "word": "肩扛",
+        "wordTraditional": "肩扛",
+        "pinyin": "jiān káng",
+        "meaning": "to carry on the shoulder",
+        "ttsText": "扛，肩扛的扛"
+      }
+    ]
+  },
+  {
+    "simplified": "峭",
+    "traditional": "峭",
+    "pinyin": "qiào",
+    "meaning": "steep, precipitous, rugged",
+    "gradeLevel": 7,
+    "orderInGrade": 493,
+    "exampleWords": [
+      {
+        "word": "料峭",
+        "wordTraditional": "料峭",
+        "pinyin": "liào qiào",
+        "meaning": "spring chill in the air; cold",
+        "ttsText": "峭，料峭的峭"
+      }
+    ]
+  },
+  {
+    "simplified": "磕",
+    "traditional": "磕",
+    "pinyin": "kē",
+    "meaning": "to collide, to hit, to knock, to tap",
+    "gradeLevel": 7,
+    "orderInGrade": 494,
+    "exampleWords": [
+      {
+        "word": "磕头",
+        "wordTraditional": "磕頭",
+        "pinyin": "kē tóu",
+        "meaning": "to kowtow (traditional greeting, esp. to a superior, involving kneeling and pressing one's forehead to the ground)",
+        "ttsText": "磕，磕头的磕"
+      }
+    ]
+  },
+  {
+    "simplified": "翘",
+    "traditional": "翹",
+    "pinyin": "qiào",
+    "meaning": "outstanding; to elevate, to lift, to raise",
+    "gradeLevel": 7,
+    "orderInGrade": 495,
+    "exampleWords": [
+      {
+        "word": "翘起",
+        "wordTraditional": "翹起",
+        "pinyin": "qiào qǐ",
+        "meaning": "to stick up; to point sth up",
+        "ttsText": "翘，翘起的翘"
+      }
+    ]
+  },
+  {
+    "simplified": "槽",
+    "traditional": "槽",
+    "pinyin": "cáo",
+    "meaning": "trough, manger; vat, tank; distillery",
+    "gradeLevel": 7,
+    "orderInGrade": 496,
+    "exampleWords": [
+      {
+        "word": "槽头",
+        "wordTraditional": "槽頭",
+        "pinyin": "cáo tóu",
+        "meaning": "feeding trough in stable",
+        "ttsText": "槽，槽头的槽"
+      }
+    ]
+  },
+  {
+    "simplified": "淌",
+    "traditional": "淌",
+    "pinyin": "tǎng",
+    "meaning": "to trickle down, to flow, to drip; to shed tears",
+    "gradeLevel": 7,
+    "orderInGrade": 497,
+    "exampleWords": [
+      {
+        "word": "淌下",
+        "wordTraditional": "淌下",
+        "pinyin": "tǎng xià",
+        "meaning": "to let drip; to trickle down; to shed (tears)",
+        "ttsText": "淌，淌下的淌"
+      }
+    ]
+  },
+  {
+    "simplified": "栅",
+    "traditional": "柵",
+    "pinyin": "zhà",
+    "meaning": "fence, grid, palisade",
+    "gradeLevel": 7,
+    "orderInGrade": 498,
+    "exampleWords": [
+      {
+        "word": "栅子",
+        "wordTraditional": "柵子",
+        "pinyin": "zhà zi",
+        "meaning": "bamboo fence",
+        "ttsText": "栅，栅子的栅"
+      }
+    ]
+  },
+  {
+    "simplified": "颓",
+    "traditional": "穨",
+    "pinyin": "tuí",
+    "meaning": "ruined, decayed; depressed; decadent",
+    "gradeLevel": 7,
+    "orderInGrade": 499,
+    "exampleWords": [
+      {
+        "word": "颓然",
+        "wordTraditional": "頹然",
+        "pinyin": "tuí rán",
+        "meaning": "decrepit; ruined; disappointed",
+        "ttsText": "颓，颓然的颓"
+      }
+    ]
   }
 ]

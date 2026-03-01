@@ -59,7 +59,7 @@ struct StrokeMatcher {
     private static let matchThresholds: [ClosedRange<Int>: Double] = [
         1...2: 0.75,   // Grades 1–2: simpler characters, younger learners
         3...4: 0.80,   // Grades 3–4: moderate
-        5...6: 0.85,   // Grades 5–6: complex characters, expect more accuracy
+        5...7: 0.85,   // Grades 5–6 + Expansion: complex characters, expect more accuracy
     ]
 
     /// Default match threshold when grade is unknown.
