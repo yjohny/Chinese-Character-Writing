@@ -20,6 +20,10 @@ final class SessionManager {
     /// Don't introduce new cards if more than this many reviews are due (catch-up backstop).
     static let maxDueBeforeStopNew = 50
 
+    /// Bumped after every rateCard/save so views that read stats re-render.
+    /// `@Observable` tracks reads of this property; views that touch it get invalidated.
+    private(set) var statsRevision: Int = 0
+
     init(characterData: CharacterDataService, modelContext: ModelContext) {
         self.characterData = characterData
         self.modelContext = modelContext
@@ -31,21 +35,19 @@ final class SessionManager {
     /// Returns nil if no cards are available (all caught up for now).
     func nextCard() -> (ReviewCard, CharacterEntry)? {
         // 1. Relearning cards due now
-        let dueRelearning = fetchDueCards(state: .relearning)
-        if let card = dueRelearning.first,
+        if let card = fetchFirstDueCard(state: .relearning),
            let entry = characterData.character(forSimplified: card.character) {
             return (card, entry)
         }
 
         // 2. Learning cards due now
-        if let card = fetchDueCards(state: .learning).first,
+        if let card = fetchFirstDueCard(state: .learning),
            let entry = characterData.character(forSimplified: card.character) {
             return (card, entry)
         }
 
         // 3. Review cards due now
-        let dueReviews = fetchDueCards(state: .review)
-        if let card = dueReviews.first,
+        if let card = fetchFirstDueCard(state: .review),
            let entry = characterData.character(forSimplified: card.character) {
             return (card, entry)
         }
@@ -63,8 +65,9 @@ final class SessionManager {
         }
 
         // 5. New cards (only if few relearning cards and due backlog is manageable)
-        let relearningCount = dueRelearning.count
-        let totalDue = dueReviews.count
+        // Use fetchCount — much cheaper than materializing all due cards
+        let relearningCount = countDueCards(state: .relearning)
+        let totalDue = countDueCards(state: .review)
         if relearningCount < Self.maxRelearningBeforeStopNew && totalDue < Self.maxDueBeforeStopNew {
             if let (card, entry) = introduceNextNewCard() {
                 return (card, entry)
@@ -143,7 +146,8 @@ final class SessionManager {
             profile.updateStreak(now: now)
         }
 
-        try? modelContext.save()
+        saveContext()
+        statsRevision += 1
     }
 
     // MARK: - Stats
@@ -190,8 +194,25 @@ final class SessionManager {
         }
         let newProfile = UserProfile()
         modelContext.insert(newProfile)
-        try? modelContext.save()
+        saveContext()
         return newProfile
+    }
+
+    // MARK: - Settings
+
+    func updateStartingGrade(_ grade: Int) {
+        if let profile = fetchProfile() {
+            profile.startingGrade = grade
+            saveContext()
+        }
+        setupAssumedKnownCards(startingGrade: grade)
+    }
+
+    func updateUseTraditional(_ value: Bool) {
+        if let profile = fetchProfile() {
+            profile.useTraditional = value
+            saveContext()
+        }
     }
 
     // MARK: - Starting Grade
@@ -243,7 +264,8 @@ final class SessionManager {
             }
         }
 
-        try? modelContext.save()
+        saveContext()
+        statsRevision += 1
     }
 
     // MARK: - Private
@@ -256,16 +278,30 @@ final class SessionManager {
         return Set(cards.map(\.character))
     }
 
-    private func fetchDueCards(state: CardState) -> [ReviewCard] {
+    /// Fetch just the first due card for a given state (fetchLimit: 1).
+    private func fetchFirstDueCard(state: CardState) -> ReviewCard? {
         let now = Date()
         let stateRaw = state.rawValue
-        let descriptor = FetchDescriptor<ReviewCard>(
+        var descriptor = FetchDescriptor<ReviewCard>(
             predicate: #Predicate {
                 $0.stateRaw == stateRaw && $0.dueDate <= now
             },
             sortBy: [SortDescriptor(\.dueDate)]
         )
-        return (try? modelContext.fetch(descriptor)) ?? []
+        descriptor.fetchLimit = 1
+        return (try? modelContext.fetch(descriptor))?.first
+    }
+
+    /// Count due cards for a given state without materializing them (fetchCount).
+    private func countDueCards(state: CardState) -> Int {
+        let now = Date()
+        let stateRaw = state.rawValue
+        let descriptor = FetchDescriptor<ReviewCard>(
+            predicate: #Predicate {
+                $0.stateRaw == stateRaw && $0.dueDate <= now
+            }
+        )
+        return (try? modelContext.fetchCount(descriptor)) ?? 0
     }
 
     private func introduceNextNewCard() -> (ReviewCard, CharacterEntry)? {
@@ -288,7 +324,7 @@ final class SessionManager {
                     card.dueDate = Date() // due immediately
                     card.state = .new
                     modelContext.insert(card)
-                    try? modelContext.save()
+                    saveContext()
 
                     return (card, entry)
                 }
@@ -323,5 +359,15 @@ final class SessionManager {
         let fromDay = calendar.startOfDay(for: from)
         let toDay = calendar.startOfDay(for: to)
         return max(0, calendar.dateComponents([.day], from: fromDay, to: toDay).day ?? 0)
+    }
+
+    /// Centralized save with error logging. Persistence failures (disk full,
+    /// constraint violations) are logged rather than silently swallowed.
+    private func saveContext() {
+        do {
+            try modelContext.save()
+        } catch {
+            print("⚠️ SwiftData save failed: \(error)")
+        }
     }
 }

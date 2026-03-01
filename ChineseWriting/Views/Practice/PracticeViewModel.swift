@@ -29,6 +29,9 @@ final class PracticeViewModel {
     /// (optional review), so we advance to the next card instead of tracing.
     var isReviewingAfterCorrect = false
 
+    /// Tracks consecutive failed rewrite attempts so we can offer an escape hatch.
+    var rewriteAttempts = 0
+
     // Practice stats (running totals for current practice)
     var correctCount = 0
     var incorrectCount = 0
@@ -40,6 +43,7 @@ final class PracticeViewModel {
     let ttsService: TTSService
     let characterData: CharacterDataService
     private let recognitionService = RecognitionService()
+    private let hapticGenerator = UINotificationFeedbackGenerator()
 
     /// Tracks in-flight async work (recognition, delayed transitions) so it can be
     /// cancelled when the user ends the session or moves to the next card.
@@ -71,6 +75,9 @@ final class PracticeViewModel {
         pendingTask?.cancel()
         pendingTask = nil
         ttsService.stop()
+        isRecognizing = false
+        isReviewingAfterCorrect = false
+        rewriteAttempts = 0
         studyState = .sessionComplete
     }
 
@@ -89,7 +96,7 @@ final class PracticeViewModel {
     /// (e.g. TTS completion that transitions presenting → writing).
     func handleReturnToForeground() {
         if studyState == .presenting {
-            studyState = .writing
+            transitionToWriting()
         }
     }
 
@@ -104,7 +111,21 @@ final class PracticeViewModel {
         ttsService.speak(ttsText, traditional: useTraditional) { [weak self] in
             guard let self else { return }
             if self.studyState == .presenting {
-                self.studyState = .writing
+                self.transitionToWriting()
+            }
+        }
+    }
+
+    /// Transition from presenting to writing. If the user drew strokes during
+    /// TTS playback, schedule an auto-submit so they don't have to manually tap Check.
+    private func transitionToWriting() {
+        studyState = .writing
+        if !writingDrawing.strokes.isEmpty {
+            pendingTask?.cancel()
+            pendingTask = Task {
+                try? await Task.sleep(for: .seconds(WritingCanvasView.idleTimeout))
+                guard !Task.isCancelled, studyState == .writing else { return }
+                submitWriting()
             }
         }
     }
@@ -194,6 +215,18 @@ final class PracticeViewModel {
         studyState = .rewriting
         rewriteDrawing = PKDrawing()
         rewriteFeedback = nil
+        rewriteAttempts = 0
+    }
+
+    /// User taps "Show strokes again" after multiple failed rewrite attempts.
+    /// Re-enters stroke order animation → tracing → rewriting flow.
+    func showStrokesAgain() {
+        guard studyState == .rewriting, currentStrokeData != nil else { return }
+        pendingTask?.cancel()
+        pendingTask = nil
+        rewriteFeedback = nil
+        rewriteAttempts = 0
+        studyState = .showingStrokeOrder
     }
 
     func submitRewrite() {
@@ -235,6 +268,7 @@ final class PracticeViewModel {
                 }
             } else {
                 // Not quite right — encourage them to try again
+                rewriteAttempts += 1
                 rewriteFeedback = "Almost! Try again"
                 rewriteDrawing = PKDrawing()
                 triggerHaptic(success: false)
@@ -271,7 +305,7 @@ final class PracticeViewModel {
 
         // Load stroke data for animation
         if let entry = currentEntry {
-            currentStrokeData = characterData.strokeData(for: entry.simplified)
+            currentStrokeData = resolveStrokeData(for: entry)
         }
 
         pendingTask = Task {
@@ -290,11 +324,14 @@ final class PracticeViewModel {
     private func loadNextCard() {
         pendingTask?.cancel()
         pendingTask = nil
+        isRecognizing = false
+        isReviewingAfterCorrect = false
+        rewriteAttempts = 0
 
         if let (card, entry) = sessionManager.nextCard() {
             currentCard = card
             currentEntry = entry
-            currentStrokeData = characterData.strokeData(for: entry.simplified)
+            currentStrokeData = resolveStrokeData(for: entry)
             writingDrawing = PKDrawing()
             tracingDrawing = PKDrawing()
             rewriteDrawing = PKDrawing()
@@ -307,8 +344,19 @@ final class PracticeViewModel {
         }
     }
 
+    /// Resolves stroke data for the current character, accounting for traditional mode.
+    /// When the traditional form differs from simplified, stroke data (which is
+    /// simplified-only from Make Me a Hanzi) would be wrong — return nil so
+    /// recognition falls through to Vision OCR, which handles traditional correctly.
+    private func resolveStrokeData(for entry: CharacterEntry) -> StrokeData? {
+        if useTraditional && entry.simplified != entry.traditional {
+            return nil
+        }
+        return characterData.strokeData(for: entry.simplified)
+    }
+
     private func triggerHaptic(success: Bool) {
-        let generator = UINotificationFeedbackGenerator()
-        generator.notificationOccurred(success ? .success : .error)
+        hapticGenerator.notificationOccurred(success ? .success : .error)
+        hapticGenerator.prepare()
     }
 }

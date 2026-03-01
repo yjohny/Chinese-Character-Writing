@@ -320,6 +320,15 @@ struct PracticeView: View {
                         .buttonStyle(.borderedProminent)
                         .disabled(viewModel.rewriteDrawing.strokes.isEmpty)
                     }
+
+                    if viewModel.rewriteAttempts >= 3 && viewModel.currentStrokeData != nil {
+                        Button(action: { viewModel.showStrokesAgain() }) {
+                            Label("Show strokes again", systemImage: "arrow.counterclockwise")
+                                .font(.caption)
+                        }
+                        .buttonStyle(.bordered)
+                        .tint(.orange)
+                    }
                 }
             }
         }

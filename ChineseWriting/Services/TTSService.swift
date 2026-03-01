@@ -5,6 +5,13 @@ import AVFoundation
 final class TTSService: NSObject, ObservableObject {
     private let synthesizer = AVSpeechSynthesizer()
     private var completion: (() -> Void)?
+    /// Generation counter prevents stale delegate callbacks from firing the wrong
+    /// completion. Incremented on every stop()/speak() call; delegate tasks that
+    /// wake up with a mismatched generation are silently dropped.
+    /// `nonisolated(unsafe)` because the didCancel delegate reads it from an
+    /// arbitrary thread — safe because writes only happen on @MainActor and
+    /// UInt loads are atomic on 64-bit platforms.
+    nonisolated(unsafe) private var generation: UInt = 0
 
     override init() {
         super.init()
@@ -18,10 +25,12 @@ final class TTSService: NSObject, ObservableObject {
     ///   - traditional: If true, uses zh-TW voice; otherwise zh-CN.
     ///   - completion: Called when speech finishes.
     func speak(_ text: String, traditional: Bool = false, completion: (() -> Void)? = nil) {
-        // Drop the old completion before stopping so the cancelled utterance's
-        // delegate callback doesn't fire it or the new one prematurely.
+        // Bump generation so any in-flight delegate Tasks from the old utterance
+        // will see a stale generation and no-op.
+        generation &+= 1
         self.completion = nil
         synthesizer.stopSpeaking(at: .immediate)
+        activateAudioSession()
         self.completion = completion
 
         let utterance = AVSpeechUtterance(string: text)
@@ -36,17 +45,28 @@ final class TTSService: NSObject, ObservableObject {
     }
 
     func stop() {
+        generation &+= 1
         completion = nil
         synthesizer.stopSpeaking(at: .immediate)
+        deactivateAudioSession()
     }
 
     private func configureAudioSession() {
         do {
             try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
-            try AVAudioSession.sharedInstance().setActive(true)
         } catch {
-            print("⚠️ Audio session setup failed: \(error)")
+            print("⚠️ Audio session category setup failed: \(error)")
         }
+    }
+
+    private func activateAudioSession() {
+        try? AVAudioSession.sharedInstance().setActive(true)
+    }
+
+    /// Deactivate audio session so other apps (music, podcasts) can resume.
+    /// Called when practice ends via stop().
+    private func deactivateAudioSession() {
+        try? AVAudioSession.sharedInstance().setActive(false, options: .notifyOthersOnDeactivation)
     }
 }
 
@@ -59,11 +79,14 @@ extension TTSService: AVSpeechSynthesizerDelegate {
     }
 
     nonisolated func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didCancel utterance: AVSpeechUtterance) {
+        // Capture the generation at dispatch time. If speak()/stop() has been
+        // called since this cancellation was triggered, generation will have
+        // changed and we must not fire the (now-replaced) completion.
+        let gen = self.generation
         Task { @MainActor in
-            // When OUR code cancels (stop()/speak()), completion is nil'd first,
-            // so this is a no-op. But when the SYSTEM cancels speech (e.g. app
-            // went to background), completion is still set — fire it so callers
-            // aren't left waiting for a transition that will never come.
+            guard self.generation == gen else { return }
+            // System-initiated cancellation (e.g. app backgrounded) — fire the
+            // completion so callers aren't stuck waiting for a transition.
             self.completion?()
             self.completion = nil
         }

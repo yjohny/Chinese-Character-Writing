@@ -17,11 +17,7 @@ struct SettingsView: View {
                         }
                     }
                     .onChange(of: startingGrade) { _, newValue in
-                        if let profile = sessionManager.fetchProfile() {
-                            profile.startingGrade = newValue
-                            try? profile.modelContext?.save()
-                        }
-                        sessionManager.setupAssumedKnownCards(startingGrade: newValue)
+                        sessionManager.updateStartingGrade(newValue)
                     }
                     Text("New characters start from this grade. Lower grades are verified periodically.")
                         .font(.caption)
@@ -41,10 +37,7 @@ struct SettingsView: View {
                         }
                     }
                     .onChange(of: useTraditional) { _, newValue in
-                        if let profile = sessionManager.fetchProfile() {
-                            profile.useTraditional = newValue
-                            try? profile.modelContext?.save()
-                        }
+                        sessionManager.updateUseTraditional(newValue)
                     }
                 }
 
