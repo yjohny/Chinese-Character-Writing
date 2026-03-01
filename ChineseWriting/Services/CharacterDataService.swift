@@ -2,7 +2,7 @@ import Foundation
 
 /// Loads and provides access to bundled character and stroke data.
 /// Character data is loaded at init; stroke data is lazily decoded per character
-/// to avoid holding the entire 6MB strokes.json in memory as decoded objects.
+/// to avoid holding the entire strokes.json (~7MB) in memory as decoded objects.
 @MainActor
 final class CharacterDataService: ObservableObject {
     private(set) var characters: [CharacterEntry] = []

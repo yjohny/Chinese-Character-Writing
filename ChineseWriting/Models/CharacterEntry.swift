@@ -8,7 +8,7 @@ struct CharacterEntry: Codable, Identifiable {
     let traditional: String         // "遊"
     let pinyin: String              // "yóu"
     let meaning: String             // "swim; travel"
-    let gradeLevel: Int             // 1-6 for school grades
+    let gradeLevel: Int             // 1-6 for school grades, 7 for expansion (识字表-only)
     let orderInGrade: Int           // position within grade list (0-indexed)
     let exampleWords: [ExampleWord]
 
@@ -28,5 +28,11 @@ struct CharacterEntry: Codable, Identifiable {
     /// Returns the primary TTS text for this character.
     var primaryTTSText: String {
         exampleWords.first?.ttsText ?? simplified
+    }
+
+    /// Display name for a grade level. Grades 1-6 map to "Grade N";
+    /// grade 7 is the expansion tier (识字表 recognition-only characters).
+    static func gradeName(for grade: Int) -> String {
+        grade <= 6 ? "Grade \(grade)" : "Expansion"
     }
 }
