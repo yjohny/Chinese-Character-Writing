@@ -86,9 +86,18 @@ struct PracticeView: View {
 
     /// "I got it right" only appears after the user has submitted their writing
     /// (recognizing/incorrect) and drawn enough strokes to indicate a real attempt.
+    /// During rewriting, it also appears after a failed recognition attempt or
+    /// while recognition is running, so users aren't trapped by misrecognition.
     private var showOverrideButton: Bool {
-        (viewModel.studyState == .recognizing || viewModel.studyState == .incorrect)
-            && viewModel.hasDrawnEnoughForOverride
+        if (viewModel.studyState == .recognizing || viewModel.studyState == .incorrect)
+            && viewModel.hasDrawnEnoughForOverride {
+            return true
+        }
+        if viewModel.studyState == .rewriting
+            && (viewModel.rewriteAttempts >= 1 || viewModel.isRecognizing) {
+            return true
+        }
+        return false
     }
 
     /// Whether the user is in an active practice flow (not idle or complete).
