@@ -173,11 +173,32 @@ final class PracticeViewModel {
     }
 
     func overrideCorrect() {
-        guard studyState == .recognizing || studyState == .incorrect else { return }
-        pendingTask?.cancel()
-        pendingTask = nil
-        isRecognizing = false
-        handleCorrect(wasOverride: true, visionConfidence: 0)
+        if studyState == .recognizing || studyState == .incorrect {
+            pendingTask?.cancel()
+            pendingTask = nil
+            isRecognizing = false
+            handleCorrect(wasOverride: true, visionConfidence: 0)
+        } else if studyState == .rewriting {
+            // Override during rewrite — recognition misidentified valid handwriting.
+            // Treat as successful rewrite: rate as .again (they needed help) and advance.
+            pendingTask?.cancel()
+            pendingTask = nil
+            isRecognizing = false
+            rewriteFeedback = nil
+
+            guard let card = currentCard else { return }
+            sessionManager.rateCard(card, rating: .again)
+            incorrectCount += 1
+            totalCount += 1
+            rewriteAttempts = 0
+            triggerHaptic(success: true)
+
+            pendingTask = Task {
+                try? await Task.sleep(for: .seconds(0.8))
+                guard !Task.isCancelled else { return }
+                loadNextCard()
+            }
+        }
     }
 
     /// User taps "Show me" — they don't know this character.
@@ -267,6 +288,7 @@ final class PracticeViewModel {
                 // They wrote it correctly after review — rate as "again" since they
                 // needed help, but let them move on
                 rewriteFeedback = nil
+                rewriteAttempts = 0
                 sessionManager.rateCard(card, rating: .again)
                 incorrectCount += 1
                 totalCount += 1
