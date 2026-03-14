@@ -324,9 +324,10 @@ final class PracticeViewModel {
         )
         correctCount += 1
         totalCount += 1
+        prefetchNextStrokeData()
 
         pendingTask = Task {
-            try? await Task.sleep(for: .seconds(1.5))
+            try? await Task.sleep(for: .seconds(1.2))
             guard !Task.isCancelled else { return }
             loadNextCard()
         }
@@ -340,9 +341,10 @@ final class PracticeViewModel {
         if let entry = currentEntry {
             currentStrokeData = resolveStrokeData(for: entry)
         }
+        prefetchNextStrokeData()
 
         pendingTask = Task {
-            try? await Task.sleep(for: .seconds(2.0))
+            try? await Task.sleep(for: .seconds(1.5))
             guard !Task.isCancelled else { return }
             if currentStrokeData != nil {
                 studyState = .showingStrokeOrder
@@ -386,6 +388,14 @@ final class PracticeViewModel {
             return nil
         }
         return characterData.strokeData(for: entry.simplified)
+    }
+
+    /// Pre-decode the next card's stroke data while the user views the result screen,
+    /// so loadNextCard() doesn't pay the JSON decode cost.
+    private func prefetchNextStrokeData() {
+        if let (_, entry) = sessionManager.peekNextCard() {
+            _ = characterData.strokeData(for: entry.simplified)
+        }
     }
 
     private func triggerHaptic(success: Bool) {

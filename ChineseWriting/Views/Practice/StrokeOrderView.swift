@@ -128,11 +128,11 @@ struct StrokeOrderView: View {
                 guard !Task.isCancelled else { return }
 
                 currentStrokeProgress = 0
-                withAnimation(.easeInOut(duration: 0.6)) {
+                withAnimation(.easeInOut(duration: 0.5)) {
                     currentStrokeProgress = 1.0
                 }
 
-                try? await Task.sleep(for: .milliseconds(700))
+                try? await Task.sleep(for: .milliseconds(550))
                 guard !Task.isCancelled else { return }
 
                 completedStrokes = stroke + 1
@@ -140,7 +140,7 @@ struct StrokeOrderView: View {
             }
 
             // All strokes done — brief pause then notify completion
-            try? await Task.sleep(for: .milliseconds(500))
+            try? await Task.sleep(for: .milliseconds(300))
             guard !Task.isCancelled else { return }
             onComplete?()
         }

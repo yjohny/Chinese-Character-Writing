@@ -340,7 +340,7 @@ struct PracticeView: View {
                         .disabled(viewModel.rewriteDrawing.strokes.isEmpty)
                     }
 
-                    if viewModel.rewriteAttempts >= 3 && viewModel.currentStrokeData != nil {
+                    if viewModel.rewriteAttempts >= 2 && viewModel.currentStrokeData != nil {
                         Button(action: { viewModel.showStrokesAgain() }) {
                             Label("Show strokes again", systemImage: "arrow.counterclockwise")
                                 .font(.caption)
