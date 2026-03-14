@@ -62,10 +62,18 @@ struct StrokeOrderView: View {
                 RoundedRectangle(cornerRadius: 8)
                     .stroke(Color.gray.opacity(0.3), lineWidth: 1)
             )
+            .contentShape(Rectangle())
+            .onTapGesture { skipAnimation() }
 
-            Text("Stroke \(min(completedStrokes + 1, totalStrokes)) of \(totalStrokes)")
-                .font(.caption)
-                .foregroundStyle(.secondary)
+            if completedStrokes < totalStrokes {
+                Text("Stroke \(completedStrokes + 1) of \(totalStrokes) — tap to skip")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            } else {
+                Text("All \(totalStrokes) strokes")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
         }
         .onAppear { startAnimation() }
         .onDisappear {
@@ -117,6 +125,15 @@ struct StrokeOrderView: View {
         return path
     }
 
+    /// Tap to instantly complete the animation and advance.
+    private func skipAnimation() {
+        animationTask?.cancel()
+        animationTask = nil
+        completedStrokes = totalStrokes
+        currentStrokeProgress = 0
+        onComplete?()
+    }
+
     private func startAnimation() {
         // Reset state for fresh animation
         completedStrokes = 0
@@ -128,11 +145,11 @@ struct StrokeOrderView: View {
                 guard !Task.isCancelled else { return }
 
                 currentStrokeProgress = 0
-                withAnimation(.easeInOut(duration: 0.6)) {
+                withAnimation(.easeInOut(duration: 0.5)) {
                     currentStrokeProgress = 1.0
                 }
 
-                try? await Task.sleep(for: .milliseconds(700))
+                try? await Task.sleep(for: .milliseconds(550))
                 guard !Task.isCancelled else { return }
 
                 completedStrokes = stroke + 1
@@ -140,7 +157,7 @@ struct StrokeOrderView: View {
             }
 
             // All strokes done — brief pause then notify completion
-            try? await Task.sleep(for: .milliseconds(500))
+            try? await Task.sleep(for: .milliseconds(300))
             guard !Task.isCancelled else { return }
             onComplete?()
         }

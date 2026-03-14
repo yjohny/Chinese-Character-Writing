@@ -45,13 +45,15 @@ struct StatsView: View {
                 }
 
                 Section("Grade Progress") {
+                    let gradeStats = sessionManager.allGradeStats()
                     ForEach(characterData.gradeLevels, id: \.self) { grade in
+                        let stats = gradeStats[grade]
                         GradeProgressRow(
                             grade: grade,
                             total: characterData.totalCharacters(forGrade: grade),
-                            introduced: sessionManager.totalIntroduced(forGrade: grade),
-                            learning: sessionManager.learningCount(forGrade: grade),
-                            mastered: sessionManager.masteredCount(forGrade: grade)
+                            introduced: stats?.introduced ?? 0,
+                            learning: stats?.learning ?? 0,
+                            mastered: stats?.mastered ?? 0
                         )
                     }
                 }

@@ -24,6 +24,11 @@ final class SessionManager {
     /// `@Observable` tracks reads of this property; views that touch it get invalidated.
     private(set) var statsRevision: Int = 0
 
+    /// Cached set of character strings that already have ReviewCards. Avoids
+    /// materializing all cards on every `nextCard()` / `introduceNextNewCard()` call.
+    /// Invalidated (set to nil) only when new cards are created.
+    private var knownCardCharacters: Set<String>?
+
     init(characterData: CharacterDataService, modelContext: ModelContext) {
         self.characterData = characterData
         self.modelContext = modelContext
@@ -89,6 +94,32 @@ final class SessionManager {
             }
         }
 
+        return nil
+    }
+
+    /// Peeks at the likely next card without creating new ReviewCards or mutating state.
+    /// Used for prefetching stroke data during transitions.
+    func peekNextCard() -> (ReviewCard, CharacterEntry)? {
+        // Check due cards in priority order (same as nextCard, but read-only)
+        for state: CardState in [.relearning, .learning, .review] {
+            if let card = fetchFirstDueCard(state: state),
+               let entry = characterData.character(forSimplified: card.character) {
+                return (card, entry)
+            }
+        }
+        // Check existing .new cards
+        let newStateRaw = CardState.new.rawValue
+        var existingNewDescriptor = FetchDescriptor<ReviewCard>(
+            predicate: #Predicate { $0.stateRaw == newStateRaw },
+            sortBy: [SortDescriptor(\.orderInGrade)]
+        )
+        existingNewDescriptor.fetchLimit = 1
+        if let card = (try? modelContext.fetch(existingNewDescriptor))?.first,
+           let entry = characterData.character(forSimplified: card.character) {
+            return (card, entry)
+        }
+        // Don't introduce new cards here — that mutates state.
+        // Peek returns nil if next card would be a fresh introduction.
         return nil
     }
 
@@ -158,6 +189,38 @@ final class SessionManager {
             predicate: #Predicate { $0.stability >= threshold }
         )
         return (try? modelContext.fetchCount(descriptor)) ?? 0
+    }
+
+    /// Stats for a single grade level.
+    struct GradeStats {
+        let introduced: Int
+        let learning: Int
+        let mastered: Int
+    }
+
+    /// Fetches introduced/learning/mastered counts for all grades in a single query,
+    /// avoiding 3 separate fetchCount calls per grade (21+ queries → 1).
+    func allGradeStats() -> [Int: GradeStats] {
+        let descriptor = FetchDescriptor<ReviewCard>()
+        guard let cards = try? modelContext.fetch(descriptor) else { return [:] }
+
+        let threshold = FSRSEngine.masteryThreshold
+        var result: [Int: (introduced: Int, learning: Int, mastered: Int)] = [:]
+
+        for card in cards {
+            let grade = card.gradeLevel
+            var stats = result[grade] ?? (0, 0, 0)
+            stats.introduced += 1
+            if card.state != .new && card.stability < threshold {
+                stats.learning += 1
+            }
+            if card.stability >= threshold {
+                stats.mastered += 1
+            }
+            result[grade] = stats
+        }
+
+        return result.mapValues { GradeStats(introduced: $0.introduced, learning: $0.learning, mastered: $0.mastered) }
     }
 
     func totalIntroduced(forGrade grade: Int) -> Int {
@@ -264,18 +327,24 @@ final class SessionManager {
             }
         }
 
+        knownCardCharacters = nil // Invalidate — bulk insert changes the set
         saveContext()
         statsRevision += 1
     }
 
     // MARK: - Private
 
-    /// Fetches just the character strings from all ReviewCards, returning a Set for
-    /// existence checks. Avoids retaining the full card object graph in the caller's scope.
+    /// Returns the cached set of character strings with existing ReviewCards.
+    /// Lazily populated on first call; invalidated when new cards are inserted.
     private func fetchAllCardCharacters() -> Set<String> {
+        if let cached = knownCardCharacters {
+            return cached
+        }
         let descriptor = FetchDescriptor<ReviewCard>()
         let cards = (try? modelContext.fetch(descriptor)) ?? []
-        return Set(cards.map(\.character))
+        let result = Set(cards.map(\.character))
+        knownCardCharacters = result
+        return result
     }
 
     /// Fetch just the first due card for a given state (fetchLimit: 1).
@@ -324,6 +393,7 @@ final class SessionManager {
                     card.dueDate = Date() // due immediately
                     card.state = .new
                     modelContext.insert(card)
+                    knownCardCharacters?.insert(entry.simplified)
                     saveContext()
 
                     return (card, entry)

@@ -8,6 +8,10 @@ final class CharacterDataService: ObservableObject {
     private(set) var characters: [CharacterEntry] = []
     private var characterIndex: [String: CharacterEntry] = [:]      // keyed by simplified
     private var traditionalIndex: [String: CharacterEntry] = [:]    // keyed by traditional
+    /// Pre-computed characters grouped by grade, sorted by orderInGrade.
+    private var charactersByGrade: [Int: [CharacterEntry]] = [:]
+    /// Pre-computed sorted grade levels.
+    private var sortedGradeLevels: [Int] = []
 
     /// Raw JSON objects keyed by character — decoded lazily into StrokeData on demand.
     private var rawStrokeEntries: [String: Any] = [:]
@@ -23,14 +27,12 @@ final class CharacterDataService: ObservableObject {
 
     /// All characters for a given grade level, ordered by orderInGrade.
     func characters(forGrade grade: Int) -> [CharacterEntry] {
-        characters
-            .filter { $0.gradeLevel == grade }
-            .sorted { $0.orderInGrade < $1.orderInGrade }
+        charactersByGrade[grade] ?? []
     }
 
     /// Total character count for a grade.
     func totalCharacters(forGrade grade: Int) -> Int {
-        characters.count(where: { $0.gradeLevel == grade })
+        charactersByGrade[grade]?.count ?? 0
     }
 
     /// Look up a character by its simplified form.
@@ -69,7 +71,7 @@ final class CharacterDataService: ObservableObject {
 
     /// All available grade levels, sorted.
     var gradeLevels: [Int] {
-        Array(Set(characters.map(\.gradeLevel))).sorted()
+        sortedGradeLevels
     }
 
     // MARK: - Loading
@@ -121,5 +123,9 @@ final class CharacterDataService: ObservableObject {
                 traditionalIndex[entry.traditional] = entry
             }
         }
+        // Pre-compute grade groupings (avoids repeated filter+sort on every call)
+        charactersByGrade = Dictionary(grouping: characters, by: \.gradeLevel)
+            .mapValues { $0.sorted { $0.orderInGrade < $1.orderInGrade } }
+        sortedGradeLevels = charactersByGrade.keys.sorted()
     }
 }

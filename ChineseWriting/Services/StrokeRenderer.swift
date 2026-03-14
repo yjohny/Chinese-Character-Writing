@@ -10,6 +10,10 @@ struct StrokeRenderer {
     /// The original coordinate space size.
     static let canvasSize: CGFloat = 1024
 
+    /// Cache of parsed SVG paths keyed by character. Avoids re-parsing
+    /// SVG strings on every SwiftUI body evaluation.
+    private static var pathCache: [String: [Path]] = [:]
+
     /// Parse a single SVG path 'd' string into a SwiftUI Path.
     static func path(from svgString: String) -> Path {
         let cgPath = parseSVGPath(svgString)
@@ -25,8 +29,14 @@ struct StrokeRenderer {
     }
 
     /// Parse all strokes for a character into an array of Paths.
+    /// Results are cached by character to avoid re-parsing SVG on every render.
     static func allStrokes(from data: StrokeData) -> [Path] {
-        data.strokes.map { path(from: $0) }
+        if let cached = pathCache[data.character] {
+            return cached
+        }
+        let paths = data.strokes.map { path(from: $0) }
+        pathCache[data.character] = paths
+        return paths
     }
 
     /// Returns median points for a given stroke, transformed to display coordinates.
