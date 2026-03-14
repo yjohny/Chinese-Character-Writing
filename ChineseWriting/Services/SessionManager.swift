@@ -191,6 +191,38 @@ final class SessionManager {
         return (try? modelContext.fetchCount(descriptor)) ?? 0
     }
 
+    /// Stats for a single grade level.
+    struct GradeStats {
+        let introduced: Int
+        let learning: Int
+        let mastered: Int
+    }
+
+    /// Fetches introduced/learning/mastered counts for all grades in a single query,
+    /// avoiding 3 separate fetchCount calls per grade (21+ queries → 1).
+    func allGradeStats() -> [Int: GradeStats] {
+        let descriptor = FetchDescriptor<ReviewCard>()
+        guard let cards = try? modelContext.fetch(descriptor) else { return [:] }
+
+        let threshold = FSRSEngine.masteryThreshold
+        var result: [Int: (introduced: Int, learning: Int, mastered: Int)] = [:]
+
+        for card in cards {
+            let grade = card.gradeLevel
+            var stats = result[grade] ?? (0, 0, 0)
+            stats.introduced += 1
+            if card.state != .new && card.stability < threshold {
+                stats.learning += 1
+            }
+            if card.stability >= threshold {
+                stats.mastered += 1
+            }
+            result[grade] = stats
+        }
+
+        return result.mapValues { GradeStats(introduced: $0.introduced, learning: $0.learning, mastered: $0.mastered) }
+    }
+
     func totalIntroduced(forGrade grade: Int) -> Int {
         let descriptor = FetchDescriptor<ReviewCard>(
             predicate: #Predicate { $0.gradeLevel == grade }

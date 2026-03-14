@@ -62,10 +62,18 @@ struct StrokeOrderView: View {
                 RoundedRectangle(cornerRadius: 8)
                     .stroke(Color.gray.opacity(0.3), lineWidth: 1)
             )
+            .contentShape(Rectangle())
+            .onTapGesture { skipAnimation() }
 
-            Text("Stroke \(min(completedStrokes + 1, totalStrokes)) of \(totalStrokes)")
-                .font(.caption)
-                .foregroundStyle(.secondary)
+            if completedStrokes < totalStrokes {
+                Text("Stroke \(completedStrokes + 1) of \(totalStrokes) — tap to skip")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            } else {
+                Text("All \(totalStrokes) strokes")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
         }
         .onAppear { startAnimation() }
         .onDisappear {
@@ -115,6 +123,15 @@ struct StrokeOrderView: View {
             path.addLine(to: point)
         }
         return path
+    }
+
+    /// Tap to instantly complete the animation and advance.
+    private func skipAnimation() {
+        animationTask?.cancel()
+        animationTask = nil
+        completedStrokes = totalStrokes
+        currentStrokeProgress = 0
+        onComplete?()
     }
 
     private func startAnimation() {
