@@ -23,6 +23,18 @@ struct PracticeView: View {
                 // Celebration overlay
                 CelebrationView(isActive: $viewModel.showCelebration)
 
+                // Daily goal completion overlay
+                if viewModel.showDailyGoalComplete {
+                    dailyGoalOverlay
+                }
+
+                // Milestone celebration overlay
+                if let milestone = viewModel.activeMilestone {
+                    MilestoneView(milestone: milestone) {
+                        viewModel.activeMilestone = nil
+                    }
+                }
+
                 // Floating buttons
                 if showFloatingButtons {
                     VStack {
@@ -57,6 +69,10 @@ struct PracticeView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 if isActivelyPracticing {
+                    ToolbarItem(placement: .topBarLeading) {
+                        let progress = viewModel.sessionManager.dailyProgress()
+                        DailyProgressRing(current: progress.current, goal: progress.goal)
+                    }
                     ToolbarItem(placement: .topBarTrailing) {
                         Button("Done") {
                             viewModel.endPractice()
@@ -98,6 +114,25 @@ struct PracticeView: View {
             return true
         }
         return false
+    }
+
+    private var dailyGoalOverlay: some View {
+        VStack(spacing: 16) {
+            Image(systemName: "checkmark.circle.fill")
+                .font(.system(size: 52))
+                .foregroundStyle(.green)
+            Text("Daily goal complete!")
+                .font(.title2.bold())
+        }
+        .padding(32)
+        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 20))
+        .transition(.scale.combined(with: .opacity))
+        .onAppear {
+            Task { @MainActor in
+                try? await Task.sleep(for: .seconds(2.5))
+                withAnimation { viewModel.showDailyGoalComplete = false }
+            }
+        }
     }
 
     /// Whether the user is in an active practice flow (not idle or complete).

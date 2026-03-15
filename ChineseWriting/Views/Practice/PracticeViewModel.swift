@@ -48,11 +48,18 @@ final class PracticeViewModel {
     var incorrectCount = 0
     var totalCount = 0
 
+    /// Triggers the daily goal completion celebration overlay.
+    var showDailyGoalComplete = false
+
+    /// When non-nil, shows the milestone celebration overlay.
+    var activeMilestone: MilestoneType?
+
     // MARK: - Dependencies
 
     let sessionManager: SessionManager
     let ttsService: TTSService
     let characterData: CharacterDataService
+    let soundService: SoundService
     private let recognitionService = RecognitionService()
     private let hapticGenerator = UINotificationFeedbackGenerator()
 
@@ -64,10 +71,11 @@ final class PracticeViewModel {
         sessionManager.fetchProfile()?.useTraditional ?? false
     }
 
-    init(sessionManager: SessionManager, ttsService: TTSService, characterData: CharacterDataService) {
+    init(sessionManager: SessionManager, ttsService: TTSService, characterData: CharacterDataService, soundService: SoundService) {
         self.sessionManager = sessionManager
         self.ttsService = ttsService
         self.characterData = characterData
+        self.soundService = soundService
     }
 
     // MARK: - Actions
@@ -78,6 +86,7 @@ final class PracticeViewModel {
         correctCount = 0
         incorrectCount = 0
         totalCount = 0
+        soundService.isEnabled = sessionManager.fetchProfile()?.soundEffectsEnabled ?? true
         loadNextCard()
     }
 
@@ -192,6 +201,8 @@ final class PracticeViewModel {
             totalCount += 1
             rewriteAttempts = 0
             triggerHaptic(success: true)
+            soundService.play(.correct)
+            checkDailyGoalAndMilestones()
 
             pendingTask = Task {
                 try? await Task.sleep(for: .seconds(0.8))
@@ -293,6 +304,8 @@ final class PracticeViewModel {
                 incorrectCount += 1
                 totalCount += 1
                 triggerHaptic(success: true)
+                soundService.play(.correct)
+                checkDailyGoalAndMilestones()
 
                 pendingTask = Task {
                     try? await Task.sleep(for: .seconds(0.8))
@@ -305,6 +318,7 @@ final class PracticeViewModel {
                 rewriteFeedback = "Almost! Try again"
                 rewriteDrawing = PKDrawing()
                 triggerHaptic(success: false)
+                soundService.play(.incorrect)
             }
         }
     }
@@ -315,6 +329,7 @@ final class PracticeViewModel {
         studyState = .correct
         showCelebration = true
         triggerHaptic(success: true)
+        soundService.play(.correct)
 
         guard let card = currentCard else { return }
         sessionManager.rateCard(
@@ -324,6 +339,7 @@ final class PracticeViewModel {
         )
         correctCount += 1
         totalCount += 1
+        checkDailyGoalAndMilestones()
         prefetchNextStrokeData()
 
         pendingTask = Task {
@@ -336,6 +352,7 @@ final class PracticeViewModel {
     private func handleIncorrect() {
         studyState = .incorrect
         triggerHaptic(success: false)
+        soundService.play(.incorrect)
 
         // Load stroke data for animation
         if let entry = currentEntry {
@@ -395,6 +412,18 @@ final class PracticeViewModel {
     private func prefetchNextStrokeData() {
         if let (_, entry) = sessionManager.peekNextCard() {
             _ = characterData.strokeData(for: entry.simplified)
+        }
+    }
+
+    /// Check if the daily goal was just reached or a milestone was achieved.
+    private func checkDailyGoalAndMilestones() {
+        if sessionManager.dailyGoalReached {
+            showDailyGoalComplete = true
+            soundService.play(.dailyGoal)
+        }
+        if let milestone = sessionManager.checkForNewMilestones() {
+            activeMilestone = milestone
+            soundService.play(.milestone)
         }
     }
 

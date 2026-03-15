@@ -24,6 +24,9 @@ final class SessionManager {
     /// `@Observable` tracks reads of this property; views that touch it get invalidated.
     private(set) var statsRevision: Int = 0
 
+    /// Set to true in rateCard() when reviewsToday hits dailyGoal exactly (fires once).
+    var dailyGoalReached: Bool = false
+
     /// Cached set of character strings that already have ReviewCards. Avoids
     /// materializing all cards on every `nextCard()` / `introduceNextNewCard()` call.
     /// Invalidated (set to nil) only when new cards are created.
@@ -172,13 +175,88 @@ final class SessionManager {
         modelContext.insert(log)
 
         // Update user profile
+        dailyGoalReached = false
         if let profile = fetchProfile() {
+            profile.incrementReviewsToday(now: now)
             profile.totalReviews += 1
             profile.updateStreak(now: now)
+            if profile.reviewsToday == profile.dailyGoal {
+                dailyGoalReached = true
+            }
         }
 
         saveContext()
         statsRevision += 1
+    }
+
+    // MARK: - Daily Goal
+
+    /// Returns today's review progress and the daily goal target.
+    func dailyProgress() -> (current: Int, goal: Int) {
+        guard let profile = fetchProfile() else { return (0, 10) }
+        let calendar = Calendar.current
+        if let last = profile.lastReviewCountDate,
+           calendar.startOfDay(for: last) == calendar.startOfDay(for: Date()) {
+            return (profile.reviewsToday, profile.dailyGoal)
+        }
+        return (0, profile.dailyGoal)
+    }
+
+    func updateDailyGoal(_ goal: Int) {
+        if let profile = fetchProfile() {
+            profile.dailyGoal = goal
+            saveContext()
+        }
+    }
+
+    // MARK: - Milestones
+
+    /// Checks for a newly achieved milestone. Returns one at a time to avoid modal stacking.
+    func checkForNewMilestones() -> MilestoneType? {
+        guard let profile = fetchProfile() else { return nil }
+
+        // Check mastery milestones
+        let mastered = masteredCount()
+        for (count, milestone) in MilestoneType.masteryThresholds {
+            if mastered >= count && !profile.hasAchieved(milestone) {
+                profile.markAchieved(milestone)
+                saveContext()
+                return milestone
+            }
+        }
+
+        // Check streak milestones
+        for (days, milestone) in MilestoneType.streakThresholds {
+            if profile.currentStreak >= days && !profile.hasAchieved(milestone) {
+                profile.markAchieved(milestone)
+                saveContext()
+                return milestone
+            }
+        }
+
+        // Check grade completion
+        let gradeStats = allGradeStats()
+        for grade in characterData.gradeLevels {
+            guard let milestone = MilestoneType.gradeComplete(for: grade) else { continue }
+            let total = characterData.totalCharacters(forGrade: grade)
+            let gradeMastered = gradeStats[grade]?.mastered ?? 0
+            if gradeMastered >= total && total > 0 && !profile.hasAchieved(milestone) {
+                profile.markAchieved(milestone)
+                saveContext()
+                return milestone
+            }
+        }
+
+        return nil
+    }
+
+    // MARK: - Sound Settings
+
+    func updateSoundEffects(_ enabled: Bool) {
+        if let profile = fetchProfile() {
+            profile.soundEffectsEnabled = enabled
+            saveContext()
+        }
     }
 
     // MARK: - Stats
