@@ -6,6 +6,8 @@ struct SettingsView: View {
 
     @State private var useTraditional: Bool = false
     @State private var startingGrade: Int = 1
+    @State private var dailyGoal: Int = 10
+    @State private var soundEffectsEnabled: Bool = true
 
     var body: some View {
         NavigationStack {
@@ -26,6 +28,22 @@ struct SettingsView: View {
                     Text("Starting Grade")
                 }
 
+                Section("Daily Goal") {
+                    Picker("Characters per day", selection: $dailyGoal) {
+                        Text("5").tag(5)
+                        Text("10").tag(10)
+                        Text("15").tag(15)
+                        Text("20").tag(20)
+                        Text("25").tag(25)
+                    }
+                    .onChange(of: dailyGoal) { _, newValue in
+                        sessionManager.updateDailyGoal(newValue)
+                    }
+                    Text("How many characters to practice each day.")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
+
                 Section("Character Set") {
                     Toggle(isOn: $useTraditional) {
                         VStack(alignment: .leading) {
@@ -39,6 +57,13 @@ struct SettingsView: View {
                     .onChange(of: useTraditional) { _, newValue in
                         sessionManager.updateUseTraditional(newValue)
                     }
+                }
+
+                Section("Audio") {
+                    Toggle("Sound Effects", isOn: $soundEffectsEnabled)
+                        .onChange(of: soundEffectsEnabled) { _, newValue in
+                            sessionManager.updateSoundEffects(newValue)
+                        }
                 }
 
                 Section("Statistics") {
@@ -62,6 +87,8 @@ struct SettingsView: View {
                 let profile = sessionManager.fetchProfile()
                 useTraditional = profile?.useTraditional ?? false
                 startingGrade = max(1, profile?.startingGrade ?? 1)
+                dailyGoal = profile?.dailyGoal ?? 10
+                soundEffectsEnabled = profile?.soundEffectsEnabled ?? true
             }
         }
     }

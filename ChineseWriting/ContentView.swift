@@ -6,6 +6,7 @@ struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     @State private var characterData = CharacterDataService()
     @State private var ttsService = TTSService()
+    @State private var soundService = SoundService()
     @State private var sessionManager: SessionManager?
     @State private var viewModel: PracticeViewModel?
 
@@ -45,7 +46,8 @@ struct ContentView: View {
         self.viewModel = PracticeViewModel(
             sessionManager: sm,
             ttsService: ttsService,
-            characterData: characterData
+            characterData: characterData,
+            soundService: soundService
         )
     }
 }

@@ -28,6 +28,20 @@ struct StatsView: View {
                         }
                         .padding(.vertical, 4)
 
+                        let progress = sessionManager.dailyProgress()
+                        HStack(spacing: 12) {
+                            Image(systemName: "target")
+                                .font(.title2)
+                                .foregroundStyle(progress.current >= progress.goal ? .green : .orange)
+                            VStack(alignment: .leading, spacing: 4) {
+                                Text("Today: \(progress.current)/\(progress.goal) reviews")
+                                    .font(.headline)
+                                ProgressView(value: min(1.0, Double(progress.current) / Double(max(1, progress.goal))))
+                                    .tint(progress.current >= progress.goal ? .green : .orange)
+                            }
+                        }
+                        .padding(.vertical, 4)
+
                         HStack(spacing: 12) {
                             Image(systemName: "checkmark.seal.fill")
                                 .font(.title2)
