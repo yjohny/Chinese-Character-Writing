@@ -98,6 +98,9 @@ final class PracticeViewModel {
         isRecognizing = false
         isReviewingAfterCorrect = false
         rewriteAttempts = 0
+        showCelebration = false
+        showDailyGoalComplete = false
+        activeMilestone = nil
         studyState = .sessionComplete
     }
 
@@ -376,9 +379,13 @@ final class PracticeViewModel {
     private func loadNextCard() {
         pendingTask?.cancel()
         pendingTask = nil
+        ttsService.stop()
         isRecognizing = false
         isReviewingAfterCorrect = false
         rewriteAttempts = 0
+        showCelebration = false
+        showDailyGoalComplete = false
+        activeMilestone = nil
 
         if let (card, entry) = sessionManager.nextCard() {
             currentCard = card

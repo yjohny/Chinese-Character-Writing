@@ -155,10 +155,9 @@ final class SessionManager {
         card.dueDate = result.dueDate
         card.lastReviewDate = now
 
+        card.reps += 1
         if rating == .again {
             card.lapses += 1
-        } else {
-            card.reps += 1
         }
 
         // Create review log
