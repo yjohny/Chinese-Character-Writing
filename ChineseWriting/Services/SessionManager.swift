@@ -321,6 +321,55 @@ final class SessionManager {
         return Dictionary(cards.map { ($0.character, $0) }, uniquingKeysWith: { first, _ in first })
     }
 
+    /// Returns review counts per day for the last N weeks, for the heatmap.
+    /// Dictionary keys are calendar day starts (midnight), values are review counts.
+    func reviewCountsByDay(weeks: Int = 12) -> [Date: Int] {
+        let calendar = Calendar.current
+        let today = calendar.startOfDay(for: Date())
+        guard let startDate = calendar.date(byAdding: .day, value: -(weeks * 7 - 1), to: today) else {
+            return [:]
+        }
+        let descriptor = FetchDescriptor<ReviewLog>(
+            predicate: #Predicate { $0.reviewDate >= startDate }
+        )
+        guard let logs = try? modelContext.fetch(descriptor) else { return [:] }
+
+        var counts: [Date: Int] = [:]
+        for log in logs {
+            let day = calendar.startOfDay(for: log.reviewDate)
+            counts[day, default: 0] += 1
+        }
+        return counts
+    }
+
+    /// Returns the number of reviews due today and in the coming days.
+    func reviewForecast() -> (today: Int, tomorrow: Int, thisWeek: Int) {
+        let calendar = Calendar.current
+        let now = Date()
+        let todayEnd = calendar.date(byAdding: .day, value: 1, to: calendar.startOfDay(for: now))!
+        let tomorrowEnd = calendar.date(byAdding: .day, value: 1, to: todayEnd)!
+        let weekEnd = calendar.date(byAdding: .day, value: 7, to: calendar.startOfDay(for: now))!
+
+        let descriptor = FetchDescriptor<ReviewCard>(
+            predicate: #Predicate { $0.dueDate <= weekEnd }
+        )
+        guard let cards = try? modelContext.fetch(descriptor) else { return (0, 0, 0) }
+
+        var today = 0, tomorrow = 0, week = 0
+        for card in cards {
+            if card.dueDate <= now {
+                today += 1
+            } else if card.dueDate <= todayEnd {
+                today += 1
+            }
+            if card.dueDate > todayEnd && card.dueDate <= tomorrowEnd {
+                tomorrow += 1
+            }
+            week += 1
+        }
+        return (today, tomorrow, week)
+    }
+
     func totalIntroduced(forGrade grade: Int) -> Int {
         let descriptor = FetchDescriptor<ReviewCard>(
             predicate: #Predicate { $0.gradeLevel == grade }
@@ -345,6 +394,59 @@ final class SessionManager {
             predicate: #Predicate { $0.gradeLevel == grade && $0.stability >= threshold }
         )
         return (try? modelContext.fetchCount(descriptor)) ?? 0
+    }
+
+    /// Exports all review data as a JSON-compatible dictionary for backup/analysis.
+    func exportProgressData() -> Data? {
+        let profile = fetchProfile()
+        let cardDescriptor = FetchDescriptor<ReviewCard>()
+        let logDescriptor = FetchDescriptor<ReviewLog>(sortBy: [SortDescriptor(\.reviewDate)])
+        guard let cards = try? modelContext.fetch(cardDescriptor),
+              let logs = try? modelContext.fetch(logDescriptor) else {
+            return nil
+        }
+
+        let exportCards = cards.map { card -> [String: Any] in
+            [
+                "character": card.character,
+                "gradeLevel": card.gradeLevel,
+                "stability": card.stability,
+                "difficulty": card.difficulty,
+                "reps": card.reps,
+                "lapses": card.lapses,
+                "state": card.state.rawValue,
+                "dueDate": ISO8601DateFormatter().string(from: card.dueDate),
+                "lastReviewDate": card.lastReviewDate.map { ISO8601DateFormatter().string(from: $0) } ?? ""
+            ]
+        }
+
+        let exportLogs = logs.map { log -> [String: Any] in
+            [
+                "character": log.character,
+                "reviewDate": ISO8601DateFormatter().string(from: log.reviewDate),
+                "rating": log.rating.rawValue,
+                "elapsedDays": log.elapsedDays,
+                "scheduledDays": log.scheduledDays,
+                "stabilityBefore": log.stabilityBefore,
+                "stabilityAfter": log.stabilityAfter
+            ]
+        }
+
+        let export: [String: Any] = [
+            "exportDate": ISO8601DateFormatter().string(from: Date()),
+            "version": "1.0",
+            "profile": [
+                "totalReviews": profile?.totalReviews ?? 0,
+                "currentStreak": profile?.currentStreak ?? 0,
+                "longestStreak": profile?.longestStreak ?? 0,
+                "startingGrade": profile?.startingGrade ?? 1,
+                "dailyGoal": profile?.dailyGoal ?? 10
+            ],
+            "cards": exportCards,
+            "reviewLogs": exportLogs
+        ]
+
+        return try? JSONSerialization.data(withJSONObject: export, options: [.prettyPrinted, .sortedKeys])
     }
 
     func fetchProfile() -> UserProfile? {

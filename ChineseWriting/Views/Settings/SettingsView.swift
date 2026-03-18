@@ -10,6 +10,8 @@ struct SettingsView: View {
     @State private var soundEffectsEnabled: Bool = true
     @State private var animationSpeed: Int = 1
     @State private var sessionLength: Int = 0
+    @State private var showExportSheet = false
+    @State private var exportFileURL: URL?
 
     var body: some View {
         NavigationStack {
@@ -103,6 +105,15 @@ struct SettingsView: View {
                     }
                 }
 
+                Section("Data") {
+                    Button(action: exportProgress) {
+                        Label("Export Progress", systemImage: "square.and.arrow.up")
+                    }
+                    Text("Export your review data as JSON for backup or analysis.")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
+
                 Section("About") {
                     LabeledContent("Version", value: "1.0")
                     Text("Chinese character writing practice with spaced repetition (FSRS).")
@@ -111,6 +122,11 @@ struct SettingsView: View {
                 }
             }
             .navigationTitle("Settings")
+            .sheet(isPresented: $showExportSheet) {
+                if let url = exportFileURL {
+                    ShareSheet(items: [url])
+                }
+            }
             .onAppear {
                 let profile = sessionManager.fetchProfile()
                 useTraditional = profile?.useTraditional ?? false
@@ -122,4 +138,28 @@ struct SettingsView: View {
             }
         }
     }
+
+    private func exportProgress() {
+        guard let data = sessionManager.exportProgressData() else { return }
+        let tempDir = FileManager.default.temporaryDirectory
+        let fileURL = tempDir.appendingPathComponent("chinese-writing-progress.json")
+        do {
+            try data.write(to: fileURL)
+            exportFileURL = fileURL
+            showExportSheet = true
+        } catch {
+            print("⚠️ Export failed: \(error)")
+        }
+    }
+}
+
+/// UIKit share sheet wrapper for SwiftUI.
+private struct ShareSheet: UIViewControllerRepresentable {
+    let items: [Any]
+
+    func makeUIViewController(context: Context) -> UIActivityViewController {
+        UIActivityViewController(activityItems: items, applicationActivities: nil)
+    }
+
+    func updateUIViewController(_ uiViewController: UIActivityViewController, context: Context) {}
 }

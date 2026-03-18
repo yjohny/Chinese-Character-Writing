@@ -2,6 +2,7 @@ import SwiftUI
 import SwiftData
 
 /// Root view with tab navigation: Practice, Progress, Settings.
+/// Shows onboarding on first launch before the main tabs.
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     @State private var characterData = CharacterDataService()
@@ -9,11 +10,20 @@ struct ContentView: View {
     @State private var soundService = SoundService()
     @State private var sessionManager: SessionManager?
     @State private var viewModel: PracticeViewModel?
+    @State private var showOnboarding = false
 
     var body: some View {
         Group {
             if let sessionManager, let viewModel {
-                TabView {
+                if showOnboarding {
+                    OnboardingView(
+                        sessionManager: sessionManager,
+                        characterData: characterData
+                    ) {
+                        withAnimation { showOnboarding = false }
+                    }
+                } else {
+                    TabView {
                     PracticeView(viewModel: viewModel)
                         .tabItem {
                             Label("Practice", systemImage: "pencil.and.outline")
@@ -39,6 +49,7 @@ struct ContentView: View {
                         .tabItem {
                             Label("Settings", systemImage: "gearshape.fill")
                         }
+                    }
                 }
             } else {
                 ProgressView("Loading...")
@@ -57,5 +68,6 @@ struct ContentView: View {
             characterData: characterData,
             soundService: soundService
         )
+        showOnboarding = !(sm.fetchProfile()?.hasCompletedOnboarding ?? false)
     }
 }

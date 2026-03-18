@@ -58,6 +58,27 @@ struct StatsView: View {
                     }
                 }
 
+                Section("Review History") {
+                    ReviewHeatmapView(reviewCounts: sessionManager.reviewCountsByDay())
+                        .listRowInsets(EdgeInsets(top: 8, leading: 4, bottom: 8, trailing: 4))
+
+                    let forecast = sessionManager.reviewForecast()
+                    if forecast.today > 0 || forecast.tomorrow > 0 {
+                        HStack(spacing: 16) {
+                            if forecast.today > 0 {
+                                Label("\(forecast.today) due now", systemImage: "clock.fill")
+                                    .font(.caption)
+                                    .foregroundStyle(.orange)
+                            }
+                            if forecast.tomorrow > 0 {
+                                Label("\(forecast.tomorrow) tomorrow", systemImage: "sunrise.fill")
+                                    .font(.caption)
+                                    .foregroundStyle(.secondary)
+                            }
+                        }
+                    }
+                }
+
                 Section("Grade Progress") {
                     let gradeStats = sessionManager.allGradeStats()
                     ForEach(characterData.gradeLevels, id: \.self) { grade in

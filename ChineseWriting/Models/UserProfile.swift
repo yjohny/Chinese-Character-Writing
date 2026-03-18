@@ -37,6 +37,9 @@ final class UserProfile {
     /// Session length (number of characters per session). 0 = unlimited (manual "Done").
     var sessionLength: Int = 0
 
+    /// Whether the user has completed the first-run onboarding flow.
+    var hasCompletedOnboarding: Bool = false
+
     init() {}
 
     // MARK: - Daily Goal
