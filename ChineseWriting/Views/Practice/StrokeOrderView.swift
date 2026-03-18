@@ -81,6 +81,10 @@ struct StrokeOrderView: View {
             )
             .contentShape(Rectangle())
             .onTapGesture { skipAnimation() }
+            .accessibilityElement(children: .ignore)
+            .accessibilityLabel("Stroke order animation, \(completedStrokes) of \(totalStrokes) strokes shown")
+            .accessibilityHint("Tap to skip the animation")
+            .accessibilityAddTraits(.isButton)
 
             if completedStrokes < totalStrokes {
                 Text("Stroke \(completedStrokes + 1) of \(totalStrokes) — tap to skip")

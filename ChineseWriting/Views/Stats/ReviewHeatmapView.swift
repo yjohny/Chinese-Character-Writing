@@ -55,7 +55,7 @@ struct ReviewHeatmapView: View {
                 }
             }
 
-            // Legend
+            // Legend (hidden from VoiceOver since we provide a summary)
             HStack(spacing: 4) {
                 Text("Less")
                     .font(.system(size: 9))
@@ -71,6 +71,15 @@ struct ReviewHeatmapView: View {
             }
             .padding(.leading, 20)
         }
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(heatmapSummary)
+    }
+
+    /// Text summary of review activity for VoiceOver users.
+    private var heatmapSummary: String {
+        let totalReviews = reviewCounts.values.reduce(0, +)
+        let activeDays = reviewCounts.values.filter { $0 > 0 }.count
+        return "Review activity: \(totalReviews) reviews over \(activeDays) active days in the last \(weeks) weeks"
     }
 
     // MARK: - Grid Building

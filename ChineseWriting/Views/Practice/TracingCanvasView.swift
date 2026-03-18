@@ -39,6 +39,10 @@ struct TracingCanvasView: View {
                 RoundedRectangle(cornerRadius: 8)
                     .stroke(Color.gray.opacity(0.3), lineWidth: 1)
             )
+            .accessibilityElement(children: .combine)
+            .accessibilityLabel("Tracing canvas with guide character")
+            .accessibilityHint("Trace over the gray character with your finger or Apple Pencil")
+            .accessibilityAddTraits(.allowsDirectInteraction)
 
             Text("Trace over the gray character")
                 .font(.caption)

@@ -93,6 +93,15 @@ private struct CharacterRow: View {
     let card: ReviewCard?
     let useTraditional: Bool
 
+    private var statusText: String {
+        if let card {
+            if card.isMastered { return "Mastered" }
+            if card.state != .new { return "Learning" }
+            return "Seen"
+        }
+        return "New"
+    }
+
     var body: some View {
         HStack(spacing: 12) {
             Text(entry.displayCharacter(traditional: useTraditional))
@@ -106,13 +115,16 @@ private struct CharacterRow: View {
                 Text(entry.meaning)
                     .font(.caption)
                     .foregroundStyle(.secondary)
-                    .lineLimit(1)
+                    .lineLimit(2)
+                    .minimumScaleFactor(0.8)
             }
 
             Spacer()
 
             statusBadge
         }
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel("\(entry.displayCharacter(traditional: useTraditional)), \(entry.pinyin), \(entry.meaning), \(statusText)")
     }
 
     @ViewBuilder

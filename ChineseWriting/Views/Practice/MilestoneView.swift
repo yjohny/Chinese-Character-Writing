@@ -47,6 +47,9 @@ struct MilestoneView: View {
             .scaleEffect(showContent ? 1.0 : 0.5)
             .opacity(showContent ? 1.0 : 0)
         }
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("Milestone achieved: \(milestone.title). \(milestone.subtitle)")
+        .accessibilityAddTraits(.isModal)
         .onTapGesture {
             dismiss()
         }

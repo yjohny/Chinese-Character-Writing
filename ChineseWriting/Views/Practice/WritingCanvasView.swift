@@ -139,5 +139,9 @@ struct WritingCanvasContainer: View {
         .frame(width: size, height: size)
         .background(Color.white)
         .clipShape(RoundedRectangle(cornerRadius: 8))
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("Writing canvas")
+        .accessibilityHint("Draw the character here using your finger or Apple Pencil")
+        .accessibilityAddTraits(.allowsDirectInteraction)
     }
 }

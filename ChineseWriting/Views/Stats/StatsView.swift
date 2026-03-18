@@ -16,6 +16,7 @@ struct StatsView: View {
                             Image(systemName: "flame.fill")
                                 .font(.title2)
                                 .foregroundStyle(.orange)
+                                .accessibilityHidden(true)
                             VStack(alignment: .leading) {
                                 Text("\(profile.currentStreak) day streak")
                                     .font(.headline)
@@ -27,12 +28,15 @@ struct StatsView: View {
                             }
                         }
                         .padding(.vertical, 4)
+                        .accessibilityElement(children: .ignore)
+                        .accessibilityLabel("\(profile.currentStreak) day streak\(profile.longestStreak > profile.currentStreak ? ", best: \(profile.longestStreak) days" : "")")
 
                         let progress = sessionManager.dailyProgress()
                         HStack(spacing: 12) {
                             Image(systemName: "target")
                                 .font(.title2)
                                 .foregroundStyle(progress.current >= progress.goal ? .green : .orange)
+                                .accessibilityHidden(true)
                             VStack(alignment: .leading, spacing: 4) {
                                 Text("Today: \(progress.current)/\(progress.goal) reviews")
                                     .font(.headline)
@@ -41,11 +45,14 @@ struct StatsView: View {
                             }
                         }
                         .padding(.vertical, 4)
+                        .accessibilityElement(children: .ignore)
+                        .accessibilityLabel("Today: \(progress.current) of \(progress.goal) reviews\(progress.current >= progress.goal ? ", goal complete" : "")")
 
                         HStack(spacing: 12) {
                             Image(systemName: "checkmark.seal.fill")
                                 .font(.title2)
                                 .foregroundStyle(.green)
+                                .accessibilityHidden(true)
                             VStack(alignment: .leading) {
                                 Text("\(sessionManager.masteredCount()) characters mastered")
                                     .font(.headline)
@@ -55,6 +62,8 @@ struct StatsView: View {
                             }
                         }
                         .padding(.vertical, 4)
+                        .accessibilityElement(children: .ignore)
+                        .accessibilityLabel("\(sessionManager.masteredCount()) characters mastered, \(profile.totalReviews) total reviews")
                     }
                 }
 

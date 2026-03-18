@@ -34,7 +34,10 @@ struct CharacterPromptView: View {
             }
             .buttonStyle(.bordered)
             .buttonBorderShape(.capsule)
+            .accessibilityHint("Hear the character pronounced in context")
         }
         .padding()
+        .accessibilityElement(children: .contain)
+        .accessibilityLabel("Character prompt: \(entry.pinyin), meaning: \(entry.meaning)")
     }
 }
