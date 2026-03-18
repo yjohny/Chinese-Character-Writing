@@ -116,23 +116,9 @@ struct PracticeView: View {
         return false
     }
 
+    @ViewBuilder
     private var dailyGoalOverlay: some View {
-        VStack(spacing: 16) {
-            Image(systemName: "checkmark.circle.fill")
-                .font(.system(size: 52))
-                .foregroundStyle(.green)
-            Text("Daily goal complete!")
-                .font(.title2.bold())
-        }
-        .padding(32)
-        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 20))
-        .transition(.scale.combined(with: .opacity))
-        .onAppear {
-            Task { @MainActor in
-                try? await Task.sleep(for: .seconds(2.5))
-                withAnimation { viewModel.showDailyGoalComplete = false }
-            }
-        }
+        DailyGoalOverlayView(isShowing: $viewModel.showDailyGoalComplete)
     }
 
     /// Whether the user is in an active practice flow (not idle or complete).
@@ -438,6 +424,39 @@ struct PracticeView: View {
                     .padding(.vertical, 10)
             }
             .buttonStyle(.borderedProminent)
+        }
+    }
+}
+
+// MARK: - Daily Goal Overlay
+
+/// Extracted so we can store and cancel the auto-dismiss Task properly.
+private struct DailyGoalOverlayView: View {
+    @Binding var isShowing: Bool
+    @State private var dismissTask: Task<Void, Never>?
+
+    var body: some View {
+        VStack(spacing: 16) {
+            Image(systemName: "checkmark.circle.fill")
+                .font(.system(size: 52))
+                .foregroundStyle(.green)
+            Text("Daily goal complete!")
+                .font(.title2.bold())
+        }
+        .padding(32)
+        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 20))
+        .transition(.scale.combined(with: .opacity))
+        .onAppear {
+            dismissTask?.cancel()
+            dismissTask = Task { @MainActor in
+                try? await Task.sleep(for: .seconds(2.5))
+                guard !Task.isCancelled else { return }
+                withAnimation { isShowing = false }
+            }
+        }
+        .onDisappear {
+            dismissTask?.cancel()
+            dismissTask = nil
         }
     }
 }

@@ -83,7 +83,7 @@ struct MilestoneView: View {
             newParticles.append(MilestoneParticle(
                 x: centerX + CGFloat.random(in: -20...20),
                 y: centerY,
-                color: colors.randomElement()!,
+                color: colors.randomElement() ?? .orange,
                 size: CGFloat.random(in: 6...14),
                 opacity: 1.0,
                 rotation: Double.random(in: 0...360)

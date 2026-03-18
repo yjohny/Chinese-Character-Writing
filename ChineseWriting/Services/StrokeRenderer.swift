@@ -10,9 +10,9 @@ struct StrokeRenderer {
     /// The original coordinate space size.
     static let canvasSize: CGFloat = 1024
 
-    /// Cache of parsed SVG paths keyed by character. Avoids re-parsing
-    /// SVG strings on every SwiftUI body evaluation.
-    private static var pathCache: [String: [Path]] = [:]
+    /// Cache of parsed SVG paths keyed by character. Uses NSCache so entries
+    /// are automatically evicted under memory pressure, unlike a plain Dictionary.
+    private static let pathCache = NSCache<NSString, PathCacheEntry>()
 
     /// Parse a single SVG path 'd' string into a SwiftUI Path.
     static func path(from svgString: String) -> Path {
@@ -31,11 +31,12 @@ struct StrokeRenderer {
     /// Parse all strokes for a character into an array of Paths.
     /// Results are cached by character to avoid re-parsing SVG on every render.
     static func allStrokes(from data: StrokeData) -> [Path] {
-        if let cached = pathCache[data.character] {
-            return cached
+        let key = data.character as NSString
+        if let cached = pathCache.object(forKey: key) {
+            return cached.paths
         }
         let paths = data.strokes.map { path(from: $0) }
-        pathCache[data.character] = paths
+        pathCache.setObject(PathCacheEntry(paths), forKey: key)
         return paths
     }
 
@@ -241,6 +242,12 @@ struct StrokeRenderer {
         }
 
         return path
+    }
+
+    /// NSCache requires reference-type values; wraps the [Path] array.
+    private class PathCacheEntry {
+        let paths: [Path]
+        init(_ paths: [Path]) { self.paths = paths }
     }
 
     /// Tokenize an SVG path string into commands and numbers.
