@@ -31,6 +31,12 @@ final class UserProfile {
     /// Whether sound effects are enabled.
     var soundEffectsEnabled: Bool = true
 
+    /// Stroke animation speed multiplier: 0 = slow (1.5×), 1 = normal (1×), 2 = fast (0.5×).
+    var animationSpeed: Int = 1
+
+    /// Session length (number of characters per session). 0 = unlimited (manual "Done").
+    var sessionLength: Int = 0
+
     init() {}
 
     // MARK: - Daily Goal

@@ -191,19 +191,31 @@ struct PracticeView: View {
                     )
                 }
 
-                Text("Write the character")
-                    .font(.subheadline)
-                    .foregroundStyle(.secondary)
+                HStack(spacing: 4) {
+                    Text("Write the character")
+                    if let strokeData = viewModel.currentStrokeData {
+                        Text("(\(strokeData.strokes.count) strokes)")
+                    }
+                }
+                .font(.subheadline)
+                .foregroundStyle(.secondary)
             }
         } canvas: {
             VStack(spacing: 16) {
                 WritingCanvasContainer(
                     drawing: $viewModel.writingDrawing,
                     onSubmit: { viewModel.submitWriting() },
+                    onUndoAvailabilityChanged: { viewModel.canUndo = $0 },
                     size: canvasSize
                 )
 
                 HStack(spacing: 16) {
+                    Button(action: { viewModel.undoLastStroke() }) {
+                        Label("Undo", systemImage: "arrow.uturn.backward")
+                    }
+                    .buttonStyle(.bordered)
+                    .disabled(!viewModel.canUndo)
+
                     Button(action: { viewModel.clearCanvas() }) {
                         Label("Clear", systemImage: "trash")
                     }
@@ -275,7 +287,8 @@ struct PracticeView: View {
                 StrokeOrderView(
                     strokeData: strokeData,
                     onComplete: { viewModel.strokeOrderComplete() },
-                    size: canvasSize - 20
+                    size: canvasSize - 20,
+                    animationSpeed: viewModel.animationSpeed
                 )
             }
         }
@@ -300,6 +313,12 @@ struct PracticeView: View {
             }
 
             HStack(spacing: 16) {
+                Button(action: { viewModel.undoLastStroke() }) {
+                    Label("Undo", systemImage: "arrow.uturn.backward")
+                }
+                .buttonStyle(.bordered)
+                .disabled(!viewModel.canUndo)
+
                 Button(action: { viewModel.clearCanvas() }) {
                     Label("Clear", systemImage: "trash")
                 }
@@ -341,6 +360,7 @@ struct PracticeView: View {
                 WritingCanvasContainer(
                     drawing: $viewModel.rewriteDrawing,
                     onSubmit: { viewModel.submitRewrite() },
+                    onUndoAvailabilityChanged: { viewModel.canUndo = $0 },
                     size: canvasSize
                 )
 
@@ -349,6 +369,12 @@ struct PracticeView: View {
                         .font(.caption)
                 } else {
                     HStack(spacing: 16) {
+                        Button(action: { viewModel.undoLastStroke() }) {
+                            Label("Undo", systemImage: "arrow.uturn.backward")
+                        }
+                        .buttonStyle(.bordered)
+                        .disabled(!viewModel.canUndo)
+
                         Button(action: { viewModel.clearCanvas() }) {
                             Label("Clear", systemImage: "trash")
                         }

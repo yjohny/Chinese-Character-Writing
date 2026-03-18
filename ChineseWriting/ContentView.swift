@@ -19,6 +19,14 @@ struct ContentView: View {
                             Label("Practice", systemImage: "pencil.and.outline")
                         }
 
+                    CharacterBrowseView(
+                        sessionManager: sessionManager,
+                        characterData: characterData
+                    )
+                    .tabItem {
+                        Label("Characters", systemImage: "character.book.closed.fill")
+                    }
+
                     StatsView(
                         sessionManager: sessionManager,
                         characterData: characterData

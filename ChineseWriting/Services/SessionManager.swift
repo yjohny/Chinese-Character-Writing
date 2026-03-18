@@ -258,6 +258,20 @@ final class SessionManager {
         }
     }
 
+    func updateAnimationSpeed(_ speed: Int) {
+        if let profile = fetchProfile() {
+            profile.animationSpeed = speed
+            saveContext()
+        }
+    }
+
+    func updateSessionLength(_ length: Int) {
+        if let profile = fetchProfile() {
+            profile.sessionLength = length
+            saveContext()
+        }
+    }
+
     // MARK: - Stats
 
     func masteredCount() -> Int {
@@ -298,6 +312,13 @@ final class SessionManager {
         }
 
         return result.mapValues { GradeStats(introduced: $0.introduced, learning: $0.learning, mastered: $0.mastered) }
+    }
+
+    /// Returns all ReviewCards indexed by character string, for batch lookup.
+    func allCardsByCharacter() -> [String: ReviewCard] {
+        let descriptor = FetchDescriptor<ReviewCard>()
+        guard let cards = try? modelContext.fetch(descriptor) else { return [:] }
+        return Dictionary(cards.map { ($0.character, $0) }, uniquingKeysWith: { first, _ in first })
     }
 
     func totalIntroduced(forGrade grade: Int) -> Int {

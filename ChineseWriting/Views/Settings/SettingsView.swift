@@ -8,6 +8,8 @@ struct SettingsView: View {
     @State private var startingGrade: Int = 1
     @State private var dailyGoal: Int = 10
     @State private var soundEffectsEnabled: Bool = true
+    @State private var animationSpeed: Int = 1
+    @State private var sessionLength: Int = 0
 
     var body: some View {
         NavigationStack {
@@ -44,6 +46,21 @@ struct SettingsView: View {
                         .foregroundStyle(.secondary)
                 }
 
+                Section("Session Length") {
+                    Picker("Characters per session", selection: $sessionLength) {
+                        Text("Unlimited").tag(0)
+                        Text("5").tag(5)
+                        Text("10").tag(10)
+                        Text("20").tag(20)
+                    }
+                    .onChange(of: sessionLength) { _, newValue in
+                        sessionManager.updateSessionLength(newValue)
+                    }
+                    Text("How many characters to practice before ending a session. Unlimited means you tap Done when finished.")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
+
                 Section("Character Set") {
                     Toggle(isOn: $useTraditional) {
                         VStack(alignment: .leading) {
@@ -56,6 +73,17 @@ struct SettingsView: View {
                     }
                     .onChange(of: useTraditional) { _, newValue in
                         sessionManager.updateUseTraditional(newValue)
+                    }
+                }
+
+                Section("Animation") {
+                    Picker("Stroke Animation Speed", selection: $animationSpeed) {
+                        Text("Slow").tag(0)
+                        Text("Normal").tag(1)
+                        Text("Fast").tag(2)
+                    }
+                    .onChange(of: animationSpeed) { _, newValue in
+                        sessionManager.updateAnimationSpeed(newValue)
                     }
                 }
 
@@ -89,6 +117,8 @@ struct SettingsView: View {
                 startingGrade = max(1, profile?.startingGrade ?? 1)
                 dailyGoal = profile?.dailyGoal ?? 10
                 soundEffectsEnabled = profile?.soundEffectsEnabled ?? true
+                animationSpeed = profile?.animationSpeed ?? 1
+                sessionLength = profile?.sessionLength ?? 0
             }
         }
     }
