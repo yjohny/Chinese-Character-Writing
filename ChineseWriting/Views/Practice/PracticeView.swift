@@ -48,6 +48,7 @@ struct PracticeView: View {
                                 .buttonStyle(.bordered)
                                 .tint(.orange)
                                 .padding()
+                                .accessibilityHint("Skip to stroke order review if you don't know this character")
                             }
 
                             Spacer()
@@ -60,6 +61,7 @@ struct PracticeView: View {
                                 .buttonStyle(.bordered)
                                 .tint(.green)
                                 .padding()
+                                .accessibilityHint("Override if your handwriting was correct but not recognized")
                             }
                         }
                     }
@@ -191,19 +193,32 @@ struct PracticeView: View {
                     )
                 }
 
-                Text("Write the character")
-                    .font(.subheadline)
-                    .foregroundStyle(.secondary)
+                HStack(spacing: 4) {
+                    Text("Write the character")
+                    if let strokeData = viewModel.currentStrokeData {
+                        Text("(\(strokeData.strokes.count) strokes)")
+                    }
+                }
+                .font(.subheadline)
+                .foregroundStyle(.secondary)
+                .minimumScaleFactor(0.8)
             }
         } canvas: {
             VStack(spacing: 16) {
                 WritingCanvasContainer(
                     drawing: $viewModel.writingDrawing,
                     onSubmit: { viewModel.submitWriting() },
+                    onUndoAvailabilityChanged: { viewModel.canUndo = $0 },
                     size: canvasSize
                 )
 
                 HStack(spacing: 16) {
+                    Button(action: { viewModel.undoLastStroke() }) {
+                        Label("Undo", systemImage: "arrow.uturn.backward")
+                    }
+                    .buttonStyle(.bordered)
+                    .disabled(!viewModel.canUndo)
+
                     Button(action: { viewModel.clearCanvas() }) {
                         Label("Clear", systemImage: "trash")
                     }
@@ -225,10 +240,12 @@ struct PracticeView: View {
             if let entry = viewModel.currentEntry {
                 Text(entry.displayCharacter(traditional: viewModel.useTraditional))
                     .font(.custom("STKaiti", size: sizeClass == .regular ? 160 : 120))
+                    .accessibilityLabel("Character: \(entry.displayCharacter(traditional: viewModel.useTraditional)), \(entry.pinyin)")
 
                 Image(systemName: "checkmark.circle.fill")
                     .font(.system(size: 48))
                     .foregroundStyle(.green)
+                    .accessibilityHidden(true)
 
                 Text("Correct!")
                     .font(.title2)
@@ -241,9 +258,11 @@ struct PracticeView: View {
                     }
                     .buttonStyle(.bordered)
                     .tint(.secondary)
+                    .accessibilityHint("Watch the stroke order animation for this character")
                 }
             }
         }
+        .accessibilityElement(children: .contain)
     }
 
     private var incorrectView: some View {
@@ -251,16 +270,19 @@ struct PracticeView: View {
             if let entry = viewModel.currentEntry {
                 Text(entry.displayCharacter(traditional: viewModel.useTraditional))
                     .font(.custom("STKaiti", size: sizeClass == .regular ? 140 : 100))
+                    .accessibilityLabel("Character: \(entry.displayCharacter(traditional: viewModel.useTraditional)), \(entry.pinyin)")
 
                 Image(systemName: "arrow.triangle.2.circlepath")
                     .font(.system(size: 40))
                     .foregroundStyle(.orange)
+                    .accessibilityHidden(true)
 
                 Text("Let's practice the strokes!")
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
             }
         }
+        .accessibilityElement(children: .contain)
     }
 
     private var strokeOrderView: some View {
@@ -275,7 +297,8 @@ struct PracticeView: View {
                 StrokeOrderView(
                     strokeData: strokeData,
                     onComplete: { viewModel.strokeOrderComplete() },
-                    size: canvasSize - 20
+                    size: canvasSize - 20,
+                    animationSpeed: viewModel.animationSpeed
                 )
             }
         }
@@ -300,6 +323,12 @@ struct PracticeView: View {
             }
 
             HStack(spacing: 16) {
+                Button(action: { viewModel.undoLastStroke() }) {
+                    Label("Undo", systemImage: "arrow.uturn.backward")
+                }
+                .buttonStyle(.bordered)
+                .disabled(!viewModel.canUndo)
+
                 Button(action: { viewModel.clearCanvas() }) {
                     Label("Clear", systemImage: "trash")
                 }
@@ -341,6 +370,7 @@ struct PracticeView: View {
                 WritingCanvasContainer(
                     drawing: $viewModel.rewriteDrawing,
                     onSubmit: { viewModel.submitRewrite() },
+                    onUndoAvailabilityChanged: { viewModel.canUndo = $0 },
                     size: canvasSize
                 )
 
@@ -349,6 +379,12 @@ struct PracticeView: View {
                         .font(.caption)
                 } else {
                     HStack(spacing: 16) {
+                        Button(action: { viewModel.undoLastStroke() }) {
+                            Label("Undo", systemImage: "arrow.uturn.backward")
+                        }
+                        .buttonStyle(.bordered)
+                        .disabled(!viewModel.canUndo)
+
                         Button(action: { viewModel.clearCanvas() }) {
                             Label("Clear", systemImage: "trash")
                         }
@@ -381,6 +417,7 @@ struct PracticeView: View {
                 Image(systemName: "star.fill")
                     .font(.system(size: 60))
                     .foregroundStyle(.yellow)
+                    .accessibilityHidden(true)
 
                 Text("Nice work!")
                     .font(.title)
@@ -389,24 +426,29 @@ struct PracticeView: View {
                     HStack {
                         Image(systemName: "checkmark.circle.fill")
                             .foregroundStyle(.green)
+                            .accessibilityHidden(true)
                         Text("Correct: \(viewModel.correctCount)")
                     }
                     HStack {
                         Image(systemName: "arrow.triangle.2.circlepath.circle.fill")
                             .foregroundStyle(.orange)
+                            .accessibilityHidden(true)
                         Text("Needed practice: \(viewModel.incorrectCount)")
                     }
                     HStack {
                         Image(systemName: "number.circle.fill")
                             .foregroundStyle(.blue)
+                            .accessibilityHidden(true)
                         Text("Total: \(viewModel.totalCount)")
                     }
                 }
                 .font(.title3)
+                .minimumScaleFactor(0.7)
             } else {
                 Image(systemName: "checkmark.seal.fill")
                     .font(.system(size: 60))
                     .foregroundStyle(.green)
+                    .accessibilityHidden(true)
 
                 Text("All caught up!")
                     .font(.title)
@@ -446,6 +488,9 @@ private struct DailyGoalOverlayView: View {
         .padding(32)
         .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 20))
         .transition(.scale.combined(with: .opacity))
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("Daily goal complete!")
+        .accessibilityAddTraits(.isModal)
         .onAppear {
             dismissTask?.cancel()
             dismissTask = Task { @MainActor in

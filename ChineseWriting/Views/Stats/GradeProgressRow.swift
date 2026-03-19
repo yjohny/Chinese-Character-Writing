@@ -42,6 +42,8 @@ struct GradeProgressRow: View {
             }
         }
         .padding(.vertical, 4)
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel("\(CharacterEntry.gradeName(for: grade)): \(mastered) of \(total) mastered, \(learning) learning, \(introduced) seen")
     }
 
     private var progressColor: Color {

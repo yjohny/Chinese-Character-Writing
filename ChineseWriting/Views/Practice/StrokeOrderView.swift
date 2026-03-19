@@ -6,6 +6,23 @@ struct StrokeOrderView: View {
     let strokeData: StrokeData
     var onComplete: (() -> Void)?
     var size: CGFloat = 280
+    /// Animation speed: 0 = slow, 1 = normal, 2 = fast.
+    var animationSpeed: Int = 1
+
+    private var strokeDuration: Double {
+        switch animationSpeed {
+        case 0: return 0.8   // slow
+        case 2: return 0.3   // fast
+        default: return 0.5  // normal
+        }
+    }
+    private var strokeDelay: Double {
+        switch animationSpeed {
+        case 0: return 850   // slow (ms)
+        case 2: return 350   // fast (ms)
+        default: return 550  // normal (ms)
+        }
+    }
 
     @State private var completedStrokes = 0
     @State private var currentStrokeProgress: CGFloat = 0
@@ -64,6 +81,10 @@ struct StrokeOrderView: View {
             )
             .contentShape(Rectangle())
             .onTapGesture { skipAnimation() }
+            .accessibilityElement(children: .ignore)
+            .accessibilityLabel("Stroke order animation, \(completedStrokes) of \(totalStrokes) strokes shown")
+            .accessibilityHint("Tap to skip the animation")
+            .accessibilityAddTraits(.isButton)
 
             if completedStrokes < totalStrokes {
                 Text("Stroke \(completedStrokes + 1) of \(totalStrokes) — tap to skip")
@@ -145,11 +166,11 @@ struct StrokeOrderView: View {
                 guard !Task.isCancelled else { return }
 
                 currentStrokeProgress = 0
-                withAnimation(.easeInOut(duration: 0.5)) {
+                withAnimation(.easeInOut(duration: strokeDuration)) {
                     currentStrokeProgress = 1.0
                 }
 
-                try? await Task.sleep(for: .milliseconds(550))
+                try? await Task.sleep(for: .milliseconds(Int(strokeDelay)))
                 guard !Task.isCancelled else { return }
 
                 completedStrokes = stroke + 1

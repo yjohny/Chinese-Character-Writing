@@ -7,6 +7,7 @@ struct WritingCanvasView: UIViewRepresentable {
     @Binding var drawing: PKDrawing
     var onSubmit: (() -> Void)?
     var showGuideGrid: Bool = true
+    var onUndoAvailabilityChanged: ((Bool) -> Void)?
 
     /// Idle time (seconds) after last stroke before auto-submit.
     static let idleTimeout: TimeInterval = 3.0
@@ -19,6 +20,7 @@ struct WritingCanvasView: UIViewRepresentable {
         canvas.isOpaque = false
         canvas.delegate = context.coordinator
         canvas.overrideUserInterfaceStyle = .light
+        context.coordinator.canvasView = canvas
         return canvas
     }
 
@@ -36,6 +38,7 @@ struct WritingCanvasView: UIViewRepresentable {
     class Coordinator: NSObject, PKCanvasViewDelegate {
         var parent: WritingCanvasView
         var idleTimer: Timer?
+        weak var canvasView: PKCanvasView?
 
         init(parent: WritingCanvasView) {
             self.parent = parent
@@ -47,6 +50,7 @@ struct WritingCanvasView: UIViewRepresentable {
 
         func canvasViewDrawingDidChange(_ canvasView: PKCanvasView) {
             parent.drawing = canvasView.drawing
+            parent.onUndoAvailabilityChanged?(canvasView.undoManager?.canUndo ?? false)
 
             // Reset idle timer
             idleTimer?.invalidate()
@@ -61,6 +65,10 @@ struct WritingCanvasView: UIViewRepresentable {
                 self?.parent.onSubmit?()
             }
         }
+
+        func undo() {
+            canvasView?.undoManager?.undo()
+        }
     }
 }
 
@@ -68,7 +76,11 @@ struct WritingCanvasView: UIViewRepresentable {
 struct WritingCanvasContainer: View {
     @Binding var drawing: PKDrawing
     var onSubmit: (() -> Void)?
+    var onUndoAvailabilityChanged: ((Bool) -> Void)?
     var size: CGFloat = 300
+
+    /// Provides access to the canvas coordinator for undo support.
+    @State private var coordinator: WritingCanvasView.Coordinator?
 
     var body: some View {
         ZStack {
@@ -118,10 +130,18 @@ struct WritingCanvasContainer: View {
             }
 
             // Drawing canvas
-            WritingCanvasView(drawing: $drawing, onSubmit: onSubmit)
+            WritingCanvasView(
+                drawing: $drawing,
+                onSubmit: onSubmit,
+                onUndoAvailabilityChanged: onUndoAvailabilityChanged
+            )
         }
         .frame(width: size, height: size)
         .background(Color.white)
         .clipShape(RoundedRectangle(cornerRadius: 8))
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("Writing canvas")
+        .accessibilityHint("Draw the character here using your finger or Apple Pencil")
+        .accessibilityAddTraits(.allowsDirectInteraction)
     }
 }

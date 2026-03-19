@@ -31,5 +31,8 @@ struct DailyProgressRing: View {
                 .foregroundStyle(isComplete ? .green : .primary)
         }
         .frame(width: 40, height: 40)
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel("Daily progress")
+        .accessibilityValue("\(current) of \(goal) reviews\(isComplete ? ", goal complete" : "")")
     }
 }

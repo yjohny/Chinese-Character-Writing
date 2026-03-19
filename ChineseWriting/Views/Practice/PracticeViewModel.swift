@@ -25,6 +25,9 @@ final class PracticeViewModel {
     var isRecognizing = false
     var rewriteFeedback: String?
 
+    /// Whether the undo button should be available (canvas has undo history).
+    var canUndo = false
+
     /// When true, stroke order review was triggered from the correct screen
     /// (optional review), so we advance to the next card instead of tracing.
     var isReviewingAfterCorrect = false
@@ -69,6 +72,10 @@ final class PracticeViewModel {
 
     var useTraditional: Bool {
         sessionManager.fetchProfile()?.useTraditional ?? false
+    }
+
+    var animationSpeed: Int {
+        sessionManager.fetchProfile()?.animationSpeed ?? 1
     }
 
     init(sessionManager: SessionManager, ttsService: TTSService, characterData: CharacterDataService, soundService: SoundService) {
@@ -236,6 +243,33 @@ final class PracticeViewModel {
         default:
             break
         }
+        canUndo = false
+    }
+
+    /// Remove the last stroke from the active drawing.
+    func undoLastStroke() {
+        switch studyState {
+        case .writing:
+            guard !writingDrawing.strokes.isEmpty else { return }
+            var strokes = writingDrawing.strokes
+            strokes.removeLast()
+            writingDrawing = PKDrawing(strokes: strokes)
+            canUndo = !strokes.isEmpty
+        case .rewriting:
+            guard !rewriteDrawing.strokes.isEmpty else { return }
+            var strokes = rewriteDrawing.strokes
+            strokes.removeLast()
+            rewriteDrawing = PKDrawing(strokes: strokes)
+            canUndo = !strokes.isEmpty
+        case .tracing:
+            guard !tracingDrawing.strokes.isEmpty else { return }
+            var strokes = tracingDrawing.strokes
+            strokes.removeLast()
+            tracingDrawing = PKDrawing(strokes: strokes)
+            canUndo = !strokes.isEmpty
+        default:
+            break
+        }
     }
 
     /// User taps "Review Strokes" on the correct screen to optionally review stroke order.
@@ -386,6 +420,14 @@ final class PracticeViewModel {
         showCelebration = false
         showDailyGoalComplete = false
         activeMilestone = nil
+        canUndo = false
+
+        // Check session length limit
+        let sessionLimit = sessionManager.fetchProfile()?.sessionLength ?? 0
+        if sessionLimit > 0 && totalCount >= sessionLimit {
+            studyState = .sessionComplete
+            return
+        }
 
         if let (card, entry) = sessionManager.nextCard() {
             currentCard = card
