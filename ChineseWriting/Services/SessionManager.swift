@@ -32,6 +32,17 @@ final class SessionManager {
     /// Invalidated (set to nil) only when new cards are created.
     private var knownCardCharacters: Set<String>?
 
+    /// Cached UserProfile to avoid repeated SwiftData fetches. The profile is a
+    /// singleton — once fetched (or created), it never changes identity. Properties
+    /// are mutated in place, so the cached reference stays valid.
+    private var cachedProfile: UserProfile?
+
+    /// Cached character→ReviewCard lookup. Invalidated when `statsRevision` changes
+    /// (after every rateCard or bulk insert). Avoids re-fetching all cards on every
+    /// CharacterBrowseView render.
+    private var cachedCardsByCharacter: [String: ReviewCard]?
+    private var cardsCacheRevision: Int = -1
+
     init(characterData: CharacterDataService, modelContext: ModelContext) {
         self.characterData = characterData
         self.modelContext = modelContext
@@ -214,7 +225,7 @@ final class SessionManager {
     func checkForNewMilestones() -> MilestoneType? {
         guard let profile = fetchProfile() else { return nil }
 
-        // Check mastery milestones
+        // Check mastery milestones (cheap: single fetchCount query)
         let mastered = masteredCount()
         for (count, milestone) in MilestoneType.masteryThresholds {
             if mastered >= count && !profile.hasAchieved(milestone) {
@@ -224,7 +235,7 @@ final class SessionManager {
             }
         }
 
-        // Check streak milestones
+        // Check streak milestones (free: reads cached profile properties)
         for (days, milestone) in MilestoneType.streakThresholds {
             if profile.currentStreak >= days && !profile.hasAchieved(milestone) {
                 profile.markAchieved(milestone)
@@ -233,16 +244,24 @@ final class SessionManager {
             }
         }
 
-        // Check grade completion
-        let gradeStats = allGradeStats()
-        for grade in characterData.gradeLevels {
-            guard let milestone = MilestoneType.gradeComplete(for: grade) else { continue }
-            let total = characterData.totalCharacters(forGrade: grade)
-            let gradeMastered = gradeStats[grade]?.mastered ?? 0
-            if gradeMastered >= total && total > 0 && !profile.hasAchieved(milestone) {
-                profile.markAchieved(milestone)
-                saveContext()
-                return milestone
+        // Check grade completion — only if there are unachieved grade milestones.
+        // This avoids the expensive allGradeStats() fetch (materializes all cards)
+        // on every review once all grade milestones have been achieved.
+        let hasUnachievedGradeMilestone = characterData.gradeLevels.contains { grade in
+            guard let milestone = MilestoneType.gradeComplete(for: grade) else { return false }
+            return !profile.hasAchieved(milestone)
+        }
+        if hasUnachievedGradeMilestone {
+            let gradeStats = allGradeStats()
+            for grade in characterData.gradeLevels {
+                guard let milestone = MilestoneType.gradeComplete(for: grade) else { continue }
+                let total = characterData.totalCharacters(forGrade: grade)
+                let gradeMastered = gradeStats[grade]?.mastered ?? 0
+                if gradeMastered >= total && total > 0 && !profile.hasAchieved(milestone) {
+                    profile.markAchieved(milestone)
+                    saveContext()
+                    return milestone
+                }
             }
         }
 
@@ -315,10 +334,17 @@ final class SessionManager {
     }
 
     /// Returns all ReviewCards indexed by character string, for batch lookup.
+    /// Cached and invalidated when statsRevision changes (after reviews or bulk inserts).
     func allCardsByCharacter() -> [String: ReviewCard] {
+        if cardsCacheRevision == statsRevision, let cached = cachedCardsByCharacter {
+            return cached
+        }
         let descriptor = FetchDescriptor<ReviewCard>()
         guard let cards = try? modelContext.fetch(descriptor) else { return [:] }
-        return Dictionary(cards.map { ($0.character, $0) }, uniquingKeysWith: { first, _ in first })
+        let result = Dictionary(cards.map { ($0.character, $0) }, uniquingKeysWith: { first, _ in first })
+        cachedCardsByCharacter = result
+        cardsCacheRevision = statsRevision
+        return result
     }
 
     /// Returns review counts per day for the last N weeks, for the heatmap.
@@ -406,6 +432,8 @@ final class SessionManager {
             return nil
         }
 
+        let dateFormatter = ISO8601DateFormatter()
+
         let exportCards = cards.map { card -> [String: Any] in
             [
                 "character": card.character,
@@ -415,25 +443,27 @@ final class SessionManager {
                 "reps": card.reps,
                 "lapses": card.lapses,
                 "state": card.state.rawValue,
-                "dueDate": ISO8601DateFormatter().string(from: card.dueDate),
-                "lastReviewDate": card.lastReviewDate.map { ISO8601DateFormatter().string(from: $0) } ?? ""
+                "dueDate": dateFormatter.string(from: card.dueDate),
+                "lastReviewDate": card.lastReviewDate.map { dateFormatter.string(from: $0) } ?? ""
             ]
         }
 
         let exportLogs = logs.map { log -> [String: Any] in
             [
                 "character": log.character,
-                "reviewDate": ISO8601DateFormatter().string(from: log.reviewDate),
+                "reviewDate": dateFormatter.string(from: log.reviewDate),
                 "rating": log.rating.rawValue,
                 "elapsedDays": log.elapsedDays,
                 "scheduledDays": log.scheduledDays,
                 "stabilityBefore": log.stabilityBefore,
-                "stabilityAfter": log.stabilityAfter
+                "stabilityAfter": log.stabilityAfter,
+                "wasOverride": log.wasOverride,
+                "visionConfidence": log.visionConfidence
             ]
         }
 
         let export: [String: Any] = [
-            "exportDate": ISO8601DateFormatter().string(from: Date()),
+            "exportDate": dateFormatter.string(from: Date()),
             "version": "1.0",
             "profile": [
                 "totalReviews": profile?.totalReviews ?? 0,
@@ -450,14 +480,19 @@ final class SessionManager {
     }
 
     func fetchProfile() -> UserProfile? {
+        if let cached = cachedProfile {
+            return cached
+        }
         let descriptor = FetchDescriptor<UserProfile>()
         let profiles = (try? modelContext.fetch(descriptor)) ?? []
         if let profile = profiles.first {
+            cachedProfile = profile
             return profile
         }
         let newProfile = UserProfile()
         modelContext.insert(newProfile)
         saveContext()
+        cachedProfile = newProfile
         return newProfile
     }
 

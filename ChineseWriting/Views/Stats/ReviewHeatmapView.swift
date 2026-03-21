@@ -94,8 +94,6 @@ struct ReviewHeatmapView: View {
     private func buildGrid() -> [[DayEntry]] {
         let calendar = Calendar.current
         let today = calendar.startOfDay(for: Date())
-        let todayWeekday = calendar.component(.weekday, from: today) // 1=Sun, 7=Sat
-
         // Total days to show
         let totalDays = weeks * 7
         guard let startDate = calendar.date(byAdding: .day, value: -(totalDays - 1), to: today) else {

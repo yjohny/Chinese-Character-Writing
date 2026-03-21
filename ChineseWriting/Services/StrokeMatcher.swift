@@ -324,12 +324,19 @@ struct StrokeMatcher {
 
     // MARK: - DTW (Dynamic Time Warping)
 
-    /// Normalized DTW distance between two point sequences of equal length.
+    /// Normalized DTW distance between two point sequences.
+    /// Uses a Sakoe-Chiba band to constrain the warping window, reducing
+    /// complexity from O(n*m) to O(n*band) while still allowing reasonable warping.
     /// Returns the average per-point cost of the optimal warping path.
     private static func dtwDistance(_ a: [CGPoint], _ b: [CGPoint]) -> Double {
         let n = a.count
         let m = b.count
         guard n > 0, m > 0 else { return .infinity }
+
+        // Sakoe-Chiba band: allow warping within ±band of the diagonal.
+        // A band of ~30% of sequence length provides good flexibility
+        // while cutting computation significantly for longer sequences.
+        let band = max(3, max(n, m) / 3)
 
         // Cost matrix. Use 1-D array for performance.
         var dtw = [Double](repeating: .infinity, count: (n + 1) * (m + 1))
@@ -337,7 +344,9 @@ struct StrokeMatcher {
         dtw[0] = 0
 
         for i in 1...n {
-            for j in 1...m {
+            let jMin = max(1, i - band)
+            let jMax = min(m, i + band)
+            for j in jMin...jMax {
                 let cost = hypot(a[i - 1].x - b[j - 1].x, a[i - 1].y - b[j - 1].y)
                 dtw[i * w + j] = cost + min(
                     dtw[(i - 1) * w + j],       // insertion

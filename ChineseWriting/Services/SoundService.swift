@@ -100,10 +100,8 @@ final class SoundService {
 
         guard let channelData = buffer.floatChannelData?[0] else { return buffer }
 
-        // Zero fill
-        for i in 0..<Int(frameCount) {
-            channelData[i] = 0
-        }
+        // Zero fill using vDSP for efficiency
+        memset(channelData, 0, Int(frameCount) * MemoryLayout<Float>.size)
 
         let samplesPerNote = Int(noteDuration * sampleRate)
         let samplesPerGap = Int(gap * sampleRate)

@@ -73,7 +73,7 @@ struct StrokeOrderView: View {
                 }
             }
             .frame(width: size, height: size)
-            .background(Color(.systemBackground))
+            .background(Color.white)
             .clipShape(RoundedRectangle(cornerRadius: 8))
             .overlay(
                 RoundedRectangle(cornerRadius: 8)

@@ -8,6 +8,14 @@ struct PracticeView: View {
     @Environment(\.horizontalSizeClass) private var sizeClass
     @Environment(\.scenePhase) private var scenePhase
 
+    /// Brief "Resuming session" toast shown when the user returns to the Practice tab
+    /// while a session is already in progress.
+    @State private var showResumeIndicator = false
+
+    /// Tracks whether the view has appeared at least once (to distinguish first launch
+    /// from tab switching).
+    @State private var hasAppearedBefore = false
+
     /// Canvas size adapts to iPad vs iPhone.
     private var canvasSize: CGFloat {
         sizeClass == .regular ? 420 : 300
@@ -33,6 +41,22 @@ struct PracticeView: View {
                     MilestoneView(milestone: milestone) {
                         viewModel.activeMilestone = nil
                     }
+                }
+
+                // Session resume indicator
+                if showResumeIndicator {
+                    VStack {
+                        Text("Resuming session")
+                            .font(.caption.bold())
+                            .foregroundStyle(.white)
+                            .padding(.horizontal, 16)
+                            .padding(.vertical, 8)
+                            .background(.black.opacity(0.6), in: Capsule())
+                            .transition(.move(edge: .top).combined(with: .opacity))
+                        Spacer()
+                    }
+                    .padding(.top, 8)
+                    .allowsHitTesting(false)
                 }
 
                 // Floating buttons
@@ -84,6 +108,18 @@ struct PracticeView: View {
             }
             .onAppear {
                 viewModel.canvasSize = canvasSize
+                if hasAppearedBefore && isActivelyPracticing {
+                    withAnimation(.easeInOut(duration: 0.3)) {
+                        showResumeIndicator = true
+                    }
+                    Task { @MainActor in
+                        try? await Task.sleep(for: .seconds(1.5))
+                        withAnimation(.easeInOut(duration: 0.3)) {
+                            showResumeIndicator = false
+                        }
+                    }
+                }
+                hasAppearedBefore = true
                 viewModel.beginIfNeeded()
             }
             .onChange(of: sizeClass) { _, _ in
