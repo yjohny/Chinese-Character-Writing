@@ -37,6 +37,12 @@ final class SessionManager {
     /// are mutated in place, so the cached reference stays valid.
     private var cachedProfile: UserProfile?
 
+    /// Cached character→ReviewCard lookup. Invalidated when `statsRevision` changes
+    /// (after every rateCard or bulk insert). Avoids re-fetching all cards on every
+    /// CharacterBrowseView render.
+    private var cachedCardsByCharacter: [String: ReviewCard]?
+    private var cardsCacheRevision: Int = -1
+
     init(characterData: CharacterDataService, modelContext: ModelContext) {
         self.characterData = characterData
         self.modelContext = modelContext
@@ -328,10 +334,17 @@ final class SessionManager {
     }
 
     /// Returns all ReviewCards indexed by character string, for batch lookup.
+    /// Cached and invalidated when statsRevision changes (after reviews or bulk inserts).
     func allCardsByCharacter() -> [String: ReviewCard] {
+        if cardsCacheRevision == statsRevision, let cached = cachedCardsByCharacter {
+            return cached
+        }
         let descriptor = FetchDescriptor<ReviewCard>()
         guard let cards = try? modelContext.fetch(descriptor) else { return [:] }
-        return Dictionary(cards.map { ($0.character, $0) }, uniquingKeysWith: { first, _ in first })
+        let result = Dictionary(cards.map { ($0.character, $0) }, uniquingKeysWith: { first, _ in first })
+        cachedCardsByCharacter = result
+        cardsCacheRevision = statsRevision
+        return result
     }
 
     /// Returns review counts per day for the last N weeks, for the heatmap.
@@ -443,7 +456,9 @@ final class SessionManager {
                 "elapsedDays": log.elapsedDays,
                 "scheduledDays": log.scheduledDays,
                 "stabilityBefore": log.stabilityBefore,
-                "stabilityAfter": log.stabilityAfter
+                "stabilityAfter": log.stabilityAfter,
+                "wasOverride": log.wasOverride,
+                "visionConfidence": log.visionConfidence
             ]
         }
 

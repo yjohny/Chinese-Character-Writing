@@ -12,6 +12,9 @@ final class CharacterDataService: ObservableObject {
     private var charactersByGrade: [Int: [CharacterEntry]] = [:]
     /// Pre-computed sorted grade levels.
     private var sortedGradeLevels: [Int] = []
+    /// Pre-computed tone-stripped pinyin for each character (keyed by simplified).
+    /// Allows search by ASCII pinyin without tone marks (e.g. "you" matches "yóu").
+    private(set) var pinyinNormalized: [String: String] = [:]
 
     /// Raw JSON objects keyed by character — decoded lazily into StrokeData on demand.
     private var rawStrokeEntries: [String: Any] = [:]
@@ -127,5 +130,10 @@ final class CharacterDataService: ObservableObject {
         charactersByGrade = Dictionary(grouping: characters, by: \.gradeLevel)
             .mapValues { $0.sorted { $0.orderInGrade < $1.orderInGrade } }
         sortedGradeLevels = charactersByGrade.keys.sorted()
+        // Pre-compute tone-stripped pinyin for fast ASCII search
+        pinyinNormalized = Dictionary(
+            characters.map { ($0.simplified, CharacterEntry.stripTones($0.pinyin)) },
+            uniquingKeysWith: { first, _ in first }
+        )
     }
 }

@@ -65,6 +65,7 @@ final class PracticeViewModel {
     let soundService: SoundService
     private let recognitionService = RecognitionService()
     private let hapticGenerator = UINotificationFeedbackGenerator()
+    private let impactGenerator = UIImpactFeedbackGenerator(style: .light)
 
     /// Tracks in-flight async work (recognition, delayed transitions) so it can be
     /// cancelled when the user ends the session or moves to the next card.
@@ -248,6 +249,7 @@ final class PracticeViewModel {
 
     /// Remove the last stroke from the active drawing.
     func undoLastStroke() {
+        var didUndo = false
         switch studyState {
         case .writing:
             guard !writingDrawing.strokes.isEmpty else { return }
@@ -255,20 +257,27 @@ final class PracticeViewModel {
             strokes.removeLast()
             writingDrawing = PKDrawing(strokes: strokes)
             canUndo = !strokes.isEmpty
+            didUndo = true
         case .rewriting:
             guard !rewriteDrawing.strokes.isEmpty else { return }
             var strokes = rewriteDrawing.strokes
             strokes.removeLast()
             rewriteDrawing = PKDrawing(strokes: strokes)
             canUndo = !strokes.isEmpty
+            didUndo = true
         case .tracing:
             guard !tracingDrawing.strokes.isEmpty else { return }
             var strokes = tracingDrawing.strokes
             strokes.removeLast()
             tracingDrawing = PKDrawing(strokes: strokes)
             canUndo = !strokes.isEmpty
+            didUndo = true
         default:
             break
+        }
+        if didUndo {
+            impactGenerator.impactOccurred()
+            impactGenerator.prepare()
         }
     }
 

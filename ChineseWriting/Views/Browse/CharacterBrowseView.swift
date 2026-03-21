@@ -60,13 +60,15 @@ struct CharacterBrowseView: View {
             results = characterData.characters(forGrade: selectedGrade)
         }
 
-        // Search filter
+        // Search filter — matches character, pinyin (with or without tone marks), or meaning
         if !searchText.isEmpty {
             let query = searchText.lowercased()
+            let queryStripped = CharacterEntry.stripTones(query)
             results = results.filter { entry in
                 entry.simplified.contains(query)
                 || entry.traditional.contains(query)
                 || entry.pinyin.lowercased().contains(query)
+                || characterData.pinyinNormalized[entry.simplified]?.contains(queryStripped) == true
                 || entry.meaning.lowercased().contains(query)
             }
         }

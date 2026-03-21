@@ -35,4 +35,19 @@ struct CharacterEntry: Codable, Identifiable {
     static func gradeName(for grade: Int) -> String {
         grade <= 6 ? "Grade \(grade)" : "Expansion"
     }
+
+    /// Strip tone diacritics from pinyin, converting to ASCII-searchable form.
+    /// E.g. "yóu" → "you", "lǚ" → "lv" (ü → v is standard keyboard input).
+    /// Handles all standard pinyin vowels with tone marks and ü → v.
+    static func stripTones(_ pinyin: String) -> String {
+        let toneMap: [Character: Character] = [
+            "ā": "a", "á": "a", "ǎ": "a", "à": "a",
+            "ē": "e", "é": "e", "ě": "e", "è": "e",
+            "ī": "i", "í": "i", "ǐ": "i", "ì": "i",
+            "ō": "o", "ó": "o", "ǒ": "o", "ò": "o",
+            "ū": "u", "ú": "u", "ǔ": "u", "ù": "u",
+            "ǖ": "v", "ǘ": "v", "ǚ": "v", "ǜ": "v", "ü": "v",
+        ]
+        return String(pinyin.lowercased().map { toneMap[$0] ?? $0 })
+    }
 }
