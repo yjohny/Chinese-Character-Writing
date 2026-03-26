@@ -1,4 +1,7 @@
 import Foundation
+import os.log
+
+private let logger = Logger(subsystem: "com.chinesewriting.app", category: "CharacterData")
 
 /// Loads and provides access to bundled character and stroke data.
 /// Character data is loaded at init; stroke data is lazily decoded per character
@@ -67,7 +70,7 @@ final class CharacterDataService: ObservableObject {
             rawStrokeEntries.removeValue(forKey: character) // Free raw JSON now that decoded copy is cached
             return strokeData
         } catch {
-            print("⚠️ Failed to decode stroke data for \(character): \(error)")
+            logger.error("Failed to decode stroke data for \(character): \(error)")
             return nil
         }
     }
@@ -81,7 +84,7 @@ final class CharacterDataService: ObservableObject {
 
     private func loadCharacters() {
         guard let url = Bundle.main.url(forResource: "characters", withExtension: "json") else {
-            print("⚠️ characters.json not found in bundle")
+            logger.error("characters.json not found in bundle")
             return
         }
         do {
@@ -89,7 +92,7 @@ final class CharacterDataService: ObservableObject {
             characters = try JSONDecoder().decode([CharacterEntry].self, from: data)
             buildIndices()
         } catch {
-            print("⚠️ Failed to decode characters.json: \(error)")
+            logger.error("Failed to decode characters.json: \(error)")
         }
     }
 
@@ -99,16 +102,16 @@ final class CharacterDataService: ObservableObject {
     /// before parsing finishes, it returns nil (recognition falls through to Vision OCR).
     private func startStrokeLoading() {
         guard let url = Bundle.main.url(forResource: "strokes", withExtension: "json") else {
-            print("⚠️ strokes.json not found in bundle")
+            logger.error("strokes.json not found in bundle")
             return
         }
         guard let data = try? Data(contentsOf: url) else {
-            print("⚠️ Failed to read strokes.json")
+            logger.error("Failed to read strokes.json")
             return
         }
         Task.detached { [weak self] in
             guard let dict = try? JSONSerialization.jsonObject(with: data) as? [String: Any] else {
-                await MainActor.run { print("⚠️ strokes.json is not a dictionary") }
+                await MainActor.run { logger.error("strokes.json is not a dictionary") }
                 return
             }
             await MainActor.run {

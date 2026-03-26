@@ -1,6 +1,9 @@
 import Vision
 import PencilKit
 import UIKit
+import os.log
+
+private let logger = Logger(subsystem: "com.chinesewriting.app", category: "Recognition")
 
 /// Result of attempting to recognize a handwritten character.
 struct RecognitionResult {
@@ -95,7 +98,7 @@ final class RecognitionService {
             do {
                 try handler.perform([request])
             } catch {
-                print("⚠️ Vision perform() failed: \(error)")
+                logger.error("Vision perform() failed: \(error)")
             }
 
             continuation.resume(returning: result ?? .failed)
