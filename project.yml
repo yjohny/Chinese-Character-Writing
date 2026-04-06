@@ -16,6 +16,7 @@ targets:
     resources:
       - path: ChineseWriting/Resources
       - path: ChineseWriting/Assets.xcassets
+      - path: ChineseWriting/PrivacyInfo.xcprivacy
     settings:
       base:
         INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES

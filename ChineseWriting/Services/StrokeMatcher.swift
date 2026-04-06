@@ -257,10 +257,9 @@ struct StrokeMatcher {
         var cumLengths = [0.0]
         for i in 1..<points.count {
             let d = hypot(points[i].x - points[i - 1].x, points[i].y - points[i - 1].y)
-            cumLengths.append(cumLengths.last! + d)
+            cumLengths.append((cumLengths.last ?? 0) + d)
         }
-        let totalLength = cumLengths.last!
-        guard totalLength > 0 else { return points }
+        guard let totalLength = cumLengths.last, totalLength > 0 else { return points }
 
         var result = [CGPoint]()
         var segIdx = 0
