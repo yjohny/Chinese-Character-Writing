@@ -1,4 +1,7 @@
 import AVFoundation
+import os.log
+
+private let logger = Logger(subsystem: "com.chinesewriting.app", category: "TTS")
 
 /// Wraps AVSpeechSynthesizer for Chinese character pronunciation.
 @MainActor
@@ -55,7 +58,7 @@ final class TTSService: NSObject, ObservableObject {
         do {
             try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
         } catch {
-            print("⚠️ Audio session category setup failed: \(error)")
+            logger.error("Audio session category setup failed: \(error)")
         }
     }
 

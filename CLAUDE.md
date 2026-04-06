@@ -2,6 +2,8 @@
 
 iOS app (Swift 5.9 / SwiftUI) for learning to write Chinese characters with spaced repetition.
 
+Bundle ID: `com.chinesewriting.app` · Version 1.0 · iOS 17.0+
+
 ## Build
 
 ```
@@ -17,6 +19,7 @@ Xcode project generated via XcodeGen from `project.yml`. iOS 17.0+ deployment ta
 - **Recognition**: Stroke-based matching (StrokeMatcher) with Vision OCR fallback
 - **Audio**: AVFoundation TTS (`TTSService`), AVAudioEngine synthesized sound effects (`SoundService`)
 - **Spaced repetition**: FSRS v5 algorithm (`FSRSEngine.swift`)
+- **Logging**: `os.Logger` (subsystem `com.chinesewriting.app`, per-module categories)
 
 ### Key directories
 
@@ -61,7 +64,7 @@ SessionManager caches aggressively to avoid repeated SwiftData fetches:
 - **`statsRevision`** counter (tracked by `@Observable`) — incremented after `rateCard()` and `setupAssumedKnownCards()`. Views that read stats must touch this property to get re-rendered.
 - **`fetchFirstDueCard()`** uses `fetchLimit: 1`; **`countDueCards()`** uses `fetchCount` — avoids materializing all due cards.
 - **Stroke data** — lazily decoded per character, raw JSON evicted after decode. Parsed SVG paths cached in `StrokeRenderer.pathCache` (`NSCache`, auto-evicts under pressure). Next card's stroke data is prefetched during correct/incorrect screen.
-- All `modelContext.save()` calls go through `SessionManager.saveContext()` which logs errors.
+- All `modelContext.save()` calls go through `SessionManager.saveContext()` which logs errors via `os.Logger`.
 
 ## Recognition
 
@@ -104,3 +107,18 @@ Two-tier: **StrokeMatcher** (primary) then **Vision OCR** (fallback).
 - `nextDifficulty` mean-reverts toward D0(3) (Good), not D0(4), per FSRS v5 spec.
 - `scheduleLearning`/`scheduleReview` compute `newD` first, then pass `newD` to stability functions.
 - `FSRSEngine.init` requires exactly 19 weights (enforced by precondition).
+
+## Logging
+
+Use `os.Logger` — never `print()`. Each service file declares a module-level logger:
+
+```swift
+import os.log
+private let logger = Logger(subsystem: "com.chinesewriting.app", category: "CategoryName")
+```
+
+Categories: `CharacterData`, `Session`, `TTS`, `Recognition`, `Settings`. All errors use `logger.error()`.
+
+## Attribution
+
+Stroke order data from [Make Me a Hanzi](https://github.com/skishore/makemeahanzi) (LGPL / CC-BY-SA). Credited in Settings → Acknowledgments. Any new third-party data must be attributed there.

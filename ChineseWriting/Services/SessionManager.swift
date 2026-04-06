@@ -1,5 +1,8 @@
 import Foundation
+import os.log
 import SwiftData
+
+private let logger = Logger(subsystem: "com.chinesewriting.app", category: "Session")
 
 /// Manages the study queue: picks the next character and rates reviewed cards.
 ///
@@ -672,7 +675,7 @@ final class SessionManager {
         do {
             try modelContext.save()
         } catch {
-            print("⚠️ SwiftData save failed: \(error)")
+            logger.error("SwiftData save failed: \(error)")
         }
     }
 }

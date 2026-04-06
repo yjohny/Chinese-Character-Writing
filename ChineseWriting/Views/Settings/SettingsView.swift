@@ -1,4 +1,7 @@
 import SwiftUI
+import os.log
+
+private let logger = Logger(subsystem: "com.chinesewriting.app", category: "Settings")
 
 /// App settings: character set toggle, about info.
 struct SettingsView: View {
@@ -120,6 +123,12 @@ struct SettingsView: View {
                         .font(.caption)
                         .foregroundStyle(.secondary)
                 }
+
+                Section("Acknowledgments") {
+                    Text("Stroke order data derived from [Make Me a Hanzi](https://github.com/skishore/makemeahanzi), licensed under LGPL / CC-BY-SA.")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
             }
             .navigationTitle("Settings")
             .sheet(isPresented: $showExportSheet) {
@@ -148,7 +157,7 @@ struct SettingsView: View {
             exportFileURL = fileURL
             showExportSheet = true
         } catch {
-            print("⚠️ Export failed: \(error)")
+            logger.error("Export failed: \(error)")
         }
     }
 }
