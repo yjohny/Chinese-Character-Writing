@@ -174,7 +174,8 @@ final class SessionManager {
             card.lapses += 1
         }
 
-        // Create review log
+        // Create review log linked to its parent card. The relationship gives
+        // us cascade-delete (no orphan logs) and inverse access via card.logs.
         let log = ReviewLog(
             character: card.character,
             rating: rating,
@@ -185,6 +186,7 @@ final class SessionManager {
             wasOverride: wasOverride,
             visionConfidence: visionConfidence
         )
+        log.card = card
         modelContext.insert(log)
 
         // Update user profile
@@ -467,7 +469,8 @@ final class SessionManager {
 
         let export: [String: Any] = [
             "exportDate": dateFormatter.string(from: Date()),
-            "version": "1.0",
+            "schemaVersion": 1,
+            "appVersion": "1.0",
             "profile": [
                 "totalReviews": profile?.totalReviews ?? 0,
                 "currentStreak": profile?.currentStreak ?? 0,
@@ -486,7 +489,13 @@ final class SessionManager {
         if let cached = cachedProfile {
             return cached
         }
-        let descriptor = FetchDescriptor<UserProfile>()
+        // Fetch the singleton profile by its stable key. The unique constraint
+        // on UserProfile.key guarantees at most one match.
+        let singletonKey = UserProfile.singletonKey
+        var descriptor = FetchDescriptor<UserProfile>(
+            predicate: #Predicate { $0.key == singletonKey }
+        )
+        descriptor.fetchLimit = 1
         let profiles = (try? modelContext.fetch(descriptor)) ?? []
         if let profile = profiles.first {
             cachedProfile = profile
