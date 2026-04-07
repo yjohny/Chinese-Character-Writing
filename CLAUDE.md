@@ -15,16 +15,17 @@ Xcode project generated via XcodeGen from `project.yml`. iOS 17.0+ deployment ta
 ## Architecture
 
 - **UI**: SwiftUI with PencilKit for handwriting input
-- **Persistence**: SwiftData (ReviewCard, UserProfile, ReviewLog)
+- **Persistence**: SwiftData via `SchemaV1: VersionedSchema` (ReviewCard, UserProfile, ReviewLog) with `ChineseWritingMigrationPlan`
 - **Recognition**: Stroke-based matching (StrokeMatcher) with Vision OCR fallback
 - **Audio**: AVFoundation TTS (`TTSService`), AVAudioEngine synthesized sound effects (`SoundService`)
 - **Spaced repetition**: FSRS v5 algorithm (`FSRSEngine.swift`)
 - **Logging**: `os.Logger` (subsystem `com.chinesewriting.app`, per-module categories)
+- **Diagnostics**: `MetricKitService` subscribes to `MXMetricManager` at launch and logs crash/hang/CPU/disk-write payloads via `os.Logger` — no third-party SDK, no permissions
 
 ### Key directories
 
-- `Models/` — CharacterEntry, StrokeData, ReviewCard, FSRSEngine, StudyState, Milestone
-- `Services/` — CharacterDataService, StrokeRenderer, StrokeMatcher, SessionManager, RecognitionService, TTSService, SoundService
+- `Models/` — CharacterEntry, StrokeData, ReviewCard, ReviewLog, UserProfile, SchemaV1, FSRSEngine, StudyState, Milestone
+- `Services/` — CharacterDataService, StrokeRenderer, StrokeMatcher, SessionManager, RecognitionService, TTSService, SoundService, MetricKitService
 - `Views/Practice/` — PracticeView, PracticeViewModel, WritingCanvasView, StrokeOrderView, TracingCanvasView, CharacterPromptView, DailyProgressRing, MilestoneView
 - `Views/Browse/` — CharacterBrowseView (searchable character dictionary with grade filtering)
 - `Views/Stats/` — StatsView, ReviewHeatmapView, GradeProgressRow
@@ -55,6 +56,36 @@ idle → presenting → writing → recognizing → correct → (next card)
 - **WritingCanvasView coordinator must update `parent` in `updateUIView`** so SwiftUI binding updates propagate correctly.
 - **PracticeView's `mainContent` needs `.frame(maxWidth: .infinity, maxHeight: .infinity)`** on the ZStack — without it, the PKCanvasView (UIKit) briefly appears at top-left before SwiftUI repositions it.
 
+## Persistence schema
+
+SwiftData models are wrapped in `SchemaV1: VersionedSchema` so that future schema changes can be expressed as `MigrationStage`s in `ChineseWritingMigrationPlan`. `ChineseWritingApp` instantiates `ModelContainer(for: SchemaV1.self, migrationPlan: ChineseWritingMigrationPlan.self, configurations: ModelConfiguration())` and crashes loudly via `os.Logger` + `fatalError` if creation fails — persistence is required for the app to function.
+
+**To add a schema change:**
+1. Create `SchemaV2` enum with new model shapes (typically by namespacing copies inside the enum)
+2. Add `SchemaV2.self` to `ChineseWritingMigrationPlan.schemas`
+3. Add a `MigrationStage` (`.lightweight` for additive, `.custom` for renames/transforms)
+4. Update `ChineseWritingApp` to reference the latest version
+
+**Database-level constraints (do not weaken):**
+- `ReviewCard.character` is `@Attribute(.unique)` — duplicate cards for the same character are impossible
+- `UserProfile.key` is `@Attribute(.unique)` with default value `UserProfile.singletonKey` (`"default"`) — enforces singleton at the DB layer. `SessionManager.fetchProfile()` queries by this key with `fetchLimit: 1`.
+- `ReviewCard.logs ↔ ReviewLog.card` is a `@Relationship(deleteRule: .cascade, inverse: \ReviewLog.card)` — `ReviewLog`s cascade-delete with their parent card. `SessionManager.rateCard()` must set `log.card = card` before insert. `ReviewLog.character` is also kept as a redundant string for analytics resilience.
+- `UserProfile.achievedMilestones: [String]` is stored natively (no comma-string workaround). Use `hasAchieved(_:)` / `markAchieved(_:)` helpers.
+- All `@Model` properties must have default values (required for lightweight migration).
+
+**JSON export** includes `"schemaVersion": 1` and `"appVersion": "1.0"` so a future import feature can detect the source schema.
+
+## Failure modes
+
+- **`CharacterDataService` hard-fails** if `characters.json` is missing or malformed — calls `fatalError` rather than running with an empty character set, since the resource is bundled at build time and a missing file means a corrupted build. `strokes.json` failures are logged but non-fatal because recognition falls back to Vision OCR.
+- **`ChineseWritingApp` hard-fails** if `ModelContainer` creation throws — persistence is required, so the failure is logged via `os.Logger` and then `fatalError` so it's captured in MetricKit / crash reports rather than silently corrupting state.
+- **`SessionManager.saveContext()` soft-fails** — logs the error and sets `lastSaveError` for the UI banner. Called for every persistent mutation.
+- **`SoundService` is lazy** — only an `AVAudioFormat` is built in `init`. The `AVAudioEngine`, player node, and per-sound buffers are created on first `play()` call so launch isn't paying for synthesis cost upfront.
+
+## Privacy
+
+`ChineseWriting/PrivacyInfo.xcprivacy` declares required-reason API usage (file timestamp `C617.1`, disk space `E174.1`) used by SwiftData/Foundation. The app collects no user data, does no tracking, and requires no permissions. If you add a new framework that uses required-reason APIs (e.g., UserDefaults, system boot time), update this file or the App Store will reject the build.
+
 ## Caching strategy
 
 SessionManager caches aggressively to avoid repeated SwiftData fetches:
@@ -64,7 +95,7 @@ SessionManager caches aggressively to avoid repeated SwiftData fetches:
 - **`statsRevision`** counter (tracked by `@Observable`) — incremented after `rateCard()` and `setupAssumedKnownCards()`. Views that read stats must touch this property to get re-rendered.
 - **`fetchFirstDueCard()`** uses `fetchLimit: 1`; **`countDueCards()`** uses `fetchCount` — avoids materializing all due cards.
 - **Stroke data** — lazily decoded per character, raw JSON evicted after decode. Parsed SVG paths cached in `StrokeRenderer.pathCache` (`NSCache`, auto-evicts under pressure). Next card's stroke data is prefetched during correct/incorrect screen.
-- All `modelContext.save()` calls go through `SessionManager.saveContext()` which logs errors via `os.Logger`.
+- All `modelContext.save()` calls go through `SessionManager.saveContext()` which logs errors via `os.Logger` and sets `SessionManager.lastSaveError`. ContentView observes that property and shows a red `SaveErrorBanner` overlay so users know if their progress isn't persisting. Cleared on the next successful save or on tap.
 
 ## Recognition
 

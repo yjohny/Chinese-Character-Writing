@@ -5,7 +5,9 @@ import SwiftData
 @Model
 final class ReviewCard {
     // Identity
-    var character: String = ""
+    /// Unique constraint enforces one ReviewCard per character at the database
+    /// layer, preventing duplicates from race conditions or future code paths.
+    @Attribute(.unique) var character: String = ""
     var gradeLevel: Int = 1
     var orderInGrade: Int = 0
 
@@ -19,6 +21,11 @@ final class ReviewCard {
     // Scheduling
     var dueDate: Date = Date.distantFuture
     var lastReviewDate: Date?
+
+    /// Review history for this card. Cascade-deletes when the card is removed,
+    /// preventing orphaned ReviewLog rows.
+    @Relationship(deleteRule: .cascade, inverse: \ReviewLog.card)
+    var logs: [ReviewLog] = []
 
     var state: CardState {
         get { CardState(rawValue: stateRaw) ?? .new }

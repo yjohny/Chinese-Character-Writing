@@ -1,9 +1,17 @@
 import Foundation
 import SwiftData
 
-/// Singleton-like model for user preferences and streak data.
+/// Singleton model for user preferences and streak data. Singleton-ness is
+/// enforced at the database layer via `@Attribute(.unique)` on `key`.
 @Model
 final class UserProfile {
+    /// The single stable key value used for the singleton profile row.
+    static let singletonKey = "default"
+
+    /// Stable singleton key. The unique constraint guarantees at most one
+    /// UserProfile row exists. All instances default to `singletonKey`.
+    @Attribute(.unique) var key: String = UserProfile.singletonKey
+
     var currentStreak: Int = 0
     var longestStreak: Int = 0
     var lastPracticeDate: Date?
@@ -24,9 +32,9 @@ final class UserProfile {
     /// Tracks which day `reviewsToday` belongs to, separate from streak tracking.
     var lastReviewCountDate: Date?
 
-    /// Comma-separated raw values of achieved milestone types. SwiftData doesn't support
-    /// Set<String> directly, so we use a raw string and computed helpers.
-    var achievedMilestonesRaw: String = ""
+    /// Raw values of achieved milestone types. SwiftData stores `[String]`
+    /// natively, so no string-encoding workaround is needed.
+    var achievedMilestones: [String] = []
 
     /// Whether sound effects are enabled.
     var soundEffectsEnabled: Bool = true
@@ -59,22 +67,14 @@ final class UserProfile {
 
     // MARK: - Milestones
 
-    var achievedMilestones: Set<String> {
-        get {
-            guard !achievedMilestonesRaw.isEmpty else { return [] }
-            return Set(achievedMilestonesRaw.split(separator: ",").map(String.init))
-        }
-        set { achievedMilestonesRaw = newValue.sorted().joined(separator: ",") }
-    }
-
     func hasAchieved(_ milestone: MilestoneType) -> Bool {
         achievedMilestones.contains(milestone.rawValue)
     }
 
     func markAchieved(_ milestone: MilestoneType) {
-        var set = achievedMilestones
-        set.insert(milestone.rawValue)
-        achievedMilestones = set
+        if !achievedMilestones.contains(milestone.rawValue) {
+            achievedMilestones.append(milestone.rawValue)
+        }
     }
 
     /// Update streak based on practice today. Call once per session start.

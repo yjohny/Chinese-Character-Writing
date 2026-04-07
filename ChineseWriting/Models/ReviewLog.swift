@@ -14,6 +14,11 @@ final class ReviewLog {
     var wasOverride: Bool = false
     var visionConfidence: Double = 0.0
 
+    /// Back-reference to the parent card. Inverse of `ReviewCard.logs`. The
+    /// `character` string is also kept directly so logs remain analyzable even
+    /// if the card relationship is ever nil.
+    var card: ReviewCard?
+
     var rating: Rating {
         get { Rating(rawValue: ratingRaw) ?? .again }
         set { ratingRaw = newValue.rawValue }

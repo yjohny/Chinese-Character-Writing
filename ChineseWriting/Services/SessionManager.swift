@@ -30,6 +30,11 @@ final class SessionManager {
     /// Set to true in rateCard() when reviewsToday hits dailyGoal exactly (fires once).
     var dailyGoalReached: Bool = false
 
+    /// Localized message when the most recent `saveContext()` call failed.
+    /// Cleared on the next successful save or by user dismissal in the UI.
+    /// Surfaced as a banner so users know if their progress isn't persisting.
+    var lastSaveError: String?
+
     /// Cached set of character strings that already have ReviewCards. Avoids
     /// materializing all cards on every `nextCard()` / `introduceNextNewCard()` call.
     /// Invalidated (set to nil) only when new cards are created.
@@ -174,7 +179,8 @@ final class SessionManager {
             card.lapses += 1
         }
 
-        // Create review log
+        // Create review log linked to its parent card. The relationship gives
+        // us cascade-delete (no orphan logs) and inverse access via card.logs.
         let log = ReviewLog(
             character: card.character,
             rating: rating,
@@ -185,6 +191,7 @@ final class SessionManager {
             wasOverride: wasOverride,
             visionConfidence: visionConfidence
         )
+        log.card = card
         modelContext.insert(log)
 
         // Update user profile
@@ -467,7 +474,8 @@ final class SessionManager {
 
         let export: [String: Any] = [
             "exportDate": dateFormatter.string(from: Date()),
-            "version": "1.0",
+            "schemaVersion": 1,
+            "appVersion": "1.0",
             "profile": [
                 "totalReviews": profile?.totalReviews ?? 0,
                 "currentStreak": profile?.currentStreak ?? 0,
@@ -486,7 +494,13 @@ final class SessionManager {
         if let cached = cachedProfile {
             return cached
         }
-        let descriptor = FetchDescriptor<UserProfile>()
+        // Fetch the singleton profile by its stable key. The unique constraint
+        // on UserProfile.key guarantees at most one match.
+        let singletonKey = UserProfile.singletonKey
+        var descriptor = FetchDescriptor<UserProfile>(
+            predicate: #Predicate { $0.key == singletonKey }
+        )
+        descriptor.fetchLimit = 1
         let profiles = (try? modelContext.fetch(descriptor)) ?? []
         if let profile = profiles.first {
             cachedProfile = profile
@@ -670,12 +684,17 @@ final class SessionManager {
     }
 
     /// Centralized save with error logging. Persistence failures (disk full,
-    /// constraint violations) are logged rather than silently swallowed.
+    /// constraint violations) are logged and surfaced via `lastSaveError` so
+    /// the UI can show a banner — silent persistence failures are dangerous.
     private func saveContext() {
         do {
             try modelContext.save()
+            if lastSaveError != nil {
+                lastSaveError = nil
+            }
         } catch {
             logger.error("SwiftData save failed: \(error)")
+            lastSaveError = "Couldn't save progress: \(error.localizedDescription)"
         }
     }
 }

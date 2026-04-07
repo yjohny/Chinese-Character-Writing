@@ -50,11 +50,55 @@ struct ContentView: View {
                             Label("Settings", systemImage: "gearshape.fill")
                         }
                     }
+                    .overlay(alignment: .top) {
+                        if let message = sessionManager.lastSaveError {
+                            SaveErrorBanner(message: message) {
+                                sessionManager.lastSaveError = nil
+                            }
+                            .transition(.move(edge: .top).combined(with: .opacity))
+                        }
+                    }
+                    .animation(.easeInOut(duration: 0.2), value: sessionManager.lastSaveError)
                 }
             } else {
                 ProgressView("Loading...")
                     .onAppear { setupServices() }
             }
+        }
+    }
+
+    /// Persistent banner shown when SwiftData saves fail. Tap to dismiss.
+    /// The banner reappears on the next failed save until the underlying
+    /// issue (e.g. disk full) is resolved.
+    private struct SaveErrorBanner: View {
+        let message: String
+        let onDismiss: () -> Void
+
+        var body: some View {
+            HStack(spacing: 12) {
+                Image(systemName: "exclamationmark.triangle.fill")
+                    .foregroundStyle(.white)
+                    .accessibilityHidden(true)
+                Text(message)
+                    .font(.subheadline)
+                    .foregroundStyle(.white)
+                    .lineLimit(3)
+                Spacer()
+                Button(action: onDismiss) {
+                    Image(systemName: "xmark")
+                        .foregroundStyle(.white)
+                }
+                .accessibilityLabel("Dismiss")
+            }
+            .padding(.horizontal, 16)
+            .padding(.vertical, 12)
+            .background(Color.red)
+            .cornerRadius(12)
+            .padding(.horizontal, 12)
+            .padding(.top, 8)
+            .shadow(color: .black.opacity(0.2), radius: 4, y: 2)
+            .accessibilityElement(children: .combine)
+            .accessibilityAddTraits(.isModal)
         }
     }
 
