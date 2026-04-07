@@ -7,6 +7,9 @@ private let logger = Logger(subsystem: "com.chinesewriting.app", category: "App"
 @main
 struct ChineseWritingApp: App {
     let modelContainer: ModelContainer
+    /// Subscribed for the lifetime of the app so MetricKit delivers crash and
+    /// performance payloads to `os.Logger` (visible in Console.app).
+    let metricKit = MetricKitService()
 
     init() {
         do {

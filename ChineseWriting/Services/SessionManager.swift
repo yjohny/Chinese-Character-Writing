@@ -30,6 +30,11 @@ final class SessionManager {
     /// Set to true in rateCard() when reviewsToday hits dailyGoal exactly (fires once).
     var dailyGoalReached: Bool = false
 
+    /// Localized message when the most recent `saveContext()` call failed.
+    /// Cleared on the next successful save or by user dismissal in the UI.
+    /// Surfaced as a banner so users know if their progress isn't persisting.
+    var lastSaveError: String?
+
     /// Cached set of character strings that already have ReviewCards. Avoids
     /// materializing all cards on every `nextCard()` / `introduceNextNewCard()` call.
     /// Invalidated (set to nil) only when new cards are created.
@@ -679,12 +684,17 @@ final class SessionManager {
     }
 
     /// Centralized save with error logging. Persistence failures (disk full,
-    /// constraint violations) are logged rather than silently swallowed.
+    /// constraint violations) are logged and surfaced via `lastSaveError` so
+    /// the UI can show a banner — silent persistence failures are dangerous.
     private func saveContext() {
         do {
             try modelContext.save()
+            if lastSaveError != nil {
+                lastSaveError = nil
+            }
         } catch {
             logger.error("SwiftData save failed: \(error)")
+            lastSaveError = "Couldn't save progress: \(error.localizedDescription)"
         }
     }
 }

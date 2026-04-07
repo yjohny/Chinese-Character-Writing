@@ -83,16 +83,21 @@ final class CharacterDataService: ObservableObject {
     // MARK: - Loading
 
     private func loadCharacters() {
+        // characters.json is a build-time bundled resource. If it is missing
+        // or malformed, the app cannot function — crash with a clear message
+        // so the failure is obvious in development and in crash reports
+        // rather than silently running with an empty character set.
         guard let url = Bundle.main.url(forResource: "characters", withExtension: "json") else {
-            logger.error("characters.json not found in bundle")
-            return
+            logger.fault("characters.json missing from bundle")
+            fatalError("characters.json is required but missing from the app bundle")
         }
         do {
             let data = try Data(contentsOf: url)
             characters = try JSONDecoder().decode([CharacterEntry].self, from: data)
             buildIndices()
         } catch {
-            logger.error("Failed to decode characters.json: \(error)")
+            logger.fault("Failed to decode characters.json: \(error)")
+            fatalError("Failed to decode characters.json: \(error)")
         }
     }
 
