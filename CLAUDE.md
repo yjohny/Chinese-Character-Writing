@@ -2,7 +2,7 @@
 
 iOS app (Swift 5.9 / SwiftUI) for learning to write Chinese characters with spaced repetition.
 
-Bundle ID: `com.chinesewriting.app` · Version 1.0 · iOS 17.0+
+Bundle ID: `com.yjohny.chinesewriting` · Version 1.0 · iOS 17.0+
 
 ## Build
 
